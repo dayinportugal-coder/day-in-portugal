@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://dayinportugal.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://dayinportugal.com/povoa-base.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://dayinportugal.com/porto-3-days.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://dayinportugal.com/douro-day.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://dayinportugal.com/rent-car.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://dayinportugal.com/book-first.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dayinportugal.com/</loc></url>
+  <url><loc>https://dayinportugal.com/book.html</loc></url>
+  <url><loc>https://dayinportugal.com/stay.html</loc></url>
+  <url><loc>https://dayinportugal.com/bring.html</loc></url>
 </urlset>
