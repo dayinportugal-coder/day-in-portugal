@@ -1,0 +1,16 @@
+/* Day in Portugal — cookie consent. Uses the redesign's CSS variables. */
+.dip-consent{position:fixed;left:1rem;right:1rem;bottom:1rem;z-index:50;max-width:620px;margin:0 auto;
+  background:var(--card,#fffdf9);color:var(--ink,#1b1915);border:1px solid var(--line,#e4dccd);
+  border-radius:var(--radius,14px);box-shadow:0 12px 36px rgba(27,25,21,.22);padding:1.15rem 1.25rem;
+  font-family:var(--sans,system-ui,sans-serif);font-size:.93rem;line-height:1.5}
+.dip-consent[hidden]{display:none}
+.dip-consent h2{font-family:var(--serif,Georgia,serif);font-size:1.15rem;margin:0 0 .35rem}
+.dip-consent p{margin:0 0 .9rem;color:var(--muted,#5b554b)}
+.dip-consent .dip-actions{display:flex;flex-wrap:wrap;gap:.6rem}
+/* Accept and Reject are deliberately identical in size, colour and weight (GDPR / CNPD guidance). */
+.dip-consent button{flex:1 1 160px;min-height:44px;font:inherit;font-weight:600;padding:.65rem 1rem;border-radius:999px;cursor:pointer;
+  border:1px solid var(--sage,#2f4a40);background:var(--sage,#2f4a40);color:#f4efe6}
+.dip-consent button:hover{background:var(--sage-2,#3d5f52)}
+.dip-consent button:focus-visible{outline:3px solid var(--accent,#9a3b2c);outline-offset:2px}
+.dip-consent a{color:var(--sage,#2f4a40)}
+.dip-consent-reopen{background:none;border:0;padding:0;font:inherit;color:inherit;text-decoration:underline;cursor:pointer}
