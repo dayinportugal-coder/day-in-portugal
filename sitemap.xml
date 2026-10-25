@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://dayinportugal.com/</loc></url>
-  <url><loc>https://dayinportugal.com/book.html</loc></url>
-  <url><loc>https://dayinportugal.com/stay.html</loc></url>
-  <url><loc>https://dayinportugal.com/bring.html</loc></url>
+  <url><loc>https://dayinportugal.com/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/book</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/stay</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/bring</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/douro-day</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/privacy</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/disclosure</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/book-first</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/porto-3-days</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/povoa-base</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/rent-car</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/gaia-port-cellars</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/porto-airport-transfer</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/porto-day-trips</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/porto-food-tours</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/livraria-lello-tickets</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/porto-river-cruise</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/fado-in-porto</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/braga-guimaraes-day-trip</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/aveiro-day-trip</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/credits</loc><lastmod>2026-10-25</lastmod></url>
 </urlset>
