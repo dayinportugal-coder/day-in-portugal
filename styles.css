@@ -185,7 +185,7 @@ section { margin-top: 3rem; }
 /* footer: products column removed (Oct 2026) -> two columns */
 @media (min-width: 760px) { .foot-inner { grid-template-columns: 1.3fr 1fr; } }
 
-/* Launch banner (shared) and shop page */
+/* Shop banner (shared) */
 .loja-banner { margin: .8rem 0 1rem; font-size: .88rem; line-height: 1.4; }
 .loja-banner a {
   display: inline-block;
@@ -198,14 +198,3 @@ section { margin-top: 3rem; }
   padding: .28rem .8rem;
 }
 .loja-banner a:hover { color: var(--accent); border-color: #cfc3ae; }
-.loja-launch {
-  margin: .2rem 0 1.5rem;
-  padding: 1.05rem 1.2rem;
-  background: var(--sage);
-  color: #f7f3ec;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-.loja-launch p { margin: 0; }
-.loja-launch p + p { margin-top: .4rem; color: rgba(247,243,236,.9); }
-.loja-launch strong { color: #fff; letter-spacing: .03em; }
