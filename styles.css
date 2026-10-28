@@ -184,3 +184,17 @@ section { margin-top: 3rem; }
 .prose .book { margin-top: .6rem; }
 /* footer: products column removed (Oct 2026) -> two columns */
 @media (min-width: 760px) { .foot-inner { grid-template-columns: 1.3fr 1fr; } }
+
+/* Shop banner (shared) */
+.loja-banner { margin: .8rem 0 1rem; font-size: .88rem; line-height: 1.4; }
+.loja-banner a {
+  display: inline-block;
+  max-width: 100%;
+  color: var(--ink);
+  text-decoration: none;
+  background: #efe6d6;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: .28rem .8rem;
+}
+.loja-banner a:hover { color: var(--accent); border-color: #cfc3ae; }
