@@ -76,6 +76,13 @@ p { margin: 0 0 1rem; }
 .small { font-size: .9rem; }
 .fine { font-size: .82rem; color: var(--muted); margin: .35rem 0 0; }
 .h-section { font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0 0 .7rem; }
+.h-sub { font-size: clamp(1.2rem, 2.6vw, 1.5rem); margin: 2rem 0 .35rem; }
+.cards.ornaments { margin-top: .8rem; }
+.cards.ornaments .card-body { padding: .85rem .95rem 1rem; }
+.cards.ornaments h3 { font-size: 1.08rem; margin: 0 0 .65rem; }
+.cards.ornaments .book { font-size: .84rem; line-height: 1.25; padding: .5rem .85rem; min-height: 40px; white-space: normal; }
+@media (min-width: 760px) { .cards.ornaments { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .cards.ornaments { grid-template-columns: repeat(4, 1fr); } }
 h1.page { font-size: clamp(1.9rem, 5.2vw, 3rem); margin: .2rem 0 .8rem; max-width: 22ch; }
 .lead-muted { color: var(--muted); font-size: 1.08rem; max-width: 46rem; }
 .crumbs { font-size: .86rem; color: var(--muted); margin: .2rem 0 1.2rem; }
