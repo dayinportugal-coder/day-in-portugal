@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Demonstração — assistente para um restaurante (negócio fictício)</title>
+<style>
+:root{ --bg:#f7f3ee; --ink:#2e2118; --accent:#a0462c; --accent2:#c46a3c; --card:#ffffff; --muted:#5d6b78; --font:system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.45;font-size:16px}
+.banner{position:sticky;top:0;z-index:50;background:#fff3c4;color:#4a3b00;border-bottom:2px solid #e0b400;padding:8px 14px;font-size:13.5px;text-align:center}
+.banner b{font-weight:700}
+.banner a{color:#4a3b00;font-weight:700}
+.wrap{max-width:980px;margin:0 auto;padding:18px 14px 30px;display:grid;grid-template-columns:320px 1fr;gap:18px}
+@media (max-width:820px){.wrap{grid-template-columns:1fr}}
+.info{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 1px 4px rgba(0,0,0,.08);align-self:start}
+.info .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.info h1{font-size:24px;margin:4px 0 6px;line-height:1.15}
+.info p{font-size:14.5px;color:var(--muted);margin-bottom:10px}
+.info ul{list-style:none;font-size:14px}
+.info li{padding:6px 0;border-top:1px solid #eef0f2;display:flex;gap:8px}
+.info li span.i{width:20px;flex:none;text-align:center}
+.info .note{font-size:12px;color:var(--muted);margin-top:10px}
+.chat{background:var(--card);border-radius:14px;box-shadow:0 1px 4px rgba(0,0,0,.08);display:flex;flex-direction:column;min-height:560px;max-height:78vh;overflow:hidden}
+@media (max-width:820px){.sugs{flex-wrap:nowrap}.chat{max-height:none;min-height:0;height:82vh}.info{padding:14px}.info h1{font-size:21px}.info li{padding:4px 0;font-size:13.5px}}
+.chead{background:var(--accent);color:#fff;padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.chead .t{font-weight:700;font-size:15.5px}
+.chead .s{font-size:12px;opacity:.85}
+.langs{display:flex;gap:4px}
+.langs button{border:1px solid rgba(255,255,255,.6);background:transparent;color:#fff;border-radius:6px;padding:3px 7px;font-size:12px;cursor:pointer}
+.langs button.on{background:#fff;color:var(--accent);font-weight:700}
+.msgs{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;background:linear-gradient(#fafbfc,#f4f6f8)}
+.m{max-width:86%;padding:10px 12px;border-radius:12px;font-size:15px;white-space:pre-line}
+.m.bot{background:#fff;border:1px solid #e3e7eb;align-self:flex-start;border-bottom-left-radius:4px}
+.m.user{background:var(--accent2);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.m a{color:var(--accent);word-break:break-all}
+.m.user a{color:#fff}
+.draft{margin-top:8px;border:1.5px dashed var(--accent);border-radius:10px;padding:8px 10px;background:#fbfcfd;font-size:14px}
+.draft .lbl{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);margin-bottom:4px;white-space:normal}
+.tag{display:inline-block;margin-top:6px;font-size:11.5px;padding:2px 7px;border-radius:20px;background:#eef3f6;color:var(--muted);white-space:normal}
+.tag.warn{background:#fff3e0;color:#8a4b00}
+.act{margin-top:8px}
+.act button{border:1px solid var(--accent);background:#fff;color:var(--accent);border-radius:18px;padding:5px 10px;font-size:13px;cursor:pointer}
+.sugs{display:flex;gap:6px;overflow-x:auto;padding:8px 10px;border-top:1px solid #e8ecef;background:#fff;flex-wrap:wrap}
+.sugs button{flex:none;border:1px solid #cdd6dd;background:#fff;color:var(--ink);border-radius:18px;padding:6px 11px;font-size:13.5px;cursor:pointer}
+.sugs button:hover{border-color:var(--accent);color:var(--accent)}
+form.in{display:flex;gap:8px;padding:10px;border-top:1px solid #e8ecef;background:#fff}
+form.in input{flex:1;border:1px solid #cdd6dd;border-radius:22px;padding:10px 14px;font-size:15px;font-family:inherit}
+form.in button{border:0;background:var(--accent);color:#fff;border-radius:22px;padding:0 16px;font-size:15px;cursor:pointer}
+.priv{font-size:11.5px;color:var(--muted);text-align:center;padding:0 10px 8px;background:#fff}
+@media (max-width:820px){.sugs{flex-wrap:nowrap;overflow-x:auto}}
+footer{max-width:980px;margin:0 auto;padding:0 14px 30px;font-size:12.5px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="banner" role="note"><b>Negócio FICTÍCIO: demonstração preparada por Pedro Carvalho com dados inventados para mostrar o funcionamento.</b> Versão de demonstração simplificada: funciona por regras (respostas pré-programadas), não é o assistente final. Contacto: <a href="mailto:dayinportugal@gmail.com">dayinportugal@gmail.com</a></div>
+<div class="wrap">
+  <aside class="info">
+    <div class="kicker">Restaurante (exemplo fictício)</div>
+    <h1>Restaurante Exemplo (negócio fictício)</h1>
+    <p>Exemplo de assistente para um restaurante: horário, reservas de mesa, ementa e perguntas de turistas em português, inglês, francês e espanhol. A equipa aprova cada resposta.</p>
+    <ul><li><span class="i">📍</span><span>Avenida do Exemplo, 3 — morada fictícia</span></li><li><span class="i">🕒</span><span>Ter–dom 12h30–15h00 / 19h30–22h30 · seg encerrado (fictício)</span></li><li><span class="i">🍽️</span><span>Ementa fictícia: peixe do dia, arroz de marisco, bacalhau, prato vegetariano</span></li><li><span class="i">🗓️</span><span>Pedidos de mesa: a equipa confirma sempre</span></li></ul>
+    <div class="note">Negócio, morada e horários fictícios, só para demonstração. Quando um dado não está confirmado, o assistente diz que vai confirmar com a equipa — não inventa.</div>
+  </aside>
+  <section class="chat" aria-label="Assistente">
+    <div class="chead"><div><div class="t" id="ctitle"></div><div class="s" id="csub"></div></div>
+      <div class="langs" id="langs"></div></div>
+    <div class="msgs" id="msgs" aria-live="polite"></div>
+    <div class="sugs" id="sugs"></div>
+    <form class="in" id="f" autocomplete="off"><input id="q" type="text" aria-label="Pergunta" maxlength="300"><button type="submit" id="send">➤</button></form>
+    <div class="priv" id="priv"></div>
+  </section>
+</div>
+<footer>Demonstração sem ligação a sistemas do negócio: não faz reservas, não envia mensagens e não guarda dados. As respostas de reserva são rascunhos que o negócio aprovaria antes de enviar. Preparada por Pedro Carvalho · dayinportugal@gmail.com</footer>
+<script>
+const CFG = {"short": "Restaurante Exemplo", "hello": {"pt": "Olá! Sou o assistente de demonstração de um restaurante FICTÍCIO. Pergunte pelo horário, reservas, ementa ou estacionamento.", "en": "Hello! I'm the demo assistant of a FICTIONAL restaurant. Ask about opening hours, bookings, the menu or parking.", "fr": "Bonjour ! Je suis l'assistant de démonstration d'un restaurant FICTIF. Horaires, réservations, menu ou stationnement : demandez-moi.", "es": "¡Hola! Soy el asistente de demostración de un restaurante FICTICIO. Pregunte por el horario, reservas, carta o aparcamiento."}, "intents": [{"id": "hello", "kw": ["ola", "bom dia", "boa tarde", "boa noite", "hello", "hi", "good morning", "bonjour", "bonsoir", "salut", "hola", "buenos dias", "buenas"], "a": {"pt": "Olá! Posso ajudar com horário, reservas de mesa, ementa, alergénios, grupos e estacionamento.", "en": "Hello! I can help with opening hours, table bookings, the menu, allergens, groups and parking.", "fr": "Bonjour ! Je peux vous aider pour les horaires, les réservations, le menu, les allergènes, les groupes et le stationnement.", "es": "¡Hola! Puedo ayudarle con horario, reservas de mesa, carta, alérgenos, grupos y aparcamiento."}, "src": null, "unverified": false, "booking": false}, {"id": "thanks", "kw": ["obrigad", "thank", "merci", "gracias"], "a": {"pt": "De nada! Bom apetite.", "en": "You're welcome! Enjoy your meal.", "fr": "Avec plaisir ! Bon appétit.", "es": "¡De nada! Buen provecho."}, "src": null, "unverified": false, "booking": false}, {"id": "booking", "kw": ["reserv", "mesa", "marcar", "book", "booking", "table", "reserver", "reservation", "reservar", "reserva"], "a": {"pt": "Posso preparar o pedido de mesa para a equipa confirmar. Diga-me o número de pessoas, o dia e a hora, por exemplo: «mesa para 4 no sábado às 13h».", "en": "I can prepare the table request for the team to confirm. Tell me the number of people, the day and time, e.g. “table for 4 on Saturday at 13:00”.", "fr": "Je peux préparer la demande de table pour que l'équipe la confirme. Indiquez le nombre de personnes, le jour et l'heure, par ex. « table pour 4 samedi à 13h ».", "es": "Puedo preparar la petición de mesa para que el equipo la confirme. Dígame el número de personas, el día y la hora, por ejemplo: «mesa para 4 el sábado a las 13h»."}, "src": null, "unverified": false, "booking": true}, {"id": "booking_sim", "kw": [], "a": {"pt": "", "en": "", "fr": "", "es": ""}, "src": null, "unverified": false, "booking": true}, {"id": "hours", "kw": ["horario", "aberto", "abre", "fecha", "fechado", "encerra", "almoco", "jantar", "segunda", "domingo", "open", "opening", "hours", "closed", "lunch", "dinner", "monday", "horaire", "ouvert", "ferme", "dejeuner", "diner", "lundi", "abierto", "cierra", "comida", "cena", "lunes"], "a": {"pt": "Horário (fictício): terça a domingo, almoço 12h30–15h00 e jantar 19h30–22h30. À segunda-feira está encerrado.", "en": "Opening hours (fictional): Tuesday to Sunday, lunch 12:30–15:00 and dinner 19:30–22:30. Closed on Mondays.", "fr": "Horaires (fictifs) : du mardi au dimanche, déjeuner 12h30–15h00 et dîner 19h30–22h30. Fermé le lundi.", "es": "Horario (ficticio): de martes a domingo, comidas 12:30–15:00 y cenas 19:30–22:30. Los lunes cerrado."}, "src": "dados fictícios", "unverified": false, "booking": false}, {"id": "menu", "kw": ["ementa", "menu", "carta", "pratos", "prato", "peixe", "marisco", "carne", "sobremesa", "dishes", "fish", "seafood", "meat", "dessert", "plat", "poisson", "fruits de mer", "viande", "platos", "pescado", "mariscos"], "a": {"pt": "Ementa fictícia desta demonstração: peixe grelhado do dia, arroz de marisco, bacalhau no forno e um prato vegetariano. Num caso real, o assistente responde só com a ementa que o restaurante confirmar.", "en": "Fictional menu for this demo: grilled fish of the day, seafood rice, baked codfish and a vegetarian dish. In real use, the assistant only answers with the menu the restaurant confirms.", "fr": "Menu fictif de cette démo : poisson grillé du jour, riz aux fruits de mer, morue au four et un plat végétarien. En situation réelle, l'assistant ne répond qu'avec le menu confirmé par le restaurant.", "es": "Carta ficticia de esta demo: pescado a la brasa del día, arroz de marisco, bacalao al horno y un plato vegetariano. En un caso real, el asistente solo responde con la carta que confirme el restaurante."}, "src": "dados fictícios", "unverified": false, "booking": false}, {"id": "veg", "kw": ["vegetarian", "vegan", "vegetariano", "vegano", "vegetarien", "vegetalien", "sem carne", "plant"], "a": {"pt": "Nesta demonstração há um prato vegetariano na ementa. Para opções veganas, confirmo com a cozinha.", "en": "In this demo there is one vegetarian dish on the menu. For vegan options, I'll check with the kitchen.", "fr": "Dans cette démo, il y a un plat végétarien au menu. Pour les options véganes, je vérifie avec la cuisine.", "es": "En esta demo hay un plato vegetariano en la carta. Para opciones veganas, lo confirmo con la cocina."}, "src": null, "unverified": true, "booking": false}, {"id": "allergens", "kw": ["gluten-free", "gluten free", "sem gluten", "sin gluten", "sans gluten", "alergen", "alergia", "alergico", "gluten", "celiac", "lactose", "frutos secos", "marisco alerg", "allerg", "allergy", "allergic", "nuts", "sans gluten", "alergeno", "celiaco", "sin gluten"], "a": {"pt": "Não confirmo alergénios sem a cozinha: passo a sua pergunta à equipa, que responde com a informação do prato. Se tiver uma alergia grave, avise também ao chegar.", "en": "I don't confirm allergens without the kitchen: I'll pass your question to the team, who will reply with the dish information. If you have a severe allergy, please also tell the staff on arrival.", "fr": "Je ne confirme pas les allergènes sans la cuisine : je transmets votre question à l'équipe. En cas d'allergie grave, prévenez aussi le personnel à votre arrivée.", "es": "No confirmo alérgenos sin la cocina: paso su pregunta al equipo, que le responderá con la información del plato. Si tiene una alergia grave, avise también al llegar."}, "src": null, "unverified": true, "booking": false}, {"id": "groups", "kw": ["grupo", "grupos", "evento", "aniversario", "empresa", "festa", "group", "groups", "event", "party", "birthday", "groupe", "evenement", "fete", "anniversaire", "grupo", "fiesta", "cumpleanos"], "a": {"pt": "Para grupos com mais de 8 pessoas, a equipa prepara uma proposta à parte. Diga-me o número de pessoas e o dia, e passo o pedido.", "en": "For groups of more than 8 people, the team prepares a separate proposal. Tell me the number of people and the day, and I'll pass the request on.", "fr": "Pour les groupes de plus de 8 personnes, l'équipe prépare une proposition à part. Indiquez le nombre de personnes et le jour.", "es": "Para grupos de más de 8 personas, el equipo prepara una propuesta aparte. Dígame el número de personas y el día, y paso la petición."}, "src": "dados fictícios", "unverified": false, "booking": false}, {"id": "location", "kw": ["onde", "morada", "fica", "chegar", "mapa", "where", "address", "location", "adresse", "ou est", "donde", "direccion", "ubicacion"], "a": {"pt": "Morada fictícia: Avenida do Exemplo, 3 (só para demonstração).", "en": "Fictional address: Avenida do Exemplo, 3 (demo only).", "fr": "Adresse fictive : Avenida do Exemplo, 3 (démo).", "es": "Dirección ficticia: Avenida do Exemplo, 3 (solo demostración)."}, "src": "dados fictícios", "unverified": false, "booking": false}, {"id": "parking", "kw": ["estacion", "aparcamiento", "parque", "parking", "carro", "aparcar", "garer", "stationnement", "coche"], "a": {"pt": "Nesta demonstração, há estacionamento público na rua e um parque a 5 minutos a pé (dado fictício).", "en": "In this demo, there is public street parking and a car park 5 minutes' walk away (fictional).", "fr": "Dans cette démo, il y a du stationnement public dans la rue et un parking à 5 minutes à pied (fictif).", "es": "En esta demo, hay aparcamiento público en la calle y un parking a 5 minutos a pie (ficticio)."}, "src": "dados fictícios", "unverified": false, "booking": false}, {"id": "takeaway", "kw": ["take away", "takeaway", "levar", "para fora", "emporter", "para llevar", "delivery", "entrega"], "a": {"pt": "Nesta demonstração há take away por encomenda; a equipa confirma a hora de levantamento.", "en": "In this demo, take away is available to order; the team confirms the pick-up time.", "fr": "Dans cette démo, la vente à emporter se fait sur commande ; l'équipe confirme l'heure.", "es": "En esta demo hay comida para llevar por encargo; el equipo confirma la hora de recogida."}, "src": null, "unverified": true, "booking": false}, {"id": "pay", "kw": ["aceitam cartao", "pagar com", "pay by card", "credit card", "con tarjeta", "par carte", "pagar", "pagamento", "cartao", "multibanco", "dinheiro", "mbway", "pay", "card", "cash", "payer", "carte", "especes", "tarjeta", "efectivo"], "a": {"pt": "Nesta demonstração aceita-se cartão e dinheiro (dado fictício).", "en": "In this demo, card and cash are accepted (fictional).", "fr": "Dans cette démo, carte et espèces acceptées (fictif).", "es": "En esta demo se acepta tarjeta y efectivo (ficticio)."}, "src": "dados fictícios", "unverified": false, "booking": false}], "sugs": [{"id": "hours", "pt": "Qual é o horário?", "en": "What are your opening hours?", "fr": "Quels sont vos horaires ?", "es": "¿Cuál es el horario?"}, {"id": "booking_sim", "pt": "Mesa para 4 no sábado às 13h", "en": "Table for 4 on Saturday at 13:00", "fr": "Table pour 4 samedi à 13h", "es": "Mesa para 4 el sábado a las 13h"}, {"id": "menu", "pt": "O que há na ementa?", "en": "What's on the menu?", "fr": "Qu'y a-t-il au menu ?", "es": "¿Qué hay en la carta?"}, {"id": "allergens", "pt": "Têm pratos sem glúten?", "en": "Do you have gluten-free dishes?", "fr": "Avez-vous des plats sans gluten ?", "es": "¿Tienen platos sin gluten?"}, {"id": "parking", "pt": "Há estacionamento?", "en": "Is there parking?", "fr": "Y a-t-il un parking ?", "es": "¿Hay aparcamiento?"}, {"id": "groups", "pt": "Somos um grupo de 12", "en": "We are a group of 12", "fr": "Nous sommes un groupe de 12", "es": "Somos un grupo de 12"}], "fallback": {"pt": "Não tenho essa informação confirmada para a Restaurante Exemplo, por isso não lhe vou dar uma resposta inventada. Posso passar a sua pergunta à equipa.", "en": "I don't have that information confirmed for Restaurante Exemplo, so I won't make up an answer. I can pass your question to the team.", "fr": "Je n'ai pas cette information confirmée pour Restaurante Exemplo : je préfère ne rien inventer. Je peux transmettre votre question à l'équipe.", "es": "No tengo esa información confirmada para Restaurante Exemplo, así que no le voy a dar una respuesta inventada. Puedo pasar su pregunta al equipo."}, "note": {"pt": "Pergunta de cliente recebida pelo assistente: «{q}». A equipa confirma a resposta antes de responder ao cliente.", "en": "Customer question received by the assistant: “{q}”. The team confirms the answer before replying to the customer.", "fr": "Question client reçue par l'assistant : « {q} ». L'équipe confirme la réponse avant de répondre au client.", "es": "Pregunta de cliente recibida por el asistente: «{q}». El equipo confirma la respuesta antes de contestar al cliente."}, "draftIntro": {"pt": "Num caso real, o pedido chegava à equipa e eu preparava esta resposta para aprovarem:", "en": "In real use, the request would reach the team and I would prepare this reply for them to approve:", "fr": "En situation réelle, la demande arriverait à l'équipe et je préparerais cette réponse à valider :", "es": "En un caso real, la petición llegaría al equipo y yo prepararía esta respuesta para que la aprueben:"}, "draft": {"pt": "Olá! Obrigado pelo seu pedido de mesa para {n} pessoas, {dia}, às {hora}. Vamos verificar a disponibilidade e respondemos em breve a confirmar. Até breve!", "en": "Hello! Thank you for your table request for {n} people, {dia}, at {hora}. We'll check availability and reply shortly to confirm. See you soon!", "fr": "Bonjour ! Merci pour votre demande de table pour {n} personnes, {dia}, à {hora}. Nous vérifions la disponibilité et vous confirmons rapidement. À bientôt !", "es": "¡Hola! Gracias por su petición de mesa para {n} personas, el {dia}, a las {hora}. Comprobamos la disponibilidad y le confirmamos en breve. ¡Hasta pronto!"}, "groupMax": 8, "groupNote": {"pt": "Como são mais de 8 pessoas, a equipa envia também uma proposta de menu de grupo.", "en": "As you are more than 8 people, the team will also send a group menu proposal.", "fr": "Comme vous êtes plus de 8, l'équipe enverra aussi une proposition de menu de groupe.", "es": "Como son más de 8 personas, el equipo enviará también una propuesta de menú de grupo."}};
+const UI = {
+ pt:{title:"Assistente "+CFG.short, sub:"Demonstração · responde em PT, EN, FR e ES", ph:"Escreva a sua pergunta…", priv:"Nada do que escrever sai deste navegador.", pass:"Passar pedido à equipa", passed:"Rascunho de nota para a equipa (demonstração — nada foi enviado):", draftLbl:"Rascunho de resposta para a equipa aprovar — não foi enviado nada e nada está confirmado", unv:"Não confirmado nas fontes públicas", src:"Fonte: ", conf:"a confirmar", hello:CFG.hello.pt},
+ en:{title:CFG.short+" assistant", sub:"Demo · answers in PT, EN, FR and ES", ph:"Type your question…", priv:"Nothing you type leaves this browser.", pass:"Pass request to the team", passed:"Draft note for the team (demo — nothing was sent):", draftLbl:"Draft reply for the team to approve — nothing was sent and nothing is confirmed", unv:"Not confirmed in public sources", src:"Source: ", conf:"to be confirmed", hello:CFG.hello.en},
+ fr:{title:"Assistant "+CFG.short, sub:"Démo · répond en PT, EN, FR et ES", ph:"Écrivez votre question…", priv:"Rien de ce que vous écrivez ne quitte ce navigateur.", pass:"Transmettre à l'équipe", passed:"Brouillon de note pour l'équipe (démo — rien n'a été envoyé) :", draftLbl:"Brouillon de réponse à valider par l'équipe — rien n'a été envoyé ni confirmé", unv:"Non confirmé dans les sources publiques", src:"Source : ", conf:"à confirmer", hello:CFG.hello.fr},
+ es:{title:"Asistente "+CFG.short, sub:"Demo · responde en PT, EN, FR y ES", ph:"Escriba su pregunta…", priv:"Nada de lo que escriba sale de este navegador.", pass:"Pasar la petición al equipo", passed:"Borrador de nota para el equipo (demo — no se ha enviado nada):", draftLbl:"Borrador de respuesta para que el equipo lo apruebe — no se ha enviado nada ni hay nada confirmado", unv:"No confirmado en fuentes públicas", src:"Fuente: ", conf:"por confirmar", hello:CFG.hello.es}
+};
+const FALL = CFG.fallback;
+let lang = "pt";
+const $ = id => document.getElementById(id);
+const norm = s => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9:+@.\- ]/g," ").replace(/\s+/g," ").trim();
+const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+function short(u){ let d=u.replace(/^https?:\/\//,"").replace(/^www\./,"").split("?")[0].replace(/\/$/,""); if(u.includes("google.com/maps")) return "Google Maps ↗"; return (d.length>38?d.slice(0,36)+"…":d)+" ↗"; }
+function linkify(t){ return esc(t).replace(/(https?:\/\/[^\s)]+)/g,(m,u)=>'<a href="'+u+'" target="_blank" rel="noopener noreferrer">'+short(u)+'</a>').replace(/([a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,})/gi,'<a href="mailto:$1">$1</a>'); }
+const LANGHINT = {
+ pt:["ola","obrigado","obrigada","aceitam","tem","quero","qual","quais","onde","sao","pessoas","noites","fica","voces","posso","ha","nao","uma","um","estacionamento","pequeno-almoco","quanto","horas","sabado","domingo"],
+ en:["what","when","where","how","hello","hi","the","is","are","do","does","can","you","there","time","far","pay","thanks","parking","breakfast","opening","book","price","people","nights","table","room"],
+ fr:["bonjour","quel","quelle","quels","comment","est-ce","il","je","voudrais","vous","votre","avez","merci","chambre","stationnement","prix","garer","personnes","nuits","adresse"],
+ es:["hola","donde","cuando","hay","gracias","desayuno","habitacion","aparcamiento","precio","cuanto","tienen","quiero","admiten","puedo","el","los","las","personas","noches","mascotas"]
+};
+function detect(t){
+  const n=" "+norm(t)+" "; const sc={};
+  for(const l in LANGHINT){ sc[l]=0; for(const w of LANGHINT[l]) if(n.includes(" "+w+" ")) sc[l]++; }
+  let best=lang, bv=sc[lang]||0;
+  for(const l in sc){ if(sc[l]>bv){ bv=sc[l]; best=l; } }
+  return bv>=1?best:null;
+}
+function score(intent, n){
+  let s=0; const padded=" "+n+" ";
+  for(const k of intent.kw){ if(k.length<=3){ if(padded.includes(" "+k+" ")) s+=1; } else if(padded.includes(k)) s+= k.includes(" ")?2:1; }
+  return s;
+}
+function addMsg(html, who){ const d=document.createElement("div"); d.className="m "+who; d.innerHTML=html; $("msgs").appendChild(d); $("msgs").scrollTop=$("msgs").scrollHeight; return d; }
+function passBtn(question){
+  const b=document.createElement("button"); b.type="button"; b.textContent=UI[lang].pass; b.className="passbtn";
+  b.onclick=()=>{ b.disabled=true; const note = CFG.note[lang].replace("{q}", question);
+    addMsg('<div class="draft"><div class="lbl">'+esc(UI[lang].passed)+'</div>'+linkify(note)+'</div>',"bot"); };
+  const w=document.createElement("div"); w.className="act"; w.appendChild(b); return w;
+}
+// --- extraction for simulated booking drafts
+const NUMW={um:1,uma:1,one:1,un:1,une:1,uno:1,dois:2,duas:2,two:2,deux:2,dos:2,tres:3,three:3,trois:3,quatro:4,four:4,quatre:4,cuatro:4,cinco:5,five:5,cinq:5,seis:6,six:6,sete:7,seven:7,sept:7,siete:7,oito:8,eight:8,huit:8,ocho:8,dez:10,ten:10,dix:10,diez:10};
+const DAYS={pt:["hoje","amanha","segunda","terca","quarta","quinta","sexta","sabado","domingo"],en:["today","tomorrow","monday","tuesday","wednesday","thursday","friday","saturday","sunday"],fr:["aujourd'hui","demain","lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche"],es:["hoy","manana","lunes","martes","miercoles","jueves","viernes","sabado","domingo"]};
+function extract(text){
+  const n=norm(text); let people=null, time=null, day=null, nights=null, dates=null;
+  let m=n.match(/(\d{1,2})\s*(pessoas|pessoa|people|persons|person|pax|personnes|personne|personas|persona|adultos|adults|adultes|hospedes|guests)/);
+  if(!m) m=n.match(/(?:para|for|pour)\s+(\d{1,2})\b(?!\s*(h|:|noites|nights|nuits|noches))/);
+  if(m) people=parseInt(m[1]); else { for(const w in NUMW){ if(new RegExp("\\b"+w+"\\s+(pessoas|people|personnes|personas|adultos|adults)").test(n)){people=NUMW[w];break;} } }
+  m=n.match(/\b(\d{1,2})\s*(?:h|:)\s*(\d{2})?\b/); if(m) time=m[1]+"h"+(m[2]||"00"); else { m=n.match(/\b(\d{1,2})\s*(am|pm)\b/); if(m) time=(m[2]=="pm"&&+m[1]<12?+m[1]+12:+m[1])+"h00"; }
+  m=n.match(/(\d{1,2})\s*(noites|noite|nights|night|nuits|nuit|noches|noche)/); if(m) nights=parseInt(m[1]);
+  const lo=text.toLowerCase(); m=lo.match(/(\d{1,2}\s*(?:\/|de|a|to|au|al|-)\s*\d{1,2}(?:\s*(?:de\s*)?[a-zà-ÿ]+)?)/); if(m && !time) dates=m[1];
+  for(const l in DAYS){ for(const d of DAYS[l]){ if((" "+n+" ").includes(" "+norm(d)+" ")){ day=d; break; } } if(day) break; }
+  const DISP={sabado:"sábado",terca:"terça",amanha:"amanhã",miercoles:"miércoles",manana:"mañana"}; if(day&&DISP[day]) day=DISP[day];
+  return {people,time,day,nights,dates};
+}
+function answer(text, forced){
+  const detected = forced?null:detect(text); if(detected && detected!==lang) setLang(detected,true);
+  const n=norm(text); let best=null, bs=0;
+  if(forced){ best=CFG.intents.find(i=>i.id===forced); bs=1; }
+  else for(const it of CFG.intents){ const s=score(it,n); if(s>bs){bs=s;best=it;} }
+  let html, unv=false;
+  if(!best||bs===0){ html=linkify(FALL[lang]); unv=true; }
+  else {
+    let a=best.a[lang];
+    if(best.booking){
+      const ex=extract(text); const hasDetail = ex.people||ex.time||ex.day||ex.nights||ex.dates;
+      if(hasDetail || best.id==="booking_sim"){
+        const c=UI[lang].conf;
+        let d=CFG.draft[lang].replace("{n}",ex.people||"["+c+"]").replace("{dia}",ex.day||ex.dates||"["+c+"]").replace("{hora}",ex.time||"["+c+"]").replace("{noites}",ex.nights||"["+c+"]");
+        let extra="";
+        if(CFG.groupMax && ex.people && ex.people>CFG.groupMax) extra="\n\n"+CFG.groupNote[lang];
+        a=CFG.draftIntro[lang]; html=linkify(a)+'<div class="draft"><div class="lbl">'+esc(UI[lang].draftLbl)+'</div>'+linkify(d+extra)+'</div>';
+      } else html=linkify(a);
+    } else html=linkify(a);
+    if(best.src) html+='<div><span class="tag">'+esc(UI[lang].src+best.src)+'</span></div>';
+    if(best.unverified){ unv=true; }
+  }
+  const node=addMsg(html,"bot");
+  if(unv){ node.insertAdjacentHTML("beforeend",'<div><span class="tag warn">'+esc(UI[lang].unv)+'</span></div>'); node.appendChild(passBtn(text)); }
+}
+function renderSugs(){
+  const s=$("sugs"); s.innerHTML="";
+  for(const g of CFG.sugs){ const b=document.createElement("button"); b.type="button"; b.textContent=g[lang]; b.dataset.intent=g.id;
+    b.onclick=()=>{ addMsg(esc(g[lang]),"user"); answer(g[lang], g.id); }; s.appendChild(b); }
+}
+function setLang(l, silent){
+  lang=l; document.documentElement.lang={pt:"pt-PT",en:"en",fr:"fr",es:"es"}[l];
+  $("ctitle").textContent=UI[l].title; $("csub").textContent=UI[l].sub; $("q").placeholder=UI[l].ph; $("priv").textContent=UI[l].priv;
+  document.querySelectorAll("#langs button").forEach(b=>b.classList.toggle("on",b.dataset.l===l));
+  renderSugs(); if(!silent) addMsg(linkify(UI[l].hello),"bot");
+}
+["pt","en","fr","es"].forEach(l=>{ const b=document.createElement("button"); b.type="button"; b.dataset.l=l; b.textContent=l.toUpperCase(); b.onclick=()=>setLang(l); $("langs").appendChild(b); });
+$("f").addEventListener("submit",e=>{ e.preventDefault(); const v=$("q").value.trim(); if(!v) return; addMsg(esc(v),"user"); $("q").value=""; answer(v); });
+setLang("pt");
+</script>
+</body>
+</html>
