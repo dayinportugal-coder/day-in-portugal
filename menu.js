@@ -1,7 +1,7 @@
 /* Day in Portugal — site menu.
    This file is the only menu definition. To add a guide, add one
    { href, label } object to the right group. An empty group is not shown.
-   Lisboa lists the Lisbon guides. */
+   Lisbon lists the Lisbon guides. */
 (function () {
   var MENU = [
     {
@@ -25,7 +25,7 @@
     },
     {
       id: "cidades",
-      label: "Day trips / Cidades",
+      label: "Day trips",
       items: [
         { href: "/porto-day-trips", label: "Day trips from Porto" },
         { href: "/douro-day", label: "Douro Valley" },
@@ -36,7 +36,7 @@
     },
     {
       id: "vistos",
-      label: "Vistos e mudar-se",
+      label: "Visas and moving",
       items: [
         { href: "/portugal-d7-visa", label: "Portugal D7 visa" },
         { href: "/portugal-d8-digital-nomad-visa", label: "Portugal D8 digital nomad visa" }
@@ -44,7 +44,7 @@
     },
     {
       id: "lisboa",
-      label: "Lisboa",
+      label: "Lisbon",
       items: [
         { href: "/lisbon-3-days", label: "3 days in Lisbon" },
         { href: "/sintra-day-trip", label: "Sintra day trip" },
@@ -57,24 +57,24 @@
     },
     {
       id: "loja",
-      label: "Loja",
+      label: "Shop",
       items: [
         { href: "/loja.html", label: "Gifts from Portugal" }
       ]
     },
     {
       id: "servicos",
-      label: "Serviços",
+      label: "Services",
       items: [
-        { href: "/demos/", label: "Demonstrações" },
-        { href: "/demos/31-de-janeiro/", label: "Demo: Restaurante 31 de Janeiro" },
+        { href: "/demos/", label: "Demos" },
+        { href: "/demos/31-de-janeiro/", label: "Demo: 31 de Janeiro restaurant" },
         { href: "/demos/o-poboa/", label: "Demo: Ó Poboa Guesthouse" },
         { href: "/demos/autor-guesthouse/", label: "Demo: Autor Guesthouse" },
-        { href: "/demos/restaurante-exemplo/", label: "Demo: restaurante exemplo" },
-        { href: "/demos/al-exemplo/", label: "Demo: alojamento exemplo" },
-        { href: "/demos/clinica-exemplo/", label: "Demo: clínica exemplo" },
-        { href: "/demos/imobiliaria-exemplo/", label: "Demo: imobiliária exemplo" },
-        { href: "/privacidade-servicos", label: "Privacidade (serviços)" }
+        { href: "/demos/restaurante-exemplo/", label: "Demo: sample restaurant" },
+        { href: "/demos/al-exemplo/", label: "Demo: sample guesthouse" },
+        { href: "/demos/clinica-exemplo/", label: "Demo: sample clinic" },
+        { href: "/demos/imobiliaria-exemplo/", label: "Demo: sample estate agency" },
+        { href: "/privacidade-servicos", label: "Privacy (services)" }
       ]
     },
     {
