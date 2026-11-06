@@ -20,3 +20,5 @@ Photos added for the guide heroes and the home page. All are real photographs. E
 | `costa-nova-palheiros.webp` | [Palheiros da Costa Nova - Portugal (16367348673).jpg](https://commons.wikimedia.org/wiki/File:Palheiros_da_Costa_Nova_-_Portugal_(16367348673).jpg) | Vitor Oliveira from Torres Vedras, PORTUGAL | [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0) | https://upload.wikimedia.org/wikipedia/commons/1/10/Palheiros_da_Costa_Nova_-_Portugal_%2816367348673%29.jpg |
 
 The Cálem cellar photo (`calem-cellars.webp`) also had a photographer watermark along the bottom edge cropped off before the WebP encode. No other crops or retouching.
+
+Last updated: 2026-11-06
