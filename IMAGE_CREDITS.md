@@ -21,3 +21,22 @@ Favicon / app icons (`favicon.svg`, `favicon.ico`, `*.png` icons) are a simple '
 
 - douro-valley — "Portugal Vallée du Douro (8121915978).jpg" by peuplier from Switzerland Suisse romande, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Portugal_Vall%C3%A9e_du_Douro_(8121915978).jpg
 | `claus-porto-soap-800.webp` | [Claus Porto (À Antiga Portuguesa).jpg](https://commons.wikimedia.org/wiki/File:Claus_Porto_(%C3%80_Antiga_Portuguesa).jpg) | Tinta Social | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0) | Bring — Soap from Claus Porto (square crop, resized, WebP; photo taken in a Cascais shop, alt text does not claim Porto) |
+
+## Added with the sticky menu (November 2026)
+
+See also `img/CREDITS.md` for source URLs. Same photographers and licences as `/credits`.
+
+- `livraria-lello.webp` — Livraria Lello, Porto (32727410642).jpg — WASD42 — CC BY 2.0 — https://commons.wikimedia.org/wiki/File:Livraria_Lello,_Porto_(32727410642).jpg
+- `aveiro-moliceiros.webp` — Moliceiros na Ria de Aveiro.jpg — Inês Severiano — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Moliceiros_na_Ria_de_Aveiro.jpg
+- `braga-bom-jesus.webp` — Braga bom jesus monte escadaria (2).JPG — Carlos Luis M C da Cruz — CC0 — https://commons.wikimedia.org/wiki/File:Braga_bom_jesus_monte_escadaria_(2).JPG
+- `guimaraes-castle.webp` — Exterior view of Castelo de Guimarães 03.jpg — John Samuel — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Exterior_view_of_Castelo_de_Guimar%C3%A3es_03.jpg
+- `povoa-beach.webp` — Praia da Lagoa - Póvoa de Varzim (145735150).jpg — Vitor Oliveira from Torres Vedras, PORTUGAL — CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:Praia_da_Lagoa_-_P%C3%B3voa_de_Varzim_(145735150).jpg
+- `lisbon-praca-comercio.webp` — Lisbon Praça do Comércio BW 2018-10-03 13-31-10.jpg — Berthold Werner — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Lisbon_Pra%C3%A7a_do_Com%C3%A9rcio_BW_2018-10-03_13-31-10.jpg
+- `lisbon-tram-28.webp` — Tram of line 28E on Rua Augusto Rosa in Lisbon, 20250603 2011 9033.jpg — Jakub Hałun — CC BY 4.0 — https://commons.wikimedia.org/wiki/File:Tram_of_line_28E_on_Rua_Augusto_Rosa_in_Lisbon,_20250603_2011_9033.jpg
+- `porto-airport.webp` — Aeroporto Francisco Sá Carneiro.jpeg — Robot8A — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Aeroporto_Francisco_S%C3%A1_Carneiro.jpeg
+- `bolhao-market.webp` — Mercado do Bolhão a Porto (Portugal).jpg — Brunnaiz — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Mercado_do_Bolh%C3%A3o_a_Porto_(Portugal).jpg
+- `sao-bento-station.webp` — Estación de tren São Bento, Oporto, Portugal, 2019-06-02, DD 05.jpg — Diego Delso — CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:Estaci%C3%B3n_de_tren_S%C3%A3o_Bento,_Oporto,_Portugal,_2019-06-02,_DD_05.jpg
+- `metro-porto.webp` — Metro do Porto (407708996).jpg — Cornelius Kibelka from Berlin, Germany — CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:Metro_do_Porto_(407708996).jpg
+- `fado-porto.webp` — Porto et fado 14 (33105387052).jpg — Alain Rouiller — CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:Porto_et_fado_14_(33105387052).jpg
+- `calem-cellars.webp` — Caves Cálem - Vila Nova de Gaia - Portugal (53194242277).jpg — Vitor Oliveira from Torres Vedras, PORTUGAL — CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:Caves_C%C3%A1lem_-_Vila_Nova_de_Gaia_-_Portugal_(53194242277).jpg
+- `costa-nova-palheiros.webp` — Palheiros da Costa Nova - Portugal (16367348673).jpg — Vitor Oliveira from Torres Vedras, PORTUGAL — CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:Palheiros_da_Costa_Nova_-_Portugal_(16367348673).jpg
