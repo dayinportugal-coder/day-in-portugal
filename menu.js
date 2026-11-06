@@ -1,7 +1,7 @@
 /* Day in Portugal — site menu.
    This file is the only menu definition. To add a guide, add one
    { href, label } object to the right group. An empty group is not shown.
-   Lisboa is ready for the Lisbon pages: uncomment or add items below. */
+   Lisboa lists the Lisbon guides. */
 (function () {
   var MENU = [
     {
@@ -46,13 +46,13 @@
       id: "lisboa",
       label: "Lisboa",
       items: [
-        // { href: "/lisbon-3-days", label: "3 days in Lisbon" },
-        // { href: "/sintra-day-trip", label: "Sintra day trip" },
-        // { href: "/cascais-day-trip", label: "Cascais day trip" },
-        // { href: "/evora-obidos-day-trip", label: "Évora and Óbidos" },
-        // { href: "/lisbon-where-to-stay", label: "Where to stay in Lisbon" },
-        // { href: "/lisbon-book-first", label: "Book before Lisbon" },
-        // { href: "/lisbon-airport-transfer", label: "Lisbon airport transfer" }
+        { href: "/lisbon-3-days", label: "3 days in Lisbon" },
+        { href: "/sintra-day-trip", label: "Sintra day trip" },
+        { href: "/cascais-day-trip", label: "Cascais day trip" },
+        { href: "/evora-day-trip", label: "Évora day trip" },
+        { href: "/lisbon-where-to-stay", label: "Where to stay in Lisbon" },
+        { href: "/lisbon-book-first", label: "Book before Lisbon" },
+        { href: "/lisbon-airport-transfer", label: "Lisbon airport transfer" }
       ]
     },
     {
