@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="/styles.css" />
   <link rel="stylesheet" href="/consent.css" />
   <script src="/consent.js" defer></script>
+  <script src="/menu.js" defer></script>
   <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Day in Portugal", "item": "https://dayinportugal.com/"}, {"@type": "ListItem", "position": 2, "name": "Braga and Guimarães day trip", "item": "https://dayinportugal.com/braga-guimaraes-day-trip"}]}, {"@context": "https://schema.org", "@type": "Article", "headline": "Braga and Guimarães day trip from Porto", "description": "How to do Braga and Guimarães in one day from Porto: what a guided day trip covers (Bom Jesus, Braga cathedral, Guimarães castle), train versus tour versus hire car, and which tour to book.", "inLanguage": "en", "mainEntityOfPage": "https://dayinportugal.com/braga-guimaraes-day-trip", "datePublished": "2026-10-24", "dateModified": "2026-10-24", "author": {"@type": "Person", "name": "Pedro Carvalho"}, "publisher": {"@type": "Organization", "name": "Day in Portugal", "url": "https://dayinportugal.com/"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can you do Braga and Guimarães in one day from Porto?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Both are about an hour from Porto and close to each other, so organised day trips combine them: Braga in the morning (Bom Jesus, the cathedral, the old centre), Guimarães in the afternoon (the castle and the medieval centre)."}}, {"@type": "Question", "name": "Is it better to take the train or a tour to Braga and Guimarães?", "acceptedAnswer": {"@type": "Answer", "text": "For one town, the train is easy — both have direct trains from Porto. For both in one day, a tour or a hire car saves a lot of time, because there is no quick train between Braga and Guimarães."}}, {"@type": "Question", "name": "What is Bom Jesus do Monte?", "acceptedAnswer": {"@type": "Answer", "text": "A sanctuary on a hill above Braga, reached by a long Baroque zigzag stairway or by a historic funicular. It is a UNESCO World Heritage site."}}]}]</script>
 </head>
 <body>
@@ -36,11 +37,16 @@
   <header class="top">
     <div class="top-inner">
       <a class="logo" href="/"><span class="logo-mark" aria-hidden="true">D</span>Day in Portugal</a>
-      <nav aria-label="Main"><a href="/book">Book in Porto</a><a href="/douro-day">Douro Valley</a><a href="/stay">Where to sleep</a><a href="/bring">What to bring home</a><a href="/loja.html">Loja</a></nav>
+      <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu"><span class="menu-bars" aria-hidden="true"></span></button>
+      <nav id="site-menu" class="site-menu" aria-label="Main"></nav>
       <a class="top-ig" href="https://www.instagram.com/dayinportugal/" rel="me noopener" target="_blank" aria-label="Day in Portugal on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.2.8-.4.4-.6.7-.8 1.2-.2.4-.3 1-.4 2.1C2.7 9.8 2.7 10.2 2.7 12s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.2.4.4.7.6 1.2.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.2-.8.4-.4.6-.7.8-1.2.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.2-.4-.4-.7-.6-1.2-.8-.4-.2-1-.3-2.1-.4C15.5 4 15.1 4 12 4zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 8.1a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.2-8.3a1.1 1.1 0 1 1-2.3 0 1.1 1.1 0 0 1 2.3 0z"/></svg></a>
     </div>
   </header>
   <main id="main" class="wrap">
+  <figure class="guide-hero">
+    <img src="/img/braga-bom-jesus.webp" width="1600" height="1107" alt="The baroque stairway of Bom Jesus do Monte above Braga, looking down toward the city" fetchpriority="high" decoding="async" />
+    <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Braga_bom_jesus_monte_escadaria_(2).JPG" rel="noopener" target="_blank">Carlos Luis M C da Cruz</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license noopener" target="_blank">CC0</a>, via Wikimedia Commons. Resized and converted to WebP.</figcaption>
+  </figure>
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Day in Portugal</a> <span aria-hidden="true">/</span> Braga and Guimarães day trip</nav>
     <p class="kicker">From Porto · the Minho</p>
     <h1 class="page">Braga and Guimarães in a day: Bom Jesus in the morning, the castle after lunch.</h1>
@@ -50,7 +56,11 @@
     <section aria-labelledby="what-h">
       <h2 class="h-section" id="what-h">What you see</h2>
       <p><strong>Braga</strong> is a lively university and church town. Above it, <strong>Bom Jesus do Monte</strong> — a UNESCO World Heritage site — climbs the hill in a zigzag of Baroque stairs, fountains and chapels; a historic funicular saves the climb if you want it. In town, the <strong>Sé</strong>, the cathedral, is one of the oldest in Portugal, and the old centre around it is easy to walk.</p>
-      <p><strong>Guimarães</strong>, about half an hour away, has a medieval centre that is itself a UNESCO World Heritage site: granite squares, balconies, and the hilltop <strong>castle</strong> tied to the founding of the kingdom. Next to it is the Palace of the Dukes of Bragança. Look for the wall in town that reads <em>Aqui nasceu Portugal</em> — “Portugal was born here”.</p>
+      <figure class="guide-hero">
+    <img src="/img/guimaraes-castle.webp" width="1360" height="907" alt="Guimarães Castle on its hill above the old town" loading="lazy" decoding="async" />
+    <figcaption>Photo: <a href="https://commons.wikimedia.org/wiki/File:Exterior_view_of_Castelo_de_Guimar%C3%A3es_03.jpg" rel="noopener" target="_blank">John Samuel</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener" target="_blank">CC BY-SA 4.0</a>, via Wikimedia Commons. Resized and converted to WebP.</figcaption>
+  </figure>
+    <p><strong>Guimarães</strong>, about half an hour away, has a medieval centre that is itself a UNESCO World Heritage site: granite squares, balconies, and the hilltop <strong>castle</strong> tied to the founding of the kingdom. Next to it is the Palace of the Dukes of Bragança. Look for the wall in town that reads <em>Aqui nasceu Portugal</em> — “Portugal was born here”.</p>
     </section>
 
     <section aria-labelledby="tour-h">
