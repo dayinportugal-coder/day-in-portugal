@@ -240,3 +240,8 @@ section { margin-top: 3rem; }
 .tile .fine { display: block; margin-top: .35rem; }
 @media (min-width: 760px) { .tiles.quad { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 1000px) { .tiles.quad { grid-template-columns: repeat(4, 1fr); } }
+/* Lisbon guide photos: credit under the shot, no extra page width */
+.shot-fig { margin: 0 0 .2rem; max-width: 100%; }
+.shot-fig .shot { margin-bottom: 0; }
+.shot-fig .fine { margin-top: .4rem; overflow-wrap: anywhere; }
+.area > .shot-fig .fine { padding: 0 .9rem; }
