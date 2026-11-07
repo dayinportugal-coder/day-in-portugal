@@ -1,35 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://dayinportugal.com/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/book</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/book</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/book</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/book</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/book</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/stay</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/stay</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/stay</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/stay</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/stay</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/bring</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/bring</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/bring</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/bring</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/bring</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/douro-day</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/douro-day</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/douro-day</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/douro-day</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/douro-day</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/privacy</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/privacy</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/privacy</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/privacy</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/privacy</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/privacidade-servicos</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/privacidade-servicos</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/privacidade-servicos</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/privacidade-servicos</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/privacidade-servicos</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/disclosure</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/disclosure</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/disclosure</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/disclosure</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/disclosure</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/book-first</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/book-first</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/book-first</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/book-first</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/book-first</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/porto-3-days</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/porto-3-days</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/porto-3-days</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/porto-3-days</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/porto-3-days</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/povoa-base</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/povoa-base</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/povoa-base</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/povoa-base</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/povoa-base</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/rent-car</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/rent-car</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/rent-car</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/rent-car</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/rent-car</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/gaia-port-cellars</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/gaia-port-cellars</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/gaia-port-cellars</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/gaia-port-cellars</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/gaia-port-cellars</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/porto-airport-transfer</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/porto-airport-transfer</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/porto-airport-transfer</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/porto-airport-transfer</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/porto-airport-transfer</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/porto-day-trips</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/porto-day-trips</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/porto-day-trips</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/porto-day-trips</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/porto-day-trips</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/porto-food-tours</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/porto-food-tours</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/porto-food-tours</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/porto-food-tours</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/porto-food-tours</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/livraria-lello-tickets</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/livraria-lello-tickets</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/livraria-lello-tickets</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/livraria-lello-tickets</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/livraria-lello-tickets</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/porto-river-cruise</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/porto-river-cruise</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/porto-river-cruise</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/porto-river-cruise</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/porto-river-cruise</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/fado-in-porto</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/fado-in-porto</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/fado-in-porto</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/fado-in-porto</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/fado-in-porto</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/braga-guimaraes-day-trip</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/braga-guimaraes-day-trip</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/braga-guimaraes-day-trip</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/braga-guimaraes-day-trip</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/braga-guimaraes-day-trip</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/aveiro-day-trip</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/aveiro-day-trip</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/aveiro-day-trip</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/aveiro-day-trip</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/aveiro-day-trip</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/credits</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/credits</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/credits</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/credits</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/credits</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/portugal-d7-visa</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/portugal-d7-visa</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/portugal-d7-visa</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/portugal-d7-visa</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/portugal-d7-visa</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/portugal-d8-digital-nomad-visa</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/portugal-d8-digital-nomad-visa</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/portugal-d8-digital-nomad-visa</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/portugal-d8-digital-nomad-visa</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/portugal-d8-digital-nomad-visa</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/loja.html</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/loja.html</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/loja.html</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/loja.html</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/loja.html</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/lisbon-3-days</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/lisbon-3-days</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/lisbon-3-days</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/lisbon-3-days</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/lisbon-3-days</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/sintra-day-trip</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/sintra-day-trip</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/sintra-day-trip</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/sintra-day-trip</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/sintra-day-trip</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/cascais-day-trip</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/cascais-day-trip</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/cascais-day-trip</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/cascais-day-trip</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/cascais-day-trip</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/evora-day-trip</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/evora-day-trip</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/evora-day-trip</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/evora-day-trip</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/evora-day-trip</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/lisbon-where-to-stay</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/lisbon-where-to-stay</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/lisbon-where-to-stay</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/lisbon-where-to-stay</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/lisbon-where-to-stay</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/lisbon-book-first</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/lisbon-book-first</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/lisbon-book-first</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/lisbon-book-first</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/lisbon-book-first</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://dayinportugal.com/lisbon-airport-transfer</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/es/lisbon-airport-transfer</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/fr/lisbon-airport-transfer</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/de/lisbon-airport-transfer</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://dayinportugal.com/pt/lisbon-airport-transfer</loc><lastmod>2026-11-06</lastmod></url>
 </urlset>

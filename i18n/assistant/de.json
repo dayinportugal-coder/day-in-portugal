@@ -1,0 +1,457 @@
+{
+  "title": "Hilfe beim Buchen",
+  "close": "Schließen",
+  "send": "Senden",
+  "placeholder": "Tickets, ein Transfer, eine Unterkunft…",
+  "intro": "Sagen Sie, was Sie in Lissabon, Porto oder für einen Tagesausflug brauchen. Wir zeigen den Guide und die Partnerseite. Wir nehmen kein Geld an und sehen weder Preise noch Verfügbarkeit live.",
+  "note": "Wir fragen nie nach Zahlung oder Ausweisen. Der einzige Kontakt ist dayinportugal@gmail.com.",
+  "sensitive": "Wir fragen nie nach Zahlung, Kartennummern oder Ausweisen. Was Sie tippen, wird nicht an uns gesendet. Der einzige Kontakt ist dayinportugal@gmail.com.",
+  "priceNote": "Wir können keinen Preis und keinen freien Platz zusagen. Es gilt die Partnerseite.",
+  "fallback": "Ich kann Tickets und Touren, Flughafentransfers, Unterkünfte, Mietwagen, Gepäckaufbewahrung und eine eSIM zeigen, für Lissabon, Porto und die Tagesausflüge. Nutzen Sie einen Knopf oder schreiben Sie an dayinportugal@gmail.com.",
+  "fallbackLinks": [
+    {
+      "href": "/book",
+      "label": "In Porto buchen",
+      "ext": false
+    },
+    {
+      "href": "/lisbon-book-first",
+      "label": "Vor Lissabon buchen",
+      "ext": false
+    },
+    {
+      "href": "mailto:dayinportugal@gmail.com",
+      "label": "dayinportugal@gmail.com",
+      "ext": false
+    }
+  ],
+  "quick": [
+    {
+      "id": "tickets-porto",
+      "label": "Tickets in Porto"
+    },
+    {
+      "id": "tickets-lisbon",
+      "label": "Tickets in Lissabon"
+    },
+    {
+      "id": "transfer",
+      "label": "Flughafentransfer"
+    },
+    {
+      "id": "stay",
+      "label": "Unterkunft"
+    },
+    {
+      "id": "car",
+      "label": "Mietwagen"
+    },
+    {
+      "id": "day",
+      "label": "Tagesausflüge"
+    },
+    {
+      "id": "practical",
+      "label": "eSIM und Gepäck"
+    }
+  ],
+  "intents": [
+    {
+      "id": "tickets-porto",
+      "keywords": [
+        "ticket",
+        "tickets",
+        "fahrt",
+        "kreuzfahrt",
+        "keller",
+        "lello",
+        "fado",
+        "tour",
+        "buchen",
+        "gaia",
+        "brucke",
+        "brücke",
+        "brucken",
+        "brücken",
+        "wein"
+      ],
+      "answer": "In Porto buchen Sie vor dem Flug, was eine Uhrzeit hat: die Fahrt unter den sechs Brücken, einen Keller in Gaia, die Livraria Lello, wenn Ihnen die Treppe wichtig ist. Der Guide sagt, was sich lohnt. Preis und Zeit stehen auf der Partnerseite.",
+      "links": [
+        {
+          "href": "/book",
+          "label": "In Porto buchen",
+          "ext": false
+        },
+        {
+          "href": "/porto-river-cruise",
+          "label": "Fahrt unter den sechs Brücken",
+          "ext": false
+        },
+        {
+          "href": "/gaia-port-cellars",
+          "label": "Portweinkeller in Gaia",
+          "ext": false
+        },
+        {
+          "href": "/livraria-lello-tickets",
+          "label": "Livraria Lello",
+          "ext": false
+        },
+        {
+          "href": "/fado-in-porto",
+          "label": "Fado in Porto",
+          "ext": false
+        },
+        {
+          "href": "/porto-food-tours",
+          "label": "Ess- und Weintouren",
+          "ext": false
+        },
+        {
+          "href": "https://www.getyourguide.com/porto-l151/porto-bridges-cruise-with-option-wine-cellar-tour-or-sunset-t402384/?partner_id=QYSYONP&utm_medium=online_publisher",
+          "label": "Sechs-Brücken-Fahrt bei GetYourGuide",
+          "ext": true
+        }
+      ],
+      "price": false
+    },
+    {
+      "id": "tickets-lisbon",
+      "keywords": [
+        "lissabon",
+        "lissabon",
+        "pena",
+        "sintra",
+        "jeronimos",
+        "belem",
+        "belém",
+        "oceanario",
+        "strassenbahn",
+        "straßenbahn",
+        "ticket",
+        "kloster",
+        "turm"
+      ],
+      "answer": "In Lissabon sind die Türen mit Zeitfenster die, die ausgehen: Pena, und die Jerónimos, wenn Sie den Kreuzgang wollen. Beginnen Sie mit den drei Tagen und mit der Seite, was Sie vor dem Flug buchen.",
+      "links": [
+        {
+          "href": "/lisbon-3-days",
+          "label": "3 Tage in Lissabon",
+          "ext": false
+        },
+        {
+          "href": "/sintra-day-trip",
+          "label": "Tagesausflug nach Sintra",
+          "ext": false
+        },
+        {
+          "href": "/lisbon-book-first",
+          "label": "Vor Lissabon buchen",
+          "ext": false
+        },
+        {
+          "href": "https://tp.media/r?campaign_id=89&marker=784671&p=2074&sub_id=dayinportugal.com&trs=580652&u=https%3A%2F%2Fwww.tiqets.com%2Fen%2Fsintra-attractions-c76496%2Ftickets-for-national-palace-of-pena-park-entry-ticket-p1120392%2F",
+          "label": "Pena bei Tiqets",
+          "ext": true
+        },
+        {
+          "href": "https://tp.media/r?campaign_id=89&marker=784671&p=2074&sub_id=dayinportugal.com&trs=580652&u=https%3A%2F%2Fwww.tiqets.com%2Fen%2Flisbon-attractions-c76528%2Ftickets-for-jeronimos-monastery-entry-p1012358%2F",
+          "label": "Jerónimos bei Tiqets",
+          "ext": true
+        }
+      ],
+      "price": false
+    },
+    {
+      "id": "transfer",
+      "keywords": [
+        "transfer",
+        "flughafen",
+        "taxi",
+        "abholung",
+        "flug",
+        "landung",
+        "kiwi",
+        "welcome"
+      ],
+      "answer": "Der Flughafen Porto liegt an der Metro. Der Flughafen Lissabon an der roten Linie. Ein vorgebuchtes Auto ist für eine späte Landung oder viel Gepäck. Den Fahrpreis nennen wir nicht.",
+      "links": [
+        {
+          "href": "/porto-airport-transfer",
+          "label": "Vom Flughafen Porto in die Stadt",
+          "ext": false
+        },
+        {
+          "href": "/lisbon-airport-transfer",
+          "label": "Vom Flughafen Lissabon in die Stadt",
+          "ext": false
+        },
+        {
+          "href": "https://tp.media/r?campaign_id=627&marker=784671&p=8919&sub_id=dayinportugal.com&trs=580652&u=https%3A%2F%2Fwww.welcomepickups.com%2Fporto%2Fairport-transfer%2F",
+          "label": "Welcome Pickups in Porto",
+          "ext": true
+        },
+        {
+          "href": "https://tp.media/r?campaign_id=1&marker=784671&p=647&sub_id=dayinportugal.com&trs=580652&u=https%3A%2F%2Fkiwitaxi.com%2Fen%2Fportugal%2Fporto-airport",
+          "label": "Kiwitaxi vom Flughafen Porto",
+          "ext": true
+        },
+        {
+          "href": "https://tp.media/r?campaign_id=1&marker=784671&p=647&sub_id=dayinportugal.com&trs=580652&u=https%3A%2F%2Fkiwitaxi.com%2Fen%2Fportugal%2Fhumberto-delgado-airport",
+          "label": "Kiwitaxi vom Flughafen Lissabon",
+          "ext": true
+        }
+      ],
+      "price": false
+    },
+    {
+      "id": "stay",
+      "keywords": [
+        "ubernachten",
+        "übernachten",
+        "hotel",
+        "unterkunft",
+        "zimmer",
+        "airbnb",
+        "viertel",
+        "hostel"
+      ],
+      "answer": "Wo Sie schlafen, verändert die Reise. In Porto würden wir Cedofeita oder Bonfim nehmen, nicht die lauteste Ecke der Ribeira. In Lissabon sind Baixa und Chiado die einfache Basis. Suchen Sie über den Guide — wir haben keine Live-Zimmer.",
+      "links": [
+        {
+          "href": "/stay",
+          "label": "Wo in Porto übernachten",
+          "ext": false
+        },
+        {
+          "href": "/lisbon-where-to-stay",
+          "label": "Wo in Lissabon übernachten",
+          "ext": false
+        }
+      ],
+      "price": false
+    },
+    {
+      "id": "car",
+      "keywords": [
+        "auto",
+        "mietwagen",
+        "mieten",
+        "fahren",
+        "auto europe"
+      ],
+      "answer": "In Porto oder Lissabon brauchen Sie meist kein Auto. Mieten Sie eines fürs Douro-Tal, wenn Sie weder Zug noch geführten Tag nehmen. Vergleichen Sie die Selbstbeteiligung, bevor Sie zahlen. Wir sehen nicht, welche Autos frei sind.",
+      "links": [
+        {
+          "href": "/rent-car",
+          "label": "Auto oder Metro?",
+          "ext": false
+        },
+        {
+          "href": "https://autoeurope.tpx.li/YUpIVJHl",
+          "label": "Mietwagen bei Auto Europe vergleichen",
+          "ext": true
+        },
+        {
+          "href": "https://tp.media/r?campaign_id=87&marker=784671&p=2043&sub_id=dayinportugal.com&trs=580652&u=https%3A%2F%2Fwww.localrent.com%2Fen%2Fportugal%2Fporto%2F",
+          "label": "Lokale Verleiher in Porto",
+          "ext": true
+        },
+        {
+          "href": "https://tp.media/r?campaign_id=87&marker=784671&p=2043&sub_id=dayinportugal.com&trs=580652&u=https%3A%2F%2Fwww.localrent.com%2Fen%2Fportugal%2Flisbon%2F",
+          "label": "Mietwagen in Lissabon vergleichen",
+          "ext": true
+        }
+      ],
+      "price": false
+    },
+    {
+      "id": "day",
+      "keywords": [
+        "douro",
+        "sintra",
+        "evora",
+        "évora",
+        "cascais",
+        "aveiro",
+        "braga",
+        "guimaraes",
+        "guimarães",
+        "tagesausflug",
+        "ausflug",
+        "povoa",
+        "póvoa"
+      ],
+      "answer": "Tagesausflüge, die wir wirklich beschreiben: das Douro-Tal ab Porto, Sintra, Cascais und Évora ab Lissabon, dazu Aveiro, Braga und Guimarães. Nehmen Sie den Guide, und die Partnerseite, wenn Sie den Tag geführt wollen.",
+      "links": [
+        {
+          "href": "/porto-day-trips",
+          "label": "Tagesausflüge ab Porto",
+          "ext": false
+        },
+        {
+          "href": "/douro-day",
+          "label": "Douro-Tal",
+          "ext": false
+        },
+        {
+          "href": "/sintra-day-trip",
+          "label": "Sintra",
+          "ext": false
+        },
+        {
+          "href": "/cascais-day-trip",
+          "label": "Cascais",
+          "ext": false
+        },
+        {
+          "href": "/evora-day-trip",
+          "label": "Évora",
+          "ext": false
+        },
+        {
+          "href": "/aveiro-day-trip",
+          "label": "Aveiro",
+          "ext": false
+        },
+        {
+          "href": "/braga-guimaraes-day-trip",
+          "label": "Braga und Guimarães",
+          "ext": false
+        },
+        {
+          "href": "https://www.getyourguide.com/porto-l151/from-porto-douro-valley-w-boat-tour-wine-tasting-lunch-t73660/?partner_id=QYSYONP&utm_medium=online_publisher",
+          "label": "Ein Douro-Tag bei GetYourGuide",
+          "ext": true
+        }
+      ],
+      "price": false
+    },
+    {
+      "id": "practical",
+      "keywords": [
+        "esim",
+        "sim",
+        "gepack",
+        "gepäck",
+        "koffer",
+        "aufbewahrung",
+        "daten",
+        "internet",
+        "saily",
+        "yesim"
+      ],
+      "answer": "Installieren Sie eine eSIM vor der Landung, wenn das Handy frei geschaltet ist. Geben Sie das Gepäck bei Radical Storage ab, wenn das Zimmer noch nicht bereit ist. Tarife und Schließfächer ändern sich — das aktuelle Angebot steht auf der Partnerseite.",
+      "links": [
+        {
+          "href": "/book-first",
+          "label": "Vor dem Flug buchen (Porto)",
+          "ext": false
+        },
+        {
+          "href": "/lisbon-book-first",
+          "label": "Vor Lissabon buchen",
+          "ext": false
+        },
+        {
+          "href": "https://tp.media/r?campaign_id=629&marker=784671&p=8979&sub_id=dayinportugal.com&trs=580652&u=https%3A%2F%2Fsaily.com%2Fesim-portugal%2F",
+          "label": "Portugal-eSIM bei Saily",
+          "ext": true
+        },
+        {
+          "href": "https://tp.media/r?campaign_id=224&marker=784671&p=5998&sub_id=dayinportugal.com&trs=580652&u=https%3A%2F%2Fyesim.tech%2Fcountry%2Fportugal%2F",
+          "label": "Portugal-eSIM bei Yesim",
+          "ext": true
+        },
+        {
+          "href": "https://tp.media/r?campaign_id=209&marker=784671&p=5867&sub_id=dayinportugal.com&trs=580652&u=https%3A%2F%2Fradicalstorage.com%2Fluggage-storage%2Fporto",
+          "label": "Gepäckaufbewahrung in Porto",
+          "ext": true
+        },
+        {
+          "href": "https://tp.media/r?campaign_id=209&marker=784671&p=5867&sub_id=dayinportugal.com&trs=580652&u=https%3A%2F%2Fradicalstorage.com%2Fluggage-storage%2Flisbon",
+          "label": "Gepäckaufbewahrung in Lissabon",
+          "ext": true
+        }
+      ],
+      "price": false
+    },
+    {
+      "id": "visa",
+      "keywords": [
+        "visum",
+        "visa",
+        "d7",
+        "d8",
+        "nomade",
+        "nomaden",
+        "aufenthalt",
+        "aima"
+      ],
+      "answer": "Die Seiten zu D7 und D8 sind praktische Notizen mit Links zu den amtlichen Formularen. Das ist keine Rechtsberatung, und die Regeln ändern sich. Lesen Sie den Guide, dann die Seite der Behörde.",
+      "links": [
+        {
+          "href": "/portugal-d7-visa",
+          "label": "Portugal D7 Visum",
+          "ext": false
+        },
+        {
+          "href": "/portugal-d8-digital-nomad-visa",
+          "label": "Portugal D8 Visum",
+          "ext": false
+        }
+      ],
+      "price": false
+    },
+    {
+      "id": "price",
+      "keywords": [
+        "preis",
+        "preise",
+        "kosten",
+        "günstig",
+        "gunstig",
+        "verfugbar",
+        "verfügbar",
+        "verfugbarkeit",
+        "rabatt",
+        "wie viel",
+        "euro"
+      ],
+      "answer": "Wir nennen keine Preise und sagen nicht, ob morgen noch etwas frei ist.",
+      "links": [
+        {
+          "href": "/book",
+          "label": "In Porto buchen",
+          "ext": false
+        },
+        {
+          "href": "/lisbon-book-first",
+          "label": "Vor Lissabon buchen",
+          "ext": false
+        }
+      ],
+      "price": true
+    },
+    {
+      "id": "contact",
+      "keywords": [
+        "email",
+        "kontakt",
+        "mensch",
+        "telefon",
+        "whatsapp",
+        "anrufen"
+      ],
+      "answer": "Der einzige Kontakt ist dayinportugal@gmail.com. Es gibt keine Telefonnummer. Buchungen nehmen wir nicht selbst an.",
+      "links": [
+        {
+          "href": "mailto:dayinportugal@gmail.com",
+          "label": "dayinportugal@gmail.com",
+          "ext": false
+        }
+      ],
+      "price": false
+    }
+  ]
+}
