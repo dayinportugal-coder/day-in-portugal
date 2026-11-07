@@ -5,6 +5,65 @@
   var KEY = "dip-consent-v1";
   var MAX_AGE = 1000 * 60 * 60 * 24 * 182; // ~6 months, then ask again
 
+  function pageLang() {
+    var m = (location.pathname || "/").match(/^\/(es|fr|de|pt)(?=\/|$)/);
+    return m ? m[1] : "en";
+  }
+
+  function langHref(path) {
+    var code = pageLang();
+    if (code === "en") return path;
+    return "/" + code + path;
+  }
+
+  var COPY = {
+    en: {
+      label: "Cookie choice",
+      title: "Cookies, briefly",
+      body: "The site works without them. If you accept, we load a script from our affiliate partner Travelpayouts that can set cookies so a booking you make on GetYourGuide, Booking.com and similar sites is credited to us. Same price for you.",
+      privacy: "Privacy",
+      earn: "How we earn",
+      reject: "Reject",
+      accept: "Accept"
+    },
+    es: {
+      label: "Elección de cookies",
+      title: "Cookies, en breve",
+      body: "El sitio funciona sin ellas. Si aceptas, cargamos un script de nuestro socio de afiliación Travelpayouts, que puede guardar cookies para que una reserva que hagas en GetYourGuide, Booking.com y sitios parecidos se nos atribuya. El precio para ti es el mismo.",
+      privacy: "Privacidad",
+      earn: "Cómo ganamos",
+      reject: "Rechazar",
+      accept: "Aceptar"
+    },
+    fr: {
+      label: "Choix des cookies",
+      title: "Les cookies, en bref",
+      body: "Le site fonctionne sans cookies. Si vous acceptez, nous chargeons un script de notre partenaire d'affiliation Travelpayouts, qui peut déposer des cookies afin qu'une réservation faite sur GetYourGuide, Booking.com et des sites similaires nous soit attribuée. Le prix reste le même pour vous.",
+      privacy: "Confidentialité",
+      earn: "Comment nous gagnons",
+      reject: "Refuser",
+      accept: "Accepter"
+    },
+    de: {
+      label: "Cookie-Auswahl",
+      title: "Cookies, kurz erklärt",
+      body: "Die Seite funktioniert ohne Cookies. Wenn Sie zustimmen, laden wir ein Skript unseres Affiliate-Partners Travelpayouts. Es kann Cookies setzen, damit eine Buchung bei GetYourGuide, Booking.com und ähnlichen Seiten uns zugeordnet wird. Der Preis für Sie bleibt gleich.",
+      privacy: "Datenschutz",
+      earn: "So verdienen wir",
+      reject: "Ablehnen",
+      accept: "Akzeptieren"
+    },
+    pt: {
+      label: "Escolha de cookies",
+      title: "Cookies, em breve",
+      body: "O site funciona sem cookies. Se aceitar, carregamos um script do nosso parceiro de afiliados Travelpayouts, que pode guardar cookies para que uma reserva feita na GetYourGuide, no Booking.com e em sites semelhantes nos seja atribuída. O preço para si é o mesmo.",
+      privacy: "Privacidade",
+      earn: "Como ganhamos",
+      reject: "Recusar",
+      accept: "Aceitar"
+    }
+  };
+
   function read() {
     try {
       var v = JSON.parse(localStorage.getItem(KEY) || "null");
@@ -34,15 +93,16 @@
     box.className = "dip-consent";
     box.setAttribute("role", "dialog");
     box.setAttribute("aria-live", "polite");
-    box.setAttribute("aria-label", "Cookie choice");
+    var copy = COPY[pageLang()] || COPY.en;
+    box.setAttribute("aria-label", copy.label);
     box.hidden = true;
     box.innerHTML =
-      '<h2>Cookies, briefly</h2>' +
-      '<p>The site works without them. If you accept, we load a script from our affiliate partner Travelpayouts that can set cookies so a booking you make on GetYourGuide, Booking.com and similar sites is credited to us. Same price for you. ' +
-      '<a href="/privacy">Privacy</a> · <a href="/disclosure">How we earn</a></p>' +
+      '<h2>' + copy.title + '</h2>' +
+      '<p>' + copy.body + ' ' +
+      '<a href="' + langHref("/privacy") + '">' + copy.privacy + '</a> · <a href="' + langHref("/disclosure") + '">' + copy.earn + '</a></p>' +
       '<div class="dip-actions">' +
-      '<button type="button" data-choice="reject">Reject</button>' +
-      '<button type="button" data-choice="accept">Accept</button>' +
+      '<button type="button" data-choice="reject">' + copy.reject + '</button>' +
+      '<button type="button" data-choice="accept">' + copy.accept + '</button>' +
       '</div>';
     box.addEventListener("click", function (e) {
       var c = e.target && e.target.getAttribute && e.target.getAttribute("data-choice");
