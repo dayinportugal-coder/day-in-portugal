@@ -33,9 +33,18 @@ p { margin: 0 0 1rem; }
 .top-inner { max-width: 1120px; margin: 0 auto; padding: .45rem 1rem; display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .5rem; }
 .logo { display: inline-flex; align-items: center; gap: .55rem; margin-right: auto; font-family: var(--serif); font-weight: 700; font-size: 1.12rem; color: var(--ink); text-decoration: none; }
 .logo-mark { display: inline-grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: 8px; background: var(--sage); color: #f7f3ec; font-size: 1rem; }
-.top-ig { display: inline-grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 999px; color: var(--ink); flex: 0 0 auto; }
-.top-ig svg { width: 1.3rem; height: 1.3rem; }
-.top-ig:hover { background: var(--tile); color: var(--accent); }
+.top-social { display: inline-flex; align-items: center; flex: 0 0 auto; }
+.top-ig, .top-fb { display: inline-grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 999px; color: var(--ink); flex: 0 0 auto; }
+.top-ig svg, .top-fb svg { width: 1.3rem; height: 1.3rem; }
+.top-ig:hover, .top-fb:hover { background: var(--tile); color: var(--accent); }
+@media (max-width: 430px) {
+  .top-inner { padding-left: .65rem; padding-right: .65rem; gap: .2rem .3rem; }
+  .logo { font-size: 1.02rem; gap: .4rem; }
+  .logo-mark { width: 1.7rem; height: 1.7rem; font-size: .9rem; }
+  .menu-toggle { width: 40px; height: 40px; }
+  .lang-btn { width: 42px; height: 40px; }
+  .top-ig, .top-fb { width: 2.15rem; height: 2.15rem; }
+}
 .menu-toggle { display: inline-grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--line); border-radius: 10px; background: var(--card); color: var(--ink); cursor: pointer; }
 .menu-bars, .menu-bars::before, .menu-bars::after { display: block; width: 18px; height: 2px; background: currentColor; border-radius: 2px; position: relative; }
 .menu-bars::before, .menu-bars::after { content: ""; position: absolute; left: 0; }
