@@ -71,43 +71,21 @@
     log.scrollTop = log.scrollHeight;
   }
 
-  function score(intent, n) {
-    var padded = " " + n + " ";
-    var s = 0;
-    (intent.keywords || []).forEach(function (word) {
-      var k = norm(word);
-      if (!k) return;
-      if (k.indexOf(" ") >= 0) {
-        if (n.indexOf(k) >= 0) s += 2;
-      } else if (padded.indexOf(" " + k + " ") >= 0) s += 1;
-    });
-    return s;
-  }
-
   function reply(text, forced) {
     if (sensitive(text)) {
       addMsg(data.sensitive, "bot");
       return;
     }
-    var n = norm(text);
-    var best = null;
-    var bestScore = 0;
-    if (forced) {
-      best = (data.intents || []).filter(function (item) { return item.id === forced; })[0] || null;
-      bestScore = best ? 1 : 0;
-    } else {
-      (data.intents || []).forEach(function (intent) {
-        var s = score(intent, n);
-        if (s > bestScore) { bestScore = s; best = intent; }
-      });
-    }
-    if (!best) {
+    var hit = (window.DIPMatch && window.DIPMatch.matchQuery)
+      ? window.DIPMatch.matchQuery(data, text, forced || null)
+      : null;
+    if (!hit) {
       addMsg(data.fallback, "bot", data.fallbackLinks || []);
       return;
     }
-    var answer = best.answer;
-    if (best.price) answer = answer + " " + data.priceNote;
-    addMsg(answer, "bot", best.links || []);
+    var answer = hit.answer;
+    if (hit.price) answer = answer + " " + data.priceNote;
+    addMsg(answer, "bot", hit.links || []);
   }
 
   function ask(text, forced) {

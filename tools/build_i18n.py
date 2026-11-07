@@ -40,6 +40,7 @@ ASSET_PREFIXES = (
     "/menu.js",
     "/lang.js",
     "/assistant.js",
+    "/assistant-match.js",
     "/assistant.css",
     "/favicon",
     "/apple-touch-icon",
@@ -82,7 +83,7 @@ def load_translations(lang: str) -> dict[str, str]:
 
 
 def is_asset(path: str) -> bool:
-    if path in ("/styles.css", "/consent.css", "/consent.js", "/menu.js", "/lang.js", "/assistant.js", "/assistant.css", "/site.webmanifest", "/robots.txt", "/sitemap.xml", "/favicon.ico", "/favicon.svg", "/favicon-32.png", "/apple-touch-icon.png"):
+    if path in ("/styles.css", "/consent.css", "/consent.js", "/menu.js", "/lang.js", "/assistant.js", "/assistant-match.js", "/assistant.css", "/site.webmanifest", "/robots.txt", "/sitemap.xml", "/favicon.ico", "/favicon.svg", "/favicon-32.png", "/apple-touch-icon.png"):
         return True
     return any(path.startswith(prefix) for prefix in ASSET_PREFIXES)
 
@@ -279,7 +280,7 @@ def set_language_head(soup: BeautifulSoup, lang: str, source_canonical: str) -> 
             menu.insert_before(tag)
         else:
             head.append(tag)
-    for script_src in ("/lang.js", "/assistant.js"):
+    for script_src in ("/lang.js", "/assistant-match.js", "/assistant.js"):
         if not head.find("script", src=script_src):
             tag = soup.new_tag("script", src=script_src)
             tag["defer"] = ""
@@ -382,7 +383,7 @@ def prepare_english() -> None:
         if 'src="/lang.js"' not in html:
             html = html.replace(
                 "</head>",
-                '  <script src="/lang.js" defer></script>\n  <script src="/assistant.js" defer></script>\n</head>',
+                '  <script src="/lang.js" defer></script>\n  <script src="/assistant-match.js" defer></script>\n  <script src="/assistant.js" defer></script>\n</head>',
                 1,
             )
         if 'href="/assistant.css"' not in html and 'href="/styles.css"' in html:
