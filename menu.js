@@ -100,11 +100,57 @@
     return path;
   }
 
-  var here = normPath(location.pathname);
+  var LANG = (location.pathname.match(/^\/(es|fr|de|pt)(?=\/|$)/) || [])[1] || "en";
+  var I18N = window.DIP_I18N || { groups: {}, items: {}, ui: {} };
+
+  function barePath(value) {
+    var path = normPath(value);
+    path = path.replace(/^\/(es|fr|de|pt)(?=\/|$)/, "");
+    if (path === "") path = "/";
+    return path;
+  }
+
+  function tGroup(id, fallback) {
+    var table = I18N.groups[LANG];
+    return (table && table[id]) || fallback;
+  }
+
+  function tItem(href, fallback) {
+    var table = I18N.items[LANG];
+    if (!table) return fallback;
+    if (table[href + "|" + fallback]) return table[href + "|" + fallback];
+    return table[href] || fallback;
+  }
+
+  function tUi(key, fallback) {
+    var table = I18N.ui[LANG];
+    return (table && table[key]) || fallback;
+  }
+
+  function localizeHref(href) {
+    if (LANG === "en") return href;
+    var hash = "";
+    var query = "";
+    var path = href;
+    var hi = path.indexOf("#");
+    if (hi >= 0) { hash = path.slice(hi); path = path.slice(0, hi); }
+    var qi = path.indexOf("?");
+    if (qi >= 0) { query = path.slice(qi); path = path.slice(0, qi); }
+    if (/^(https?:|mailto:)/i.test(path)) return href;
+    var trailing = path.length > 1 && path.endsWith("/");
+    var bare = barePath(path);
+    if (path === "/loja.html") return "/" + LANG + "/loja.html" + query + hash;
+    if (bare === "/") return "/" + LANG + "/" + query + hash;
+    return "/" + LANG + bare + (trailing ? "/" : "") + query + hash;
+  }
+
+  var here = barePath(location.pathname);
   var nav = document.getElementById("site-menu");
   var toggle = document.querySelector(".menu-toggle");
   var header = document.querySelector("header.top");
   if (!nav || !header) return;
+  nav.setAttribute("aria-label", tUi("main", nav.getAttribute("aria-label") || "Main"));
+  if (toggle && LANG !== "en") toggle.setAttribute("aria-label", tUi("open", "Open menu"));
 
   var mobileQuery = window.matchMedia("(max-width: 819px)");
 
@@ -133,7 +179,7 @@
       "aria-expanded": "false",
       "aria-controls": panelId
     });
-    button.appendChild(document.createTextNode(group.label));
+    button.appendChild(document.createTextNode(tGroup(group.id, group.label)));
     var caret = make("span", { "class": "menu-caret", "aria-hidden": "true" });
     button.appendChild(caret);
 
@@ -144,8 +190,8 @@
     var groupHasCurrent = false;
     items.forEach(function (item) {
       var li = make("li");
-      var link = make("a", { href: item.href, text: item.label });
-      if (normPath(item.href) === here) {
+      var link = make("a", { href: localizeHref(item.href), text: tItem(item.href, item.label) });
+      if (barePath(item.href) === here) {
         link.setAttribute("aria-current", "page");
         groupHasCurrent = true;
       }
@@ -184,7 +230,7 @@
     if (!toggle) return;
     nav.classList.toggle("is-open", open);
     toggle.setAttribute("aria-expanded", open ? "true" : "false");
-    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    toggle.setAttribute("aria-label", open ? tUi("close", "Close menu") : tUi("open", "Open menu"));
     if (!open) closePanels(null);
   }
 
@@ -246,7 +292,7 @@
       nav.classList.remove("is-open");
       if (toggle) {
         toggle.setAttribute("aria-expanded", "false");
-        toggle.setAttribute("aria-label", "Open menu");
+        toggle.setAttribute("aria-label", tUi("open", "Open menu"));
       }
     }
   });
