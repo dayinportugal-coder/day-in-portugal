@@ -3,7 +3,7 @@ window.DIP_I18N = {
   groups: {
     es: { porto: "Porto", cidades: "Excursiones", vistos: "Visados y mudanza", lisboa: "Lisboa", loja: "Tienda", servicos: "Servicios", site: "Sitio" },
     fr: { porto: "Porto", cidades: "Excursions", vistos: "Visas et installation", lisboa: "Lisbonne", loja: "Boutique", servicos: "Services", site: "Site" },
-    de: { porto: "Porto", cidades: "Tagesausflüge", vistos: "Visa und Umzug", lisboa: "Lissabon", loja: "Shop", servicos: "Leistungen", site: "Seite" },
+    de: { porto: "Porto", cidades: "Tagesausflüge", vistos: "Visa und Auswandern", lisboa: "Lissabon", loja: "Shop", servicos: "Leistungen", site: "Seite" },
     pt: { porto: "Porto", cidades: "Excursões", vistos: "Vistos e mudança", lisboa: "Lisboa", loja: "Loja", servicos: "Serviços", site: "Site" }
   },
   ui: {
@@ -104,7 +104,7 @@ window.DIP_I18N = {
       "/book": "In Porto buchen",
       "/book-first": "Vor dem Flug buchen",
       "/stay": "Wo übernachten",
-      "/bring": "Was man mitnimmt",
+      "/bring": "Was man mit nach Hause nimmt",
       "/douro-day": "Douro-Tal",
       "/douro-day|Douro day from Porto": "Ein Tag im Douro ab Porto",
       "/gaia-port-cellars": "Portweinkeller in Gaia",
