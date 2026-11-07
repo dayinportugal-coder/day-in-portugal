@@ -183,7 +183,9 @@
     var header = document.querySelector("header.top .top-inner");
     if (header) {
       var ig = header.querySelector(".top-ig");
-      if (ig) header.insertBefore(wrap, ig);
+      var before = ig;
+      if (ig && ig.parentElement && ig.parentElement.classList.contains("top-social")) before = ig.parentElement;
+      if (before) header.insertBefore(wrap, before);
       else header.appendChild(wrap);
       return;
     }
