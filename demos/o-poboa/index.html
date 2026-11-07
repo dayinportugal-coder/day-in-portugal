@@ -53,6 +53,17 @@ form.in button{border:0;background:var(--accent);color:#fff;border-radius:22px;p
 @media (max-width:820px){.sugs{flex-wrap:nowrap;overflow-x:auto}}
 footer{max-width:980px;margin:0 auto;padding:0 14px 30px;font-size:12.5px;color:var(--muted)}
 </style>
+  <link rel="canonical" href="https://dayinportugal.com/demos/o-poboa/" />
+  <link rel="alternate" hreflang="en" href="https://dayinportugal.com/demos/o-poboa/" />
+  <link rel="alternate" hreflang="es" href="https://dayinportugal.com/es/demos/o-poboa/" />
+  <link rel="alternate" hreflang="fr" href="https://dayinportugal.com/fr/demos/o-poboa/" />
+  <link rel="alternate" hreflang="de" href="https://dayinportugal.com/de/demos/o-poboa/" />
+  <link rel="alternate" hreflang="pt" href="https://dayinportugal.com/pt/demos/o-poboa/" />
+  <link rel="alternate" hreflang="x-default" href="https://dayinportugal.com/demos/o-poboa/" />
+<script src="/i18n/menu-labels.js" defer></script>
+  <script src="/lang.js" defer></script>
+  <script src="/assistant.js" defer></script>
+  <link rel="stylesheet" href="/assistant.css" />
 </head>
 <body>
 <div class="banner" role="note"><b>Demo prepared by Pedro Carvalho for Ó Poboa Guesthouse. This is not the official website, and it is not connected to the business.</b> Contact: <a href="mailto:dayinportugal@gmail.com">dayinportugal@gmail.com</a></div>
@@ -160,7 +171,7 @@ function renderSugs(){
     b.onclick=()=>{ addMsg(esc(g[lang]),"user"); answer(g[lang], g.id); }; s.appendChild(b); }
 }
 function setLang(l, silent){
-  lang=l; document.documentElement.lang={pt:"pt-PT",en:"en",fr:"fr",es:"es"}[l];
+  lang=l;
   $("ctitle").textContent=UI[l].title; $("csub").textContent=UI[l].sub; $("q").placeholder=UI[l].ph; $("priv").textContent=UI[l].priv;
   document.querySelectorAll("#langs button").forEach(b=>b.classList.toggle("on",b.dataset.l===l));
   renderSugs(); if(!silent) addMsg(linkify(UI[l].hello),"bot");

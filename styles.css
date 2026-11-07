@@ -245,3 +245,32 @@ section { margin-top: 3rem; }
 .shot-fig .shot { margin-bottom: 0; }
 .shot-fig .fine { margin-top: .4rem; overflow-wrap: anywhere; }
 .area > .shot-fig .fine { padding: 0 .9rem; }
+
+/* Language switcher — flag only on the button, names in the list */
+.lang-switch { position: relative; flex: 0 0 auto; }
+.lang-btn {
+  display: inline-grid; place-items: center;
+  width: 48px; height: 44px; padding: 0;
+  border: 2px solid var(--sage); border-radius: 10px;
+  background: #fff; cursor: pointer; box-shadow: var(--shadow);
+}
+.lang-btn img { width: 30px; height: 20px; object-fit: cover; border-radius: 2px; display: block; box-shadow: 0 0 0 1px rgba(0,0,0,.15); }
+.lang-btn[aria-expanded="true"] { border-color: var(--accent); }
+.lang-menu {
+  position: absolute; top: calc(100% + .35rem); right: 0; z-index: 40;
+  min-width: 12.8rem; margin: 0; padding: .35rem; list-style: none;
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow);
+}
+.lang-menu[hidden] { display: none; }
+.lang-menu a {
+  display: flex; align-items: center; gap: .65rem;
+  padding: .5rem .7rem; border-radius: 8px; color: var(--ink);
+  text-decoration: none; font-weight: 650; min-height: 44px;
+}
+.lang-menu a:hover, .lang-menu a:focus-visible { background: var(--tile); color: var(--ink); }
+.lang-menu a[aria-current="true"] { background: var(--sage); color: #f7f3ec; }
+.lang-menu img { width: 28px; height: 18px; object-fit: cover; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,.12); }
+.lang-switch-fixed { position: fixed; top: .55rem; right: .55rem; z-index: 60; }
+@media (max-width: 819px) {
+  .lang-menu { right: 0; left: auto; }
+}

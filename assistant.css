@@ -1,0 +1,56 @@
+/* Booking help. Under the sticky menu (z-index 30) and the cookie bar (z-index 50). */
+.dip-help { position: fixed; right: max(12px, env(safe-area-inset-right)); bottom: max(12px, env(safe-area-inset-bottom)); z-index: 24; font-family: var(--sans, system-ui, sans-serif); }
+.dip-help-bubble {
+  display: flex; align-items: center; gap: .55rem;
+  max-width: min(280px, calc(100vw - 24px));
+  min-height: 48px;
+  padding: .55rem .85rem .55rem .7rem;
+  border: 0; border-radius: 999px; cursor: pointer;
+  background: var(--sage, #2f4a40); color: #f7f3ec;
+  box-shadow: 0 8px 24px rgba(27, 25, 21, .22);
+  font: inherit; font-size: .92rem; font-weight: 650; text-align: left; line-height: 1.25;
+}
+.dip-help-bubble:hover { background: var(--sage-2, #3d5f52); }
+.dip-help-mark {
+  flex: 0 0 auto; width: 1.7rem; height: 1.7rem; border-radius: 999px;
+  display: grid; place-items: center; background: rgba(255,255,255,.14); font-family: var(--serif, Georgia, serif);
+}
+body:has(.dip-consent:not([hidden])) .dip-help { bottom: 12.5rem; }
+.dip-help-panel {
+  position: absolute; right: 0; bottom: calc(100% + .5rem);
+  width: min(360px, calc(100vw - 24px));
+  max-height: min(70dvh, 520px);
+  display: flex; flex-direction: column;
+  background: var(--card, #fffdf9); color: var(--ink, #1b1915);
+  border: 1px solid var(--line, #e4dccd); border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(27, 25, 21, .2); overflow: hidden;
+}
+.dip-help-panel[hidden] { display: none; }
+.dip-help-head { display: flex; align-items: center; gap: .6rem; padding: .7rem .8rem; background: var(--sage, #2f4a40); color: #f7f3ec; }
+.dip-help-head strong { font-family: var(--serif, Georgia, serif); font-size: 1.02rem; }
+.dip-help-x { margin-left: auto; width: 36px; height: 36px; border: 0; border-radius: 8px; background: transparent; color: inherit; font-size: 1.3rem; cursor: pointer; }
+.dip-help-x:hover { background: rgba(255,255,255,.12); }
+.dip-help-log { flex: 1; overflow: auto; padding: .75rem .8rem; display: flex; flex-direction: column; gap: .55rem; }
+.dip-help-msg { max-width: 95%; padding: .55rem .7rem; border-radius: 12px; font-size: .92rem; line-height: 1.45; white-space: pre-wrap; }
+.dip-help-msg.bot { background: #f3eee4; align-self: flex-start; }
+.dip-help-msg.user { background: var(--sage, #2f4a40); color: #f7f3ec; align-self: flex-end; }
+.dip-help-msg a { color: inherit; }
+.dip-help-msg.bot a { color: var(--sage, #2f4a40); font-weight: 650; }
+.dip-help-links { display: flex; flex-direction: column; gap: .25rem; margin-top: .45rem; }
+.dip-help-links a { display: inline-block; }
+.dip-help-quick { display: flex; gap: .35rem; overflow-x: auto; padding: .45rem .7rem; border-top: 1px solid var(--line, #e4dccd); }
+.dip-help-quick button {
+  flex: none; border: 1px solid var(--line, #e4dccd); background: #fff; color: var(--ink, #1b1915);
+  border-radius: 999px; padding: .35rem .7rem; min-height: 36px; font: inherit; font-size: .82rem; cursor: pointer;
+}
+.dip-help-quick button:hover { border-color: var(--accent, #9a3b2c); color: var(--accent, #9a3b2c); }
+.dip-help-form { display: flex; gap: .4rem; padding: .55rem .7rem .7rem; }
+.dip-help-form input { flex: 1; min-width: 0; border: 1px solid var(--line, #e4dccd); border-radius: 999px; padding: .55rem .8rem; font: inherit; font-size: .92rem; }
+.dip-help-form button { border: 0; border-radius: 999px; background: var(--accent, #9a3b2c); color: #fff; padding: 0 .9rem; min-height: 40px; font: inherit; font-weight: 650; cursor: pointer; }
+.dip-help-note { margin: 0; padding: 0 .8rem .55rem; font-size: .75rem; color: var(--muted, #5b554b); }
+@media (max-width: 819px) {
+  .dip-help-bubble span { max-width: 11.5rem; }
+}
+@media print { .dip-help { display: none !important; } }
+.banner.has-lang { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .6rem; }
+.banner.has-lang .lang-switch { flex: 0 0 auto; }
