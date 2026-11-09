@@ -2,6 +2,7 @@
 """Check generated language pages: files, lang, hreflang, links, affiliates."""
 from __future__ import annotations
 
+import os
 import re
 from html.parser import HTMLParser
 from pathlib import Path
@@ -12,6 +13,21 @@ LANGS = ("en", "es", "fr", "de", "pt")
 HTML_LANG = {"en": "en", "es": "es", "fr": "fr", "de": "de", "pt": "pt-PT"}
 SITE = "dayinportugal.com"
 SKIP = {".git", "tools", "includes"}
+
+
+def banned_words() -> list[str]:
+    """Private word list: BANNED_WORDS env (comma-separated) and/or tools/banned-words.local.txt."""
+    words: list[str] = []
+    env = os.environ.get("BANNED_WORDS", "")
+    if env.strip():
+        words.extend(w.strip() for w in env.split(",") if w.strip())
+    local = ROOT / "tools" / "banned-words.local.txt"
+    if local.is_file():
+        for line in local.read_text(encoding="utf-8", errors="replace").splitlines():
+            line = line.strip()
+            if line and not line.startswith("#"):
+                words.append(line)
+    return words
 
 
 def pages():
@@ -133,8 +149,9 @@ def main() -> int:
             elif lang != "en" and f"/{lang}/" not in grab.canonical and not grab.canonical.rstrip("/").endswith("/" + lang):
                 errors.append(f"canonical not localized {path}: {grab.canonical}")
             raw = path.read_text(encoding="utf-8")
-            if re.search(r"", raw):
-                errors.append(f" found in {path}")
+            for word in banned_words():
+                if word and word in raw:
+                    errors.append(f"banned word found in {path}")
             for href in grab.hrefs:
                 if href.startswith(("#", "mailto:", "tel:", "javascript:")):
                     continue
