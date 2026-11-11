@@ -131,5 +131,10 @@
   "The aim is not to receive personal data. The files I receive are used only to prepare this report, and are not used to train artificial-intelligence models.",
   "If a document nevertheless contains personal data, I process it only on behalf of the client company and according to its instructions, as a processor (GDPR art. 28), and only to prepare the report.",
   "The files received are deleted 90 days after delivery of the final report. Only the invoice and the records the law requires the provider to keep are retained.",
-  "These files are not shared."
+  "These files are not shared.",
+  "Payment.",
+  "Payment and the receipt for VSME Simples are handled by Gumroad. I do not accept direct bank transfers for this service.",
+  "Name, tax number (NIF) and billing address, so I can issue the invoice-receipt and meet tax duties, for services that I invoice directly. For VSME Simples, payment and the receipt are handled by Gumroad; I do not accept direct bank transfers for that service. Legal basis: legal obligation (GDPR art. 6(1)(c)). Retention: the following 10 calendar years (VAT Code, art. 52(1), applied by Article 118 of the personal income tax code).",
+  "Gumroad",
+  "(VSME Simples): payment and the receipt are handled by Gumroad."
 ]
