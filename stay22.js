@@ -40,10 +40,26 @@
     });
   }
 
+  function deactivate() {
+    document.querySelectorAll(".stay22-wrap").forEach(function (wrap) {
+      wrap.removeAttribute("data-stay22-on");
+      var pending = wrap.querySelector(".stay22-pending");
+      var ready = wrap.querySelector(".stay22-ready");
+      if (pending) pending.hidden = false;
+      if (ready) ready.hidden = true;
+      var slot = wrap.querySelector("[data-stay22-map]");
+      if (slot) {
+        slot.removeAttribute("data-stay22-loaded");
+        slot.innerHTML = "";
+      }
+    });
+  }
+
   function init() {
     if (accepted()) activate();
     else if (window.dipConsent && window.dipConsent.onAccept) window.dipConsent.onAccept(activate);
     document.addEventListener("dip-consent-accepted", activate);
+    document.addEventListener("dip-consent-rejected", deactivate);
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
