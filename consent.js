@@ -83,6 +83,9 @@
     acceptListeners.forEach(function (cb) { try { cb(); } catch (e) {} });
     acceptListeners = [];
   }
+  function notifyRejected() {
+    try { document.dispatchEvent(new CustomEvent("dip-consent-rejected")); } catch (e) {}
+  }
   function loadTravelpayouts() {
     if (loaded) return; loaded = true;
     // Exact Travelpayouts Drive snippet from the live site (project 580652).
@@ -117,7 +120,7 @@
       save(c);
       box.hidden = true;
       if (c === "accept") { loadTravelpayouts(); notifyAccepted(); }
-      else if (loaded) location.reload(); // withdrawing consent: drop the already-running script
+      else { notifyRejected(); if (loaded) location.reload(); } // reject or withdraw: hide Stay22 now; reload drops Travelpayouts if it was running
     });
     document.body.appendChild(box);
     return box;
