@@ -283,3 +283,8 @@ section { margin-top: 3rem; }
 @media (max-width: 819px) {
   .lang-menu { right: 0; left: auto; }
 }
+
+/* Stay22 accommodation map — iframe is injected only after cookie consent */
+.stay22-wrap { margin-top: 1rem; }
+.stay22-pending { margin-top: 0.6rem; }
+.stay22-map { width: 100%; height: 380px; border: 0; border-radius: 10px; margin: 0.4rem 0 0.8rem; background: var(--tile); }
