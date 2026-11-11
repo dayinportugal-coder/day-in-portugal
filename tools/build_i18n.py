@@ -51,6 +51,8 @@ ASSET_PREFIXES = (
     "/i18n/",
 )
 SKIP_DIR_PARTS = {".git", "tools", "includes"}
+# Portuguese-only B2B offer; do not translate or overwrite language copies.
+SKIP_PAGES = {"vsme-simples.html"}
 WIDGET_LANG = {"en": "en", "es": "es", "fr": "fr", "de": "en", "pt": "pt"}
 
 
@@ -134,6 +136,8 @@ def iter_pages():
     for path in sorted(ROOT.rglob("*.html")):
         rel = path.relative_to(ROOT)
         if any(part in SKIP_DIR_PARTS or part in LANGS for part in rel.parts):
+            continue
+        if rel.name in SKIP_PAGES:
             continue
         yield rel, path
 
