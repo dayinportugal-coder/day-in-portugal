@@ -36,6 +36,7 @@
   <link rel="stylesheet" href="/assistant.css" />
   <link rel="stylesheet" href="/consent.css" />
   <script src="/consent.js" defer></script>
+  <script src="/stay22.js" defer></script>
   <script src="/i18n/menu-labels.js" defer></script>
   <script src="/menu.js" defer></script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Day in Portugal", "item": "https://dayinportugal.com/"}, {"@type": "ListItem", "position": 2, "name": "Where to sleep", "item": "https://dayinportugal.com/stay"}]}</script>
@@ -79,7 +80,17 @@
     </div>
     <div class="search-box">
       <p>Search those neighbourhoods, not “best hotel Porto”. Filter by cancellation and walking time to São Bento or a metro stop.</p>
-      <p>Search stays in Porto</p>
+      <div class="stay22-wrap">
+      <div class="note" role="note">Disclosure: Day in Portugal is a referral partner of Stay22. If you book accommodation through our link or the map, we earn a commission from Stay22, at no extra cost to you. Our recommendations are our own.</div>
+      <div class="stay22-pending">
+        <p>The hotel map and booking links load only if you accept cookies. <button type="button" class="dip-consent-reopen" data-consent-open>Cookie settings</button></p>
+      </div>
+      <div class="stay22-ready" hidden>
+        <div data-stay22-map data-stay22-address="Porto, Portugal" data-stay22-campaign="stay" data-stay22-title="Hotels and rentals in Porto"></div>
+        <p><!-- AFFILIATE: Stay22 allez Booking.com link (aid=dayinportugal) --><a class="book" rel="sponsored noopener" target="_blank" href="https://www.stay22.com/allez/booking?aid=dayinportugal&amp;link=https%3A%2F%2Fwww.booking.com%2Fcity%2Fpt%2Fporto.html&amp;campaign=stay">Search stays in Porto</a> (referral link).</p>
+        <p class="fine">Stay22 · Booking.com</p>
+      </div>
+    </div>
     </div>
     <div class="note"><strong>Airport:</strong> Francisco Sá Carneiro (OPO) is on the metro — <a href="/porto-airport-transfer">airport to the city</a>. A hire car is only useful if you leave the city. For Porto itself, do not rent “just in case” — hills, one-ways, paid parking.</div>
     <section class="follow" aria-labelledby="follow-h">
