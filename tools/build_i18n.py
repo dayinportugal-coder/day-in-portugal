@@ -52,7 +52,7 @@ ASSET_PREFIXES = (
 )
 SKIP_DIR_PARTS = {".git", "tools", "includes"}
 # Portuguese-only B2B offer; do not translate or overwrite language copies.
-SKIP_PAGES = {"vsme-simples.html"}
+SKIP_PAGES = {"vsme-simples.html", "avaliacoes-google.html", "menu-qr.html"}
 WIDGET_LANG = {"en": "en", "es": "es", "fr": "fr", "de": "en", "pt": "pt"}
 
 
