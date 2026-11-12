@@ -149,5 +149,10 @@
   "The request arrives by email, through Gmail (Google LLC), already listed under “Who receives the data”. We do not use any form tool other than your email programme.",
   "When the service is running:",
   "the business page, the QR code and the monthly count of QR reads process technical access data (for example, the date of a read). That count is emailed to the client business. We do not ask for data that identifies the end customer. Before delivery, these client pages will be hosted on a service whose terms allow commercial use (not GitHub Pages).",
-  "the digital menu and the Google Sheet used to update prices and hide dishes process the restaurant’s menu data. Allergen information is provided and confirmed in writing by the restaurant, which remains responsible for it. The public menu page generates technical hosting logs. Before delivery, these client pages will be hosted on a service whose terms allow commercial use (not GitHub Pages)."
+  "the digital menu and the Google Sheet used to update prices and hide dishes process the restaurant’s menu data. Allergen information is provided and confirmed in writing by the restaurant, which remains responsible for it. The public menu page generates technical hosting logs. Before delivery, these client pages will be hosted on a service whose terms allow commercial use (not GitHub Pages).",
+  "Waitlist: TV screen offer",
+  "Waitlist: group card offer",
+  "TV screen waitlist",
+  "group card waitlist",
+  "Anfitrião IA, VSME Simples, and the waitlists for the Google reviews, QR menu, TV screen and group card offers."
 ]
