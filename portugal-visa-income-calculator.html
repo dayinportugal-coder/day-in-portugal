@@ -66,25 +66,27 @@
     <p class="kicker">Moving to Portugal · Visas · Free tool</p>
     <h1 class="page">Portugal D7 &amp; D8 visa income calculator (2026)</h1>
     <p class="fine">By Pedro Carvalho · Figures checked against official sources on 12 November 2026</p>
-    <div class="note" role="note" style="margin-top:1rem"><strong>Please read:</strong> general information, not legal or immigration advice. Consulates can ask for more. Check the official sources linked below or a qualified professional. We can't guarantee any visa outcome. Nothing you type here leaves your browser.</div>
+    <div class="note" role="note" style="margin-top:1rem"><strong>Please read:</strong> general information, not legal or immigration advice. Consulates can ask for more. Check the official sources linked below or a qualified professional. We can't guarantee any visa outcome. The calculator runs in your browser. We do not send the figures you type to our servers. Day in Portugal is independent. It is not affiliated with, endorsed by or acting for AIMA, the Ministry of Foreign Affairs, any consulate or the Portuguese Government.</div>
 
     <section aria-labelledby="calc-h">
       <h2 class="h-section" id="calc-h">Check your numbers</h2>
       <div class="calc">
         <div class="g">
           <div><label for="v">Visa</label><select id="v"><option value="d7">D7: pension / passive income</option><option value="d8">D8: remote work (digital nomad)</option></select></div>
-          <div><label for="yr">Year</label><select id="yr"><option value="920">2026 (minimum wage €920, in force)</option><option value="970">2027 preview (€970, proposed, not law yet)</option></select></div>
+          <div><label for="yr">Year</label><select id="yr"><option value="920">2026 (mainland minimum wage €920, in force)</option><option value="970">2027 preview (€970, proposed, not law yet)</option></select></div>
           <div><label for="ad">Adults applying (incl. you)</label><input id="ad" type="number" min="1" max="8" value="1"></div>
-          <div><label for="ch">Children / dependants</label><input id="ch" type="number" min="0" max="10" value="0"></div>
-          <div><label for="inc">Your net monthly income (€)</label><input id="inc" type="number" min="0" step="10" value="2000"></div>
-          <div><label for="sav">Savings you can show (€)</label><input id="sav" type="number" min="0" step="100" value="10000"></div>
+          <div><label for="dep">Other dependent adults, for example a parent (50 % each)</label><input id="dep" type="number" min="0" max="8" value="0"></div>
+          <div><label for="ch">Children under 18 and dependent adult children (30 % each)</label><input id="ch" type="number" min="0" max="10" value="0"></div>
+          <div><label for="inc" id="inc-label">Monthly income (€)</label><input id="inc" type="number" min="0" step="10" placeholder="example: 2000"><p class="fine" id="inc-help">For D7, the ordinance uses the minimum wage net of social-security contributions (not necessarily net of income tax).</p></div>
+          <div><label for="sav">Savings you can show (€)</label><input id="sav" type="number" min="0" step="100" placeholder="example: 10000"></div>
         </div>
-        <div class="res" id="res" aria-live="polite"></div>
+        <div class="res" id="res" aria-live="polite" hidden></div>
         <h3>Your document checklist</h3>
         <ul id="cl"></ul>
+        <p class="fine" id="cl-note" hidden></p>
         <p class="noprint"><button type="button" class="book" onclick="window.print()" style="border:0;cursor:pointer;font:inherit">Print or save as PDF</button></p>
       </div>
-      <p class="fine">How it is calculated. D7: first adult 100% of the minimum wage, each other adult 50%, each child or dependant 30% (Portaria n.º 1563/2007, art. 2.º(2)); the means must be secured for at least 12 months (art. 5.º(6)), so we also show the 12-month total. D8: average monthly income over the last 3 months of at least 4 × the minimum wage (Decreto Regulamentar n.º 84/2007, arts. 18.º-B and 31.º-A, as amended in 2022). No official text says whether family shares sit on top of the D8 figure, so we show both. Minimum wage 2026: €920 (Decreto-Lei n.º 139/2025). Sources: <a href="https://vistos.mne.gov.pt/en/national-visas/necessary-documentation/means-of-subsistence" rel="noopener" target="_blank">MNE visa portal: means of subsistence</a>, <a href="https://vistos.mne.gov.pt/pt/vistos-nacionais/documentacao-instrutoria/residencia" rel="noopener" target="_blank">MNE: residence visa documents</a>, <a href="https://www.dgert.gov.pt/retribuicao-minima-mensal-garantida-para-2026" rel="noopener" target="_blank">DGERT: minimum wage 2026</a>.</p>
+      <p class="fine">How it is calculated. D7: first adult 100% of the minimum wage, each other adult 50%, each child under 18 or dependent adult child 30% (Portaria n.º 1563/2007, art. 2.º(2)). Other dependent adults (for example a parent) count as adults, at 50%. The means must be secured for at least 12 months and, for a pension or passive income, shown to be received or available in Portugal (art. 5.º(6)(a)–(b)), so we also show the 12-month total. It does not, by itself, require a Portuguese bank account holding 12 months of the minimum wage when regular income is shown. D8: average monthly income over the last 3 months of at least 4 × the minimum wage (Decreto Regulamentar n.º 84/2007, art. 31.º-A for the residence visa and art. 18.º-B for the temporary-stay visa; added by Decreto Regulamentar n.º 4/2022). No official text says whether family shares sit on top of the D8 figure, so we show both. Minimum wage 2026 (mainland): €920 (Decreto-Lei n.º 139/2025). These figures use the mainland minimum wage published by the MNE and by Decreto-Lei n.º 139/2025. Whether a higher regional minimum wage applies if you will live in Madeira or the Azores is not confirmed here. Sources: <a href="https://vistos.mne.gov.pt/en/national-visas/necessary-documentation/means-of-subsistence" rel="noopener" target="_blank">MNE visa portal: means of subsistence</a>, <a href="https://vistos.mne.gov.pt/pt/vistos-nacionais/documentacao-instrutoria/residencia" rel="noopener" target="_blank">MNE: residence visa documents</a>, <a href="https://www.dgert.gov.pt/retribuicao-minima-mensal-garantida-para-2026" rel="noopener" target="_blank">DGERT: minimum wage 2026</a>.</p>
     </section>
 
     <section aria-labelledby="kit-h">
@@ -112,28 +114,64 @@
     (function(){
       function eur(n){return '€'+Math.round(n).toLocaleString('en-GB')}
       function v(id){return document.getElementById(id)}
-      function calc(){
-        var w=+v('yr').value,ad=Math.max(1,+v('ad').value||1),ch=Math.max(0,+v('ch').value||0),inc=+v('inc').value||0,sav=+v('sav').value||0,visa=v('v').value;
-        var hh=w*(1+0.5*(ad-1)+0.3*ch),out='';
-        if(visa==='d7'){
-          var ok=inc>=hh,yr=hh*12;
-          out='<div class="big '+(ok?'pass':'fail')+'">'+(ok?'✓ Your income meets the D7 minimum':'✗ Below the D7 minimum by '+eur(hh-inc)+'/month')+'</div>'+
-          '<p>Household minimum: <strong>'+eur(hh)+'/month</strong> ('+ad+' adult'+(ad>1?'s':'')+', '+ch+' child'+(ch==1?'':'ren')+'). 12-month total: <strong>'+eur(yr)+'</strong>.</p>'+
-          '<p>Savings you entered: '+eur(sav)+' = '+(hh?(sav/hh).toFixed(1):0)+' months of the household minimum. '+(sav>=yr?'That covers 12 months on its own.':'Many consulates look for income or savings covering 12 months; check with yours.')+'</p>';
-        }else{
-          var own=4*w,fam=own+w*(0.5*(ad-1)+0.3*ch),ok1=inc>=own,ok2=inc>=fam;
-          out='<div class="big '+(ok1?'pass':'fail')+'">'+(ok1?'✓ Your income meets the D8 minimum for the main applicant':'✗ Below the D8 minimum by '+eur(own-inc)+'/month')+'</div>'+
-          '<p>Main applicant: <strong>'+eur(own)+'/month</strong> average over the last 3 months (4 × '+eur(w)+').'+(ad>1||ch>0?' If your family\'s shares are added on top: <strong>'+eur(fam)+'/month</strong> → '+(ok2?'<span class="pass">you meet this too</span>':'<span class="fail">short by '+eur(fam-inc)+'</span>')+'.':'')+'</p>'+
-          '<p>The income must come from work for employers or clients outside Portugal.</p>';
-        }
-        if(w===970)out+='<p class="fine">2027 preview: based on a proposed minimum wage, not yet law.</p>';
-        v('res').innerHTML=out;
-        var L=visa==='d7'?['Valid passport (and copies)','Proof of regular income: pension statements, rental contracts, dividends (last 6–12 months)','Bank statements showing the income arriving','Proof of accommodation in Portugal (rental contract or deed; some consulates accept a booking)','Portuguese tax number (NIF)','Travel health insurance','Criminal record certificate (apostilled/legalised, translated if needed)','Request to check your Portuguese criminal record (form on the consulate portal)','Visa application form and 2 passport photos']:
-          ['Valid passport (and copies)','Employment contract or employer letter, or service contracts / invoices with clients outside Portugal','Payslips or invoices + bank statements for the last 3 months (average ≥ '+eur(4*w)+')','Document proving your tax residence','Proof of accommodation in Portugal','Portuguese tax number (NIF)','Travel health insurance','Criminal record certificate (apostilled/legalised, translated if needed)','Visa application form and 2 passport photos'];
-        if(ad>1||ch>0)L.push('For each family member: passport, proof of relationship (marriage/birth certificate, apostilled), and their own application');
-        v('cl').innerHTML=L.map(function(x){return '<li>☐ '+x.replace(/</g,'&lt;')+'</li>'}).join('');
+      function hhMin(w,ad,dep,ch){return w*(1+0.5*(ad-1)+0.5*dep+0.3*ch)}
+      function hhDesc(ad,dep,ch){
+        var s=ad+' adult'+(ad>1?'s':'');
+        if(dep>0)s+=', '+dep+' other dependent adult'+(dep>1?'s':'');
+        s+=', '+ch+' child'+(ch==1?'':'ren');
+        return s;
       }
-      ['v','yr','ad','ch','inc','sav'].forEach(function(i){v(i).addEventListener('input',calc)});calc();
+      function syncIncomeCopy(){
+        var d7=v('v').value==='d7';
+        v('inc-label').textContent=d7?'Monthly income (€)':'Average monthly income of the last 3 months (€)';
+        v('inc-help').textContent=d7
+          ?'For D7, the ordinance uses the minimum wage net of social-security contributions (not necessarily net of income tax).'
+          :'For D8, the law says “average monthly income” over the last 3 months and does not say gross or net — use the figure your payslips or invoices show, and check with the consulate.';
+      }
+      function docs(visa,w,ad,dep,ch){
+        var often='Often requested in practice (check your consulate; not on the MNE general list for D7/D8): proof of accommodation in Portugal; a NIF. Portuguese law provides a provisional NIF when the residence visa is granted (Lei 23/2007, art. 58.º(6)).';
+        var passport='Valid passport (valid for more than 3 months beyond the intended stay) and a copy of the biodata page';
+        var stay='Proof of lawful stay in the country where you apply, if you are not a national of that country, valid beyond the visa you are asking for';
+        var ins='Travel insurance covering necessary medical expenses, including urgent care and eventual repatriation (an exemption may apply under an agreement, for example PB4 / S1)';
+        var crim='Criminal record certificate from your country of nationality or from a country where you have lived for more than one year, apostilled or legalised (applicants under 16 are exempt). A translation may be needed';
+        var ptcrim='Portuguese criminal-record check request — only if your consulate asks; form on the MNE/consulate portal';
+        var form='Visa application form and 2 passport photos';
+        var L=visa==='d7'?[passport,stay,'If you are retired: document showing the amount of the pension, and proof that it will be received or that other income is available in Portugal.','If you live on your own income: document showing income from movable or immovable property, intellectual property or financial investments, and proof that this income is available in Portugal.','Bank statements showing the income arriving (often requested in practice).',often,ins,crim,ptcrim,form]:
+          [passport,stay,'Employment contract or employer letter, or service contracts / invoices with clients outside Portugal','Payslips or invoices + bank statements for the last 3 months (average ≥ '+eur(4*w)+')','Document proving your tax residence',often,ins,crim,ptcrim,form];
+        if(ad>1||dep>0||ch>0)L.push('For each family member: passport, proof of relationship (marriage/birth certificate, apostilled), and their own application. Plus proof of stable means for the applicant and the family, for the stay or 12 months, whichever is shorter (MNE, accompanying-family section; Portaria art. 2.º(2)). Who counts as family is defined in law (spouse or civil partner, minor or dependent children, and other cases listed on the MNE page). Family already residing legally in Portugal follows family-reunification rules (Lei 23/2007, art. 98.º), not this accompanying visa.');
+        return L;
+      }
+      function calc(){
+        syncIncomeCopy();
+        var w=+v('yr').value,ad=Math.max(1,+v('ad').value||1),dep=Math.max(0,+v('dep').value||0),ch=Math.max(0,+v('ch').value||0),visa=v('v').value;
+        var incRaw=v('inc').value,savRaw=v('sav').value,inc=incRaw===''?NaN:+incRaw,sav=savRaw===''?0:+savRaw;
+        var hh=hhMin(w,ad,dep,ch),out='',res=v('res');
+        if(incRaw===''){
+          res.hidden=true;
+          res.innerHTML='';
+        }else{
+          if(visa==='d7'){
+            var ok=inc>=hh,yr=hh*12;
+            out='<div class="big '+(ok?'pass':'fail')+'">'+(ok?'✓ Your figures meet the published D7 income threshold':'✗ Below the published D7 income threshold by '+eur(hh-inc)+'/month')+'</div>'+
+            '<p>Household minimum: <strong>'+eur(hh)+'/month</strong> ('+hhDesc(ad,dep,ch)+'). 12-month total: <strong>'+eur(yr)+'</strong>.</p>'+
+            '<p>Savings you entered: '+(savRaw===''?'none entered':eur(sav)+' = '+(hh?(sav/hh).toFixed(1):0)+' months of the household minimum')+'. The 12-month total above is the household minimum × 12. Regular income that will continue (for example a pension), plus proof that it will be received or is available in Portugal, can meet that period. Savings alone are not what the ordinance describes; some consulates still ask to see funds. Check with yours.</p>';
+          }else{
+            var own=4*w,fam=own+w*(0.5*(ad-1)+0.5*dep+0.3*ch),ok1=inc>=own,ok2=inc>=fam;
+            out='<div class="big '+(ok1?'pass':'fail')+'">'+(ok1?'✓ Your figures meet the published D8 income threshold for the main applicant':'✗ Below the published D8 income threshold by '+eur(own-inc)+'/month')+'</div>'+
+            '<p>Main applicant: <strong>'+eur(own)+'/month</strong> average over the last 3 months (4 × '+eur(w)+').'+(ad>1||dep>0||ch>0?' If your family\'s shares are added on top: <strong>'+eur(fam)+'/month</strong> → '+(ok2?'<span class="pass">you meet this too</span>':'<span class="fail">short by '+eur(fam-inc)+'</span>')+'.':'')+'</p>'+
+            '<p>The income must come from work for employers or clients outside Portugal.</p>';
+          }
+          if(w===970)out+='<p class="fine">2027 preview: based on a proposed minimum wage, not yet law.</p>';
+          res.innerHTML=out;
+          res.hidden=false;
+        }
+        var L=docs(visa,w,ad,dep,ch);
+        v('cl').innerHTML=L.map(function(x){return '<li>☐ '+x.replace(/</g,'&lt;')+'</li>'}).join('');
+        var note=v('cl-note');
+        if(visa==='d8'){note.hidden=false;note.textContent='These are the basic documents; the consulate may ask for more.';}
+        else{note.hidden=true;note.textContent='';}
+      }
+      ['v','yr','ad','dep','ch','inc','sav'].forEach(function(i){v(i).addEventListener('input',calc);v(i).addEventListener('change',calc)});calc();
       v('wl').addEventListener('submit',function(e){e.preventDefault();if(!v('wl-a').checked){alert('Please tick the box first.');return}
         location.href='mailto:dayinportugal@gmail.com?subject='+encodeURIComponent('D7/D8 2027 figures - tell me')+'&body='+encodeURIComponent('Hi Pedro,\n\nI agree to receive one email when the 2027 D7/D8 figures are confirmed.\n\nThanks')});
     })();
