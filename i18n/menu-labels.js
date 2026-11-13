@@ -187,3 +187,35 @@ window.DIP_I18N = {
     }
   }
 };
+
+/* Added 13/11/2026: hubs, airport group, business tools and moving guides. */
+(function (d) {
+  var add = {
+    groups: {
+      es: { aeroporto: "Aeropuerto", vistos: "Mudarse a Portugal", servicos: "Para negocios" },
+      fr: { aeroporto: "Aéroport", vistos: "S’installer au Portugal", servicos: "Entreprises" },
+      de: { aeroporto: "Flughafen", vistos: "Auswandern", servicos: "Für Unternehmen" },
+      pt: { aeroporto: "Aeroporto", vistos: "Mudar para Portugal", servicos: "Para negócios" }
+    },
+    items: {
+      es: { "/porto-guide": "Todas las guías de Oporto", "/lisbon-guide": "Todas las guías de Lisboa", "/airport-transfers": "Todos los traslados", "/moving-to-portugal": "Todas las guías para mudarse",
+            "/porto-airport-transfer": "Traslado del aeropuerto de Oporto", "/menu-qr": "Menú QR en 4 idiomas", "/qr-avaliacoes": "QR gratis para reseñas de Google", "/avaliacoes-google": "Reseñas de Google", "/vsme-simples": "Informe VSME",
+            "/move-to-portugal-2026": "Mudarse a Portugal en 2026", "/d7-vs-d8-visa-portugal": "Visado D7 o D8", "/portugal-visa-income-calculator": "Calculadora de ingresos del visado", "/portugal-visa-document-checklist": "Lista de documentos del visado", "/portugal-aima-residence-permit": "Permiso de residencia AIMA", "/portugal-family-reunification": "Reagrupación familiar", "/portugal-nif-niss": "NIF y NISS", "/portugal-tax-residency-2026": "Residencia fiscal e IFICI", "/open-a-bank-account-in-portugal": "Abrir una cuenta bancaria", "/renting-in-portugal-as-a-foreigner": "Alquilar siendo extranjero", "/portugal-healthcare-for-expats": "Sanidad para extranjeros", "/portugal-cost-of-living-2026": "Coste de vida 2026", "/lisbon-cost-of-living-2026": "Coste de vida en Lisboa", "/porto-cost-of-living-2026": "Coste de vida en Oporto", "/moving-to-portugal-from-the-uk": "Desde el Reino Unido", "/moving-to-portugal-from-the-usa": "Desde Estados Unidos" },
+      fr: { "/porto-guide": "Tous les guides de Porto", "/lisbon-guide": "Tous les guides de Lisbonne", "/airport-transfers": "Tous les transferts", "/moving-to-portugal": "Tous les guides d’installation",
+            "/porto-airport-transfer": "Transfert aéroport de Porto", "/menu-qr": "Menu QR en 4 langues", "/qr-avaliacoes": "QR gratuit pour avis Google", "/avaliacoes-google": "Avis Google", "/vsme-simples": "Rapport VSME",
+            "/move-to-portugal-2026": "S’installer au Portugal en 2026", "/d7-vs-d8-visa-portugal": "Visa D7 ou D8", "/portugal-visa-income-calculator": "Calculateur de revenus du visa", "/portugal-visa-document-checklist": "Liste des documents du visa", "/portugal-aima-residence-permit": "Titre de séjour AIMA", "/portugal-family-reunification": "Regroupement familial", "/portugal-nif-niss": "NIF et NISS", "/portugal-tax-residency-2026": "Résidence fiscale et IFICI", "/open-a-bank-account-in-portugal": "Ouvrir un compte bancaire", "/renting-in-portugal-as-a-foreigner": "Louer en tant qu’étranger", "/portugal-healthcare-for-expats": "Santé pour les étrangers", "/portugal-cost-of-living-2026": "Coût de la vie 2026", "/lisbon-cost-of-living-2026": "Coût de la vie à Lisbonne", "/porto-cost-of-living-2026": "Coût de la vie à Porto", "/moving-to-portugal-from-the-uk": "Depuis le Royaume-Uni", "/moving-to-portugal-from-the-usa": "Depuis les États-Unis" },
+      de: { "/porto-guide": "Alle Porto-Guides", "/lisbon-guide": "Alle Lissabon-Guides", "/airport-transfers": "Alle Flughafentransfers", "/moving-to-portugal": "Alle Auswanderer-Guides",
+            "/porto-airport-transfer": "Transfer Flughafen Porto", "/menu-qr": "QR-Speisekarte in 4 Sprachen", "/qr-avaliacoes": "Gratis-QR für Google-Bewertungen", "/avaliacoes-google": "Google-Bewertungen", "/vsme-simples": "VSME-Bericht",
+            "/move-to-portugal-2026": "Nach Portugal auswandern 2026", "/d7-vs-d8-visa-portugal": "D7- oder D8-Visum", "/portugal-visa-income-calculator": "Visum-Einkommensrechner", "/portugal-visa-document-checklist": "Dokumenten-Checkliste", "/portugal-aima-residence-permit": "AIMA-Aufenthaltstitel", "/portugal-family-reunification": "Familiennachzug", "/portugal-nif-niss": "NIF und NISS", "/portugal-tax-residency-2026": "Steuerwohnsitz und IFICI", "/open-a-bank-account-in-portugal": "Bankkonto eröffnen", "/renting-in-portugal-as-a-foreigner": "Mieten als Ausländer", "/portugal-healthcare-for-expats": "Gesundheit für Ausländer", "/portugal-cost-of-living-2026": "Lebenshaltungskosten 2026", "/lisbon-cost-of-living-2026": "Kosten in Lissabon", "/porto-cost-of-living-2026": "Kosten in Porto", "/moving-to-portugal-from-the-uk": "Aus Großbritannien", "/moving-to-portugal-from-the-usa": "Aus den USA" },
+      pt: { "/porto-guide": "Todos os guias do Porto", "/lisbon-guide": "Todos os guias de Lisboa", "/airport-transfers": "Todos os transfers", "/moving-to-portugal": "Todos os guias de mudança",
+            "/porto-airport-transfer": "Transfer do aeroporto do Porto", "/menu-qr": "Menu QR em 4 línguas", "/qr-avaliacoes": "QR grátis para avaliações Google", "/avaliacoes-google": "Avaliações Google", "/vsme-simples": "Relatório VSME", "/cartao-de-grupo": "Cartão de grupo", "/ecra-tv": "Ecrã TV",
+            "/move-to-portugal-2026": "Mudar para Portugal em 2026", "/d7-vs-d8-visa-portugal": "Visto D7 ou D8", "/portugal-visa-income-calculator": "Calculadora de rendimentos do visto", "/portugal-visa-document-checklist": "Lista de documentos do visto", "/portugal-aima-residence-permit": "Autorização de residência AIMA", "/portugal-family-reunification": "Reagrupamento familiar", "/portugal-nif-niss": "NIF e NISS", "/portugal-tax-residency-2026": "Residência fiscal e IFICI", "/open-a-bank-account-in-portugal": "Abrir conta bancária", "/renting-in-portugal-as-a-foreigner": "Arrendar sendo estrangeiro", "/portugal-healthcare-for-expats": "Saúde para estrangeiros", "/portugal-cost-of-living-2026": "Custo de vida 2026", "/lisbon-cost-of-living-2026": "Custo de vida em Lisboa", "/porto-cost-of-living-2026": "Custo de vida no Porto", "/moving-to-portugal-from-the-uk": "Do Reino Unido", "/moving-to-portugal-from-the-usa": "Dos EUA" }
+    }
+  };
+  ["groups", "items"].forEach(function (k) {
+    Object.keys(add[k]).forEach(function (lang) {
+      d[k][lang] = d[k][lang] || {};
+      Object.keys(add[k][lang]).forEach(function (key) { d[k][lang][key] = add[k][lang][key]; });
+    });
+  });
+})(window.DIP_I18N);
