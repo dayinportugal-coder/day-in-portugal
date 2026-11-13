@@ -549,3 +549,6 @@ main table{display:block;max-width:100%;overflow-x:auto}
   .hero .hero-img{object-position:50% 100%}
   .hero:not(.home-hero) .hero-img{object-position:72% 100%}
 }
+
+/* keep the hero photo credit clear of the overlapping trust cards */
+.hero-credit{bottom:auto;top:.7rem;right:1rem}
