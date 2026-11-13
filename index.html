@@ -13,7 +13,7 @@
   <link rel="alternate" hreflang="pt" href="https://dayinportugal.com/pt/" />
   <link rel="alternate" hreflang="x-default" href="https://dayinportugal.com/" />
   <meta name="robots" content="index,follow" />
-  <meta name="theme-color" content="#2f4a40" />
+  <meta name="theme-color" content="#faf6ef" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Day in Portugal" />
   <meta property="og:locale" content="en_GB" />
@@ -32,6 +32,8 @@
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
+  <link rel="preload" href="/fonts/instrument-serif-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/dm-sans-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="/styles.css" />
   <link rel="stylesheet" href="/assistant.css" />
   <link rel="stylesheet" href="/consent.css" />
@@ -54,17 +56,26 @@
     </div>
   </header>
   <main id="main">
-  <section class="hero">
-    <img class="hero-img" src="/img/hero-ribeira-from-gaia-800.webp" srcset="/img/hero-ribeira-from-gaia-800.webp 800w, /img/hero-ribeira-from-gaia-1600.webp 1600w, /img/hero-ribeira-from-gaia-2400.webp 2400w" sizes="100vw" width="800" height="389" alt="The Ribeira riverfront in Porto, seen across the Douro from Cais de Gaia" fetchpriority="high" />
+  <section class="hero home-hero">
+    <picture>
+      <source type="image/avif" srcset="/img/hero-rabelo-evening-900.avif 900w, /img/hero-rabelo-evening-1600.avif 1600w, /img/hero-rabelo-evening-2400.avif 2400w" sizes="100vw" />
+      <img class="hero-img" src="/img/hero-rabelo-evening-1600.webp" srcset="/img/hero-rabelo-evening-900.webp 900w, /img/hero-rabelo-evening-1600.webp 1600w, /img/hero-rabelo-evening-2400.webp 2400w" sizes="100vw" width="1600" height="1067" alt="A rabelo boat on the Douro in front of Porto, lit by the evening sun" fetchpriority="high" />
+    </picture>
     <div class="hero-inner">
-      <p class="kicker">Porto · independent guide</p>
-      <h1>Porto, without the queue and the junk shop.</h1>
-      <p class="lead">Three things are worth booking before you land: a timed port tasting in Gaia, one river trip that is actually the city (not the valley), and a bed that is not on the noisiest corner of Ribeira. Everything else can wait until you are here.</p>
+      <p class="kicker">An independent guide to Portugal</p>
+      <h1>Portugal, <em>slowly</em> and well.</h1>
+      <p class="lead">Calm, practical notes for visiting, for moving here, and for running a small business: what to book, where to sleep, which visa fits, and a few free tools that actually help.</p>
       <div class="cta-row">
-        <a class="btn" href="/book">See what to book</a>
-        <a class="btn ghost" href="/stay">Where to sleep</a>
+        <a class="btn" href="#visit">Plan a visit</a>
+        <a class="btn ghost" href="#move">Moving to Portugal</a>
       </div>
+      <nav class="paths" aria-label="Start here">
+        <a href="#visit"><span>01</span>Visit</a>
+        <a href="#move"><span>02</span>Move here</a>
+        <a href="#business"><span>03</span>Local business</a>
+      </nav>
     </div>
+    <p class="hero-credit">Photo: François Philipp · <a href="https://creativecommons.org/licenses/by/2.0" rel="license noopener" target="_blank">CC BY 2.0</a></p>
   </section>
 
   <div class="wrap">
@@ -88,73 +99,157 @@
 
     <p class="loja-banner"><a href="/loja.html">Gifts from Portugal — see the shop</a></p>
 
-    <section class="split">
-      <div>
-        <p class="kicker">This week in Porto</p>
-        <h2 class="h-section">Book these. Leave the rest.</h2>
-        <p class="muted">In summer, walk-up tastings in Gaia mean an hour standing in the sun. A six-bridges cruise is a short harbour loop — pretty, and not a <a href="/douro-day">Douro Valley day</a>. A walking tour only helps if you hate maps.</p>
-        <a class="book" href="/book">Open the booking page</a>
-      </div>
-      <img class="shot tall" src="/img/dom-luis-bridge-jardim-do-morro-800.webp" srcset="/img/dom-luis-bridge-jardim-do-morro-800.webp 800w, /img/dom-luis-bridge-jardim-do-morro-1600.webp 1600w" sizes="(min-width: 760px) 480px, 100vw" width="800" height="612" alt="Dom Luís I bridge and the Douro in Porto, seen from Jardim do Morro" loading="lazy" decoding="async" />
-    </section>
+    <!-- VISIT -->
+    <section id="visit" class="chapter" aria-labelledby="visit-h">
+      <header class="chapter-head">
+        <p class="chapter-no">01 · Visit</p>
+        <h2 class="h-section" id="visit-h">Porto, without the queue and the <em>junk shop.</em></h2>
+        <p class="muted chapter-lead">Three things are worth booking before you land: a timed port tasting in Gaia, one river trip that is actually the city (not the valley), and a bed that is not on the noisiest corner of Ribeira. Everything else can wait until you are here.</p>
+      </header>
 
-    <section aria-labelledby="guide-h">
-      <p class="kicker">The guide</p>
-      <h2 class="h-section" id="guide-h">Three short pages. That is the whole trip.</h2>
-      <div class="tiles">
-        <a class="tile" href="/book">
-          <img class="tile-img" src="/img/rabelos-ribeira-from-gaia-800.webp" srcset="/img/rabelos-ribeira-from-gaia-800.webp 800w, /img/rabelos-ribeira-from-gaia-1600.webp 1600w" sizes="(min-width: 760px) 320px, 100vw" width="800" height="534" alt="Rabelo boats on the Douro in front of Ribeira, Porto" loading="lazy" decoding="async" />
-          <span class="tile-body"><strong>Book in Porto</strong><span class="muted">River cruise, cellar, evening ticket — with from-prices.</span></span>
+      <div class="tiles editorial">
+        <a class="tile tile-lg" href="/book">
+          <img class="tile-img" src="/img/rabelos-ribeira-from-gaia-800.webp" srcset="/img/rabelos-ribeira-from-gaia-800.webp 800w, /img/rabelos-ribeira-from-gaia-1600.webp 1600w" sizes="(min-width: 900px) 640px, 100vw" width="800" height="534" alt="Rabelo boats on the Douro in front of Ribeira, Porto" loading="lazy" decoding="async" />
+          <span class="tile-body"><span class="tile-tag">Porto</span><strong>Book in Porto</strong><span class="muted">River cruise, cellar, evening ticket — with from-prices.</span></span>
         </a>
         <a class="tile" href="/stay">
-          <img class="tile-img" src="/img/rua-de-cedofeita-800.webp" srcset="/img/rua-de-cedofeita-800.webp 800w, /img/rua-de-cedofeita-1600.webp 1600w" sizes="(min-width: 760px) 320px, 100vw" width="800" height="600" alt="Rua de Cedofeita, a pedestrian shopping street in Porto" loading="lazy" decoding="async" />
-          <span class="tile-body"><strong>Where to sleep</strong><span class="muted">Ribeira, Cedofeita or Bonfim, or Gaia — and why.</span></span>
+          <img class="tile-img" src="/img/rua-de-cedofeita-800.webp" width="800" height="600" alt="Rua de Cedofeita, a pedestrian shopping street in Porto" loading="lazy" decoding="async" />
+          <span class="tile-body"><span class="tile-tag">Sleep</span><strong>Where to sleep</strong><span class="muted">Ribeira, Cedofeita or Bonfim, or Gaia — and why.</span></span>
         </a>
         <a class="tile" href="/bring">
-          <img class="tile-img" src="/img/sardine-tins-800.webp" srcset="/img/sardine-tins-800.webp 800w, /img/sardine-tins-1600.webp 1600w" sizes="(min-width: 760px) 320px, 100vw" width="800" height="531" alt="Shelves of colourful tinned fish in a Portuguese shop" loading="lazy" decoding="async" />
-          <span class="tile-body"><strong>What to bring home</strong><span class="muted">Four things worth the weight. The rest is a keyring.</span></span>
+          <img class="tile-img" src="/img/sardine-tins-800.webp" width="800" height="531" alt="Shelves of colourful tinned fish in a Portuguese shop" loading="lazy" decoding="async" />
+          <span class="tile-body"><span class="tile-tag">Shop</span><strong>What to bring home</strong><span class="muted">Four things worth the weight. The rest is a keyring.</span></span>
         </a>
       </div>
-    </section>
 
-    <section class="split" aria-labelledby="douro-h">
-      <div>
-        <p class="kicker">A day out of the city</p>
-        <h2 class="h-section" id="douro-h">The Douro Valley: one long drive, worth it.</h2>
-        <p class="muted">Terraced vineyards two hours inland, a quinta tasting, lunch and a short boat at Pinhão. Which guided day to book — or how to go by train or car.</p>
-        <a class="book" href="/douro-day">Plan a Douro day</a>
+      <div class="split feature">
+        <div>
+          <p class="kicker">This week in Porto</p>
+          <h3 class="h-sub">Book these. Leave the rest.</h3>
+          <p class="muted">In summer, walk-up tastings in Gaia mean an hour standing in the sun. A six-bridges cruise is a short harbour loop — pretty, and not a <a href="/douro-day">Douro Valley day</a>. A walking tour only helps if you hate maps.</p>
+          <a class="book" href="/book">Open the booking page</a>
+        </div>
+        <img class="shot tall" src="/img/dom-luis-bridge-jardim-do-morro-800.webp" srcset="/img/dom-luis-bridge-jardim-do-morro-800.webp 800w, /img/dom-luis-bridge-jardim-do-morro-1600.webp 1600w" sizes="(min-width: 760px) 560px, 100vw" width="800" height="612" alt="Dom Luís I bridge and the Douro in Porto, seen from Jardim do Morro" loading="lazy" decoding="async" />
       </div>
-      <img class="shot tall" src="/img/douro-valley-800.webp" srcset="/img/douro-valley-800.webp 800w, /img/douro-valley-1600.webp 1600w" sizes="(min-width: 760px) 480px, 100vw" width="800" height="534" alt="Terraced vineyards above the Douro river in the Douro Valley" loading="lazy" decoding="async" />
-    </section>
 
-<section aria-labelledby="places-h">
-      <p class="kicker">Further out</p>
-      <h2 class="h-section" id="places-h">Four places the guides actually cover.</h2>
+      <div class="split feature reverse">
+        <div>
+          <p class="kicker">A day out of the city</p>
+          <h3 class="h-sub">The Douro Valley: one long drive, worth it.</h3>
+          <p class="muted">Terraced vineyards two hours inland, a quinta tasting, lunch and a short boat at Pinhão. Which guided day to book — or how to go by train or car.</p>
+          <a class="book" href="/douro-day">Plan a Douro day</a>
+        </div>
+        <img class="shot tall" src="/img/douro-valley-800.webp" srcset="/img/douro-valley-800.webp 800w, /img/douro-valley-1600.webp 1600w" sizes="(min-width: 760px) 560px, 100vw" width="800" height="534" alt="Terraced vineyards above the Douro river in the Douro Valley" loading="lazy" decoding="async" />
+      </div>
+
+      <div class="sub-head"><p class="kicker">Further out</p><h3 class="h-sub">Four places the guides actually cover.</h3></div>
       <div class="tiles quad">
         <a class="tile" href="/livraria-lello-tickets">
-          <img class="tile-img" src="/img/livraria-lello.webp" width="983" height="1474" alt="The red staircase inside Livraria Lello, Porto" loading="lazy" decoding="async" />
+          <img class="tile-img" src="/img/home/livraria-lello-800.webp" width="800" height="800" alt="The red staircase inside Livraria Lello, Porto" loading="lazy" decoding="async" />
           <span class="tile-body"><strong>Livraria Lello</strong><span class="muted">The staircase, and why the timed ticket matters.</span><span class="fine">WASD42 · CC BY 2.0</span></span>
         </a>
         <a class="tile" href="/aveiro-day-trip">
-          <img class="tile-img" src="/img/aveiro-moliceiros.webp" width="1600" height="1200" alt="Painted moliceiro boats on a canal in Aveiro" loading="lazy" decoding="async" />
+          <img class="tile-img" src="/img/home/aveiro-moliceiros-800.webp" width="800" height="600" alt="Painted moliceiro boats on a canal in Aveiro" loading="lazy" decoding="async" />
           <span class="tile-body"><strong>Aveiro</strong><span class="muted">Moliceiro boats, then the striped houses at Costa Nova.</span><span class="fine">Inês Severiano · CC BY-SA 4.0</span></span>
         </a>
         <a class="tile" href="/braga-guimaraes-day-trip">
-          <img class="tile-img" src="/img/braga-bom-jesus.webp" width="1600" height="1107" alt="The stairway of Bom Jesus do Monte above Braga" loading="lazy" decoding="async" />
+          <img class="tile-img" src="/img/home/braga-bom-jesus-800.webp" width="800" height="554" alt="The stairway of Bom Jesus do Monte above Braga" loading="lazy" decoding="async" />
           <span class="tile-body"><strong>Braga and Guimarães</strong><span class="muted">Bom Jesus in the morning, the castle after lunch.</span><span class="fine">Carlos Luis M C da Cruz · CC0</span></span>
         </a>
         <a class="tile" href="/povoa-base">
-          <img class="tile-img" src="/img/povoa-beach.webp" width="1280" height="810" alt="The beach at Póvoa de Varzim" loading="lazy" decoding="async" />
+          <img class="tile-img" src="/img/home/povoa-beach-800.webp" width="800" height="506" alt="The beach at Póvoa de Varzim" loading="lazy" decoding="async" />
           <span class="tile-body"><strong>Póvoa de Varzim</strong><span class="muted">A beach base, with the metro back to Porto.</span><span class="fine">Vitor Oliveira from Torres Vedras, PORTUGAL · CC BY-SA 2.0</span></span>
         </a>
       </div>
-    </section>
 
-        <section aria-labelledby="plan-h">
-      <p class="kicker">Planning</p>
-      <h2 class="h-section" id="plan-h">More Porto guides</h2>
-      <ul class="foot-links big-links"><li><a href="/porto-3-days">3 days in Porto</a></li><li><a href="/gaia-port-cellars">Port cellars in Gaia</a></li><li><a href="/porto-food-tours">Food and wine tours</a></li><li><a href="/porto-day-trips">Day trips from Porto</a></li><li><a href="/porto-airport-transfer">Airport to the city</a></li><li><a href="/book-first">Book before you fly</a></li><li><a href="/povoa-base">Beach base: Póvoa / Vila do Conde</a></li><li><a href="/rent-car">Car or metro?</a></li><li><a href="/livraria-lello-tickets">Livraria Lello tickets</a></li><li><a href="/porto-river-cruise">Six bridges cruise</a></li><li><a href="/fado-in-porto">Fado in Porto</a></li><li><a href="/braga-guimaraes-day-trip">Braga &amp; Guimarães</a></li><li><a href="/aveiro-day-trip">Aveiro &amp; Costa Nova</a></li><li><a href="/portugal-d7-visa">Portugal D7 visa</a></li><li><a href="/portugal-d8-digital-nomad-visa">Portugal D8 digital nomad visa</a></li></ul>
-      <p class="muted">Two practical things: mobile data before you land (<a rel="sponsored nofollow noopener" target="_blank" href="https://tp.media/r?campaign_id=629&amp;marker=784671&amp;p=8979&amp;sub_id=dayinportugal.com&amp;trs=580652&amp;u=https%3A%2F%2Fsaily.com%2Fesim-portugal%2F">Portugal eSIM on Saily</a> or <!-- AFFILIATE: yesim — Travelpayouts tp.media deep link (campaign_id=224, p=5998, marker 784671) --><a rel="sponsored nofollow noopener" target="_blank" href="https://tp.media/r?campaign_id=224&amp;marker=784671&amp;p=5998&amp;sub_id=dayinportugal.com&amp;trs=580652&amp;u=https%3A%2F%2Fyesim.tech%2Fcountry%2Fportugal%2F">Yesim</a>), and travel insurance only if your card does not already cover you (<!-- AFFILIATE: ekta — Travelpayouts tp.media deep link (campaign_id=225, p=5869, marker 784671; IDs from a public tp.media/r link to ektatraveling.com) --><a rel="sponsored nofollow noopener" target="_blank" href="https://tp.media/r?campaign_id=225&amp;marker=784671&amp;p=5869&amp;sub_id=dayinportugal.com&amp;trs=580652&amp;u=https%3A%2F%2Fektatraveling.com%2F">EKTA</a> (referral link)). More in <a href="/book-first">book before you fly</a>.</p>
+      <div class="sub-head"><p class="kicker">Lisbon</p><h3 class="h-sub">The same kind of notes, for Lisbon.</h3><p class="muted">Alfama, Belém and the trains out of the city, written the same way as the Porto pages. Sintra is a timed palace door.</p></div>
+      <div class="tiles">
+        <a class="tile" href="/lisbon-3-days">
+          <img class="tile-img" src="/img/home/tram-28-alfama-800.webp" width="800" height="534" alt="Tram 28 in a narrow street in Alfama, Lisbon" loading="lazy" decoding="async" />
+          <span class="tile-body"><strong>3 days in Lisbon</strong><span class="muted">Alfama, Belém, then Baixa. What to book and what to walk past.</span></span>
+        </a>
+        <a class="tile" href="/sintra-day-trip">
+          <img class="tile-img" src="/img/home/pena-palace-800.webp" width="800" height="624" alt="Pena Palace above the trees in Sintra" loading="lazy" decoding="async" />
+          <span class="tile-body"><strong>Sintra in a day</strong><span class="muted">Rossio train, bus 434, and a palace time you cannot miss.</span></span>
+        </a>
+        <a class="tile" href="/cascais-day-trip">
+          <img class="tile-img" src="/img/home/cascais-bay-800.webp" width="800" height="600" alt="The bay at Cascais" loading="lazy" decoding="async" />
+          <span class="tile-body"><strong>Cascais by train</strong><span class="muted">Cais do Sodré to the bay, and the cliff at Boca do Inferno.</span></span>
+        </a>
+      </div>
+      <p class="fine">Tile photos: Paul Arps, <a href="https://creativecommons.org/licenses/by/2.0" rel="license noopener" target="_blank">CC BY 2.0</a> (tram 28); Chabe01, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener" target="_blank">CC BY-SA 4.0</a> (Pena); Herbert wie, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener" target="_blank">CC BY-SA 4.0</a> (Cascais bay). Via Wikimedia Commons.</p>
+
+      <div class="sub-head"><p class="kicker">Planning</p><h3 class="h-sub">More Porto and Lisbon guides</h3></div>
+      <ul class="foot-links big-links"><li><a href="/porto-3-days">3 days in Porto</a></li><li><a href="/gaia-port-cellars">Port cellars in Gaia</a></li><li><a href="/porto-food-tours">Food and wine tours</a></li><li><a href="/porto-day-trips">Day trips from Porto</a></li><li><a href="/porto-airport-transfer">Airport to the city</a></li><li><a href="/book-first">Book before you fly</a></li><li><a href="/povoa-base">Beach base: Póvoa / Vila do Conde</a></li><li><a href="/rent-car">Car or metro?</a></li><li><a href="/livraria-lello-tickets">Livraria Lello tickets</a></li><li><a href="/porto-river-cruise">Six bridges cruise</a></li><li><a href="/fado-in-porto">Fado in Porto</a></li><li><a href="/braga-guimaraes-day-trip">Braga &amp; Guimarães</a></li><li><a href="/aveiro-day-trip">Aveiro &amp; Costa Nova</a></li><li><a href="/evora-day-trip">Évora by train</a></li><li><a href="/lisbon-where-to-stay">Where to sleep in Lisbon</a></li><li><a href="/lisbon-book-first">Book before Lisbon</a></li><li><a href="/lisbon-airport-transfer">Lisbon airport to the city</a></li></ul>
+      <p class="muted small">Two practical things: mobile data before you land (<a rel="sponsored nofollow noopener" target="_blank" href="https://tp.media/r?campaign_id=629&amp;marker=784671&amp;p=8979&amp;sub_id=dayinportugal.com&amp;trs=580652&amp;u=https%3A%2F%2Fsaily.com%2Fesim-portugal%2F">Portugal eSIM on Saily</a> or <!-- AFFILIATE: yesim — Travelpayouts tp.media deep link (campaign_id=224, p=5998, marker 784671) --><a rel="sponsored nofollow noopener" target="_blank" href="https://tp.media/r?campaign_id=224&amp;marker=784671&amp;p=5998&amp;sub_id=dayinportugal.com&amp;trs=580652&amp;u=https%3A%2F%2Fyesim.tech%2Fcountry%2Fportugal%2F">Yesim</a>), and travel insurance only if your card does not already cover you (<!-- AFFILIATE: ekta — Travelpayouts tp.media deep link (campaign_id=225, p=5869, marker 784671; IDs from a public tp.media/r link to ektatraveling.com) --><a rel="sponsored nofollow noopener" target="_blank" href="https://tp.media/r?campaign_id=225&amp;marker=784671&amp;p=5869&amp;sub_id=dayinportugal.com&amp;trs=580652&amp;u=https%3A%2F%2Fektatraveling.com%2F">EKTA</a> (referral link)). More in <a href="/book-first">book before you fly</a>.</p>
+    </section>
+  </div>
+
+  <!-- MOVE -->
+  <section id="move" class="chapter band" aria-labelledby="move-h">
+    <div class="wrap">
+      <header class="chapter-head">
+        <p class="chapter-no">02 · Move here</p>
+        <h2 class="h-section" id="move-h">Moving to Portugal, <em>one clear step at a time.</em></h2>
+        <p class="muted chapter-lead">The D7 for pensions and passive income, the D8 for remote work, and the two numbers you need first. Official figures, official links, and a calculator that does the household maths for you.</p>
+      </header>
+
+      <div class="move-grid">
+        <a class="spot" href="/portugal-visa-income-calculator">
+          <img src="/img/home/senhora-do-monte-800.webp" srcset="/img/home/senhora-do-monte-800.webp 800w, /img/home/senhora-do-monte-1600.webp 1600w" sizes="(min-width: 900px) 720px, 100vw" width="800" height="450" alt="Lisbon at night, seen from Miradouro da Senhora do Monte" loading="lazy" decoding="async" />
+          <span class="spot-body">
+            <span class="tile-tag light">Free tool</span>
+            <strong>D7 &amp; D8 visa income calculator</strong>
+            <span>Do you meet the 2026 income rule? Household figures from the €920 minimum wage, a 12-month savings view and a personal document checklist.</span>
+            <span class="spot-cta">Open the calculator</span>
+          </span>
+        </a>
+        <div class="kit">
+          <span class="kit-tile" aria-hidden="true"></span>
+          <p class="kicker">Doing it yourself?</p>
+          <h3>Portugal D7 &amp; D8 Visa Kit 2026</h3>
+          <p class="muted">A printable PDF kit to tick, and an Excel workbook with the 2026 figures, a D7 household calculator, a D7 proof-of-means sheet, a D8 three-month income tracker and budget pages. Each figure is labelled with its official source.</p>
+          <p class="kit-price"><span>€29</span> one-off · instant download</p>
+          <a class="btn" href="https://portugaldiary.gumroad.com/l/pgcqi" rel="noopener" target="_blank">See the kit on Gumroad</a>
+          <p class="fine">Payment happens on Gumroad, not on this site.</p>
+        </div>
+      </div>
+
+      <div class="tiles">
+        <a class="tile" href="/portugal-d7-visa">
+          <img class="tile-img" src="/img/home/costa-nova-800.webp" width="800" height="490" alt="Striped palheiro houses at Costa Nova, near Aveiro" loading="lazy" decoding="async" />
+          <span class="tile-body"><span class="tile-tag">Visa</span><strong>Portugal D7 visa</strong><span class="muted">Pensions and passive income: 2026 figures, documents and steps.</span></span>
+        </a>
+        <a class="tile" href="/portugal-d8-digital-nomad-visa">
+          <img class="tile-img" src="/img/home/lx-factory-800.webp" width="800" height="600" alt="LX Factory, a creative quarter in Lisbon" loading="lazy" decoding="async" />
+          <span class="tile-body"><span class="tile-tag">Visa</span><strong>D8 digital nomad visa</strong><span class="muted">Remote work: the €3,680 income rule, stay versus residence.</span></span>
+        </a>
+        <a class="tile" href="/portugal-nif-niss">
+          <img class="tile-img" src="/img/home/praca-do-comercio-800.webp" width="800" height="533" alt="Praça do Comércio and the Tagus in Lisbon" loading="lazy" decoding="async" />
+          <span class="tile-body"><span class="tile-tag">First steps</span><strong>NIF and NISS</strong><span class="muted">Your tax and social security numbers: the official routes.</span></span>
+        </a>
+      </div>
+      <p class="fine">Photos via Wikimedia Commons: Stavros Argyropoulos, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener" target="_blank">CC BY-SA 4.0</a> (Lisbon from Senhora do Monte); Vitor Oliveira, <a href="https://creativecommons.org/licenses/by-sa/2.0" rel="license noopener" target="_blank">CC BY-SA 2.0</a> (Costa Nova); TJ DeGroat, <a href="https://creativecommons.org/licenses/by/2.0" rel="license noopener" target="_blank">CC BY 2.0</a> (LX Factory); NorbertNagel, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener" target="_blank">CC BY-SA 4.0</a> (Praça do Comércio). Not legal advice; always check the official pages linked in each guide.</p>
+    </div>
+  </section>
+
+  <!-- BUSINESS -->
+  <div class="wrap">
+    <section id="business" class="chapter" aria-labelledby="biz-h">
+      <header class="chapter-head">
+        <p class="chapter-no">03 · Local business</p>
+        <h2 class="h-section" id="biz-h">Small tools for <em>Portuguese</em> cafés, guesthouses and shops.</h2>
+        <p class="muted chapter-lead">Free tools and simple services for local businesses, no monthly fee. The pages are in Portuguese. Free tools run in your browser; services start with a quote by email or a waiting list.</p>
+      </header>
+      <div class="biz-grid">
+        <a class="biz" href="/qr-avaliacoes"><span class="biz-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 17h4v4"/></svg></span><span class="tile-tag">Free</span><strong>Google review QR</strong><span class="muted">QR grátis para pedir avaliações no Google, com cartaz A6.</span></a>
+        <a class="biz" href="/menu-qr"><span class="biz-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><span class="tile-tag">Waiting list</span><strong>Menu QR in 4 languages</strong><span class="muted">Menu QR em 4 línguas, no telemóvel e no papel.</span></a>
+        <a class="biz" href="/ecra-tv"><span class="biz-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><span class="tile-tag">Waiting list</span><strong>Ecrã TV</strong><span class="muted">Menu e promoções no ecrã, sem mensalidade.</span></a>
+        <a class="biz" href="/cartao-de-grupo"><span class="biz-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 15c1.5-2 3-2 4.5 0s3 2 5.5-1"/></svg></span><span class="tile-tag">Waiting list</span><strong>Cartão de grupo</strong><span class="muted">Assinado pela equipa, em português.</span></a>
+        <a class="biz" href="/avaliacoes-google"><span class="biz-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></span><span class="tile-tag">Waiting list</span><strong>Avaliações Google</strong><span class="muted">Peça avaliações sem mensalidade.</span></a>
+        <a class="biz" href="/vsme-simples"><span class="biz-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><span class="tile-tag">Quote by email</span><strong>VSME Simples</strong><span class="muted">Relatório do módulo de base VSME, a partir das faturas.</span></a>
+      </div>
+      <p class="biz-more"><a class="book" href="/demos/">See the website and assistant demos</a></p>
     </section>
 
     <section class="follow" aria-labelledby="follow-h">
@@ -165,28 +260,7 @@
       </div>
       <div class="social big"><a href="https://www.instagram.com/dayinportugal/" rel="me noopener" target="_blank" aria-label="Instagram — @dayinportugal"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.2.8-.4.4-.6.7-.8 1.2-.2.4-.3 1-.4 2.1C2.7 9.8 2.7 10.2 2.7 12s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.2.4.4.7.6 1.2.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.2-.8.4-.4.6-.7.8-1.2.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.2-.4-.4-.7-.6-1.2-.8-.4-.2-1-.3-2.1-.4C15.5 4 15.1 4 12 4zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 8.1a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.2-8.3a1.1 1.1 0 1 1-2.3 0 1.1 1.1 0 0 1 2.3 0z"/></svg><span>Instagram</span></a><a href="https://www.facebook.com/profile.php?id=61595509427117" rel="noopener" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2.63" y="2.63" width="18.74" height="18.74" rx="3.6" fill="none" stroke="currentColor" stroke-width="0.86"/><path fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" d="M13.75 16.7V8.6h1.85M11.3 11.55h4.55"/></svg><span>Facebook</span></a><!-- More profiles: uncomment TikTok / Facebook in build/build.py (SOCIAL) and rebuild. --></div>
     </section>
-
-    <section aria-labelledby="lisbon-h">
-      <p class="kicker">Lisbon</p>
-      <h2 class="h-section" id="lisbon-h">The same kind of notes, for Lisbon.</h2>
-      <p class="muted">Alfama, Belém and the trains out of the city, written the same way as the Porto pages. Sintra is a timed palace door.</p>
-      <div class="tiles">
-        <a class="tile" href="/lisbon-3-days">
-          <img class="tile-img" src="/img/lisboa/tram-28-alfama-1600.webp" width="1600" height="1068" alt="Tram 28 in a narrow street in Alfama, Lisbon" loading="lazy" decoding="async" />
-          <span class="tile-body"><strong>3 days in Lisbon</strong><span class="muted">Alfama, Belém, then Baixa. What to book and what to walk past.</span></span>
-        </a>
-        <a class="tile" href="/sintra-day-trip">
-          <img class="tile-img" src="/img/lisboa/pena-palace-1600.webp" width="1600" height="1248" alt="Pena Palace above the trees in Sintra" loading="lazy" decoding="async" />
-          <span class="tile-body"><strong>Sintra in a day</strong><span class="muted">Rossio train, bus 434, and a palace time you cannot miss.</span></span>
-        </a>
-        <a class="tile" href="/cascais-day-trip">
-          <img class="tile-img" src="/img/lisboa/cascais-bay-1600.webp" width="1600" height="1200" alt="The bay at Cascais" loading="lazy" decoding="async" />
-          <span class="tile-body"><strong>Cascais by train</strong><span class="muted">Cais do Sodré to the bay, and the cliff at Boca do Inferno.</span></span>
-        </a>
-      </div>
-      <ul class="foot-links big-links"><li><a href="/evora-day-trip">Évora by train</a></li><li><a href="/lisbon-where-to-stay">Where to sleep in Lisbon</a></li><li><a href="/lisbon-book-first">Book before you fly</a></li><li><a href="/lisbon-airport-transfer">Airport to the city</a></li></ul>
-      <p class="fine">Tile photos: Paul Arps, <a href="https://creativecommons.org/licenses/by/2.0" rel="license noopener" target="_blank">CC BY 2.0</a> (tram 28); Chabe01, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener" target="_blank">CC BY-SA 4.0</a> (Pena); Herbert wie, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener" target="_blank">CC BY-SA 4.0</a> (Cascais bay). Via Wikimedia Commons.</p>
-    </section>
+    <p class="fine">Azulejo panel photo: Diego Delso, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener" target="_blank">CC BY-SA 4.0</a> (São Bento station). Hero: François Philipp, <a href="https://creativecommons.org/licenses/by/2.0" rel="license noopener" target="_blank">CC BY 2.0</a>. More on <a href="/credits">photo credits</a>.</p>
   </div>
   </main>
   <footer class="site-foot">

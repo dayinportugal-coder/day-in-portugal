@@ -40,3 +40,8 @@ See also `img/CREDITS.md` for source URLs. Same photographers and licences as `/
 - `fado-porto.webp` — Porto et fado 14 (33105387052).jpg — Alain Rouiller — CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:Porto_et_fado_14_(33105387052).jpg
 - `calem-cellars.webp` — Caves Cálem - Vila Nova de Gaia - Portugal (53194242277).jpg — Vitor Oliveira from Torres Vedras, PORTUGAL — CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:Caves_C%C3%A1lem_-_Vila_Nova_de_Gaia_-_Portugal_(53194242277).jpg
 - `costa-nova-palheiros.webp` — Palheiros da Costa Nova - Portugal (16367348673).jpg — Vitor Oliveira from Torres Vedras, PORTUGAL — CC BY-SA 2.0 — https://commons.wikimedia.org/wiki/File:Palheiros_da_Costa_Nova_-_Portugal_(16367348673).jpg
+
+## Home redesign (November 2026)
+
+- `hero-rabelo-evening-{900,1600,2400}.{webp,avif}` — new sizes of the same photo as `rabelo-evening-*.webp` (François Philipp, CC BY 2.0), made from the Commons original. Used as the home hero; credit in the hero corner and under the follow band.
+- `img/home/*-800.webp` (and `senhora-do-monte-1600.webp`) — smaller or cropped copies of photos already listed above and in `img/lisboa/CREDITS.md`, for the home page cards (same authors and licences; credits next to each group of cards). `livraria-lello-800.webp` is a square crop; `costa-nova-800.webp` crops the bottom 7 % (watermark strip).
