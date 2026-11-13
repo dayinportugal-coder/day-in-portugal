@@ -530,3 +530,22 @@ section{margin-top:4.5rem}
 }
 /* wide tables scroll inside the page on small screens */
 main table{display:block;max-width:100%;overflow-x:auto}
+
+/* Hero framing v2 (Nov 2026): crop the sky so the headline starts over the houses
+   and the text and buttons end over the river. --dk is the distance from the bottom
+   of the hero to the top of the kicker; --f is the photo height fraction where the
+   kicker should sit. */
+@media (min-width:760px){
+  .hero{--f:.29;--dk:578px;--ar:1.5;--hh:min(92vh,860px)}
+  .hero:not(.home-hero){--f:.30;--dk:640px;--ar:2.057}
+  .hero .hero-img{
+    --H:max(calc(100vw / var(--ar)), calc(var(--dk) / (1 - var(--f))), calc((var(--hh) - var(--dk)) / var(--f)));
+    top:auto;bottom:calc(var(--dk) - (1 - var(--f)) * var(--H));height:var(--H);object-position:50% 50%}
+}
+@media (max-width:759px){
+  .hero{min-height:0}
+  .hero .hero-inner{padding-top:13rem}
+  .hero:not(.home-hero) .hero-inner{padding-top:17rem}
+  .hero .hero-img{object-position:50% 100%}
+  .hero:not(.home-hero) .hero-img{object-position:72% 100%}
+}
