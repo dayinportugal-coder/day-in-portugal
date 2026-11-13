@@ -38,8 +38,24 @@
       id: "vistos",
       label: "Visas and moving",
       items: [
+        { href: "/move-to-portugal-2026", label: "Moving to Portugal in 2026" },
         { href: "/portugal-d7-visa", label: "Portugal D7 visa" },
-        { href: "/portugal-d8-digital-nomad-visa", label: "Portugal D8 digital nomad visa" }
+        { href: "/portugal-d8-digital-nomad-visa", label: "Portugal D8 digital nomad visa" },
+        { href: "/d7-vs-d8-visa-portugal", label: "D7 vs D8 visa" },
+        { href: "/portugal-visa-income-calculator", label: "Visa income calculator" },
+        { href: "/portugal-visa-document-checklist", label: "Visa document checklist" },
+        { href: "/portugal-nif-niss", label: "NIF and NISS" },
+        { href: "/portugal-cost-of-living-2026", label: "Cost of living 2026" },
+        { href: "/lisbon-cost-of-living-2026", label: "Lisbon cost of living" },
+        { href: "/porto-cost-of-living-2026", label: "Porto cost of living" },
+        { href: "/portugal-aima-residence-permit", label: "AIMA residence permit" },
+        { href: "/portugal-family-reunification", label: "Family reunification" },
+        { href: "/portugal-tax-residency-2026", label: "Tax residency and IFICI" },
+        { href: "/open-a-bank-account-in-portugal", label: "Open a bank account" },
+        { href: "/portugal-healthcare-for-expats", label: "Healthcare for foreigners" },
+        { href: "/renting-in-portugal-as-a-foreigner", label: "Renting as a foreigner" },
+        { href: "/moving-to-portugal-from-the-uk", label: "Moving from the UK" },
+        { href: "/moving-to-portugal-from-the-usa", label: "Moving from the USA" }
       ]
     },
     {
