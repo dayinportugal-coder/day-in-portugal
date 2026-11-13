@@ -22,3 +22,6 @@ Photos added for the guide heroes and the home page. All are real photographs. E
 The Cálem cellar photo (`calem-cellars.webp`) also had a photographer watermark along the bottom edge cropped off before the WebP encode. No other crops or retouching.
 
 Last updated: 2026-11-06
+
+## img/cards/ (added 13/11/2026)
+640×427 WebP crops of the photos listed above (same authors and licences), made by tools/site_ia.py for guide cards.

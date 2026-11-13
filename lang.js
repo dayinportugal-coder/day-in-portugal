@@ -33,12 +33,24 @@
     return path;
   }
 
+  /* window.DIP_PAGES (page-langs.js) lists the pages that exist in each language.
+     When this page has no translation, the switcher goes to that language's home page. */
+  function hasPage(code, path) {
+    var all = window.DIP_PAGES;
+    if (!all || !all[code]) return true;
+    var p = path.replace(/\.html$/, "");
+    if (p === "/loja") p = "/loja.html";
+    if (p.length > 1 && p.endsWith("/")) p = p.slice(0, -1);
+    return all[code].indexOf(p) >= 0;
+  }
+
   function pageTarget(code) {
     var path = barePath();
     var tail = location.search || "";
     var hash = location.hash || "";
+    if (path === "/") return (code === "en" ? "/" : "/" + code + "/") + tail + hash;
+    if (!hasPage(code, path)) return code === "en" ? "/" : "/" + code + "/";
     if (code === "en") return (path || "/") + tail + hash;
-    if (path === "/") return "/" + code + "/" + tail + hash;
     return "/" + code + path + tail + hash;
   }
 
