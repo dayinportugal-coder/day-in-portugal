@@ -99,3 +99,4 @@
 .ddp-card .ddp-btn.ghost-dark:hover { background:#efe3cf; }
 .ddp-card details summary { cursor:pointer; font-weight:600; font-size:.9rem; color:var(--sage); }
 .ddp-tip { font-size:.85rem; color:#efe6d6; }
+#ddp-results { min-height:110vh; } /* reserve space so the JS-rendered cards do not push the page (CLS) */
