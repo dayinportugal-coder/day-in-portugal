@@ -27,6 +27,7 @@
       label: "Day trips",
       hub: { href: "/porto-day-trips", label: "Day trips from Porto" },
       items: [
+        { href: "/douro-planner/", label: "Douro Day Planner (free app)" },
         { href: "/douro-day", label: "Douro Valley" },
         { href: "/braga-guimaraes-day-trip", label: "Braga and Guimarães" },
         { href: "/aveiro-day-trip", label: "Aveiro and Costa Nova" },

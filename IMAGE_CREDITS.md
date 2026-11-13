@@ -45,3 +45,5 @@ See also `img/CREDITS.md` for source URLs. Same photographers and licences as `/
 
 - `hero-rabelo-evening-{900,1600,2400}.{webp,avif}` — new sizes of the same photo as `rabelo-evening-*.webp` (François Philipp, CC BY 2.0), made from the Commons original. Used as the home hero; credit in the hero corner and under the follow band.
 - `img/home/*-800.webp` (and `senhora-do-monte-1600.webp`) — smaller or cropped copies of photos already listed above and in `img/lisboa/CREDITS.md`, for the home page cards (same authors and licences; credits next to each group of cards). `livraria-lello-800.webp` is a square crop; `costa-nova-800.webp` crops the bottom 7 % (watermark strip).
+
+- `douro-planner/img/hero-regua-*.webp`, `og-douro-planner.jpg`, `icon-*.png` — [006 Douro vineyards in Peso da Régua, Portugal](https://commons.wikimedia.org/wiki/File:006_Douro_vineyards_in_Peso_da_R%C3%A9gua,_Portugal_-_wine_region_photo_Creative_Commons_Attribution.jpg) — Marek Ślusarczyk (Tupungato) — CC BY 3.0 — resized/cropped, WebP/PNG/JPG (Douro Day Planner, 13/11/2026)

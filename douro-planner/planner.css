@@ -1,0 +1,101 @@
+/* Douro Day Planner — builds on /styles.css (same palette). Mobile-first. */
+.ddp { --wine:#7a2433; --gold:#c99a3b; --leaf:#4f6b3a; --glass:rgba(255,253,249,.94); }
+.ddp-hero { position:relative; margin:0 0 1rem; border-radius:22px; overflow:hidden; min-height:430px; color:#fff; isolation:isolate; display:flex; flex-direction:column; justify-content:flex-end; }
+.ddp-hero > img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 55%; z-index:-2; }
+.ddp-hero::after { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(180deg,rgba(20,14,10,.05) 0%,rgba(20,14,10,.25) 40%,rgba(20,14,10,.78) 100%); }
+.ddp-hero-text { padding:1.4rem 1.2rem .6rem; max-width:44rem; }
+.ddp-hero .kicker { color:#f3d9a4; }
+.ddp-hero h1 { font-size:clamp(2.1rem,7vw,3.5rem); margin:.1rem 0 .5rem; color:#fff; text-shadow:0 2px 18px rgba(0,0,0,.35); }
+.ddp-hero p.sub { font-size:1.08rem; margin:0 0 .4rem; color:#f8f1e7; max-width:36rem; }
+.ddp-pills { display:flex; flex-wrap:wrap; gap:.4rem; margin:.5rem 0 0; padding:0; list-style:none; }
+.ddp-pills li { background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); border-radius:999px; padding:.22rem .7rem; font-size:.82rem; }
+.ddp-credit { font-size:.7rem; color:rgba(255,255,255,.78); padding:.2rem 1.2rem .7rem; }
+.ddp-credit a { color:rgba(255,255,255,.9); }
+
+.ddp-form { position:relative; z-index:2; margin:-1.2rem .6rem 1.4rem; background:var(--glass); border:1px solid var(--line); border-radius:18px; box-shadow:0 12px 40px rgba(27,25,21,.14); padding:1rem; display:grid; gap:.85rem; }
+.ddp-field label, .ddp-field .lbl { display:block; font-size:.78rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:0 0 .3rem; }
+.ddp-field input[type=date] { font:inherit; width:100%; min-height:48px; padding:.5rem .7rem; border:1px solid var(--line); border-radius:12px; background:#fff; color:var(--ink); }
+.ddp-stepper { display:flex; align-items:center; gap:.4rem; }
+.ddp-stepper button { width:48px; height:48px; border-radius:12px; border:1px solid var(--line); background:#fff; font-size:1.35rem; cursor:pointer; color:var(--ink); }
+.ddp-stepper output { min-width:3.2rem; text-align:center; font-size:1.25rem; font-weight:700; }
+.ddp-seg { display:grid; grid-template-columns:1fr 1fr; background:#efe8dc; border-radius:14px; padding:4px; gap:4px; }
+.ddp-seg input { position:absolute; opacity:0; pointer-events:none; }
+.ddp-seg label { margin:0; text-transform:none; letter-spacing:0; font-size:1rem; font-weight:600; color:var(--ink); text-align:center; padding:.65rem .4rem; border-radius:10px; cursor:pointer; min-height:44px; display:flex; align-items:center; justify-content:center; gap:.4rem; }
+.ddp-seg input:checked + label { background:#fff; box-shadow:0 2px 8px rgba(27,25,21,.12); color:var(--wine); }
+.ddp-seg input:focus-visible + label { outline:3px solid var(--accent); }
+@media (min-width:760px){ .ddp-form{ grid-template-columns:1.2fr 1fr 1.4fr; margin:-2rem 1.5rem 1.6rem; padding:1.1rem 1.3rem; align-items:end; } .ddp-hero{min-height:480px} .ddp-hero-text{padding:2rem 2rem .6rem} .ddp-credit{padding-left:2rem} }
+
+.ddp-alert { display:flex; gap:.7rem; align-items:flex-start; background:#fbf1de; border:1px solid #ecd6aa; border-radius:14px; padding:.85rem 1rem; margin:0 0 1.3rem; font-size:.95rem; }
+.ddp-alert b { color:#6b3f06; }
+.ddp-alert .ic { flex:0 0 auto; width:1.9rem; height:1.9rem; border-radius:50%; display:grid; place-items:center; background:#f3d9a4; font-weight:800; color:#6b3f06; }
+.ddp-alert.is-ok { background:#eaf0ec; border-color:#cfdcd3; } .ddp-alert.is-ok .ic { background:#cfe0d5; color:var(--sage); }
+
+.ddp-summary { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:.3rem 1rem; margin:0 0 .6rem; }
+.ddp-summary h2 { margin:0; font-size:clamp(1.4rem,4.5vw,1.9rem); }
+.ddp-summary p { margin:0; color:var(--muted); }
+
+.ddp-cards { display:grid; grid-auto-flow:column; grid-auto-columns:86%; gap:.9rem; overflow-x:auto; scroll-snap-type:x mandatory; padding:.2rem .1rem 1rem; margin:0 -.2rem; -webkit-overflow-scrolling:touch; }
+.ddp-cards::-webkit-scrollbar { height:6px } .ddp-cards::-webkit-scrollbar-thumb { background:#d8cdb8; border-radius:9px }
+@media (min-width:900px){ .ddp-cards{ grid-auto-flow:row; grid-template-columns:repeat(3,1fr); overflow:visible; } }
+.ddp-card { scroll-snap-align:start; background:var(--card); border:1px solid var(--line); border-radius:18px; overflow:hidden; display:flex; flex-direction:column; box-shadow:var(--shadow); position:relative; transition:transform .2s ease, box-shadow .2s ease; }
+.ddp-card.is-best { border:2px solid var(--wine); box-shadow:0 14px 38px rgba(122,36,51,.18); }
+.ddp-card .ph { position:relative; aspect-ratio:16/9; overflow:hidden; }
+.ddp-card .ph img { width:100%; height:100%; object-fit:cover; }
+.ddp-card .ph .badge { position:absolute; left:.7rem; top:.7rem; background:var(--wine); color:#fff; font-size:.75rem; font-weight:700; padding:.25rem .6rem; border-radius:999px; letter-spacing:.02em; }
+.ddp-card .ph .mode { position:absolute; right:.7rem; bottom:.7rem; background:rgba(20,14,10,.62); color:#fff; font-size:.78rem; padding:.2rem .55rem; border-radius:8px; }
+.ddp-card .bd { padding:1rem 1.1rem 1.2rem; display:flex; flex-direction:column; gap:.55rem; flex:1; }
+.ddp-card h3 { margin:0; font-size:1.3rem; }
+.ddp-card .verdict { margin:0; color:var(--muted); font-size:.95rem; }
+.ddp-facts { display:grid; grid-template-columns:1fr 1fr; gap:.45rem; margin:.1rem 0; }
+.ddp-facts div { background:#f5efe4; border-radius:10px; padding:.45rem .6rem; }
+.ddp-facts dt { font-size:.7rem; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); font-weight:700; }
+.ddp-facts dd { margin:0; font-weight:700; font-size:1.02rem; }
+.ddp-tl { list-style:none; margin:.2rem 0 0; padding:0; border-left:2px dashed #d9ccb4; }
+.ddp-tl li { position:relative; padding:.15rem 0 .5rem .9rem; font-size:.92rem; line-height:1.35; }
+.ddp-tl li::before { content:""; position:absolute; left:-6px; top:.45rem; width:10px; height:10px; border-radius:50%; background:var(--sage); }
+.ddp-tl li.bus::before { background:var(--gold); }
+.ddp-tl .t { font-weight:700; font-variant-numeric:tabular-nums; }
+.ddp-tl small { display:block; color:var(--muted); font-size:.78rem; }
+.ddp-sub { font-weight:700; font-size:.82rem; margin:.4rem 0 0; color:var(--ink); }
+.ddp-card .cta { margin-top:auto; display:flex; flex-direction:column; gap:.35rem; padding-top:.4rem; }
+.ddp-card .book { align-self:stretch; text-align:center; justify-content:center; }
+.ddp-card .alt { font-size:.88rem; }
+.ddp-src { font-size:.76rem; color:var(--muted); margin:0; }
+.ddp-src a { color:var(--muted); }
+.ddp-price s { color:var(--muted); font-weight:400; font-size:.85em; margin-left:.25rem; }
+
+.ddp-sec { margin:2rem 0 0; }
+.ddp-open { display:grid; gap:.7rem; }
+@media (min-width:760px){ .ddp-open{ grid-template-columns:repeat(2,1fr);} }
+.ddp-place { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:.9rem 1rem; display:flex; flex-direction:column; gap:.3rem; }
+.ddp-place h3 { margin:0; font-size:1.12rem; }
+.ddp-status { display:inline-flex; align-items:center; gap:.35rem; font-weight:700; font-size:.88rem; }
+.ddp-status::before { content:""; width:.6rem; height:.6rem; border-radius:50%; background:#3f8a55; }
+.ddp-status.closed { color:#9a3b2c; } .ddp-status.closed::before { background:#9a3b2c; }
+.ddp-boats { display:grid; gap:.6rem; margin-top:.8rem; }
+@media (min-width:760px){ .ddp-boats{ grid-template-columns:repeat(3,1fr);} }
+.ddp-boat { display:flex; flex-direction:column; gap:.2rem; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:.8rem .95rem; text-decoration:none; color:var(--ink); }
+.ddp-boat:hover { border-color:var(--wine); color:var(--ink); }
+.ddp-boat b { font-size:1rem; } .ddp-boat span { color:var(--muted); font-size:.88rem; }
+
+.ddp-save { margin:2rem 0 0; background:linear-gradient(135deg,#2f4a40 0%,#41493a 55%,#6b3a2e 100%); color:#f7f3ec; border-radius:20px; padding:1.3rem 1.2rem; display:grid; gap:.8rem; }
+.ddp-save h2 { margin:0; color:#fff; font-size:1.5rem; }
+.ddp-save p { margin:0; color:#efe6d6; }
+.ddp-btns { display:flex; flex-wrap:wrap; gap:.5rem; }
+.ddp-btn { font:inherit; font-weight:700; border:0; border-radius:999px; padding:.75rem 1.2rem; min-height:46px; cursor:pointer; background:#f3d9a4; color:#3a2606; }
+.ddp-btn.ghost { background:transparent; color:#fff; border:1px solid rgba(255,255,255,.5); }
+.ddp-btn[hidden] { display:none; }
+.ddp-saved { list-style:none; margin:0; padding:0; display:grid; gap:.45rem; }
+.ddp-saved li { background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.18); border-radius:12px; padding:.6rem .8rem; display:flex; justify-content:space-between; gap:.6rem; align-items:center; font-size:.93rem; }
+.ddp-saved button { font:inherit; font-size:.82rem; background:transparent; color:#f3d9a4; border:1px solid rgba(243,217,164,.5); border-radius:999px; padding:.25rem .65rem; cursor:pointer; }
+.ddp-toast { position:fixed; left:50%; bottom:1.2rem; transform:translateX(-50%) translateY(150%); background:#1b1915; color:#fff; padding:.7rem 1.1rem; border-radius:999px; font-size:.95rem; z-index:60; transition:transform .25s ease, opacity .25s ease; opacity:0; visibility:hidden; pointer-events:none; }
+.ddp-toast.on { transform:translateX(-50%) translateY(0); opacity:1; visibility:visible; }
+.ddp-offline { display:none; background:#1b1915; color:#fff; text-align:center; font-size:.85rem; padding:.35rem; }
+.ddp-offline.on { display:block; }
+.ddp-sources ol { padding-left:1.2rem; font-size:.9rem; } .ddp-sources li { margin:.2rem 0; }
+@media print { .top, .site-foot, .ddp-form, .ddp-save .ddp-btns, .follow { display:none !important } .ddp-cards{ grid-auto-flow:row; grid-template-columns:1fr; overflow:visible } }
+@media (prefers-reduced-motion: reduce){ .ddp-card,.ddp-toast{ transition:none } }
+.ddp-card .ddp-btn.ghost-dark { background:#f5efe4; color:var(--wine); border:1px solid #e6d9c3; padding:.55rem 1rem; min-height:42px; font-size:.92rem; }
+.ddp-card .ddp-btn.ghost-dark:hover { background:#efe3cf; }
+.ddp-card details summary { cursor:pointer; font-weight:600; font-size:.9rem; color:var(--sage); }
+.ddp-tip { font-size:.85rem; color:#efe6d6; }

@@ -14,6 +14,7 @@ window.DIP_I18N = {
   },
   items: {
     es: {
+      "/douro-planner/": "Planificador del Douro (app gratis)",
       "/porto-3-days": "3 días en Porto",
       "/book": "Reservar en Porto",
       "/book-first": "Reserva antes de volar",
@@ -57,6 +58,7 @@ window.DIP_I18N = {
       "/credits": "Créditos de las fotos"
     },
     fr: {
+      "/douro-planner/": "Planificateur Douro (appli gratuite)",
       "/porto-3-days": "3 jours à Porto",
       "/book": "Réserver à Porto",
       "/book-first": "Réserver avant le vol",
@@ -100,6 +102,7 @@ window.DIP_I18N = {
       "/credits": "Crédits photo"
     },
     de: {
+      "/douro-planner/": "Douro-Tagesplaner (kostenlose App)",
       "/porto-3-days": "3 Tage in Porto",
       "/book": "In Porto buchen",
       "/book-first": "Vor dem Flug buchen",
@@ -143,6 +146,7 @@ window.DIP_I18N = {
       "/credits": "Bildnachweise"
     },
     pt: {
+      "/douro-planner/": "Planeador do Douro (app grátis)",
       "/porto-3-days": "3 dias no Porto",
       "/book": "Reservar no Porto",
       "/book-first": "Reserve antes de voar",

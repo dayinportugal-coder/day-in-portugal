@@ -1,0 +1,17 @@
+{
+  "name": "Douro Day Planner — Day in Portugal",
+  "short_name": "Douro Planner",
+  "description": "Plan a Douro Valley day from Porto: train + replacement bus, car or guided tour. Works offline.",
+  "id": "/douro-planner/",
+  "start_url": "/douro-planner/?source=pwa",
+  "scope": "/douro-planner/",
+  "display": "standalone",
+  "background_color": "#f7f3ec",
+  "theme_color": "#2f4a40",
+  "lang": "en",
+  "icons": [
+    { "src": "/douro-planner/img/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/douro-planner/img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/douro-planner/img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
