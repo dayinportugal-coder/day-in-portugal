@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Douro Day Planner: train + bus, car or tour from Porto (free app) | Day in Portugal</title>
+  <meta name="description" content="Free offline app to plan a Douro Valley day from Porto. Pick a date, people and wine or scenery: CP train + replacement bus times (Marco–Régua bus until 24 Mar 2027), car tolls, tours and quintas open that day." />
+  <link rel="canonical" href="https://dayinportugal.com/douro-planner/" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#2f4a40" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Day in Portugal" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:url" content="https://dayinportugal.com/douro-planner/" />
+  <meta property="og:title" content="Douro Day Planner — plan your Douro day from Porto" />
+  <meta property="og:description" content="Free offline app to plan a Douro Valley day from Porto. Pick a date, people and wine or scenery: CP train + replacement bus times (Marco–Régua bus until 24 Mar 2027), car tolls, tours and quintas open that day." />
+  <meta property="og:image" content="https://dayinportugal.com/douro-planner/img/og-douro-planner.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Terraced vineyards above the Douro at Peso da Régua" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Douro Day Planner — plan your Douro day from Porto" />
+  <meta name="twitter:description" content="Free offline app to plan a Douro Valley day from Porto. Pick a date, people and wine or scenery: CP train + replacement bus times (Marco–Régua bus until 24 Mar 2027), car tolls, tours and quintas open that day." />
+  <meta name="twitter:image" content="https://dayinportugal.com/douro-planner/img/og-douro-planner.jpg" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="/douro-planner/img/icon-192.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Douro Planner" />
+  <link rel="manifest" href="/douro-planner/manifest.webmanifest" />
+  <link rel="preload" as="image" href="/douro-planner/img/hero-regua-900.webp" imagesrcset="/douro-planner/img/hero-regua-900.webp 900w, /douro-planner/img/hero-regua-1600.webp 1600w" imagesizes="(min-width: 1120px) 1090px, 100vw" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/assistant.css" />
+  <link rel="stylesheet" href="/consent.css" />
+  <link rel="stylesheet" href="/douro-planner/planner.css" />
+  <script src="/consent.js" defer></script>
+  <script src="/page-langs.js" defer></script><script src="/search.js" defer></script><script src="/i18n/menu-labels.js" defer></script>
+  <script src="/menu.js" defer></script>
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dayinportugal.com/"}, {"@type": "ListItem", "position": 2, "name": "Day trips", "item": "https://dayinportugal.com/porto-day-trips"}, {"@type": "ListItem", "position": 3, "name": "Douro Valley", "item": "https://dayinportugal.com/douro-day"}, {"@type": "ListItem", "position": 4, "name": "Douro Day Planner", "item": "https://dayinportugal.com/douro-planner/"}]}, {"@context": "https://schema.org", "@type": "WebApplication", "name": "Douro Day Planner", "url": "https://dayinportugal.com/douro-planner/", "applicationCategory": "TravelApplication", "operatingSystem": "Any (web, installable)", "inLanguage": "en", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "Day in Portugal", "url": "https://dayinportugal.com/"}}]</script>
+  <script src="/lang.js" defer></script>
+  <script src="/douro-planner/planner-data.js" defer></script>
+  <script src="/douro-planner/planner.js" defer></script>
+</head>
+<body class="ddp">
+  <div class="ddp-offline" id="ddp-offline" role="status">You are offline — the planner and your saved days still work.</div>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top">
+    <div class="top-inner">
+      <a class="logo" href="/"><span class="logo-mark" aria-hidden="true">D</span>Day in Portugal</a>
+      <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu"><span class="menu-bars" aria-hidden="true"></span></button>
+      <nav id="site-menu" class="site-menu" aria-label="Main"></nav>
+      <span class="top-social"><a class="top-ig" href="https://www.instagram.com/dayinportugal/" rel="me noopener" target="_blank" aria-label="Day in Portugal on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.2.8-.4.4-.6.7-.8 1.2-.2.4-.3 1-.4 2.1C2.7 9.8 2.7 10.2 2.7 12s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.2.4.4.7.6 1.2.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.2-.8.4-.4.6-.7.8-1.2.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.2-.4-.4-.7-.6-1.2-.8-.4-.2-1-.3-2.1-.4C15.5 4 15.1 4 12 4zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 8.1a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.2-8.3a1.1 1.1 0 1 1-2.3 0 1.1 1.1 0 0 1 2.3 0z"/></svg></a><a class="top-fb" href="https://www.facebook.com/profile.php?id=61595509427117" rel="noopener" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2.63" y="2.63" width="18.74" height="18.74" rx="3.6" fill="none" stroke="currentColor" stroke-width="0.86"/><path fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" d="M13.75 16.7V8.6h1.85M11.3 11.55h4.55"/></svg></a></span>
+    </div>
+  </header>
+  <main id="main" class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/porto-day-trips">Day trips</a></li><li><a href="/douro-day">Douro Valley</a></li><li aria-current="page">Douro Day Planner</li></ol></nav>
+    <section class="ddp-hero" aria-labelledby="ddp-h1">
+      <img src="/douro-planner/img/hero-regua-900.webp" srcset="/douro-planner/img/hero-regua-900.webp 900w, /douro-planner/img/hero-regua-1600.webp 1600w" sizes="(min-width: 1120px) 1090px, 100vw" width="1600" height="1067" alt="Terraced vineyards above the Douro river at Peso da Régua" fetchpriority="high" decoding="async" />
+      <div class="ddp-hero-text">
+        <p class="kicker">Free app · works offline</p>
+        <h1 id="ddp-h1">Douro Day Planner</h1>
+        <p class="sub">Pick your day. See train + bus, car and guided tour side by side — with real times, tolls and prices, and the quintas open that day.</p>
+        <ul class="ddp-pills"><li>CP times read 13 Nov 2026</li><li>Replacement bus until 24 Mar 2027</li><li>No sign-up</li></ul>
+      </div>
+      <p class="ddp-credit">Photo: Marek Ślusarczyk (Tupungato), <a href="https://commons.wikimedia.org/wiki/File:006_Douro_vineyards_in_Peso_da_R%C3%A9gua,_Portugal_-_wine_region_photo_Creative_Commons_Attribution.jpg" rel="noopener" target="_blank">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/3.0" rel="license noopener" target="_blank">CC BY 3.0</a>. Resized, WebP.</p>
+    </section>
+
+    <form class="ddp-form" id="ddp-form" onsubmit="return false" aria-label="Plan your Douro day">
+      <div class="ddp-field"><label for="ddp-date">Your day</label><input type="date" id="ddp-date" name="d" required /></div>
+      <div class="ddp-field"><span class="lbl" id="ddp-people-l">People</span><div class="ddp-stepper" role="group" aria-labelledby="ddp-people-l"><button type="button" data-step="-1" aria-label="One person fewer">−</button><output id="ddp-people" aria-live="polite">2</output><button type="button" data-step="1" aria-label="One person more">+</button></div></div>
+      <div class="ddp-field"><span class="lbl" id="ddp-pref-l">What matters most</span><div class="ddp-seg" role="radiogroup" aria-labelledby="ddp-pref-l">
+        <input type="radio" id="ddp-wine" name="ddp-pref" value="wine" checked /><label for="ddp-wine">🍷 Wine</label>
+        <input type="radio" id="ddp-scen" name="ddp-pref" value="scenery" /><label for="ddp-scen">⛰️ Scenery</label>
+      </div></div>
+    </form>
+
+    <div id="ddp-results" aria-live="polite"><noscript><p class="note">The planner needs JavaScript. The same facts are on our <a href="/douro-day">Douro day trip guide</a>.</p></noscript></div>
+
+    <section class="ddp-save" aria-labelledby="ddp-save-h">
+      <div><p class="kicker" style="color:#f3d9a4">On this phone</p><h2 id="ddp-save-h">My saved days</h2><p>Saved plans stay on your device (no account, nothing sent to us) and open without signal in the valley.</p></div>
+      <ul class="ddp-saved" id="ddp-saved"></ul>
+      <div class="ddp-btns"><button type="button" class="ddp-btn" id="ddp-install" hidden>Install the app</button><button type="button" class="ddp-btn ghost" id="ddp-print">Print / save as PDF</button></div>
+      <p class="ddp-tip" id="ddp-ios" hidden>On iPhone: tap Share, then “Add to Home Screen”.</p>
+    </section>
+
+    <section class="ddp-sec ddp-sources" aria-labelledby="ddp-src-h">
+      <h2 class="h-section" id="ddp-src-h">Sources we checked (13 November 2026)</h2>
+      <ol>
+        <li><a href="https://www.cp.pt/info/documents/d/cp/horarios_douro_03-11-2026" rel="noopener" target="_blank">CP — Linha do Douro timetable, valid since 3 November 2026</a> (train and replacement-bus times; all services shown are marked daily).</li>
+        <li><a href="https://servicos.infraestruturasdeportugal.pt/pt-pt/alertas/ferrovia/modernizacao-da-linha-do-douro-constrangimentos-circulacao-ferroviaria-0" rel="noopener" target="_blank">Infraestruturas de Portugal — Marco de Canaveses–Régua closed 3 Nov 2026 to 24 Mar 2027, trains planned from 25 Mar 2027</a>.</li>
+        <li><a href="https://www.cp.pt/info/documents/d/cp/precos-regional-interregional-porto-pocinho" rel="noopener" target="_blank">CP — fares Porto–Régua–Pocinho, valid from 1 January 2026</a> (Campanhã–Pinhão €12.35, São Bento–Pinhão €12.45 one way).</li>
+        <li><a href="https://www.imt-ip.pt/rodoviario/infraestruturas-rodoviarias/rede-rodoviaria/taxas-de-portagem/" rel="noopener" target="_blank">IMT — 2026 tolls, A4 Porto–Amarante, class 1: €4.75</a>; <a href="https://diariodarepublica.pt/dr/detalhe/lei/37-2024-875716581" rel="noopener" target="_blank">Lei n.º 37/2024 (toll-free A4 Transmontana and A24 since 1 Jan 2025)</a>.</li>
+        <li><a href="https://www.openstreetmap.org/directions?engine=fossgis_osrm_car&amp;route=41.1456%2C-8.6110%3B41.1906%2C-7.5463" rel="noopener" target="_blank">OpenStreetMap / OSRM — Porto São Bento to Pinhão, about 125 km and 1 h 35 without traffic</a>.</li>
+        <li>Opening hours from <a href="https://www.symington.com/visit/quinta-do-bomfim/" rel="noopener" target="_blank">symington.com (Quinta do Bomfim)</a> and <a href="https://croftport.com/en/quinta-da-roeda-wine-tourism/" rel="noopener" target="_blank">croftport.com (Quinta da Roêda)</a>.</li>
+        <li>Tour and boat prices as shown on GetYourGuide on 13 Nov 2026; the live price is the one on the partner page.</li>
+      </ol>
+      <div class="note">We do not sell anything here. You book on CP, GetYourGuide, Tiqets or the quinta's own site, under their terms. Some links pay us a commission at no extra cost to you — <a href="/disclosure">how we earn</a>. Spotted a change? Write to <a href="mailto:dayinportugal@gmail.com">dayinportugal@gmail.com</a>. More: <a href="/douro-day">Douro Valley day trip guide</a> · <a href="/porto-day-trips">day trips from Porto</a>.</div>
+    </section>
+  </main>
+  <div class="ddp-toast" id="ddp-toast" role="status" aria-live="polite"></div>
+  <footer class="site-foot">
+    <div class="foot-inner">
+      <div class="foot-col">
+        <a class="logo" href="/"><span class="logo-mark" aria-hidden="true">D</span>Day in Portugal</a>
+        <p class="muted">An independent Porto guide, written from the north. Not a travel agency. Some links are affiliate links — you pay the public price. <a href="/disclosure">How we earn</a>.</p>
+        <p><a href="mailto:dayinportugal@gmail.com">dayinportugal@gmail.com</a></p>
+        <div class="social"><a href="https://www.instagram.com/dayinportugal/" rel="me noopener" target="_blank" aria-label="Instagram — @dayinportugal"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.2.8-.4.4-.6.7-.8 1.2-.2.4-.3 1-.4 2.1C2.7 9.8 2.7 10.2 2.7 12s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.2.4.4.7.6 1.2.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.2-.8.4-.4.6-.7.8-1.2.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.2-.4-.4-.7-.6-1.2-.8-.4-.2-1-.3-2.1-.4C15.5 4 15.1 4 12 4zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 8.1a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.2-8.3a1.1 1.1 0 1 1-2.3 0 1.1 1.1 0 0 1 2.3 0z"/></svg><span>Instagram</span></a><a href="https://www.facebook.com/profile.php?id=61595509427117" rel="noopener" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2.63" y="2.63" width="18.74" height="18.74" rx="3.6" fill="none" stroke="currentColor" stroke-width="0.86"/><path fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" d="M13.75 16.7V8.6h1.85M11.3 11.55h4.55"/></svg><span>Facebook</span></a><!-- More profiles: uncomment TikTok / Facebook in build/build.py (SOCIAL) and rebuild. --></div>
+      </div>
+      <!-- ia:footmap --><div class="foot-map"><div class="foot-col"><p class="foot-h"><a href="/porto-guide">Porto guide</a></p><ul class="foot-links"><li><a href="/porto-3-days">3 days in Porto</a></li><li><a href="/book">Book in Porto</a></li><li><a href="/stay">Where to sleep</a></li><li><a href="/gaia-port-cellars">Port cellars in Gaia</a></li><li><a href="/porto-river-cruise">Six bridges cruise</a></li><li><a href="/fado-in-porto">Fado in Porto</a></li><li><a href="/livraria-lello-tickets">Livraria Lello</a></li><li><a href="/bring">What to bring home</a></li></ul></div><div class="foot-col"><p class="foot-h"><a href="/porto-day-trips">Day trips</a></p><ul class="foot-links"><li><a href="/douro-day">Douro Valley</a></li><li><a href="/braga-guimaraes-day-trip">Braga and Guimarães</a></li><li><a href="/aveiro-day-trip">Aveiro and Costa Nova</a></li><li><a href="/povoa-base">Póvoa de Varzim and Vila do Conde</a></li><li><a href="/sintra-day-trip">Sintra day trip</a></li><li><a href="/cascais-day-trip">Cascais day trip</a></li><li><a href="/evora-day-trip">Évora day trip</a></li></ul></div><div class="foot-col"><p class="foot-h"><a href="/lisbon-guide">Lisbon · Airport transfers</a></p><ul class="foot-links"><li><a href="/lisbon-3-days">3 days in Lisbon</a></li><li><a href="/lisbon-where-to-stay">Where to stay in Lisbon</a></li><li><a href="/lisbon-book-first">Book before Lisbon</a></li><li><a href="/airport-transfers">All airport transfers</a></li><li><a href="/porto-airport-transfer">Porto airport transfer</a></li><li><a href="/lisbon-airport-transfer">Lisbon airport transfer</a></li><li><a href="/rent-car">Car or metro</a></li></ul></div><div class="foot-col"><p class="foot-h"><a href="/moving-to-portugal">Moving to Portugal</a></p><ul class="foot-links"><li><a href="/move-to-portugal-2026">Moving to Portugal in 2026</a></li><li><a href="/portugal-d7-visa">Portugal D7 visa</a></li><li><a href="/portugal-d8-digital-nomad-visa">Portugal D8 digital nomad visa</a></li><li><a href="/portugal-visa-income-calculator">Visa income calculator</a></li><li><a href="/portugal-nif-niss">NIF and NISS</a></li><li><a href="/portugal-tax-residency-2026">Tax residency and IFICI</a></li><li><a href="/portugal-cost-of-living-2026">Cost of living 2026</a></li></ul></div><div class="foot-col"><p class="foot-h">About</p><ul class="foot-links"><li><a href="/loja.html">Shop</a></li><li><a href="/demos/">For businesses</a></li><li><a href="/disclosure">How we earn</a></li><li><a href="/privacy">Privacy</a></li><li><a href="/credits">Photo credits</a></li><li><a href="mailto:dayinportugal@gmail.com">dayinportugal@gmail.com</a></li></ul></div></div><!-- /ia:footmap -->
+    </div>
+    <p class="foot-base">© Day in Portugal · Porto guide · <a href="/privacy">Privacy</a> · <a href="/privacidade-servicos">Privacy (services)</a> · <a href="/disclosure">How we earn</a> · <button type="button" class="dip-consent-reopen" data-consent-open>Cookie settings</button> · <a href="/credits">Photo credits</a></p>
+  </footer>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "bf45d67662fa4409b3021476df3a265d"}'></script>
+</body>
+</html>
