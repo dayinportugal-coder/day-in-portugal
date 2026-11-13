@@ -1,2 +1,3 @@
 # Private banned-word list for tools/check_i18n.py (never commit)
 tools/banned-words.local.txt
+__pycache__/

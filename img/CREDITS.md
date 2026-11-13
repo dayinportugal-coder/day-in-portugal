@@ -25,3 +25,10 @@ Last updated: 2026-11-06
 
 ## img/cards/ (added 13/11/2026)
 640×427 WebP crops of the photos listed above (same authors and licences), made by tools/site_ia.py for guide cards.
+
+## Added 13/11/2026 (licences checked via the Wikimedia Commons API)
+- `img/bom-jesus-stairway-1600.webp` / `-800.webp` — [Escadórios do Bom Jesus 2017 (6).jpg](https://commons.wikimedia.org/wiki/File:Escad%C3%B3rios_do_Bom_Jesus_2017_(6).jpg) — Joseolgon · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0), via Wikimedia Commons. Resized and converted to WebP.
+- `img/rabelos-gaia-dom-luis-1600.webp` / `-800.webp` — [Barcos Rabelos (55242912711).jpg](https://commons.wikimedia.org/wiki/File:Barcos_Rabelos_(55242912711).jpg) — Michael Gaylard · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0), via Wikimedia Commons. Resized and converted to WebP.
+- `img/porto-se-from-clerigos-1600.webp` / `-800.webp` — [View of Porto Cathedral from Clérigos Tower, 20250605 1724 9965.jpg](https://commons.wikimedia.org/wiki/File:View_of_Porto_Cathedral_from_Cl%C3%A9rigos_Tower,_20250605_1724_9965.jpg) — Jakub Hałun · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0), via Wikimedia Commons. Resized and converted to WebP.
+- `img/lisbon-praca-comercio-tejo-1600.webp` / `-800.webp` — [Praca do Comercio - Lisbon - Portugal.jpg](https://commons.wikimedia.org/wiki/File:Praca_do_Comercio_-_Lisbon_-_Portugal.jpg) — Norbert Nagel · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0), via Wikimedia Commons. Resized and converted to WebP.
+- `img/lisbon-lapa-stairs-1600.webp` / `-800.webp` — [Lisbon typical street stairs (10334036624).jpg](https://commons.wikimedia.org/wiki/File:Lisbon_typical_street_stairs_(10334036624).jpg) — Pedro Ribeiro Simões · [CC BY 2.0](https://creativecommons.org/licenses/by/2.0), via Wikimedia Commons. Resized and converted to WebP.

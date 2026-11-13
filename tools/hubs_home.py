@@ -1,6 +1,9 @@
 """Hub pages (/porto-guide, /lisbon-guide, /airport-transfers, /moving-to-portugal in 5 languages)
 and the homepage 'browse by topic' + search blocks. Called from site_ia.py."""
-import re, json, html
+import re, json, html, sys, os
+sys.path.insert(0, os.path.dirname(__file__))
+import photos
+HUB_PHOTO = {"porto": "porto-se-from-clerigos", "lisbon": "lisbon-praca-comercio-tejo", "moving": "lisbon-lapa-stairs"}
 from pathlib import Path
 
 HUB_SRC = {"porto": "/stay", "lisbon": "/lisbon-3-days", "airport": "/porto-airport-transfer", "moving": "/portugal-d7-visa"}
@@ -31,6 +34,8 @@ def run(ia):
             if not src_page.is_file(): src_page = ia.fs_for(HUB_SRC[c])
             fig = re.search(r'<figure class="guide-hero">.*?</figure>', src_page.read_text(encoding="utf-8"), re.S)
             fig = fig.group(0) if fig else ""
+            if c in HUB_PHOTO:
+                fig = photos.figure(HUB_PHOTO[c], lang)
             pages = ia.HUB_LIST[c]
             if c == "moving":
                 body = ""
@@ -66,7 +71,7 @@ def run(ia):
            ("daytrips", "/porto-day-trips", "/img/douro-valley-1600.webp"),
            ("lisbon", "/lisbon-guide", "/img/lisboa/tram-28-alfama-1600.webp"),
            ("airport", "/airport-transfers", "/img/porto-airport.webp"),
-           ("moving", "/moving-to-portugal", "/img/lisbon-praca-comercio.webp"),
+           ("moving", "/moving-to-portugal", "/img/lisbon-lapa-stairs-1600.webp"),
            ("shop", "/loja.html", "/img/sardine-tins-1600.webp")]
     COUNT = {"porto": len(ia.HUB_LIST["porto"]), "daytrips": len(ia.CATS["daytrips"]["pages"]), "lisbon": len(ia.HUB_LIST["lisbon"]),
              "airport": len(ia.HUB_LIST["airport"]), "moving": len(ia.HUB_LIST["moving"])}
