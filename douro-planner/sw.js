@@ -1,5 +1,5 @@
 /* Douro Day Planner service worker. Scope: /douro-planner/. Bump VERSION on every change. */
-var VERSION = "ddp-2026-11-13a";
+var VERSION = "ddp-2026-11-13b";
 var CORE = [
   "/douro-planner/", "/douro-planner/planner.css", "/douro-planner/planner.js", "/douro-planner/planner-data.js",
   "/douro-planner/manifest.webmanifest", "/douro-planner/img/icon-192.png", "/douro-planner/img/icon-512.png",
