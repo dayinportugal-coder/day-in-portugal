@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free X post &amp; reply writer in your own voice · Netmend</title>
+<meta name="description" content="Paste your old posts and a rough idea. Get 10 posts or threads in your voice, with hooks that work on X. Free in your browser: 3 generations a day, your own Gemini API key, nothing sent to Netmend.">
+<link rel="canonical" href="https://dayinportugal.com/netmend/x-post-writer/">
+<meta property="og:title" content="Free X post &amp; reply writer in your own voice · Netmend">
+<meta property="og:description" content="Paste your old posts and a rough idea. Get 10 drafts in your voice. 3 free generations a day, your Gemini key stays in your browser.">
+<meta property="og:image" content="https://dayinportugal.com/netmend/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#07080b">
+<link rel="stylesheet" href="../assets/tools.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"X Post Writer","url":"https://dayinportugal.com/netmend/x-post-writer/","applicationCategory":"BusinessApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"Netmend","url":"https://dayinportugal.com/netmend/"}}</script>
+</head><body>
+<header><div class="wrap"><a href="../"><img src="../assets/logo-light.svg" alt="Netmend" width="121" height="30"></a>
+<nav><a href="../#services">Services</a><a href="../#free-tools">Free tools</a><a class="cta" href="#license">Lifetime $19</a></nav></div></header>
+
+<div class="hero"><div class="wrap">
+<p class="crumbs"><a href="../">Netmend</a> · X Post Writer</p>
+<h1>X posts and replies, <span>in your own voice</span></h1>
+<p>Paste a handful of your old posts, then an article or a rough idea. The tool drafts 10 posts or short threads that sound like you, using hook structures that actually get read on X.</p>
+<div class="pills"><span>3 free generations a day</span><span>Your own Gemini key</span><span>Nothing sent to Netmend</span><span>No account</span></div>
+</div></div>
+
+<section><div class="wrap">
+<h2>What it does</h2>
+<p class="lead">Most “write my tweets” tools produce the same polished voice, with the same padded hooks. This one has a narrower job: learn your tone from posts you paste, then write 10 drafts around one idea, each built on a hook format we already use when we write for X.</p>
+<div class="grid">
+<div class="card"><b>1. Your voice</b><p>Paste a few posts you have already published. The model looks at sentence length, formality, emoji and how you start a line, then stays there.</p></div>
+<div class="card"><b>2. Hook formats, not fluff</b><p>Question plus a numbered list, a concrete fact, numbered lessons from real work, a short twist, a tight first line. Structures, not canned topics.</p></div>
+<div class="card"><b>3. Private by design</b><p>This page is static. Your posts, your idea and your API key stay in the browser and go only to Google’s Gemini API, with the key you supply. Netmend never sees them. There is no server.</p></div>
+</div>
+</div></section>
+
+<section class="alt" id="example"><div class="wrap">
+<h2>Example output</h2>
+<p class="lead">A fictional coffee roaster pasted five of their own posts and the idea “we just started selling subscriptions, first 40 bags.” These are sample drafts, clearly marked, not a real account.</p>
+<div class="example">
+<p class="lbl">Idea (fictional)</p>
+<p>We opened a subscription: one 250g bag a month, roasted the week it ships. The first 40 bags are the current Ethiopia, same price as a single bag in the shop.</p>
+</div>
+<div class="xpw-out">
+<article class="xpw-card"><header><span class="fmt">1 · Concrete-fact hook · example</span></header>
+<pre>The first 40 subscription bags are the current Ethiopia, at the same price as a single bag in the shop.
+
+One 250g bag a month, roasted the week it ships. After 40, the price stays on the site, not in this post.</pre></article>
+<article class="xpw-card"><header><span class="fmt">2 · Question + numbered list · example</span></header>
+<pre>What do you actually get if you subscribe?
+
+1. One 250g bag a month.
+2. Roasted the week it leaves, not sitting in a warehouse.
+3. The first 40 bags are the Ethiopia we already sell in the shop, at the shop price.
+
+No mystery blend. You can cancel before the next roast.</pre></article>
+<article class="xpw-card"><header><span class="fmt">3 · Short twist · example</span></header>
+<pre>A coffee subscription should be boring.
+
+Same bag, same weight, roasted the week it ships. The only news here is that the first 40 bags are a coffee you can already taste in the shop.</pre></article>
+</div>
+<p class="note">The free tool below writes 10 drafts at a time, including threads if you ask for them. Always read a draft against your own facts before you post it.</p>
+</div></section>
+
+<section id="setup"><div class="wrap">
+<h2>Write 10 drafts</h2>
+<p class="lead">Free version: 3 generations per day, per browser. Each generation is one batch of 10 drafts. You need a free Gemini API key from Google. We do not issue keys and we cannot see yours.</p>
+
+<div class="xpw-key" id="key-box">
+<h3 style="margin:0 0 6px">1. Add your Gemini API key</h3>
+<ol>
+<li>Open <a href="https://aistudio.google.com" target="_blank" rel="noopener noreferrer">aistudio.google.com</a> and sign in with a Google account.</li>
+<li>Open the API keys page (Get API key) and create a key. The free Gemini key is enough for this tool.</li>
+<li>Paste it below and click Save key. It is stored only in this browser’s localStorage. It is not sent to Netmend, because this site has no server to send it to.</li>
+</ol>
+<label for="api-key">Gemini API key</label>
+<div class="row">
+<div><input id="api-key" type="password" autocomplete="off" spellcheck="false" placeholder="Paste your Gemini API key"></div>
+</div>
+<p style="margin-top:12px">
+<button class="btn" type="button" id="save-key">Save key</button>
+<button class="btn ghost" type="button" id="toggle-key">Show</button>
+<button class="btn ghost" type="button" id="clear-key">Remove key</button>
+</p>
+<p class="note" id="key-status"></p>
+<p class="note">On a shared computer, click Remove key when you are done. Anyone with access to this browser could use a saved key.</p>
+</div>
+
+<div class="tool">
+<label for="voice">Your old posts (the voice sample)</label>
+<textarea id="voice" placeholder="Paste 5–15 posts you have already written, one after another. More is better. Replies and threads are useful too."></textarea>
+<label for="idea">Article, notes, or a rough idea</label>
+<textarea id="idea" placeholder="What should the drafts be about? Paste an article, bullet notes, or a messy paragraph. Only include facts you are happy to stand behind."></textarea>
+<div class="row">
+<div><label for="kind">What to generate</label>
+<select id="kind">
+<option value="posts">10 single posts</option>
+<option value="threads">10 short threads (2–4 posts each)</option>
+<option value="mix">A mix of posts and threads</option>
+</select></div>
+<div><label>Daily limit</label><p class="note" id="remain" style="margin:8px 0 0"></p></div>
+</div>
+<p style="margin-top:14px"><button class="btn" type="button" id="generate">Generate 10 drafts</button></p>
+<p class="note xpw-status" id="status"></p>
+<div id="out"></div>
+</div>
+</div></section>
+
+<section class="alt" id="license"><div class="wrap">
+<h2>Lifetime license $19 (founding price, first 50) – then $29</h2>
+<p class="lead">The free tool stays free, with the daily cap. A lifetime license is for when we lift that cap and add the extras we are building (saved voices, reply drafts from a post you paste, more generations). Founding price is $19 for the first 50 licenses, then $29. Pre-order now on Gumroad. Payment is handled by Gumroad, not on this site.</p>
+<div class="grid">
+<div class="card"><b>Free, in your browser</b><div class="price">$0</div><p>3 generations a day, your own Gemini key, 10 drafts each time. No account.</p></div>
+<div class="card"><b>Lifetime license</b><div class="price">$19 <small>founding, first 50</small> <s>$29</s></div><p>Pay once on Gumroad. Founding price $19 for the first 50 licenses, then $29.</p></div>
+</div>
+<p style="margin-top:18px"><a class="btn" href="https://portugaldiary.gumroad.com/l/leutz" target="_blank" rel="noopener noreferrer">Pre-order on Gumroad ($19)</a></p>
+<p class="note">Opens the Gumroad product page for the founding lifetime license ($19, first 50, then $29). Questions: <a href="mailto:dayinportugal@gmail.com">dayinportugal@gmail.com</a>.</p>
+<p class="note"><b>Privacy.</b> This page does not send or store anything. If you buy, you pay on Gumroad (portugaldiary.gumroad.com), under Gumroad’s checkout and privacy terms. For questions about the product, contact Pedro Carvalho (Netmend), <a href="mailto:dayinportugal@gmail.com">dayinportugal@gmail.com</a>. You can complain to the Portuguese data protection authority (CNPD).</p>
+</div></section>
+
+<section id="faq"><div class="wrap"><h2>FAQ</h2>
+<details><summary>Is the Gemini API key really free?</summary><p>Google offers a free Gemini API key through <a href="https://aistudio.google.com" target="_blank" rel="noopener noreferrer">Google AI Studio</a>. Limits and availability are Google’s, not ours, and they can change. This tool uses that key from your browser. We do not resell keys and we do not have a paid Google account sitting behind this page.</p></details>
+<details><summary>Where is my key stored? Do you see my posts?</summary><p>The key is saved in localStorage in your browser. Your posts and your idea are sent only to Google’s Gemini API, from your browser, with that key. Netmend does not receive the key, the posts, or the drafts. There is no Netmend server for this tool. On a shared computer, use Remove key when you finish.</p></details>
+<details><summary>What counts as a generation?</summary><p>One click of “Generate 10 drafts”. The free version allows 3 of those per day in this browser. The count is kept in localStorage, so it is per browser, not per person. Clearing the site’s data resets it, which we do not try to stop, but the fair use is 3 a day.</p></details>
+<details><summary>Will this post to X for me?</summary><p>No. It writes drafts. You copy the ones you are happy with and post them yourself.</p></details>
+<details><summary>What does the $19 lifetime license include?</summary><p>It is a founding price for the first 50 licenses, then the price is $29, paid once on Gumroad. The plan is to lift the daily cap and add extras such as saved voices and reply drafts. The free 3-a-day tool remains. You can pre-order now at <a href="https://portugaldiary.gumroad.com/l/leutz" target="_blank" rel="noopener noreferrer">portugaldiary.gumroad.com/l/leutz</a>.</p></details>
+<details><summary>What hook formats do you use?</summary><p>Structures we already work with when writing for X: a question plus a numbered list of concrete points, a hook that starts with a real fact or number, numbered lessons from work you actually did, an “anatomy of” list, a short opinion with a twist, and a very short first line that does most of the work. The model is told not to invent figures or testimonials.</p></details>
+<details><summary>Can I use it in another language?</summary><p>This version of the tool is in English and asks the model for English drafts. If you need another language, email us; it is not in the free tool yet.</p></details>
+</div></section>
+
+<section class="alt"><div class="wrap"><h2>Hook formats, in plain language</h2>
+<p class="lead">These are the skeletons the drafts rotate through. They are structures, not topics to copy.</p>
+<div class="hooks">
+<div><b>Question + list</b>A real question on the first line, then 3–5 concrete points.</div>
+<div><b>Concrete fact</b>Open with a number or a rule that is in your material, then say why it matters.</div>
+<div><b>Your setup</b>You (not a famous name we invent) plus a real figure plus the exact steps.</div>
+<div><b>Lessons from work</b>Only if you did N things. “I did N. K things I learned.”</div>
+<div><b>Anatomy</b>The N parts of a thing, named, not padded.</div>
+<div><b>Short twist</b>One counterintuitive line, then the correction, then a rule you can use.</div>
+<div><b>Very short hook</b>The first line does almost all the work.</div>
+</div>
+</div></section>
+
+<section><div class="wrap"><h2>More free tools</h2><div class="toolsnav"><a href="../x-reach-checker/">X reach checker</a><a href="../statement-to-csv/">Bank statement → CSV</a><a href="../wall-of-love/">Testimonial wall</a><a href="../pin-maker/">Pinterest pin maker</a><a href="../excel-functions/">Excel functions in 6 languages</a><a href="../">All Netmend services</a></div></div></section>
+<footer class="site-footer"><div class="wrap">
+<div class="f-grid">
+<div class="f-brand"><a href="../"><img src="../assets/logo-light.svg" alt="Netmend" width="121" height="30" loading="lazy"></a><p>Small, private tools for writing on X, plus fixed-price back-office work for small businesses. Everything runs in your browser.</p></div>
+<div><h4>Products</h4><a href="../x-post-writer/">X Post Writer</a><a href="../x-reach-checker/">X Reach Checker</a><a href="https://portugaldiary.gumroad.com/l/leutz" target="_blank" rel="noopener noreferrer">Lifetime license $19</a><a href="../#services">Done-for-you services</a></div>
+<div><h4>Free tools</h4><a href="../statement-to-csv/">Statement PDF to CSV</a><a href="../excel-functions/">Excel formula translator</a><a href="../wall-of-love/">Testimonial wall</a><a href="../pin-maker/">Pinterest pin maker</a></div>
+<div><h4>Learn</h4><a href="../x-growth/">X growth guides</a><a href="../guides/">PDF to Excel guides</a><a href="../compare/">Comparisons</a><a href="mailto:dayinportugal@gmail.com?subject=Netmend">Contact</a></div>
+</div>
+<div class="f-bottom">© 2026 Netmend · run by Pedro Carvalho · EU-based · No cookies, no trackers, no sign-up. This tool runs in your browser. Your Gemini key, if you save one, stays on your device.</div>
+</div></footer>
+<script src="app.js"></script>
+</body></html>

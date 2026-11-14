@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Convert NatWest bank statement PDF to CSV/Excel (free, private) · Netmend</title>
+<meta name="description" content="Convert a NatWest statement PDF to CSV. Official PDF statements, transaction CSV (Date, Type, Description, Paid In, Paid Out, Balance) and DD/MM/YYYY dates.">
+<link rel="canonical" href="https://dayinportugal.com/netmend/statement-to-csv/natwest/">
+<meta property="og:title" content="Convert NatWest bank statement PDF to CSV/Excel (free, private) · Netmend"><meta property="og:description" content="Convert a NatWest statement PDF to CSV. Official PDF statements, transaction CSV (Date, Type, Description, Paid In, Paid Out, Balance) and DD/MM/YYYY dates.">
+<meta property="og:image" content="https://dayinportugal.com/netmend/assets/og-image.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="../../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#07080b">
+<link rel="stylesheet" href="../../assets/tools.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Convert NatWest bank statement PDF to CSV", "url": "https://dayinportugal.com/netmend/statement-to-csv/natwest/", "applicationCategory": "BusinessApplication", "operatingSystem": "Any (web browser)", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "Netmend", "url": "https://dayinportugal.com/netmend/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I get a CSV from NatWest?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, from View transactions in Online Banking, for a date range the bank still offers. Official statements remain PDFs."}}, {"@type": "Question", "name": "Is this the same as Royal Bank of Scotland?", "acceptedAnswer": {"@type": "Answer", "text": "Close, but not a promise. Check the header row of the RBS file before you reuse a NatWest mapping."}}, {"@type": "Question", "name": "Why doesn’t the CSV cover four years?", "acceptedAnswer": {"@type": "Answer", "text": "Transaction exports are usually limited to a recent window. Older months have to come from the PDF archive — that is what this converter is for."}}], "url": "https://dayinportugal.com/netmend/statement-to-csv/natwest/"}</script>
+<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+<script defer src="../app.js"></script>
+</head><body>
+
+<header><div class="wrap"><a href="../../"><img src="../../assets/logo-light.svg" alt="Netmend" width="121" height="30"></a>
+<nav><a href="../../#services">Services</a><a href="../">Statement converter</a><a class="cta" href="https://www.fiverr.com/dayinportugal/convert-pdf-invoices-and-documents-into-a-clean-excel-spreadsheet">From $20</a></nav></div></header>
+<div class="hero"><div class="wrap">
+<p class="crumbs"><a href="../../">Netmend</a> · <a href="../">Bank statement → CSV</a> · NatWest</p>
+<h1>Convert a NatWest statement PDF to <span>CSV or Excel</span></h1>
+<p>NatWest official statements are PDFs. You can also export recent transactions as a CSV from Online Banking. This page shows both paths and the columns you should expect, so a PDF-only period still becomes a usable sheet.</p>
+<div class="pills"><span>United Kingdom (NatWest). Royal Bank of Scotland statements are similar but not identical.</span><span>100% in your browser</span><span>No account</span><span>From $20 if you want it done</span></div>
+</div></div>
+<section><div class="wrap">
+<h2>Convert a NatWest PDF now</h2>
+<p class="lead">The defaults below are set for a typical NatWest file. You can still change them. The file never leaves your computer.</p>
+
+<div class="tool">
+<label for="file">PDF statement (stays on your computer)</label>
+<input id="file" type="file" accept="application/pdf">
+<p class="note">No statement at hand? <button id="demo" type="button" class="btn ghost" style="padding:5px 10px" data-src="../../samples/demo-statement.pdf">Try our demo statement</button> (fictional data)</p>
+<div class="row">
+<div><label for="mode">Output</label><select id="mode"><option value="tx">Transactions only</option><option value="all">Every text row (raw table)</option></select></div>
+<div><label for="fmt">Number format</label><select id="fmt"><option value="auto">Detect automatically</option><option value="eu">European 1.234,56</option><option value="us" selected>UK/US 1,234.56</option></select></div>
+<div><label for="sep">CSV for</label><select id="sep"><option value=";">Excel in Europe (; and ,)</option><option value="," selected>Excel UK/US, Google Sheets (, and .)</option></select></div>
+</div>
+<div id="out" hidden><p id="stats" class="note"></p><p><button id="dl" class="btn" disabled>Download CSV</button></p>
+<div class="scroll"><table id="preview"></table></div>
+<p class="note">Check the totals against your statement before you use the file. If a column is in the wrong place, try “Every text row”, or send it to us.</p></div>
+</div>
+<p class="note">How it stays private: the page uses the open-source pdf.js library (Mozilla) to read the file locally. There is no server and no upload. You can disconnect from the internet after the page loads and it still works.</p>
+
+</div></section>
+<section class="alt"><div class="wrap">
+<h2>The NatWest statement format</h2>
+<div class="facts">
+<div><b>Dates</b>Dates are day-first DD/MM/YYYY in the PDF and in the usual transaction CSV.</div>
+<div><b>Numbers</b>UK format: 1,234.56. Choose UK/US numbers and a comma CSV.</div>
+<div><b>Region</b>United Kingdom (NatWest). Royal Bank of Scotland statements are similar but not identical.</div>
+</div>
+<h3>Where to download the official file</h3>
+Official statements: in the NatWest app or Online Banking, open <b>Statements</b> (or View statements) for the account and download the monthly PDF. NatWest Help covers requesting a copy if a period is missing.
+<p>For a spreadsheet of recent transactions, from Online Banking:</p>
+<ol>
+<li>Go to <b>Statements &amp; transactions</b> → <b>View transactions</b>.</li>
+<li>Choose the account and a date range.</li>
+<li>Export as <b>CSV</b>.</li>
+</ol>
+<p>That export is not a substitute for the official monthly PDF when you need a legal statement.</p>
+<h3>What the PDF contains</h3>
+<p>A typical NatWest current-account PDF lists Date, Type, Description, Paid In, Paid Out and Balance. Only one of Paid In or Paid Out is filled on each row. References can wrap under the description.</p>
+<h3>Official CSV or Excel, when the bank offers one</h3>
+<p>The official transaction CSV commonly uses Date, Type, Description, Paid In, Paid Out and Balance, with DD/MM/YYYY dates. Prefer it for any period the bank still lets you export. Use our converter for older PDFs or for files a client emailed you.</p>
+<h3>What to watch for</h3>
+<ul>
+<li>If you also have an RBS or Ulster Bank statement, treat it as a sibling layout: check the header row rather than reusing a NatWest template blindly.</li>
+<li>After conversion, check Paid In − Paid Out against the change in Balance, and against the PDF’s opening and closing figures.</li>
+</ul>
+<p class="note"><b>Sources</b> (checked 12/11/2026). NatWest Support Centre pages on viewing statements and on transaction details (natwest.com), checked 12/11/2026. CSV/PDF columns (Date, Type, Description, Paid In, Paid Out, Balance; DD/MM/YYYY) from current UK layouts the same day. Banks change layouts without notice: treat the first row of your own file as the authority.</p>
+</div></section>
+<section id="done-for-you"><div class="wrap">
+<h2>Need it done for you? From $20</h2>
+<p class="lead">The free tool is for a clean, text-based PDF. For scans, password files, a packed year of statements or a layout that has to match your accounting software, we convert them and check every total against the opening and closing balance.</p>
+<div class="grid">
+<div class="card"><b>Done-for-you conversion</b><div class="price">$20 <small>/ 20 pages</small></div>
+<p>75 pages $40 · 200 pages $80. Totals reconciled. 48h. Pay on Fiverr.</p>
+<a class="btn" href="https://www.fiverr.com/dayinportugal/convert-pdf-invoices-and-documents-into-a-clean-excel-spreadsheet">Need it done for you? From $20</a></div>
+<div class="card"><b>Privacy</b><p>Your statement is processed only for the order and deleted after delivery. This page itself never uploads the file.</p>
+<p class="note">Who handles the data: Pedro Carvalho (Netmend), <a href="mailto:dayinportugal@gmail.com">dayinportugal@gmail.com</a>. No address, phone or national ID is asked for or published.</p></div>
+</div>
+</div></section>
+<section class="alt"><div class="wrap"><h2>FAQ</h2><details><summary>Can I get a CSV from NatWest?</summary><p>Yes, from View transactions in Online Banking, for a date range the bank still offers. Official statements remain PDFs.</p></details><details><summary>Is this the same as Royal Bank of Scotland?</summary><p>Close, but not a promise. Check the header row of the RBS file before you reuse a NatWest mapping.</p></details><details><summary>Why doesn’t the CSV cover four years?</summary><p>Transaction exports are usually limited to a recent window. Older months have to come from the PDF archive — that is what this converter is for.</p></details></div></section>
+<section><div class="wrap">
+<h2>Other bank guides</h2>
+<div class="banklist"><a href="../santander/"><b>Santander UK</b> statement to CSV</a><a href="../barclays/"><b>Barclays</b> statement to CSV</a><a href="../hsbc/"><b>HSBC UK</b> statement to CSV</a><a href="../monzo/"><b>Monzo</b> statement to CSV</a><a href="../lloyds/"><b>Lloyds Bank</b> statement to CSV</a><a href="../"><b>All banks</b> and the main converter</a></div>
+<p class="note" style="margin-top:16px"><a href="../../excel-functions/">Excel formula translator</a> · <a href="../../wall-of-love/">Testimonial wall</a> · <a href="../../pin-maker/">Pinterest pin maker</a> · <a href="../../">All Netmend services</a></p>
+</div></section>
+
+<footer class="site-footer"><div class="wrap">
+<div class="f-grid">
+<div class="f-brand"><a href="../../"><img src="../../assets/logo-light.svg" alt="Netmend" width="121" height="30" loading="lazy"></a><p>Small, private tools for writing on X, plus fixed-price back-office work for small businesses. Everything runs in your browser.</p></div>
+<div><h4>Products</h4><a href="../../x-post-writer/">X Post Writer</a><a href="../../x-reach-checker/">X Reach Checker</a><a href="https://portugaldiary.gumroad.com/l/leutz" target="_blank" rel="noopener noreferrer">Lifetime license $19</a><a href="../../#services">Done-for-you services</a></div>
+<div><h4>Free tools</h4><a href="../../statement-to-csv/">Statement PDF to CSV</a><a href="../../excel-functions/">Excel formula translator</a><a href="../../wall-of-love/">Testimonial wall</a><a href="../../pin-maker/">Pinterest pin maker</a></div>
+<div><h4>Learn</h4><a href="../../x-growth/">X growth guides</a><a href="../../guides/">PDF to Excel guides</a><a href="../../compare/">Comparisons</a><a href="mailto:dayinportugal@gmail.com?subject=Netmend">Contact</a></div>
+</div>
+<div class="f-bottom">© 2026 Netmend · run by Pedro Carvalho · EU-based · No cookies, no trackers, no sign-up. Free tools run in your browser.</div>
+</div></footer>
+</body></html>

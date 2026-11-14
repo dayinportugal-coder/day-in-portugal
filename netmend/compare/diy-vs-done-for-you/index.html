@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DIY PDF-to-Excel vs paying someone — when each is worth it · Netmend</title>
+<meta name="description" content="An honest comparison of doing a PDF-to-spreadsheet conversion yourself with a free in-browser tool, versus paying from $20 to have the totals checked for you.">
+<link rel="canonical" href="https://dayinportugal.com/netmend/compare/diy-vs-done-for-you/">
+<meta property="og:title" content="DIY PDF-to-Excel vs paying someone — when each is worth it · Netmend"><meta property="og:description" content="An honest comparison of doing a PDF-to-spreadsheet conversion yourself with a free in-browser tool, versus paying from $20 to have the totals checked for you.">
+<meta property="og:image" content="https://dayinportugal.com/netmend/assets/og-image.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="../../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#07080b">
+<link rel="stylesheet" href="../../assets/tools.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is the free tool a trial of the paid service?", "acceptedAnswer": {"@type": "Answer", "text": "No. The tool is free, with no account and no page limit. The paid job is for files the tool is a poor fit for, or for packs you do not want to tick yourself."}}, {"@type": "Question", "name": "What does from $20 actually buy?", "acceptedAnswer": {"@type": "Answer", "text": "Up to 20 pages for $20, 75 pages for $40, or 200 pages for $80, as a spreadsheet, with totals checked against the documents, in 48 hours, paid on Fiverr. Scans, messy layouts and accounting-template mapping are the reason to use it."}}, {"@type": "Question", "name": "Will you convert a file the bank could have exported as CSV?", "acceptedAnswer": {"@type": "Answer", "text": "We can, if that is all you have. If you can still generate the official CSV or XLS, do that instead — it is faster and you should not pay anyone for it."}}], "url": "https://dayinportugal.com/netmend/compare/diy-vs-done-for-you/"}</script>
+<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+<script defer src="../../statement-to-csv/app.js"></script>
+</head><body>
+
+<header><div class="wrap"><a href="../../"><img src="../../assets/logo-light.svg" alt="Netmend" width="121" height="30"></a>
+<nav><a href="../../#services">Services</a><a href="../../statement-to-csv/">Statement converter</a><a class="cta" href="https://www.fiverr.com/dayinportugal/convert-pdf-invoices-and-documents-into-a-clean-excel-spreadsheet">From $20</a></nav></div></header>
+<div class="hero"><div class="wrap">
+<p class="crumbs"><a href="../../">Netmend</a> · <a href="../">Compare</a> · DIY conversion vs paying someone</p>
+<h1>DIY conversion vs <span>paying someone</span></h1>
+<p>The free tool on this page is enough for a clean, text-based statement or a simple invoice table, if you are willing to tick the totals. Paying someone is worth it when the file is a scan, a packed year, a messy layout, or a delivery that has to match QuickBooks or Xero without you spending the evening on it. Here is how to decide, without the usual “just book us” evasions.</p>
+<div class="pills"><span>Free tool in your browser</span><span>No account</span><span>From $20 if you want it done</span></div>
+</div></div>
+<section><div class="wrap">
+<h2>Convert a statement PDF now</h2>
+
+<p class="lead">Defaults are a starting point. Change the number format to match the PDF. The file never leaves your computer.</p>
+<div class="tool">
+<label for="file">PDF (stays on your computer)</label>
+<input id="file" type="file" accept="application/pdf">
+<p class="note">No file at hand? <button id="demo" type="button" class="btn ghost" style="padding:5px 10px" data-src="../../samples/demo-statement.pdf">Try a demo PDF</button> (fictional data)</p>
+<div class="row">
+<div><label for="mode">Output</label><select id="mode"><option value="tx">Transactions / likely rows</option><option value="all">Every text row (raw table)</option></select></div>
+<div><label for="fmt">Number format</label><select id="fmt"><option value="auto" selected>Detect automatically</option><option value="eu">European 1.234,56</option><option value="us">UK/US 1,234.56</option></select></div>
+<div><label for="sep">CSV for</label><select id="sep"><option value=";">Excel in Europe (; and ,)</option><option value="," selected>Excel UK/US, Google Sheets (, and .)</option></select></div>
+</div>
+<div id="out" hidden><p id="stats" class="note"></p><p><button id="dl" class="btn" disabled>Download CSV</button></p>
+<div class="scroll"><table id="preview"></table></div>
+<p class="note">Check the totals against the original PDF before you use the file. If a column is in the wrong place, try “Every text row”, or send it to us.</p></div>
+</div>
+<p class="note">How it stays private: the page uses the open-source pdf.js library (Mozilla) to read the file locally. There is no server and no upload. You can disconnect from the internet after the page loads and it still works.</p>
+
+</div></section>
+<section class="alt"><div class="wrap">
+
+<h2>When doing it yourself is the right call</h2>
+<ul>
+<li>You have one or two <b>digital</b> PDFs, and you can already highlight the amounts as text.</li>
+<li>The layout is a straightforward table: a bank statement, a card statement, or an invoice with a normal line-item grid.</li>
+<li>You can spend 10–20 minutes checking that opening + movements = closing, or that each invoice gross matches the PDF.</li>
+<li>The bank will still generate an official CSV or XLS for the same dates — in which case you should not convert anything; see <a href="../official-csv-vs-pdf/">official CSV vs PDF</a>.</li>
+</ul>
+<p>In those cases, paying is a waste. Use the official export, or use the converter below, save the CSV, tick the totals, and stop. Our price is not a better method for a file you can already tick.</p>
+<h2>When paying someone is the right call</h2>
+<ul>
+<li><b>Scans and photos.</b> The free tool will not read them. Typing a packed folder of till receipts or photographed invoices is real work; that is the job.</li>
+<li><b>Volume.</b> A year of monthly statements, or a shoebox of mixed invoices, is several evenings of careful checking. A fixed pack of 20 pages from $20, 75 pages for $40, or 200 pages for $80 is often cheaper than your time, and the totals are checked against each document.</li>
+<li><b>Layout that fights the tool.</b> Multi-column statements, summary blocks that look like transactions, password files you would rather not wrestle with, or an invoice design with the tax box in a graphic.</li>
+<li><b>A target template.</b> If the delivery has to land in a QuickBooks or Xero import file, already mapped and already ticked, that is more than “get me some columns”.</li>
+</ul>
+<p>What you should still expect when you pay: the official PDFs stay the official documents; the spreadsheet is a working file; and a human check against printed totals is the point of the fee. A cheap automated service that does not tick the balances is not a bargain. We delete the files after delivery; this page itself never uploads them.</p>
+<h2>A simple rule</h2>
+<p>If you can tick the file tonight, do it yourself. If you already know you will not, or you have tried the tool and the preview is wrong, use the paid option. The converter is below either way — try it on one PDF before you decide. Other honest comparisons: <a href="../browser-vs-acrobat-vs-excel/">this tool vs Acrobat vs Excel</a>, and <a href="../official-csv-vs-pdf/">official bank exports vs a conversion</a>.</p>
+
+<p class="note"><b>Sources</b> (checked 13/11/2026). Official product help is linked in the text. Menus and templates change: treat the current screen in QuickBooks, Xero or your bank as the authority.</p>
+</div></section>
+
+<section id="done-for-you"><div class="wrap">
+<h2>Need it done for you? From $20</h2>
+<p class="lead">The free tool is for a clean, text-based PDF. For scans, password files, a packed year of documents or a layout that has to match QuickBooks or Xero, we convert them and check the totals against each document.</p>
+<div class="grid">
+<div class="card"><b>Done-for-you conversion</b><div class="price">$20 <small>/ 20 pages</small></div>
+<p>75 pages $40 · 200 pages $80. Totals reconciled. 48h. Pay on Fiverr.</p>
+<a class="btn" href="https://www.fiverr.com/dayinportugal/convert-pdf-invoices-and-documents-into-a-clean-excel-spreadsheet">Need it done for you? From $20</a></div>
+<div class="card"><b>Privacy</b><p>Your file is processed only for the order and deleted after delivery. This page itself never uploads the file.</p>
+<p class="note">Who handles the data: Pedro Carvalho (Netmend), <a href="mailto:dayinportugal@gmail.com">dayinportugal@gmail.com</a>. No address, phone or national ID is asked for or published.</p></div>
+</div>
+</div></section>
+
+<section class="alt"><div class="wrap"><h2>FAQ</h2><details><summary>Is the free tool a trial of the paid service?</summary><p>No. The tool is free, with no account and no page limit. The paid job is for files the tool is a poor fit for, or for packs you do not want to tick yourself.</p></details><details><summary>What does from $20 actually buy?</summary><p>Up to 20 pages for $20, 75 pages for $40, or 200 pages for $80, as a spreadsheet, with totals checked against the documents, in 48 hours, paid on Fiverr. Scans, messy layouts and accounting-template mapping are the reason to use it.</p></details><details><summary>Will you convert a file the bank could have exported as CSV?</summary><p>We can, if that is all you have. If you can still generate the official CSV or XLS, do that instead — it is faster and you should not pay anyone for it.</p></details></div></section>
+<section><div class="wrap">
+<h2>Related guides</h2>
+<div class="banklist"><a href="../../guides/bank-statement-to-quickbooks/"><b>Import a PDF bank statement into QuickBooks</b></a><a href="../../guides/bank-statement-to-xero/"><b>Import a PDF bank statement into Xero</b></a><a href="../../guides/scanned-pdf-invoices-to-excel/"><b>Convert scanned PDF invoices to Excel — honestly</b></a><a href="../official-csv-vs-pdf/"><b>Official bank CSV vs converting the PDF</b></a><a href="../browser-vs-acrobat-vs-excel/"><b>In-browser converter vs Acrobat vs Excel</b></a><a href="../"><b>All comparisons</b></a><a href="../../guides/"><b>How-to guides</b></a><a href="../../statement-to-csv/"><b>Bank statement converter</b> and bank guides</a></div>
+<p class="note" style="margin-top:16px"><a href="../../excel-functions/">Excel formula translator</a> · <a href="../../wall-of-love/">Testimonial wall</a> · <a href="../../pin-maker/">Pinterest pin maker</a> · <a href="../../">All Netmend services</a></p>
+</div></section>
+
+<footer class="site-footer"><div class="wrap">
+<div class="f-grid">
+<div class="f-brand"><a href="../../"><img src="../../assets/logo-light.svg" alt="Netmend" width="121" height="30" loading="lazy"></a><p>Small, private tools for writing on X, plus fixed-price back-office work for small businesses. Everything runs in your browser.</p></div>
+<div><h4>Products</h4><a href="../../x-post-writer/">X Post Writer</a><a href="../../x-reach-checker/">X Reach Checker</a><a href="https://portugaldiary.gumroad.com/l/leutz" target="_blank" rel="noopener noreferrer">Lifetime license $19</a><a href="../../#services">Done-for-you services</a></div>
+<div><h4>Free tools</h4><a href="../../statement-to-csv/">Statement PDF to CSV</a><a href="../../excel-functions/">Excel formula translator</a><a href="../../wall-of-love/">Testimonial wall</a><a href="../../pin-maker/">Pinterest pin maker</a></div>
+<div><h4>Learn</h4><a href="../../x-growth/">X growth guides</a><a href="../../guides/">PDF to Excel guides</a><a href="../../compare/">Comparisons</a><a href="mailto:dayinportugal@gmail.com?subject=Netmend">Contact</a></div>
+</div>
+<div class="f-bottom">© 2026 Netmend · run by Pedro Carvalho · EU-based · No cookies, no trackers, no sign-up. Free tools run in your browser.</div>
+</div></footer>
+</body></html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI quiz generator: text, PDF or link to Google Forms, Kahoot and Moodle · Netmend</title>
+<meta name="description" content="Turn any text, PDF, web page or topic into a quiz with answers and explanations. Export to a self-grading Google Form, CSV, Kahoot spreadsheet, Moodle GIFT or a printable test. Free in your browser.">
+<link rel="canonical" href="https://dayinportugal.com/netmend/quiz/">
+<meta property="og:title" content="AI quiz generator: text, PDF or link to Google Forms, Kahoot and Moodle · Netmend">
+<meta property="og:description" content="Turn any text, PDF, web page or topic into a quiz with answers and explanations. Export to a self-grading Google Form, CSV, Kahoot spreadsheet, Moodle GIFT or a printable test. Free in your browser.">
+<meta property="og:image" content="https://dayinportugal.com/netmend/quiz/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#07080b">
+<link rel="stylesheet" href="../assets/tools.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Netmend Quiz", "url": "https://dayinportugal.com/netmend/quiz/", "applicationCategory": "BusinessApplication", "operatingSystem": "Any (web browser)", "offers": [{"@type": "Offer", "price": "0", "priceCurrency": "USD"}, {"@type": "Offer", "price": "19", "priceCurrency": "USD", "name": "Pro lifetime"}], "publisher": {"@type": "Organization", "name": "Netmend", "url": "https://dayinportugal.com/netmend/"}}</script>
+</head><body>
+<header><div class="wrap"><a href="../"><img src="../assets/logo-light.svg" alt="Netmend" width="121" height="30"></a>
+<nav><a href="../tools/">All tools</a><a href="#app">Use it free</a><a class="cta" href="#pro">Pro $19 lifetime</a></nav></div></header>
+<div class="hero"><div class="wrap">
+<p class="crumbs"><a href="../">Netmend</a> · <a href="../tools/">Tools</a> · Netmend Quiz</p>
+<h1>Any text or PDF <span>into a ready quiz</span></h1>
+<p>Paste a lesson, drop a PDF or give a link. Netmend Quiz writes multiple-choice and true/false questions with the right answers and short explanations, then exports a self-grading Google Form, a printable test or a Kahoot and Moodle file.</p>
+<div class="pills"><span>3 free quizzes a day</span><span>Self-grading Google Form</span><span>Printable answer key</span><span>Your own Gemini key</span></div>
+<p style="margin-top:18px"><a class="btn" href="#app">Make a quiz free</a></p>
+</div></div>
+<section class="alt noprint" id="app"><div class="wrap">
+<h2>Make a quiz</h2>
+<div id="nm-key"></div>
+<div class="tool" style="margin-top:18px">
+<div class="nm-tabs"><button type="button" data-tab="text" class="on">Paste text</button><button type="button" data-tab="pdf">PDF file</button><button type="button" data-tab="url">Web page</button><button type="button" data-tab="topic">Topic</button></div>
+<div class="nm-pane" data-pane="text"><label for="srctext">Lesson, article or notes</label><textarea id="srctext" placeholder="Paste the material the quiz should test"></textarea></div>
+<div class="nm-pane" data-pane="pdf" hidden><label for="pdf">PDF file</label><input id="pdf" type="file" accept="application/pdf"></div>
+<div class="nm-pane" data-pane="url" hidden><label for="url">Public web page URL</label><input id="url" type="url" placeholder="https://…"></div>
+<div class="nm-pane" data-pane="topic" hidden><label for="topic">Topic</label><input id="topic" type="text" placeholder="e.g. The water cycle, grade 6"></div>
+<div class="row">
+<div><label for="count">Questions</label><select id="count"><option>5</option><option selected>10</option><option>15</option><option>20</option><option>30</option><option>50</option></select></div>
+<div><label for="types">Question types</label><select id="types"><option value="mix">Multiple choice + true/false</option><option value="mcq">Multiple choice only</option><option value="tf">True / false only</option></select></div>
+<div><label for="level">Difficulty</label><select id="level"><option>easy</option><option selected>medium</option><option>hard</option></select></div>
+<div><label for="lang">Language</label><select id="lang"><option>English</option><option>Spanish</option><option>Portuguese</option><option>French</option><option>German</option><option>Italian</option><option>Dutch</option><option>Hindi</option><option>Arabic</option></select></div>
+</div>
+<p class="note" id="nm-remain"></p>
+<p><button class="btn" type="button" id="go">Generate quiz</button></p>
+<p class="note" id="status"></p>
+<div id="exports" class="nm-actions" hidden>
+<button class="btn" type="button" id="x-forms">Google Form (self-grading)</button>
+<button class="btn ghost" type="button" id="x-print">Print / PDF with answer key</button>
+<button class="btn ghost" type="button" id="x-csv">CSV</button>
+<button class="btn ghost" type="button" id="x-kahoot">Kahoot .xlsx (Pro)</button>
+<button class="btn ghost" type="button" id="x-gift">Moodle GIFT (Pro)</button>
+</div>
+<div id="forms-help" hidden>
+<h3>Create the Google Form in 1 minute</h3>
+<ol><li>Open <a href="https://script.google.com/home/projects/create" target="_blank" rel="noopener noreferrer">script.google.com → New project</a> (signed in to your Google account).</li>
+<li>Replace the code with the script below (it is already copied to your clipboard) and click <b>Run</b>. Approve the Forms permission (it is your own script).</li>
+<li>Open <b>Execution log</b>: it shows the edit link and the link to share with students. Answers are graded automatically.</li></ol>
+<pre id="forms-code" style="max-height:260px;overflow:auto"></pre>
+</div>
+</div>
+</div></section>
+<section class="printable" id="quiz-sec" hidden><div class="wrap"><div id="out"></div></div></section>
+
+<section class="noprint"><div class="wrap">
+<h2>Why teachers and trainers use it</h2>
+<div class="grid">
+<div class="card"><b>From your material</b><p>Questions come from the text you give, with an explanation for each right answer, so you can check them in seconds.</p></div>
+<div class="card"><b>Google Forms quiz</b><p>One click gives you a script that builds a real Google Forms quiz in your own account, with points and correct answers set.</p></div>
+<div class="card"><b>Everywhere else</b><p>Print it with a separate answer key, or import it into Kahoot, Moodle, Canvas (GIFT/CSV) and Quizizz-style tools.</p></div>
+</div></div></section>
+
+<section class="alt noprint" id="pro"><div class="wrap">
+<h2>Netmend Quiz Pro: $19 once</h2>
+<p class="lead">AI quiz makers usually charge $8 to $15 a month. Pro is one payment.</p>
+<div id="nm-license"></div>
+</div></section>
+
+<section class="noprint"><div class="wrap"><h2>FAQ</h2>
+<details><summary>Is it free?</summary><p>Yes: 3 quizzes a day, up to 10 questions, Google Forms, CSV and print exports. You use your own free Gemini key.</p></details>
+<details><summary>Does Netmend get access to my Google account?</summary><p>No. You run the generated script yourself in your own Apps Script project. We never see your account, your form or your students' answers.</p></details>
+<details><summary>What does Pro add?</summary><p>No daily limit, up to 50 questions, Kahoot spreadsheet and Moodle GIFT exports, and no Netmend line on printouts and forms.</p></details>
+<details><summary>Can the AI get an answer wrong?</summary><p>Sometimes. Each question shows the answer and why, so review the quiz before you use it.</p></details>
+</div></section>
+<section><div class="wrap"><h2>More Netmend tools</h2><div class="toolsnav"><a href="../slides/">Netmend Slides</a><a href="../sheets-ai/">Sheets AI</a><a href="../askvideo/">AskVideo</a><a href="../quiz/">Quiz maker</a><a href="../chat-pdf/">Chat with PDF</a><a href="../certificates/">Certificates</a><a href="../blur/">Netmend Blur</a><a href="../x-post-writer/">X Post Writer</a><a href="../tools/">All tools</a></div></div></section>
+<footer class="site-footer"><div class="wrap">
+<div class="f-grid">
+<div class="f-brand"><a href="../"><img src="../assets/logo-light.svg" alt="Netmend" width="121" height="30" loading="lazy"></a><p>Small, private AI tools that run in your browser with your own free Gemini key. No account, no server, no trackers.</p></div>
+<div><h4>AI tools</h4><a href="../slides/">Netmend Slides</a><a href="../sheets-ai/">Sheets AI</a><a href="../askvideo/">AskVideo</a><a href="../quiz/">Quiz maker</a></div>
+<div><h4>More</h4><a href="../chat-pdf/">Chat with PDF</a><a href="../certificates/">Certificates</a><a href="../blur/">Netmend Blur</a><a href="../x-post-writer/">X Post Writer</a></div>
+<div><h4>Netmend</h4><a href="../tools/">All tools</a><a href="../#services">Services</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a><a href="mailto:dayinportugal@gmail.com?subject=Netmend">Contact</a></div>
+</div>
+<div class="f-bottom">© 2026 Netmend · run by Pedro Carvalho · EU-based · No cookies, no trackers, no sign-up. Your files, text and Gemini key stay in your browser and go only to Google's Gemini API. Licences are checked with Gumroad.</div>
+</div></footer>
+<script src="../assets/nm-products.js"></script><script src="../assets/nm-suite.js"></script><script src="../assets/vendor/jszip.min.js"></script><script src="app.js"></script>
+</body></html>
