@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Convert Nationwide bank statement PDF to CSV/Excel (free, private) · Netmend</title>
+<meta name="description" content="Convert a Nationwide PDF statement to CSV in your browser. Official midata transaction download (12 months, last 31 days excluded) versus the official PDF statement.">
+<link rel="canonical" href="https://dayinportugal.com/netmend/statement-to-csv/nationwide/">
+<meta property="og:title" content="Convert Nationwide bank statement PDF to CSV/Excel (free, private) · Netmend"><meta property="og:description" content="Convert a Nationwide PDF statement to CSV in your browser. Official midata transaction download (12 months, last 31 days excluded) versus the official PDF statement.">
+<meta property="og:image" content="https://dayinportugal.com/netmend/assets/og-image.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="../../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#07080b">
+<link rel="stylesheet" href="../../assets/tools.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Convert Nationwide bank statement PDF to CSV", "url": "https://dayinportugal.com/netmend/statement-to-csv/nationwide/", "applicationCategory": "BusinessApplication", "operatingSystem": "Any (web browser)", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "Netmend", "url": "https://dayinportugal.com/netmend/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I download a Nationwide statement as CSV?", "acceptedAnswer": {"@type": "Answer", "text": "You can download current-account transactions as midata from the Internet Bank (Transactions → Download transactions → Download midata). That is not the official statement, and it excludes the last 31 days. Statements themselves are PDFs."}}, {"@type": "Question", "name": "Why are the last few weeks missing from my midata file?", "acceptedAnswer": {"@type": "Answer", "text": "Nationwide leaves out the 31 days before the download on purpose, because some firms use recent transactions to confirm identity. Download the latest PDF statement for those days."}}, {"@type": "Question", "name": "Does midata include savings or credit cards?", "acceptedAnswer": {"@type": "Answer", "text": "Nationwide’s midata page says it is currently only for current accounts."}}], "url": "https://dayinportugal.com/netmend/statement-to-csv/nationwide/"}</script>
+<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+<script defer src="../app.js"></script>
+</head><body>
+
+<header><div class="wrap"><a href="../../"><img src="../../assets/logo-light.svg" alt="Netmend" width="121" height="30"></a>
+<nav><a href="../../#services">Services</a><a href="../">Statement converter</a><a class="cta" href="https://www.fiverr.com/dayinportugal/convert-pdf-invoices-and-documents-into-a-clean-excel-spreadsheet">From $20</a></nav></div></header>
+<div class="hero"><div class="wrap">
+<p class="crumbs"><a href="../../">Netmend</a> · <a href="../">Bank statement → CSV</a> · Nationwide</p>
+<h1>Convert a Nationwide statement PDF to <span>CSV or Excel</span></h1>
+<p>Nationwide already lets you download current-account transactions as midata, but that file is not your official statement and it deliberately leaves out the last 31 days. This page explains both official downloads and how to convert a PDF statement when you need the printed months.</p>
+<div class="pills"><span>United Kingdom (Nationwide Building Society)</span><span>100% in your browser</span><span>No account</span><span>From $20 if you want it done</span></div>
+</div></div>
+<section><div class="wrap">
+<h2>Convert a Nationwide PDF now</h2>
+<p class="lead">The defaults below are set for a typical Nationwide file. You can still change them. The file never leaves your computer.</p>
+
+<div class="tool">
+<label for="file">PDF statement (stays on your computer)</label>
+<input id="file" type="file" accept="application/pdf">
+<p class="note">No statement at hand? <button id="demo" type="button" class="btn ghost" style="padding:5px 10px" data-src="../../samples/demo-statement.pdf">Try our demo statement</button> (fictional data)</p>
+<div class="row">
+<div><label for="mode">Output</label><select id="mode"><option value="tx">Transactions only</option><option value="all">Every text row (raw table)</option></select></div>
+<div><label for="fmt">Number format</label><select id="fmt"><option value="auto">Detect automatically</option><option value="eu">European 1.234,56</option><option value="us" selected>UK/US 1,234.56</option></select></div>
+<div><label for="sep">CSV for</label><select id="sep"><option value=";">Excel in Europe (; and ,)</option><option value="," selected>Excel UK/US, Google Sheets (, and .)</option></select></div>
+</div>
+<div id="out" hidden><p id="stats" class="note"></p><p><button id="dl" class="btn" disabled>Download CSV</button></p>
+<div class="scroll"><table id="preview"></table></div>
+<p class="note">Check the totals against your statement before you use the file. If a column is in the wrong place, try “Every text row”, or send it to us.</p></div>
+</div>
+<p class="note">How it stays private: the page uses the open-source pdf.js library (Mozilla) to read the file locally. There is no server and no upload. You can disconnect from the internet after the page loads and it still works.</p>
+
+</div></section>
+<section class="alt"><div class="wrap">
+<h2>The Nationwide statement format</h2>
+<div class="facts">
+<div><b>Dates</b>UK day-first dates on statements. midata files are built for comparison sites; do not tidy the date column in Excel before you know whether the file uses DD/MM/YYYY or another format — open it as text first.</div>
+<div><b>Numbers</b>Pound sterling, dot decimal. A European Excel that double-clicks a comma CSV may split columns wrongly — use Data → From Text/CSV.</div>
+<div><b>Region</b>United Kingdom (Nationwide Building Society)</div>
+</div>
+<h3>Where to download the official file</h3>
+Two official downloads, and they are not the same file.</p>
+<p><b>Official PDF statements</b> are available in the Internet Bank and the Nationwide app after you sign in. Look for <b>Statements</b> or <b>Documents</b> / <b>My Documents</b> — Nationwide’s public pages confirm that statements can be viewed, downloaded and printed there, including (if you registered in time) historical statements after an account is closed. The exact menu label can change; trust the labels you see once you are signed in.</p>
+<p><b>midata transaction download</b>, from Nationwide’s official “About midata” page, is only on the Internet Bank (not the app), and only for current accounts:</p>
+<ol>
+<li>Log in to the Internet Bank on a Windows or Mac computer.</li>
+<li>Select the current account.</li>
+<li>Under <b>Transactions</b>, choose <b>Download transactions</b>.</li>
+<li>Choose <b>Download midata</b>.</li>
+</ol>
+<p>The midata file covers up to 12 months of current-account transactions and <b>excludes the 31 days before the download</b>. Nationwide does this because recent transactions are sometimes used to confirm identity. If you have less than 12 months of history, you get what you have, minus those 31 days.</p>
+<h3>What the PDF contains</h3>
+<p>The PDF is the official statement for that account and period. It includes the society’s branding, the account details and the transactions that belong on that statement. A month with a zero balance and no transactions may not produce a statement at all. Do not treat a midata file as a substitute for this PDF if a lender or a tax enquiry asks for statements.</p>
+<h3>Official CSV or Excel, when the bank offers one</h3>
+<p>midata is a government-backed current-account download aimed at comparison providers, not a statement export. Nationwide asks you to send the file in its original format and not to resave it as another type if you are using a comparison site. Nationwide does not publish the column layout on that help page — open the first row of your own file.</p>
+<p>For bookkeeping, midata is still useful for the months it covers, with one gap you must not ignore: the most recent 31 days are missing by design. For those days, or for older statement PDFs, convert the official PDF and check the totals against the printed balance.</p></p>
+<h3>What to watch for</h3>
+<ul>
+<li>Need the last month for a mortgage pack? Use the official PDF. midata will not include the last 31 days.</li>
+<li>Need a year of current-account transactions for a comparison site? Use midata, and do not edit the file first.</li>
+<li>Closed accounts: you must register for online access to historical statements within 6 months of closure (accounts closed on or after 2 February 2018); Nationwide describes up to 5 years of statements in that process.</li>
+</ul>
+<p class="note"><b>Sources</b> (checked 12/11/2026). Nationwide, “About midata” (nationwide.co.uk/help/online-banking-help/about-midata) and “Accessing statements for a closed bank account”, checked 13/11/2026. Banks change layouts without notice: treat the first row of your own file as the authority.</p>
+</div></section>
+<section id="done-for-you"><div class="wrap">
+<h2>Need it done for you? From $20</h2>
+<p class="lead">The free tool is for a clean, text-based PDF. For scans, password files, a packed year of statements or a layout that has to match your accounting software, we convert them and check every total against the opening and closing balance.</p>
+<div class="grid">
+<div class="card"><b>Done-for-you conversion</b><div class="price">$20 <small>/ 20 pages</small></div>
+<p>75 pages $40 · 200 pages $80. Totals reconciled. 48h. Pay on Fiverr.</p>
+<a class="btn" href="https://www.fiverr.com/dayinportugal/convert-pdf-invoices-and-documents-into-a-clean-excel-spreadsheet">Need it done for you? From $20</a></div>
+<div class="card"><b>Privacy</b><p>Your statement is processed only for the order and deleted after delivery. This page itself never uploads the file.</p>
+<p class="note">Who handles the data: Pedro Carvalho (Netmend), <a href="mailto:dayinportugal@gmail.com">dayinportugal@gmail.com</a>. No address, phone or national ID is asked for or published.</p></div>
+</div>
+</div></section>
+<section class="alt"><div class="wrap"><h2>FAQ</h2><details><summary>Can I download a Nationwide statement as CSV?</summary><p>You can download current-account transactions as midata from the Internet Bank (Transactions → Download transactions → Download midata). That is not the official statement, and it excludes the last 31 days. Statements themselves are PDFs.</p></details><details><summary>Why are the last few weeks missing from my midata file?</summary><p>Nationwide leaves out the 31 days before the download on purpose, because some firms use recent transactions to confirm identity. Download the latest PDF statement for those days.</p></details><details><summary>Does midata include savings or credit cards?</summary><p>Nationwide’s midata page says it is currently only for current accounts.</p></details></div></section>
+<section><div class="wrap">
+<h2>Other bank guides</h2>
+<div class="banklist"><a href="../barclays/"><b>Barclays</b> statement to CSV</a><a href="../lloyds/"><b>Lloyds Bank</b> statement to CSV</a><a href="../natwest/"><b>NatWest</b> statement to CSV</a><a href="../halifax/"><b>Halifax</b> statement to CSV</a><a href="../tsb/"><b>TSB</b> statement to CSV</a><a href="../"><b>All banks</b> and the main converter</a></div>
+<p class="note" style="margin-top:16px"><a href="../../excel-functions/">Excel formula translator</a> · <a href="../../wall-of-love/">Testimonial wall</a> · <a href="../../pin-maker/">Pinterest pin maker</a> · <a href="../../">All Netmend services</a></p>
+</div></section>
+
+<footer class="site-footer"><div class="wrap">
+<div class="f-grid">
+<div class="f-brand"><a href="../../"><img src="../../assets/logo-light.svg" alt="Netmend" width="121" height="30" loading="lazy"></a><p>Small, private tools for writing on X, plus fixed-price back-office work for small businesses. Everything runs in your browser.</p></div>
+<div><h4>Products</h4><a href="../../x-post-writer/">X Post Writer</a><a href="../../x-reach-checker/">X Reach Checker</a><a href="https://portugaldiary.gumroad.com/l/leutz" target="_blank" rel="noopener noreferrer">Lifetime license $19</a><a href="../../#services">Done-for-you services</a></div>
+<div><h4>Free tools</h4><a href="../../statement-to-csv/">Statement PDF to CSV</a><a href="../../excel-functions/">Excel formula translator</a><a href="../../wall-of-love/">Testimonial wall</a><a href="../../pin-maker/">Pinterest pin maker</a></div>
+<div><h4>Learn</h4><a href="../../x-growth/">X growth guides</a><a href="../../guides/">PDF to Excel guides</a><a href="../../compare/">Comparisons</a><a href="mailto:dayinportugal@gmail.com?subject=Netmend">Contact</a></div>
+</div>
+<div class="f-bottom">© 2026 Netmend · run by Pedro Carvalho · EU-based · No cookies, no trackers, no sign-up. Free tools run in your browser.</div>
+</div></footer>
+</body></html>

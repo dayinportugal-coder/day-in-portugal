@@ -1,0 +1,8 @@
+date,supplier,invoice_no,description,qty,unit_price,amount
+2026-10-03,Northgate Paper Co.,INV-2041,"A4 copy paper, 80gsm (box of 5 reams)",4,21.9,87.6
+2026-10-03,Northgate Paper Co.,INV-2041,Kraft envelopes C5 (pack 500),2,18.4,36.8
+2026-10-11,Bluepeak Coffee Supply,BP-7719,"Espresso beans, 1 kg",6,17.5,105.0
+2026-10-11,Bluepeak Coffee Supply,BP-7719,"Oat milk barista, 1 L (case of 12)",3,22.8,68.4
+2026-10-11,Bluepeak Coffee Supply,BP-7719,Paper cups 12 oz (sleeve 50),10,4.2,42.0
+2026-10-19,Harbourline Logistics,HL-00388,"Courier pickup, parcel up to 5 kg",9,6.75,60.75
+2026-10-19,Harbourline Logistics,HL-00388,"Pallet storage, per week",2,14.0,28.0

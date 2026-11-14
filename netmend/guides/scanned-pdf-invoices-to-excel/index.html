@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Convert scanned PDF invoices to Excel — what actually works · Netmend</title>
+<meta name="description" content="Honest limits: a scanned invoice is an image. When an in-browser tool can help, when it cannot, and how to check totals if you type or outsource the lines.">
+<link rel="canonical" href="https://dayinportugal.com/netmend/guides/scanned-pdf-invoices-to-excel/">
+<meta property="og:title" content="Convert scanned PDF invoices to Excel — what actually works · Netmend"><meta property="og:description" content="Honest limits: a scanned invoice is an image. When an in-browser tool can help, when it cannot, and how to check totals if you type or outsource the lines.">
+<meta property="og:image" content="https://dayinportugal.com/netmend/assets/og-image.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="../../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#07080b">
+<link rel="stylesheet" href="../../assets/tools.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why is the preview empty?", "acceptedAnswer": {"@type": "Answer", "text": "The file is probably a scan or a photograph. This tool only reads a text layer. Try highlighting a total in the PDF; if you cannot copy it, the tool cannot read it either."}}, {"@type": "Question", "name": "Can you “enable OCR” in the free tool?", "acceptedAnswer": {"@type": "Answer", "text": "No. Building a reliable, private OCR engine into this page would still leave you ticking every total, and it would fail quietly on poor scans. We would rather say so than ship a button that guesses."}}, {"@type": "Question", "name": "Is a scanned PDF still a valid invoice?", "acceptedAnswer": {"@type": "Answer", "text": "Often yes, as a picture of the document — but your tax rules are not this page’s job. For the spreadsheet, treat the scan as evidence and type or key the numbers, then tick them."}}], "url": "https://dayinportugal.com/netmend/guides/scanned-pdf-invoices-to-excel/"}</script>
+<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+<script defer src="../../statement-to-csv/app.js"></script>
+</head><body>
+
+<header><div class="wrap"><a href="../../"><img src="../../assets/logo-light.svg" alt="Netmend" width="121" height="30"></a>
+<nav><a href="../../#services">Services</a><a href="../../statement-to-csv/">Statement converter</a><a class="cta" href="https://www.fiverr.com/dayinportugal/convert-pdf-invoices-and-documents-into-a-clean-excel-spreadsheet">From $20</a></nav></div></header>
+<div class="hero"><div class="wrap">
+<p class="crumbs"><a href="../../">Netmend</a> · <a href="../">Guides</a> · Convert scanned PDF invoices to Excel — honestly</p>
+<h1>Convert scanned PDF invoices to <span>Excel</span> — honestly</h1>
+<p>If you cannot select the amount with your cursor and copy it as text, the PDF is a picture. Our free converter reads text, not pixels. This page says that clearly, then shows the options that do work: type the lines, use a dedicated OCR step, or have the pack keyed and ticked against each total.</p>
+<div class="pills"><span>Free tool in your browser</span><span>No account</span><span>From $20 if you want it done</span></div>
+</div></div>
+<section><div class="wrap">
+<h2>Convert a PDF now</h2>
+
+<p class="lead">This converter is built for tables. Use it on a digital invoice or receipt with a real text layer. Switch to “Every text row” if the first preview looks short.</p>
+<div class="tool">
+<label for="file">PDF (stays on your computer)</label>
+<input id="file" type="file" accept="application/pdf">
+<p class="note">No file at hand? <button id="demo" type="button" class="btn ghost" style="padding:5px 10px" data-src="../../samples/sample-invoices.pdf">Try a demo PDF</button> (fictional data)</p>
+<div class="row">
+<div><label for="mode">Output</label><select id="mode"><option value="tx">Transactions / likely rows</option><option value="all">Every text row (raw table)</option></select></div>
+<div><label for="fmt">Number format</label><select id="fmt"><option value="auto" selected>Detect automatically</option><option value="eu">European 1.234,56</option><option value="us">UK/US 1,234.56</option></select></div>
+<div><label for="sep">CSV for</label><select id="sep"><option value=";">Excel in Europe (; and ,)</option><option value="," selected>Excel UK/US, Google Sheets (, and .)</option></select></div>
+</div>
+<div id="out" hidden><p id="stats" class="note"></p><p><button id="dl" class="btn" disabled>Download CSV</button></p>
+<div class="scroll"><table id="preview"></table></div>
+<p class="note">Check the totals against the original PDF before you use the file. If a column is in the wrong place, try “Every text row”, or send it to us.</p></div>
+</div>
+<p class="note">How it stays private: the page uses the open-source pdf.js library (Mozilla) to read the file locally. There is no server and no upload. You can disconnect from the internet after the page loads and it still works.</p>
+
+</div></section>
+<section class="alt"><div class="wrap">
+
+<h2>Text PDF versus scanned PDF</h2>
+<p>A <b>digital invoice</b> from a supplier’s billing system usually has a text layer. You can highlight “£120.00”, search for the invoice number, and a converter can read the table. A <b>scanned</b> or photographed invoice is an image placed on a PDF page. It may look sharp, and it may even be called a PDF, but there are no characters to extract — only pixels. The free tool on this page, like most local PDF-table tools, will return a blank or a jumble of random letters if there is no text layer.</p>
+<p>A quick test: open the file, try to highlight a total, and copy it into a notes app. If you get the number, try the converter below (start with “Every text row”). If you get nothing, or a single letter, stop — running the tool again will not invent the missing text.</p>
+<h2>What to do with a scan</h2>
+<ul>
+<li><b>Ask for a digital copy.</b> Many suppliers can resend the original PDF from their invoicing software. That is the cheapest fix, and it is the official document.</li>
+<li><b>Type the rows.</b> For a handful of invoices this is faster than setting up OCR, and you see each total as you go. Use a simple sheet: invoice number, date, supplier, description, net, tax, gross. Tick each gross against the paper or the scan before you add the next one.</li>
+<li><b>OCR, if you accept the error rate.</b> Adobe Acrobat, Apple’s PDF tools, Google Drive, and similar software can try to recognise the characters. They make quiet mistakes: a 3 that becomes an 8, a decimal comma that disappears, a line that is skipped. If you use OCR, you still have to tick every invoice total against the scan. OCR is a typing aid, not a source of truth.</li>
+<li><b>Done for you.</b> If you have a packed folder of scans, mixed languages, or a layout that has to match QuickBooks or Xero, we key the lines and check each document total. That is the paid option below — it is not a magic scan button on this page.</li>
+</ul>
+<p>The tool is still here because mixed packs are common: three digital invoices and two scans. Run the digital files through it, type the scans, and keep one working sheet. Then, if you need to import into <a href="../pdf-invoice-to-excel-quickbooks/">QuickBooks</a> or <a href="../pdf-invoice-to-excel-xero/">Xero</a>, copy the rows into that product’s official template and map the columns there.</p>
+<h2>How to tick a pack so mistakes do not slip through</h2>
+<ol>
+<li>Number the source files and put that name on each spreadsheet row.</li>
+<li>For every invoice, compare the printed gross (and the tax total, if it is shown) with the sum of the lines you captured. If a document has three lines of 40, 40 and 40 and a gross of 132, you are missing tax or you have the wrong currency.</li>
+<li>Add a pack total — the sum of every gross — and compare it with a control you already trust, such as a purchase ledger or a card-statement total for the same suppliers and dates. A pack that only “looks complete” is how one invoice gets dropped.</li>
+</ol>
+
+<p class="note"><b>Sources</b> (checked 13/11/2026). Official product help is linked in the text. Menus and templates change: treat the current screen in QuickBooks, Xero or your bank as the authority.</p>
+</div></section>
+
+<section id="done-for-you"><div class="wrap">
+<h2>Need it done for you? From $20</h2>
+<p class="lead">The free tool is for a clean, text-based PDF. For scans, password files, a packed year of documents or a layout that has to match QuickBooks or Xero, we convert them and check the totals against each document.</p>
+<div class="grid">
+<div class="card"><b>Done-for-you conversion</b><div class="price">$20 <small>/ 20 pages</small></div>
+<p>75 pages $40 · 200 pages $80. Totals reconciled. 48h. Pay on Fiverr.</p>
+<a class="btn" href="https://www.fiverr.com/dayinportugal/convert-pdf-invoices-and-documents-into-a-clean-excel-spreadsheet">Need it done for you? From $20</a></div>
+<div class="card"><b>Privacy</b><p>Your file is processed only for the order and deleted after delivery. This page itself never uploads the file.</p>
+<p class="note">Who handles the data: Pedro Carvalho (Netmend), <a href="mailto:dayinportugal@gmail.com">dayinportugal@gmail.com</a>. No address, phone or national ID is asked for or published.</p></div>
+</div>
+</div></section>
+
+<section class="alt"><div class="wrap"><h2>FAQ</h2><details><summary>Why is the preview empty?</summary><p>The file is probably a scan or a photograph. This tool only reads a text layer. Try highlighting a total in the PDF; if you cannot copy it, the tool cannot read it either.</p></details><details><summary>Can you “enable OCR” in the free tool?</summary><p>No. Building a reliable, private OCR engine into this page would still leave you ticking every total, and it would fail quietly on poor scans. We would rather say so than ship a button that guesses.</p></details><details><summary>Is a scanned PDF still a valid invoice?</summary><p>Often yes, as a picture of the document — but your tax rules are not this page’s job. For the spreadsheet, treat the scan as evidence and type or key the numbers, then tick them.</p></details></div></section>
+<section><div class="wrap">
+<h2>Related guides</h2>
+<div class="banklist"><a href="../pdf-invoice-to-excel-quickbooks/"><b>Convert PDF invoices to Excel for QuickBooks</b></a><a href="../pdf-invoice-to-excel-xero/"><b>Convert PDF invoices to Excel for Xero</b></a><a href="../pdf-receipts-to-excel/"><b>Convert PDF receipts to Excel or CSV</b></a><a href="../pdf-invoice-to-google-sheets/"><b>Convert PDF invoices to Google Sheets</b></a><a href="../"><b>All how-to guides</b></a><a href="../../compare/"><b>Comparisons</b></a><a href="../../statement-to-csv/"><b>Bank statement converter</b> and bank guides</a></div>
+<p class="note" style="margin-top:16px"><a href="../../excel-functions/">Excel formula translator</a> · <a href="../../wall-of-love/">Testimonial wall</a> · <a href="../../pin-maker/">Pinterest pin maker</a> · <a href="../../">All Netmend services</a></p>
+</div></section>
+
+<footer class="site-footer"><div class="wrap">
+<div class="f-grid">
+<div class="f-brand"><a href="../../"><img src="../../assets/logo-light.svg" alt="Netmend" width="121" height="30" loading="lazy"></a><p>Small, private tools for writing on X, plus fixed-price back-office work for small businesses. Everything runs in your browser.</p></div>
+<div><h4>Products</h4><a href="../../x-post-writer/">X Post Writer</a><a href="../../x-reach-checker/">X Reach Checker</a><a href="https://portugaldiary.gumroad.com/l/leutz" target="_blank" rel="noopener noreferrer">Lifetime license $19</a><a href="../../#services">Done-for-you services</a></div>
+<div><h4>Free tools</h4><a href="../../statement-to-csv/">Statement PDF to CSV</a><a href="../../excel-functions/">Excel formula translator</a><a href="../../wall-of-love/">Testimonial wall</a><a href="../../pin-maker/">Pinterest pin maker</a></div>
+<div><h4>Learn</h4><a href="../../x-growth/">X growth guides</a><a href="../../guides/">PDF to Excel guides</a><a href="../../compare/">Comparisons</a><a href="mailto:dayinportugal@gmail.com?subject=Netmend">Contact</a></div>
+</div>
+<div class="f-bottom">© 2026 Netmend · run by Pedro Carvalho · EU-based · No cookies, no trackers, no sign-up. Free tools run in your browser.</div>
+</div></footer>
+</body></html>

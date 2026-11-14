@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Convert bunq bank statement PDF to CSV/Excel (free, private) · Netmend</title>
+<meta name="description" content="Convert a bunq PDF statement to CSV in your browser. Official exports already include PDF, CSV and MT940 — plus card, annual and single-payment statements.">
+<link rel="canonical" href="https://dayinportugal.com/netmend/statement-to-csv/bunq/">
+<meta property="og:title" content="Convert bunq bank statement PDF to CSV/Excel (free, private) · Netmend"><meta property="og:description" content="Convert a bunq PDF statement to CSV in your browser. Official exports already include PDF, CSV and MT940 — plus card, annual and single-payment statements.">
+<meta property="og:image" content="https://dayinportugal.com/netmend/assets/og-image.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="../../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#07080b">
+<link rel="stylesheet" href="../../assets/tools.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Convert bunq bank statement PDF to CSV", "url": "https://dayinportugal.com/netmend/statement-to-csv/bunq/", "applicationCategory": "BusinessApplication", "operatingSystem": "Any (web browser)", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "Netmend", "url": "https://dayinportugal.com/netmend/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does bunq already give me a CSV?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Export Statement lets you choose PDF, CSV or MT940, in the app and on web.bunq.com, once the account is verified."}}, {"@type": "Question", "name": "Can I get a signed statement myself?", "acceptedAnswer": {"@type": "Answer", "text": "No. Self-exports have no signature or stamp. bunq Help says to message Support for a signed and stamped statement, and that they will not change its layout or filter out payments."}}, {"@type": "Question", "name": "What language is the statement in?", "acceptedAnswer": {"@type": "Answer", "text": "Help says documents other than the French RIB are currently available in English only."}}], "url": "https://dayinportugal.com/netmend/statement-to-csv/bunq/"}</script>
+<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+<script defer src="../app.js"></script>
+</head><body>
+
+<header><div class="wrap"><a href="../../"><img src="../../assets/logo-light.svg" alt="Netmend" width="121" height="30"></a>
+<nav><a href="../../#services">Services</a><a href="../">Statement converter</a><a class="cta" href="https://www.fiverr.com/dayinportugal/convert-pdf-invoices-and-documents-into-a-clean-excel-spreadsheet">From $20</a></nav></div></header>
+<div class="hero"><div class="wrap">
+<p class="crumbs"><a href="../../">Netmend</a> · <a href="../">Bank statement → CSV</a> · bunq</p>
+<h1>Convert a bunq statement PDF to <span>CSV or Excel</span></h1>
+<p>bunq already exports statements as PDF, CSV or MT940, from the app and from web.bunq.com. Use that official CSV when you can. This page shows the official paths, the other statement types bunq offers, and how to convert a PDF when that is the file you were sent.</p>
+<div class="pills"><span>EEA (bunq). Documents are exported in English (the French RIB is the documented exception).</span><span>100% in your browser</span><span>No account</span><span>From $20 if you want it done</span></div>
+</div></div>
+<section><div class="wrap">
+<h2>Convert a bunq PDF now</h2>
+<p class="lead">The defaults below are set for a typical bunq file. You can still change them. The file never leaves your computer.</p>
+
+<div class="tool">
+<label for="file">PDF statement (stays on your computer)</label>
+<input id="file" type="file" accept="application/pdf">
+<p class="note">No statement at hand? <button id="demo" type="button" class="btn ghost" style="padding:5px 10px" data-src="../../samples/demo-statement.pdf">Try our demo statement</button> (fictional data)</p>
+<div class="row">
+<div><label for="mode">Output</label><select id="mode"><option value="tx">Transactions only</option><option value="all">Every text row (raw table)</option></select></div>
+<div><label for="fmt">Number format</label><select id="fmt"><option value="auto">Detect automatically</option><option value="eu" selected>European 1.234,56</option><option value="us">UK/US 1,234.56</option></select></div>
+<div><label for="sep">CSV for</label><select id="sep"><option value=";" selected>Excel in Europe (; and ,)</option><option value=",">Excel UK/US, Google Sheets (, and .)</option></select></div>
+</div>
+<div id="out" hidden><p id="stats" class="note"></p><p><button id="dl" class="btn" disabled>Download CSV</button></p>
+<div class="scroll"><table id="preview"></table></div>
+<p class="note">Check the totals against your statement before you use the file. If a column is in the wrong place, try “Every text row”, or send it to us.</p></div>
+</div>
+<p class="note">How it stays private: the page uses the open-source pdf.js library (Mozilla) to read the file locally. There is no server and no upload. You can disconnect from the internet after the page loads and it still works.</p>
+
+</div></section>
+<section class="alt"><div class="wrap">
+<h2>The bunq statement format</h2>
+<div class="facts">
+<div><b>Dates</b>Confirm the first dated line on your own file. bunq’s public Help does not fix a single printed date format, and the app language does not change most documents (Help says documents other than the French RIB are currently English only).</div>
+<div><b>Numbers</b>Euro amounts. European Excel usually wants a semicolon separator and a decimal comma; US/UK Excel and Google Sheets usually want a comma separator and a dot decimal. Try both if a total looks ten times too large.</div>
+<div><b>Region</b>EEA (bunq). Documents are exported in English (the French RIB is the documented exception).</div>
+</div>
+<h3>Where to download the official file</h3>
+Official path, from bunq Help (“How do I export a bank statement?”). Your account must be verified or bunq will not export a statement.</p>
+<p><b>From Profile:</b> tap Profile (top left) → <b>Accounting</b> → <b>Export Statement</b>. Choose the bank account, the period and the format (<b>PDF, CSV or MT940</b>), then Export Statement.</p>
+<p><b>From a specific account:</b> Home → the account → Settings → Export statement → period and format.</p>
+<p><b>On the web:</b> sign in at web.bunq.com, open the account, Settings → Export statement, choose the date and format, then export.</p>
+<p><b>Closed accounts:</b> Home → Profile → Archive → Bank Accounts → the account → Export Statement.</p>
+<p>Other official documents, from “What types of bank statements can I export?”: a <b>card statement</b> (Profile → Accounting → Card Statements, or from the card’s settings); a <b>single-transaction</b> statement (open the payment → Export); an <b>annual overview</b> (available each January for the previous year, under Accounting → Annual Overview, as PDF); and a <b>statement of fees</b> for the previous year, listed there too. A signed and stamped statement is not the self-export — message bunq Support for that. Self-exports carry no signature or stamp. Image attachments can be included on a PDF export only (toggle “Include Attachments”).</p>
+<h3>What the PDF contains</h3>
+<p>A bunq bank-statement PDF is generated from your payment history for one IBAN and period. It shows your name and IBAN (bunq notes it can be used as proof of ownership). bunq cannot filter the official file to incoming-only, or remove individual payments, or change the layout — those limits also apply to signed copies from Support. A card statement is a different document (name, last four digits, the name on the card, and the IBAN used for each payment).</p>
+<h3>Official CSV or Excel, when the bank offers one</h3>
+<p>If you can still generate the official CSV, use it and skip the PDF. bunq does not publish the CSV column names on those Help articles — open the first row of your own export. Prefer that official CSV for accounting imports; use MT940 if your accountant asked for it.</p>
+<p>Convert the PDF when someone sent you only the PDF, when you need to tick rows against a signed paper copy, or when you want a spreadsheet from a card statement that you only have as a PDF. After conversion, check the totals against the PDF before you import the file.</p></p>
+<h3>What to watch for</h3>
+<ul>
+<li>Verify the account first. Unverified accounts cannot export a statement.</li>
+<li>Need a stamp or signature? Do not convert a self-export and hope — ask bunq Support for the signed document, then convert that PDF if you also need columns.</li>
+<li>Annual overviews and fee statements are year-end documents, not a substitute for a period statement.</li>
+<li>Keep one IBAN per file. bunq statements are per bank account.</li>
+</ul>
+<p class="note"><b>Sources</b> (checked 12/11/2026). bunq Help, “How do I export a bank statement?” and “What types of bank statements can I export?” (help.bunq.com), checked 13/11/2026. Banks change layouts without notice: treat the first row of your own file as the authority.</p>
+</div></section>
+<section id="done-for-you"><div class="wrap">
+<h2>Need it done for you? From $20</h2>
+<p class="lead">The free tool is for a clean, text-based PDF. For scans, password files, a packed year of statements or a layout that has to match your accounting software, we convert them and check every total against the opening and closing balance.</p>
+<div class="grid">
+<div class="card"><b>Done-for-you conversion</b><div class="price">$20 <small>/ 20 pages</small></div>
+<p>75 pages $40 · 200 pages $80. Totals reconciled. 48h. Pay on Fiverr.</p>
+<a class="btn" href="https://www.fiverr.com/dayinportugal/convert-pdf-invoices-and-documents-into-a-clean-excel-spreadsheet">Need it done for you? From $20</a></div>
+<div class="card"><b>Privacy</b><p>Your statement is processed only for the order and deleted after delivery. This page itself never uploads the file.</p>
+<p class="note">Who handles the data: Pedro Carvalho (Netmend), <a href="mailto:dayinportugal@gmail.com">dayinportugal@gmail.com</a>. No address, phone or national ID is asked for or published.</p></div>
+</div>
+</div></section>
+<section class="alt"><div class="wrap"><h2>FAQ</h2><details><summary>Does bunq already give me a CSV?</summary><p>Yes. Export Statement lets you choose PDF, CSV or MT940, in the app and on web.bunq.com, once the account is verified.</p></details><details><summary>Can I get a signed statement myself?</summary><p>No. Self-exports have no signature or stamp. bunq Help says to message Support for a signed and stamped statement, and that they will not change its layout or filter out payments.</p></details><details><summary>What language is the statement in?</summary><p>Help says documents other than the French RIB are currently available in English only.</p></details></div></section>
+<section><div class="wrap">
+<h2>Other bank guides</h2>
+<div class="banklist"><a href="../revolut/"><b>Revolut</b> statement to CSV</a><a href="../wise/"><b>Wise</b> statement to CSV</a><a href="../n26/"><b>N26</b> statement to CSV</a><a href="../ing/"><b>ING</b> statement to CSV</a><a href="../abn-amro/"><b>ABN AMRO</b> statement to CSV</a><a href="../"><b>All banks</b> and the main converter</a></div>
+<p class="note" style="margin-top:16px"><a href="../../excel-functions/">Excel formula translator</a> · <a href="../../wall-of-love/">Testimonial wall</a> · <a href="../../pin-maker/">Pinterest pin maker</a> · <a href="../../">All Netmend services</a></p>
+</div></section>
+
+<footer class="site-footer"><div class="wrap">
+<div class="f-grid">
+<div class="f-brand"><a href="../../"><img src="../../assets/logo-light.svg" alt="Netmend" width="121" height="30" loading="lazy"></a><p>Small, private tools for writing on X, plus fixed-price back-office work for small businesses. Everything runs in your browser.</p></div>
+<div><h4>Products</h4><a href="../../x-post-writer/">X Post Writer</a><a href="../../x-reach-checker/">X Reach Checker</a><a href="https://portugaldiary.gumroad.com/l/leutz" target="_blank" rel="noopener noreferrer">Lifetime license $19</a><a href="../../#services">Done-for-you services</a></div>
+<div><h4>Free tools</h4><a href="../../statement-to-csv/">Statement PDF to CSV</a><a href="../../excel-functions/">Excel formula translator</a><a href="../../wall-of-love/">Testimonial wall</a><a href="../../pin-maker/">Pinterest pin maker</a></div>
+<div><h4>Learn</h4><a href="../../x-growth/">X growth guides</a><a href="../../guides/">PDF to Excel guides</a><a href="../../compare/">Comparisons</a><a href="mailto:dayinportugal@gmail.com?subject=Netmend">Contact</a></div>
+</div>
+<div class="f-bottom">© 2026 Netmend · run by Pedro Carvalho · EU-based · No cookies, no trackers, no sign-up. Free tools run in your browser.</div>
+</div></footer>
+</body></html>

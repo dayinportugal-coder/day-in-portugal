@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><rect x="0" y="0" width="64" height="64" rx="14.08" fill="#0B1F33"/>
+<polygon points="32.00,10.88 42.56,21.44 32.00,32.00 21.44,21.44" fill="#FF5A36"/>
+<g fill="none" stroke="#F4F1EA" stroke-width="4.16" stroke-linejoin="round" stroke-linecap="round">
+<polygon points="32.00,10.88 53.12,32.00 32.00,53.12 10.88,32.00"/>
+<line x1="21.44" y1="21.44" x2="42.56" y2="42.56"/>
+<line x1="42.56" y1="21.44" x2="21.44" y2="42.56"/>
+</g>
+<circle cx="32.00" cy="32.00" r="3.84" fill="#FF5A36" stroke="#F4F1EA" stroke-width="1.92"/></svg>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Convert Wells Fargo bank statement PDF to CSV/Excel (free, private) · Netmend</title>
+<meta name="description" content="Convert a Wells Fargo statement PDF to CSV, or tidy the official activity CSV (often no header: Date, Amount, *, check number, Description, MM/DD/YYYY).">
+<link rel="canonical" href="https://dayinportugal.com/netmend/statement-to-csv/wells-fargo/">
+<meta property="og:title" content="Convert Wells Fargo bank statement PDF to CSV/Excel (free, private) · Netmend"><meta property="og:description" content="Convert a Wells Fargo statement PDF to CSV, or tidy the official activity CSV (often no header: Date, Amount, *, check number, Description, MM/DD/YYYY).">
+<meta property="og:image" content="https://dayinportugal.com/netmend/assets/og-image.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="../../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#07080b">
+<link rel="stylesheet" href="../../assets/tools.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Convert Wells Fargo bank statement PDF to CSV", "url": "https://dayinportugal.com/netmend/statement-to-csv/wells-fargo/", "applicationCategory": "BusinessApplication", "operatingSystem": "Any (web browser)", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "Netmend", "url": "https://dayinportugal.com/netmend/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why is there no header in my CSV?", "acceptedAnswer": {"@type": "Answer", "text": "That is how Wells Fargo’s activity download is commonly built. Import with no headers and assign column names yourself."}}, {"@type": "Question", "name": "The PDF date has no year. What do I do?", "acceptedAnswer": {"@type": "Answer", "text": "Take the year from the statement period. On a statement that spans December and January, assign the year line by line."}}, {"@type": "Question", "name": "Is this the same as a Wells Fargo credit-card file?", "acceptedAnswer": {"@type": "Answer", "text": "No. Download or convert cards separately; the columns differ."}}], "url": "https://dayinportugal.com/netmend/statement-to-csv/wells-fargo/"}</script>
+<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+<script defer src="../app.js"></script>
+</head><body>
+
+<header><div class="wrap"><a href="../../"><img src="../../assets/logo-light.svg" alt="Netmend" width="121" height="30"></a>
+<nav><a href="../../#services">Services</a><a href="../">Statement converter</a><a class="cta" href="https://www.fiverr.com/dayinportugal/convert-pdf-invoices-and-documents-into-a-clean-excel-spreadsheet">From $20</a></nav></div></header>
+<div class="hero"><div class="wrap">
+<p class="crumbs"><a href="../../">Netmend</a> · <a href="../">Bank statement → CSV</a> · Wells Fargo</p>
+<h1>Convert a Wells Fargo statement PDF to <span>CSV or Excel</span></h1>
+<p>Wells Fargo’s activity CSV is easy to mis-import: it often has no header row, and the PDF transaction table may print the date as M/D without a year. This page shows the official files and how to convert a statement PDF safely.</p>
+<div class="pills"><span>United States (Wells Fargo)</span><span>100% in your browser</span><span>No account</span><span>From $20 if you want it done</span></div>
+</div></div>
+<section><div class="wrap">
+<h2>Convert a Wells Fargo PDF now</h2>
+<p class="lead">The defaults below are set for a typical Wells Fargo file. You can still change them. The file never leaves your computer.</p>
+
+<div class="tool">
+<label for="file">PDF statement (stays on your computer)</label>
+<input id="file" type="file" accept="application/pdf">
+<p class="note">No statement at hand? <button id="demo" type="button" class="btn ghost" style="padding:5px 10px" data-src="../../samples/demo-statement.pdf">Try our demo statement</button> (fictional data)</p>
+<div class="row">
+<div><label for="mode">Output</label><select id="mode"><option value="tx">Transactions only</option><option value="all">Every text row (raw table)</option></select></div>
+<div><label for="fmt">Number format</label><select id="fmt"><option value="auto">Detect automatically</option><option value="eu">European 1.234,56</option><option value="us" selected>UK/US 1,234.56</option></select></div>
+<div><label for="sep">CSV for</label><select id="sep"><option value=";">Excel in Europe (; and ,)</option><option value="," selected>Excel UK/US, Google Sheets (, and .)</option></select></div>
+</div>
+<div id="out" hidden><p id="stats" class="note"></p><p><button id="dl" class="btn" disabled>Download CSV</button></p>
+<div class="scroll"><table id="preview"></table></div>
+<p class="note">Check the totals against your statement before you use the file. If a column is in the wrong place, try “Every text row”, or send it to us.</p></div>
+</div>
+<p class="note">How it stays private: the page uses the open-source pdf.js library (Mozilla) to read the file locally. There is no server and no upload. You can disconnect from the internet after the page loads and it still works.</p>
+
+</div></section>
+<section class="alt"><div class="wrap">
+<h2>The Wells Fargo statement format</h2>
+<div class="facts">
+<div><b>Dates</b>The activity CSV uses MM/DD/YYYY. Official PDF tables often print the transaction date as M/D (for example 11/12) with the year only in the statement-period header — add the year before you sort across January.</div>
+<div><b>Numbers</b>US format: 1,234.56. In the activity CSV, Amount is signed (debits negative, credits positive).</div>
+<div><b>Region</b>United States (Wells Fargo)</div>
+</div>
+<h3>Where to download the official file</h3>
+<p><b>Activity CSV:</b> sign in, open the account, go to activity for a date range, and choose <b>Download Account Activity</b> (CSV). Do each account separately.</p>
+<p><b>Official PDF:</b> <b>Statements &amp; Documents</b> → select the account and period → download the statement PDF, especially when you need months the activity download no longer covers.</p>
+<h3>What the PDF contains</h3>
+<p>A typical Wells Fargo checking PDF lists Date (often M/D, no year), Check Number, Description, Deposits/Credits, Withdrawals/Debits and an ending daily balance. Because the year may be missing on each line, a January statement that includes late December is the dangerous case. Credit-card statements differ — keep them in their own file.</p>
+<h3>Official CSV or Excel, when the bank offers one</h3>
+<p>The Download Account Activity CSV commonly has <b>no header row</b>. The columns, in order, are typically:
+<code>Date, Amount, *, a check-number field (often blank), Description</code>
+<p>There may be no running balance. Because there is no header, the first transaction is not a title row. Import with “no headers”, then name the columns yourself. Amount is signed.</p></p>
+<h3>What to watch for</h3>
+<ul>
+<li>Do not tick “My data has headers” until you have looked at row 1 of the official CSV.</li>
+<li>When converting a PDF, add the year from the statement period to every date.</li>
+<li>Use our converter for PDFs; do not run the official CSV through a PDF tool.</li>
+</ul>
+<p class="note"><b>Sources</b> (checked 12/11/2026). Current Wells Fargo activity CSV layout (no header; Date, Amount, *, check number, Description; MM/DD/YYYY; signed amounts) and PDF table notes, checked 12/11/2026. Menu labels vary; look for Download Account Activity and Statements & Documents. Banks change layouts without notice: treat the first row of your own file as the authority.</p>
+</div></section>
+<section id="done-for-you"><div class="wrap">
+<h2>Need it done for you? From $20</h2>
+<p class="lead">The free tool is for a clean, text-based PDF. For scans, password files, a packed year of statements or a layout that has to match your accounting software, we convert them and check every total against the opening and closing balance.</p>
+<div class="grid">
+<div class="card"><b>Done-for-you conversion</b><div class="price">$20 <small>/ 20 pages</small></div>
+<p>75 pages $40 · 200 pages $80. Totals reconciled. 48h. Pay on Fiverr.</p>
+<a class="btn" href="https://www.fiverr.com/dayinportugal/convert-pdf-invoices-and-documents-into-a-clean-excel-spreadsheet">Need it done for you? From $20</a></div>
+<div class="card"><b>Privacy</b><p>Your statement is processed only for the order and deleted after delivery. This page itself never uploads the file.</p>
+<p class="note">Who handles the data: Pedro Carvalho (Netmend), <a href="mailto:dayinportugal@gmail.com">dayinportugal@gmail.com</a>. No address, phone or national ID is asked for or published.</p></div>
+</div>
+</div></section>
+<section class="alt"><div class="wrap"><h2>FAQ</h2><details><summary>Why is there no header in my CSV?</summary><p>That is how Wells Fargo’s activity download is commonly built. Import with no headers and assign column names yourself.</p></details><details><summary>The PDF date has no year. What do I do?</summary><p>Take the year from the statement period. On a statement that spans December and January, assign the year line by line.</p></details><details><summary>Is this the same as a Wells Fargo credit-card file?</summary><p>No. Download or convert cards separately; the columns differ.</p></details></div></section>
+<section><div class="wrap">
+<h2>Other bank guides</h2>
+<div class="banklist"><a href="../revolut/"><b>Revolut</b> statement to CSV</a><a href="../wise/"><b>Wise</b> statement to CSV</a><a href="../chase/"><b>Chase</b> statement to CSV</a><a href="../bank-of-america/"><b>Bank of America</b> statement to CSV</a><a href="../"><b>All banks</b> and the main converter</a></div>
+<p class="note" style="margin-top:16px"><a href="../../excel-functions/">Excel formula translator</a> · <a href="../../wall-of-love/">Testimonial wall</a> · <a href="../../pin-maker/">Pinterest pin maker</a> · <a href="../../">All Netmend services</a></p>
+</div></section>
+
+<footer class="site-footer"><div class="wrap">
+<div class="f-grid">
+<div class="f-brand"><a href="../../"><img src="../../assets/logo-light.svg" alt="Netmend" width="121" height="30" loading="lazy"></a><p>Small, private tools for writing on X, plus fixed-price back-office work for small businesses. Everything runs in your browser.</p></div>
+<div><h4>Products</h4><a href="../../x-post-writer/">X Post Writer</a><a href="../../x-reach-checker/">X Reach Checker</a><a href="https://portugaldiary.gumroad.com/l/leutz" target="_blank" rel="noopener noreferrer">Lifetime license $19</a><a href="../../#services">Done-for-you services</a></div>
+<div><h4>Free tools</h4><a href="../../statement-to-csv/">Statement PDF to CSV</a><a href="../../excel-functions/">Excel formula translator</a><a href="../../wall-of-love/">Testimonial wall</a><a href="../../pin-maker/">Pinterest pin maker</a></div>
+<div><h4>Learn</h4><a href="../../x-growth/">X growth guides</a><a href="../../guides/">PDF to Excel guides</a><a href="../../compare/">Comparisons</a><a href="mailto:dayinportugal@gmail.com?subject=Netmend">Contact</a></div>
+</div>
+<div class="f-bottom">© 2026 Netmend · run by Pedro Carvalho · EU-based · No cookies, no trackers, no sign-up. Free tools run in your browser.</div>
+</div></footer>
+</body></html>
