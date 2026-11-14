@@ -9,8 +9,5 @@ window.NM_PRODUCTS = {
   "chat-pdf": { name: "Netmend Chat PDF Pro",   price: 19, productId: "-1VnsENn3hSgi8gvyaFwWg==", url: "https://portugaldiary.gumroad.com/l/netmend-chat-pdf" },
   certificates:{ name: "Netmend Certificates Pro", price: 19, productId: "8G3e_FHuBJe5H4lJVHjrCQ==", url: "https://portugaldiary.gumroad.com/l/netmend-certificates" },
   blur:       { name: "Netmend Blur Pro",       price: 19, productId: "fUlEbd-Bg7-CQd76RsReIA==", url: "https://portugaldiary.gumroad.com/l/ybylzw" },
-  /* PLACEHOLDER: Gumroad product for Statement is not created yet.
-     When it exists, paste product_id (Gumroad > product > licence key section) and the public URL.
-     Leave productId and url empty until then: the Pro box says "opens soon" and offers email. */
-  statement:  { name: "Netmend Statement Pro",  price: 29, productId: "", url: "" }
+  statement:  { name: "Netmend Statement Pro",  price: 29, productId: "v43OyKnElur3RfHfK8X1Ug==", url: "https://portugaldiary.gumroad.com/l/netmend-statement" }
 };
