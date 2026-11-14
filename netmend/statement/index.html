@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bank statement PDF to Excel or CSV, private in your browser · Netmend</title>
+<meta name="description" content="Convert a bank statement PDF to Excel or CSV in your browser. The file never leaves your computer in heuristic mode. Free for the first page; Pro ($29 lifetime) unlocks full statements, batch files and optional AI mode.">
+<link rel="canonical" href="https://dayinportugal.com/netmend/statement/">
+<meta property="og:title" content="Bank statement PDF to Excel or CSV, private in your browser · Netmend">
+<meta property="og:description" content="Convert a bank statement PDF to Excel or CSV in your browser. The file never leaves your computer in heuristic mode. Free for the first page; Pro is $29 lifetime.">
+<meta property="og:image" content="https://dayinportugal.com/netmend/statement/og.png">
+<meta property="og:url" content="https://dayinportugal.com/netmend/statement/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bank statement PDF to Excel or CSV, private in your browser · Netmend">
+<meta name="twitter:description" content="Your statement never leaves your browser in heuristic mode. Export Excel or CSV. Pay once for Pro.">
+<meta name="twitter:image" content="https://dayinportugal.com/netmend/statement/og.png">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#07080b">
+<link rel="stylesheet" href="../assets/tools.css">
+<style>
+#drop{border:1px dashed var(--border-2);border-radius:14px;padding:22px;background:rgba(255,255,255,.02);transition:border-color .2s,background .2s}
+#drop.on{border-color:var(--coral);background:rgba(255,90,54,.08)}
+#drop .pick{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+td.num,th.num{text-align:right}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Netmend Statement → Excel","url":"https://dayinportugal.com/netmend/statement/","applicationCategory":"FinanceApplication","operatingSystem":"Any (web browser)","description":"Convert bank statement PDFs to Excel or CSV in your browser. In heuristic mode the file never leaves your computer.","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD","name":"Free (first page, one statement a day)"},{"@type":"Offer","price":"29","priceCurrency":"USD","name":"Pro lifetime"}],"publisher":{"@type":"Organization","name":"Netmend","url":"https://dayinportugal.com/netmend/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does my bank statement leave my computer?","acceptedAnswer":{"@type":"Answer","text":"In the default heuristic mode, no. The page uses Mozilla's pdf.js library to read the PDF in your browser and build the spreadsheet locally. You can disconnect from the internet after the page loads and it still works. Optional AI mode, which is part of Pro, sends the extracted text from your browser to Google's Gemini API with your own key, never to a Netmend server."}},{"@type":"Question","name":"What does the free plan include?","acceptedAnswer":{"@type":"Answer","text":"The free plan converts one statement a day in this browser, and only the first page. You can download CSV or Excel. Pro ($29, one payment) unlocks every page, batch files, and optional AI mode for messy layouts."}},{"@type":"Question","name":"Which banks and formats work?","acceptedAnswer":{"@type":"Answer","text":"Any statement that is a real text PDF (you can select the text with the mouse). European formats such as 1.234,56 and 12/11/2026 are supported, as are UK/US 1,234.56 dates. Scanned image-only PDFs need OCR; AI mode can help with messy text layouts but cannot invent text that is not in the file."}},{"@type":"Question","name":"How do I get a Pro licence?","acceptedAnswer":{"@type":"Answer","text":"Pro is a $29 lifetime licence. When the Gumroad product is live, you pay there and paste the licence key on this page. Until then, use the notify link on this page or email dayinportugal@gmail.com. 14-day refund once sales open. Payhip buyers receive a key by email after sending their receipt."}}]}</script>
+</head><body>
+<header><div class="wrap"><a href="../"><img src="../assets/logo-light.svg" alt="Netmend" width="121" height="30"></a>
+<nav><a href="../tools/">All tools</a><a href="#app">Use it free</a><a class="cta" href="#pro">Pro $29 lifetime</a></nav></div></header>
+<div class="hero"><div class="wrap">
+<p class="crumbs"><a href="../">Netmend</a> · <a href="../tools/">Tools</a> · Netmend Statement → Excel</p>
+<h1>Bank statement PDF → <span>Excel or CSV</span></h1>
+<p>Drop a statement, get a spreadsheet. In the default mode your file never leaves this browser: no upload, no Netmend server, no account.</p>
+<div class="pills"><span>Your statement stays on your computer</span><span>Excel (.xlsx) and CSV</span><span>EU and US number formats</span><span>Pro $29 lifetime</span></div>
+<p style="margin-top:18px"><a class="btn" href="#app">Convert a statement</a> <a class="btn ghost" href="#pro">See Pro</a></p>
+</div></div>
+
+<section class="alt" id="app"><div class="wrap">
+<h2>Convert a statement now</h2>
+<p class="lead">The page reads the PDF with Mozilla's pdf.js library, finds dates, descriptions, debit, credit, amount and running balance, and lets you download Excel or CSV. Optional AI mode (Pro) uses your own Gemini key for messy layouts. The key is stored only in this browser.</p>
+<div id="nm-key"></div>
+<div class="tool" style="margin-top:18px">
+<div id="drop">
+<label for="file">PDF statement (stays on your computer in heuristic mode)</label>
+<p class="note">Drop a file here or choose one. Free: first page of one statement a day. Pro: every page, several files at once.</p>
+<div class="pick">
+<input id="file" type="file" accept="application/pdf">
+<button class="btn" type="button" id="run">Convert</button>
+</div>
+<p class="note">No statement at hand? Try a fictional sample:
+<button class="btn ghost" type="button" data-demo="samples/sample-statement-en.pdf">English (US format)</button>
+<button class="btn ghost" type="button" data-demo="samples/sample-statement-pt.pdf">Portuguese (EU format)</button>
+</p>
+</div>
+<div class="row">
+<div><label for="fmt">Number format</label><select id="fmt"><option value="auto">Detect automatically</option><option value="eu">European 1.234,56</option><option value="us">UK/US 1,234.56</option></select></div>
+<div><label for="sep">CSV for</label><select id="sep"><option value=";">Excel in Europe (; and ,)</option><option value=",">Excel UK/US, Google Sheets (, and .)</option></select></div>
+<div><label for="ai-mode">AI mode (Pro)</label>
+<div class="nm-inline" style="margin-top:6px"><input id="ai-mode" type="checkbox"> <label for="ai-mode" style="margin:0;font-weight:400">Use my Gemini key for messy layouts</label></div>
+<p class="note" id="ai-hint">Unlock Pro to turn AI mode on. Extracted text then goes to Google with your key, never to Netmend.</p>
+</div>
+</div>
+<p class="note" id="nm-remain"></p>
+<p class="note" id="status"></p>
+<div id="out" hidden>
+<p id="stats" class="note"></p>
+<p class="nm-actions"><button class="btn" type="button" id="dl-xlsx" disabled>Download Excel (.xlsx)</button> <button class="btn ghost" type="button" id="dl-csv" disabled>Download CSV</button></p>
+<div class="scroll"><table id="preview"></table></div>
+<p class="note">Check the totals against your statement before you bookkeep. Bank layouts differ; if a column is wrong, try the other number format or Pro AI mode.</p>
+</div>
+</div>
+<p class="note">How it stays private: after this page and its libraries have loaded, heuristic conversion works offline. Nothing is uploaded to Netmend. Licence checks, if you activate Pro, go only to Gumroad. AI mode, if you switch it on, sends text only to Google's Gemini API with your key.</p>
+</div></section>
+
+<section><div class="wrap">
+<h2>Good for</h2>
+<div class="grid">
+<div class="card"><b>Bookkeeping and taxes</b><p>Get dated rows with debit, credit and running balance into Excel or Google Sheets, including European <code>1.234,56</code>.</p></div>
+<div class="card"><b>Accountants and freelancers</b><p>Pro converts a batch of client statements in one go, with one sheet per file plus a combined sheet.</p></div>
+<div class="card"><b>Messy or unusual layouts</b><p>If the heuristics miss a column, Pro AI mode reads the extracted text with your own Gemini key and returns a clean table.</p></div>
+</div></div></section>
+
+<section class="alt" id="pro"><div class="wrap">
+<h2>Statement Pro: $29 once</h2>
+<p class="lead">Typical converters charge a monthly fee after a one-page trial, and they upload your statement to a server. Pro is one payment, and the file still starts in your browser.</p>
+<div id="nm-license"></div>
+<p class="note">The Gumroad checkout link will appear here once the product is created. Until then the button emails us so we can tell you when licences open. Payhip buyers get a key by email after they send their receipt to <a href="mailto:dayinportugal@gmail.com">dayinportugal@gmail.com</a>.</p>
+</div></section>
+
+<section><div class="wrap"><h2>FAQ</h2>
+<details><summary>Does my bank statement leave my computer?</summary><p>In the default heuristic mode, no. The page uses Mozilla's pdf.js library to read the PDF in your browser and build the spreadsheet locally. You can disconnect from the internet after the page loads and it still works. Optional AI mode, which is part of Pro, sends the extracted text from your browser to Google's Gemini API with your own key, never to a Netmend server.</p></details>
+<details><summary>What does the free plan include?</summary><p>The free plan converts one statement a day in this browser, and only the first page. You can download CSV or Excel. Pro ($29, one payment) unlocks every page, batch files, and optional AI mode for messy layouts.</p></details>
+<details><summary>Which banks and formats work?</summary><p>Any statement that is a real text PDF (you can select the text with the mouse). European formats such as 1.234,56 and 12/11/2026 are supported, as are UK/US 1,234.56 dates. Scanned image-only PDFs need OCR; AI mode can help with messy text layouts but cannot invent text that is not in the file. Bank-by-bank notes also live in the <a href="../statement-to-csv/">free bank guides</a>.</p></details>
+<details><summary>Can I trust the totals?</summary><p>Always check opening and closing balances against the statement. Layouts differ between banks, and a missed row will throw the running balance off. For official accounts, keep the original PDF.</p></details>
+<details><summary>How do I get a Pro licence?</summary><p>Pro is a $29 lifetime licence. When the Gumroad product is live, you pay there and paste the licence key on this page. Until then, use the notify link above or email <a href="mailto:dayinportugal@gmail.com">dayinportugal@gmail.com</a>. 14-day refund once sales open. Payhip buyers receive a key by email after sending their receipt.</p></details>
+</div></section>
+<section><div class="wrap"><h2>More Netmend tools</h2><div class="toolsnav"><a href="../slides/">Netmend Slides</a><a href="../sheets-ai/">Sheets AI</a><a href="../askvideo/">AskVideo</a><a href="../quiz/">Quiz maker</a><a href="../chat-pdf/">Chat with PDF</a><a href="../certificates/">Certificates</a><a href="../statement/">Statement → Excel</a><a href="../blur/">Netmend Blur</a><a href="../tools/">All tools</a></div></div></section>
+<footer class="site-footer"><div class="wrap">
+<div class="f-grid">
+<div class="f-brand"><a href="../"><img src="../assets/logo-light.svg" alt="Netmend" width="121" height="30" loading="lazy"></a><p>Small, private AI tools that run in your browser with your own free Gemini key. No account, no server, no trackers.</p></div>
+<div><h4>AI tools</h4><a href="../slides/">Netmend Slides</a><a href="../sheets-ai/">Sheets AI</a><a href="../askvideo/">AskVideo</a><a href="../quiz/">Quiz maker</a></div>
+<div><h4>More</h4><a href="../chat-pdf/">Chat with PDF</a><a href="../certificates/">Certificates</a><a href="../statement/">Statement → Excel</a><a href="../blur/">Netmend Blur</a></div>
+<div><h4>Netmend</h4><a href="../tools/">All tools</a><a href="../#services">Services</a><a href="mailto:dayinportugal@gmail.com?subject=Netmend">Contact</a></div>
+</div>
+<div class="f-bottom">© 2026 Netmend · run by Pedro Carvalho · EU-based · No cookies, no trackers, no sign-up. Your files, text and Gemini key stay in your browser. Heuristic conversion does not leave this device. AI mode, if you switch it on, goes only to Google's Gemini API. Licences are checked with Gumroad.</div>
+</div></footer>
+<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="../assets/nm-products.js"></script><script src="../assets/nm-suite.js"></script>
+<script src="parser.js"></script><script src="app.js"></script>
+</body></html>
