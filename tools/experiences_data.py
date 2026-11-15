@@ -10,16 +10,19 @@ WGT = "https://tp.media/r?campaign_id=150&marker=784671&p=4487&sub_id=dayinportu
 def gyg(path): return "https://www.getyourguide.com/" + path + "?" + GYG_Q
 def gygs(q): return "https://www.getyourguide.com/s/?q=" + q + "&" + GYG_Q
 
+# Map pins: lat/lon are the real city centres. Optional vlat/vlon are used only
+# by the home SVG map when the true point would sit in the sea (the coastline
+# is simplified) or would collide with a neighbour. Keep those on land.
 PLACES = {
  "porto":  dict(lat=41.1406, lon=-8.6131, name=dict(en="Porto", pt="Porto", es="Oporto", fr="Porto", de="Porto")),
- "povoa":  dict(lat=41.3804, lon=-8.7609, vlon=-9.16, short="Póvoa", dx=-1, dy=-1.2, name=dict(en="Póvoa de Varzim", pt="Póvoa de Varzim", es="Póvoa de Varzim", fr="Póvoa de Varzim", de="Póvoa de Varzim")),
+ "povoa":  dict(lat=41.3833, lon=-8.7608, short="Póvoa", dx=-1, dy=-1.2, name=dict(en="Póvoa de Varzim", pt="Póvoa de Varzim", es="Póvoa de Varzim", fr="Póvoa de Varzim", de="Póvoa de Varzim")),
  "braga":  dict(lat=41.4940, lon=-8.3600, vlat=41.60, name=dict(en="Braga & Guimarães", pt="Braga e Guimarães", es="Braga y Guimarães", fr="Braga et Guimarães", de="Braga & Guimarães")),
  "douro":  dict(lat=41.1906, lon=-7.5464, name=dict(en="Douro Valley", pt="Vale do Douro", es="Valle del Duero", fr="Vallée du Douro", de="Douro-Tal")),
  "aveiro": dict(lat=40.6405, lon=-8.6538, name=dict(en="Aveiro", pt="Aveiro", es="Aveiro", fr="Aveiro", de="Aveiro")),
  "paiva":  dict(lat=40.9390, lon=-8.2160, vlat=40.68, vlon=-7.53, short="Paiva", name=dict(en="Paiva Walkways & Arouca", pt="Passadiços do Paiva e Arouca", es="Pasarelas del Paiva y Arouca", fr="Passerelles du Paiva et Arouca", de="Paiva-Stege & Arouca")),
- "sintra": dict(lat=38.7876, lon=-9.3905, vlat=39.15, dy=-1.3, name=dict(en="Sintra", pt="Sintra", es="Sintra", fr="Sintra", de="Sintra")),
- "lisbon": dict(lat=38.7110, lon=-9.1300, dy=0, name=dict(en="Lisbon", pt="Lisboa", es="Lisboa", fr="Lisbonne", de="Lissabon")),
- "cascais":dict(lat=38.6970, lon=-9.4215, vlat=38.24, dy=1.4, name=dict(en="Cascais", pt="Cascais", es="Cascais", fr="Cascais", de="Cascais")),
+ "sintra": dict(lat=38.7876, lon=-9.3905, dy=-1.3, name=dict(en="Sintra", pt="Sintra", es="Sintra", fr="Sintra", de="Sintra")),
+ "lisbon": dict(lat=38.7110, lon=-9.1300, vlat=38.736, vlon=-9.150, dy=0, name=dict(en="Lisbon", pt="Lisboa", es="Lisboa", fr="Lisbonne", de="Lissabon")),
+ "cascais":dict(lat=38.6979, lon=-9.4215, vlat=38.722, vlon=-9.40, dy=1.4, name=dict(en="Cascais", pt="Cascais", es="Cascais", fr="Cascais", de="Cascais")),
  "evora":  dict(lat=38.5714, lon=-7.9135, name=dict(en="Évora", pt="Évora", es="Évora", fr="Évora", de="Évora")),
 }
 
