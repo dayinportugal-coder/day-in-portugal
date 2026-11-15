@@ -247,3 +247,72 @@ window.DIP_I18N = {
     });
   });
 })(window.DIP_I18N);
+
+/* Added 15/11/2026 (v2): experience pages in the Experiences menu. Generated from tools/experiences_data.py. */
+(function (d) {
+  var add = {
+ "groups": {},
+ "items": {
+  "pt": {
+   "/experiences/": "Todas as experiências, com preços",
+   "/experiences/douro-valley-day-trip-from-porto": "Dia no Douro: quintas, almoço e barco",
+   "/experiences/porto-sunset-cruise-port-wine": "Cruzeiro das pontes com vinho do Porto, ao pôr do sol",
+   "/experiences/porto-six-bridges-cruise": "Cruzeiro das seis pontes",
+   "/experiences/taylors-port-cellar-and-wow-porto": "Prova de vinho do Porto na Taylor’s + WOW",
+   "/experiences/porto-food-and-wine-tour": "Passeio de comida e vinho no Porto",
+   "/experiences/paiva-walkways-arouca-516-day-trip-from-porto": "Passadiços do Paiva, ponte 516 Arouca e Aveiro",
+   "/experiences/lisbon-sunset-sailing-tagus": "Veleiro ao pôr do sol no Tejo",
+   "/experiences/lisbon-tuk-tuk-tour": "Tuk-tuk privado por Lisboa",
+   "/experiences/pastel-de-nata-class-lisbon": "Oficina de pastel de nata",
+   "/experiences/lisbon-food-and-wine-tour": "Passeio de comida e vinho em Lisboa",
+   "/experiences/pena-palace-tickets-sintra": "Palácio e Parque da Pena, com hora"
+  },
+  "es": {
+   "/experiences/": "Todas las experiencias, con precios",
+   "/experiences/douro-valley-day-trip-from-porto": "Día en el Duero: quintas, almuerzo y barco",
+   "/experiences/porto-sunset-cruise-port-wine": "Crucero de los puentes con oporto, al atardecer",
+   "/experiences/porto-six-bridges-cruise": "Crucero de los seis puentes",
+   "/experiences/taylors-port-cellar-and-wow-porto": "Cata de oporto en Taylor’s + museos WOW",
+   "/experiences/porto-food-and-wine-tour": "Ruta de comida y vino en Oporto",
+   "/experiences/paiva-walkways-arouca-516-day-trip-from-porto": "Pasarelas del Paiva, puente 516 Arouca y Aveiro",
+   "/experiences/lisbon-sunset-sailing-tagus": "Velero al atardecer en el Tajo",
+   "/experiences/lisbon-tuk-tuk-tour": "Tuk-tuk privado por Lisboa",
+   "/experiences/pastel-de-nata-class-lisbon": "Taller de pastel de nata",
+   "/experiences/lisbon-food-and-wine-tour": "Ruta de comida y vino en Lisboa",
+   "/experiences/pena-palace-tickets-sintra": "Palacio y parque da Pena, con hora"
+  },
+  "fr": {
+   "/experiences/": "Toutes les expériences, avec prix",
+   "/experiences/douro-valley-day-trip-from-porto": "Journée dans le Douro : quintas, déjeuner et bateau",
+   "/experiences/porto-sunset-cruise-port-wine": "Croisière des ponts avec porto, au coucher du soleil",
+   "/experiences/porto-six-bridges-cruise": "Croisière des six ponts",
+   "/experiences/taylors-port-cellar-and-wow-porto": "Dégustation de porto chez Taylor’s + musées WOW",
+   "/experiences/porto-food-and-wine-tour": "Balade gourmande et vin à Porto",
+   "/experiences/paiva-walkways-arouca-516-day-trip-from-porto": "Passerelles du Paiva, pont 516 Arouca et Aveiro",
+   "/experiences/lisbon-sunset-sailing-tagus": "Voilier au coucher du soleil sur le Tage",
+   "/experiences/lisbon-tuk-tuk-tour": "Tuk-tuk privé dans Lisbonne",
+   "/experiences/pastel-de-nata-class-lisbon": "Atelier pastel de nata",
+   "/experiences/lisbon-food-and-wine-tour": "Balade gourmande et vin à Lisbonne",
+   "/experiences/pena-palace-tickets-sintra": "Palais et parc de Pena, à heure fixe"
+  },
+  "de": {
+   "/experiences/": "Alle Erlebnisse mit Preisen",
+   "/experiences/douro-valley-day-trip-from-porto": "Douro-Tag: Quintas, Mittagessen und Boot",
+   "/experiences/porto-sunset-cruise-port-wine": "Brückenfahrt mit Portwein bei Sonnenuntergang",
+   "/experiences/porto-six-bridges-cruise": "Sechs-Brücken-Fahrt auf dem Douro",
+   "/experiences/taylors-port-cellar-and-wow-porto": "Portweinprobe bei Taylor’s + WOW-Museen",
+   "/experiences/porto-food-and-wine-tour": "Essen-und-Wein-Tour in Porto",
+   "/experiences/paiva-walkways-arouca-516-day-trip-from-porto": "Paiva-Stege, Brücke 516 Arouca und Aveiro",
+   "/experiences/lisbon-sunset-sailing-tagus": "Segeln bei Sonnenuntergang auf dem Tejo",
+   "/experiences/lisbon-tuk-tuk-tour": "Private Tuk-Tuk-Tour durch Lissabon",
+   "/experiences/pastel-de-nata-class-lisbon": "Pastel-de-Nata-Backkurs",
+   "/experiences/lisbon-food-and-wine-tour": "Essen-und-Wein-Tour in Lissabon",
+   "/experiences/pena-palace-tickets-sintra": "Pena-Palast und Park, mit Zeitfenster"
+  }
+ }
+};
+  Object.keys(add.items).forEach(function (lang) {
+    d.items[lang] = d.items[lang] || {};
+    Object.keys(add.items[lang]).forEach(function (key) { d.items[lang][key] = add.items[lang][key]; });
+  });
+})(window.DIP_I18N);

@@ -54,3 +54,11 @@ See also `img/CREDITS.md` for source URLs. Same photographers and licences as `/
 - `img/exp/tram-28-santa-luzia-{640,1200}.webp` — [Tram 28 at Largo de Santa Luzia in Lisbon, 20250606 1958 0419.jpg](https://commons.wikimedia.org/wiki/File:Tram_28_at_Largo_de_Santa_Luzia_in_Lisbon,_20250606_1958_0419.jpg) — Jakub Hałun — CC BY 4.0 — resized, WebP.
 - `img/exp/lisbon-santa-luzia-view-{640,1200}.webp` — [Vistas de Lisboa desde el Mirador de Santa Luzia, Portugal, 2012-05-12, DD 03.JPG](https://commons.wikimedia.org/wiki/File:Vistas_de_Lisboa_desde_el_Mirador_de_Santa_Luzia,_Portugal,_2012-05-12,_DD_03.JPG) — Diego Delso — CC BY-SA 3.0 — resized, WebP.
 - `img/map/portugal.svg` — drawn from [Natural Earth](https://www.naturalearthdata.com/) 1:10m data (public domain).
+
+## Experience pages (15/11/2026)
+- `img/exp/tagus-sailboats-{640,1200}.webp` — [Veleiros - panoramio.jpg](https://commons.wikimedia.org/wiki/File:Veleiros_-_panoramio.jpg) — Marcos Proença — CC BY 3.0 — cropped 3:2, resized, WebP.
+- `img/exp/paiva-walkways-{640,1200}.webp` — [Passadiços do Paiva Paiva walkways (39681956172).jpg](https://commons.wikimedia.org/wiki/File:Passadi%C3%A7os_do_Paiva_Paiva_walkways_(39681956172).jpg) — Luis Ascenso — CC BY 2.0 — cropped 3:2, resized, WebP.
+- `img/exp/tuk-tuks-jeronimos-{640,1200}.webp` — [Vintage Charm Meets Iconic Lisbon Tuk Tuks at Jerónimos Monastery (54694176493).jpg](https://commons.wikimedia.org/wiki/File:Vintage_Charm_Meets_Iconic_Lisbon_Tuk_Tuks_at_Jer%C3%B3nimos_Monastery_(54694176493).jpg) — Dale Cruse — CC BY 4.0 — cropped 3:2, resized, WebP.
+- `img/exp/lisbon-prego-ramiro-{640,1200}.webp` — [Cervejaria Ramiro (41171394540).jpg](https://commons.wikimedia.org/wiki/File:Cervejaria_Ramiro_(41171394540).jpg) — Kent Wang — CC BY-SA 2.0 — cropped 3:2, resized, WebP.
+- `img/exp/pasteis-de-nata-{640,1200}.webp` — [Pastel de nata septembre 2015.jpg](https://commons.wikimedia.org/wiki/File:Pastel_de_nata_septembre_2015.jpg) — Claude Truong-Ngoc — CC BY-SA 3.0 — cropped 3:2, resized, WebP.
+- `img/exp/rabelo-evening-light-{640,1200}.webp` — Rabelo Boat, Evening Light on Porto (10247683023).jpg — François Philipp — CC BY 2.0 (listed above) — cropped 3:2, resized, WebP.
