@@ -54,7 +54,7 @@
     if (pro && sig) { var sh = 16, sw = Math.min(60, sh * sig.w / sig.h); doc.addImage(sig.data, sig.fmt, cx + 70 - sw / 2, y - sh - 1, sw, sh); }
     if ($("signer").value) { doc.line(cx + 40, y, cx + 100, y); doc.text($("signer").value, cx + 70, y + 6, { align: "center" }); }
     if ($("issuer").value) { doc.setFont(f, "bold"); doc.setFontSize(12); doc.text($("issuer").value, cx, 150, { align: "center" }); }
-    if (!pro) { doc.setFont("helvetica", "normal"); doc.setFontSize(7); doc.setTextColor(150, 150, 150); doc.text("Made with Netmend Certificates · dayinportugal.com/netmend/certificates", cx, H - 5, { align: "center" }); }
+    if (!pro) { doc.setFont("helvetica", "normal"); doc.setFontSize(7); doc.setTextColor(150, 150, 150); doc.text("Made with Netmend Certificates · netmend.app/certificates", cx, H - 5, { align: "center" }); }
   }
   function newDoc() { return new window.jspdf.jsPDF({ orientation: "landscape", unit: "mm", format: "a4", compress: true }); }
   function list(forBatch) {

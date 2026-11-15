@@ -108,7 +108,7 @@
     var F = "Calibri", W = 13.33;
     function base() {
       var s = p.addSlide(); s.background = { color: th.bg };
-      if (!pro) s.addText("Made with Netmend Slides · dayinportugal.com/netmend/slides", { x: 0.5, y: 7.05, w: 9, h: 0.3, fontSize: 9, color: th.text, transparency: 40, fontFace: F });
+      if (!pro) s.addText("Made with Netmend Slides · netmend.app/slides", { x: 0.5, y: 7.05, w: 9, h: 0.3, fontSize: 9, color: th.text, transparency: 40, fontFace: F });
       return s;
     }
     function bullets(s, items, x, y, w, h, size) {
@@ -150,7 +150,7 @@
     if (!pro) {
       var e = base();
       e.addText("Made with Netmend Slides", { x: 0.9, y: 2.8, w: 11.5, h: 1, fontSize: 32, bold: true, color: th.title, fontFace: F });
-      e.addText("Free AI decks from any PDF, text or link · dayinportugal.com/netmend/slides", { x: 0.9, y: 3.8, w: 11.5, h: 0.7, fontSize: 18, color: th.text, fontFace: F });
+      e.addText("Free AI decks from any PDF, text or link · netmend.app/slides", { x: 0.9, y: 3.8, w: 11.5, h: 0.7, fontSize: 18, color: th.text, fontFace: F });
     }
     return p.writeFile({ fileName: NM.slug(deck.title) + ".pptx" });
   }

@@ -23,7 +23,7 @@ function gen(){
     return '<div class="c">'+(t.stars?'<div class="s" aria-label="'+t.stars+' out of 5 stars">'+'★'.repeat(t.stars)+'☆'.repeat(5-t.stars)+'</div>':'')+
     '<p>'+esc(t.text)+'</p><div><span class="a">'+esc(ini)+'</span><span><span class="n">'+esc(t.name)+'</span>'+(t.role?' <span class="r">· '+esc(t.role)+'</span>':'')+
     (t.src?' <span class="r">· '+(/^https?:\/\//.test(t.src)?'<a href="'+esc(t.src)+'" rel="nofollow noopener" style="color:inherit">source</a>':esc(t.src))+'</span>':'')+'</span></div></div>'}).join('')+'</div></div>';
-  var out='<!-- Testimonial wall made free with Netmend: https://dayinportugal.com/netmend/wall-of-love/ -->\n<style>'+css+'</style>\n'+html;
+  var out='<!-- Testimonial wall made free with Netmend: https://netmend.app/wall-of-love/ -->\n<style>'+css+'</style>\n'+html;
   document.getElementById('preview').innerHTML=out;document.getElementById('code').value=out;
   document.getElementById('count').textContent=items.length+' testimonial(s)';
 }

@@ -43,14 +43,14 @@
         '<div class="ex noprint">Answer: ' + L[q.answer] + ". " + NM.esc(q.explanation) + "</div></div>";
     });
     h += '<div style="page-break-before:always"></div><h3>Answer key</h3><p>' + quiz.questions.map(function (q, i) { return (i + 1) + ". " + L[q.answer]; }).join(" &nbsp; ") + "</p>";
-    if (!NM.isPro()) h += '<p class="note">Made with Netmend Quiz · dayinportugal.com/netmend/quiz</p>';
+    if (!NM.isPro()) h += '<p class="note">Made with Netmend Quiz · netmend.app/quiz</p>';
     $("out").innerHTML = h; $("quiz-sec").hidden = false; $("exports").hidden = false;
   }
   function js(s) { return JSON.stringify(String(s)); }
   function formsScript() {
     var o = "// Netmend Quiz -> Google Forms. Paste into script.google.com and click Run.\nfunction createNetmendQuiz() {\n" +
       "  var form = FormApp.create(" + js(quiz.title) + ");\n  form.setIsQuiz(true);\n" +
-      "  form.setDescription(" + js(NM.isPro() ? "" : "Made with Netmend Quiz (dayinportugal.com/netmend/quiz)") + ");\n" +
+      "  form.setDescription(" + js(NM.isPro() ? "" : "Made with Netmend Quiz (netmend.app/quiz)") + ");\n" +
       "  var q = " + JSON.stringify(quiz.questions) + ";\n" +
       "  q.forEach(function (x) {\n    var it = form.addMultipleChoiceItem();\n    it.setTitle(x.question).setPoints(1).setRequired(true)\n" +
       "      .setChoices(x.options.map(function (o, i) { return it.createChoice(o, i === x.answer); }));\n" +
