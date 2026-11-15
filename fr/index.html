@@ -30,6 +30,7 @@
 <link rel="preload" href="/fonts/instrument-serif-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/fonts/dm-sans-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link href="/styles.css" rel="stylesheet"/>
+<link href="/home.css" rel="stylesheet"/>
 <link href="/assistant.css" rel="stylesheet"/>
 <link href="/consent.css" rel="stylesheet"/>
 <script defer src="/consent.js"></script>
@@ -39,8 +40,10 @@
 <script defer src="/lang.js"></script>
 <script defer src="/assistant-match.js"></script>
 <script defer src="/assistant.js"></script>
+<script defer src="/experiences.js"></script>
+<script defer src="/home.js"></script>
 </head>
-<body>
+<body class="home">
 <a class="skip" href="#main">Aller au contenu</a>
 <header class="top">
 <div class="top-inner">
@@ -51,42 +54,33 @@
 </div>
 </header>
 <main id="main">
-<section class="hero">
-<img alt="Le quai de Ribeira à Porto, vu de l’autre côté du Douro depuis Cais de Gaia" class="hero-img" fetchpriority="high" height="389" sizes="100vw" src="/img/hero-ribeira-from-gaia-800.webp" srcset="/img/hero-ribeira-from-gaia-800.webp 800w, /img/hero-ribeira-from-gaia-1600.webp 1600w, /img/hero-ribeira-from-gaia-2400.webp 2400w" width="800"/>
-<div class="hero-inner">
-<p class="kicker">Porto · guide indépendant</p>
-<h1>Porto, sans la file et la boutique de pacotille.</h1>
-<p class="lead">Trois choses valent d’être réservées avant l’atterrissage : une dégustation de vin de Porto à heure fixe à Gaia, un tour sur le fleuve qui est vraiment la ville (pas la vallée), et un lit qui n’est pas à l’angle le plus bruyant de Ribeira. Tout le reste peut attendre que vous soyez là.</p>
-<div class="cta-row">
-<a class="btn" href="/fr/book">Voir quoi réserver</a>
-<a class="btn ghost" href="/fr/stay">Où dormir</a>
+<section class="film-hero" aria-labelledby="hero-h">
+<img alt="Le quai de Ribeira à Porto, vu de l’autre côté du Douro depuis le Cais de Gaia" class="hero-img" fetchpriority="high" height="778" sizes="100vw" src="/img/hero-ribeira-from-gaia-1600.webp" srcset="/img/hero-ribeira-from-gaia-800.webp 800w, /img/hero-ribeira-from-gaia-1600.webp 1600w, /img/hero-ribeira-from-gaia-2400.webp 2400w" width="1600"/>
+<span aria-hidden="true" class="film-bar top"></span><span aria-hidden="true" class="film-bar bot"></span>
+<div class="film-inner">
+<p class="film-kicker">Porto · Douro · Lisbonne</p>
+<h1 id="hero-h">Le Portugal, <em>lentement</em> et bien.</h1>
+<p class="film-lead">La croisière sur le fleuve, la cave de porto et la journée dans le Douro qui en valent la peine — avec de vrais prix « dès », une carte des lieux et la réservation sur les sites partenaires que vous connaissez déjà.</p>
+<div class="film-ctas"><a class="btn" href="#experiences">Voir les expériences</a><a class="btn ghost" href="#map">Ouvrir la carte</a></div>
+<ul class="film-facts"><li>Journée dans le Douro dès 85 €</li><li>Croisière des six ponts dès 18 €</li><li>Paiement sur GetYourGuide, Tiqets ou Klook</li></ul>
 </div>
-      <!-- ia:search --><form class="ia-hero-search" role="search" action="https://duckduckgo.com/" method="get" data-ia-search><label class="sr-only" for="ia-q">Rechercher dans le guide</label><input id="ia-q" name="q" type="search" autocomplete="off" placeholder="Rechercher : vallée du Douro, visa D7, aéroport…" /><input type="hidden" name="sites" value="dayinportugal.com" /><button type="submit">Rechercher</button></form><!-- /ia:search -->
-      
-      
-      
-      
-      
+<p class="film-credit">La Ribeira vue du Cais de Gaia · Photo : Jakub Hałun · <a href="https://creativecommons.org/licenses/by/4.0" rel="license noopener" target="_blank">CC BY 4.0</a></p>
+</section>
+<div class="xp-trust" role="note"><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><div><strong>Vous payez le prix public</strong><span>La réservation se fait sur GetYourGuide, Tiqets ou Klook. Une éventuelle commission vient d’eux, pas de vous.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></svg><div><strong>Conditions d’annulation avant de payer</strong><span>La page du partenaire indique si, et jusqu’à quand, vous pouvez annuler gratuitement.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><strong>Indépendant, écrit près de Porto</strong><span>Nous ne sommes pas une agence de voyages. Questions : <a href="mailto:dayinportugal@gmail.com">dayinportugal@gmail.com</a></span></div></li></ul><p class="xp-partners">Partenaires de réservation : <b>GetYourGuide</b> · <b>Tiqets</b> · <b>Klook</b> · <b>WeGoTrip</b></p></div>
+<section class="xp-sec" id="experiences" aria-labelledby="xp-h">
+<div class="xp-head reveal"><div><p class="kicker">Expériences</p><h2 id="xp-h">Les quelques choses <em>à réserver.</em></h2><p class="muted">Choisies dans nos guides, avec le prix « dès » trouvé et un lien direct vers la page du partenaire. Filtrez par zone ou retrouvez-les sur la carte.</p></div><div class="xp-filters" id="xp-filters"></div></div>
+<div class="xp-grid" id="xp-grid"><p class="muted">Ouvrez la <a href="/fr/book">page de réservation</a>, la <a href="/fr/douro-day">journée dans le Douro</a> ou <a href="/fr/lisbon-3-days">3 jours à Lisbonne</a>.</p></div>
+<p class="xp-note" id="xp-note"></p>
+</section>
+<section class="xp-sec" id="map" aria-labelledby="map-h">
+<div class="xp-head reveal"><div><p class="kicker">Carte</p><h2 id="map-h">Là où tout <em>se passe.</em></h2><p class="muted">Touchez un point pour voir ce que l’on peut y faire. Porto en a le plus ; le Douro et Lisbonne sont à un trajet en train.</p></div></div>
+<div class="pt-wrap">
+<div class="pt-map" id="pt-map" role="group" aria-label="Carte du Portugal continental avec les lieux de nos expériences"><img alt="" decoding="async" height="1000" loading="lazy" src="/img/map/portugal.svg" width="585"/></div>
+<div aria-live="polite" class="pt-panel" id="pt-panel"><p class="muted">Ouvrez la <a href="/fr/book">page de réservation</a>, la <a href="/fr/douro-day">journée dans le Douro</a> ou <a href="/fr/lisbon-3-days">3 jours à Lisbonne</a>.</p></div>
 </div>
+<p class="fine">Photos : Jakub Hałun, CC BY 4.0 (ouverture, tram 28) ; CEphoto, Uwe Aranas, CC BY-SA 3.0 (Pena) ; Diego Delso, CC BY-SA 3.0 (Lisbonne depuis Santa Luzia) ; autres cartes dans les <a href="/fr/credits">crédits photo</a>. Carte : Natural Earth (domaine public).</p>
 </section>
 <div class="wrap">
-<section aria-label="Comment fonctionne ce guide" class="trust">
-<article>
-<span aria-hidden="true" class="ico">€</span>
-<h2>Vous payez le même prix</h2>
-<p class="muted">Les boutons de réservation mènent à des partenaires comme GetYourGuide, Tiqets ou Klook. Si nous touchons une commission, elle vient d’eux — pas en plus sur ce que vous payez.</p>
-</article>
-<article>
-<span aria-hidden="true" class="ico">✓</span>
-<h2>Pas une agence de voyages</h2>
-<p class="muted">Nous ne prenons pas votre carte, ne gardons pas votre passeport et ne modifions pas la réservation de votre vol. Vous réservez sur la plateforme que vous connaissez déjà.</p>
-</article>
-<article>
-<span aria-hidden="true" class="ico">N</span>
-<h2>Écrit depuis le nord</h2>
-<p class="muted">Day in Portugal est un petit guide établi près de Porto. Questions : <a href="mailto:dayinportugal@gmail.com">dayinportugal@gmail.com</a>.</p>
-</article>
-</section>
     <!-- ddp:promo --><a class="ddp-promo" href="/douro-planner/?utm_source=site&amp;utm_medium=banner&amp;utm_campaign=fr_index"><img src="/img/cards/douro-valley-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span><span class="ddp-promo-k">Nouveau · appli gratuite (en anglais)</span><strong>Douro Day Planner</strong><span class="ddp-promo-t">Choisissez votre jour et comparez train + bus, voiture ou excursion dans le Douro, avec les vrais horaires CP et les quintas ouvertes ce jour-là. Fonctionne hors ligne.</span></span><span class="ddp-promo-b">Planifier ma journée dans le Douro →</span></a><!-- /ddp:promo -->
 
     <!-- ia:home --><section class="ia-topics" aria-labelledby="ia-top-h"><div class="ia-head"><div><p class="kicker">Guides</p><h2 class="h-section" id="ia-top-h">Explorer par thème</h2><p class="muted">Choisissez un point de départ. Chaque guide a des prix vérifiés sur des pages officielles ou partenaires.</p></div></div><div class="ia-topic-grid"><a class="ia-topic" href="/fr/porto-guide"><img src="/img/cards/rabelos-ribeira-from-gaia-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span class="ia-topic-body"><strong>Guide de Porto</strong><span class="ia-count">15 guides</span></span></a><a class="ia-topic" href="/fr/porto-day-trips"><img src="/img/cards/douro-valley-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span class="ia-topic-body"><strong>Excursions</strong><span class="ia-count">7 guides</span></span></a><a class="ia-topic" href="/fr/lisbon-guide"><img src="/img/cards/tram-28-alfama-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span class="ia-topic-body"><strong>Lisbonne</strong><span class="ia-count">7 guides</span></span></a><a class="ia-topic" href="/fr/airport-transfers"><img src="/img/cards/porto-airport-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span class="ia-topic-body"><strong>Transferts aéroport</strong><span class="ia-count">5 guides</span></span></a><a class="ia-topic" href="/fr/moving-to-portugal"><img src="/img/cards/lisbon-lapa-stairs-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span class="ia-topic-body"><strong>S’installer au Portugal</strong><span class="ia-count">18 guides</span></span></a><a class="ia-topic" href="/fr/loja.html"><img src="/img/cards/sardine-tins-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span class="ia-topic-body"><strong>Boutique</strong></span></a></div></section><section class="ia-related ia-popular" aria-labelledby="ia-pop-h"><div class="ia-head"><h2 class="h-sub" id="ia-pop-h">Les plus lus en ce moment</h2></div><div class="ia-grid"><a class="ia-card" href="/fr/douro-day"><img src="/img/cards/douro-valley-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span class="ia-card-body"><strong>Vallée du Douro</strong><span class="ia-desc">Comparez une excursion d&#x27;une journée dans la vallée du Douro depuis Porto : le train jusqu&#x27;à Régua ou Pinhão, une…</span></span></a><a class="ia-card" href="/fr/braga-guimaraes-day-trip"><img src="/img/cards/bom-jesus-stairway-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span class="ia-card-body"><strong>Braga et Guimarães</strong><span class="ia-desc">Comment faire Braga et Guimarães en une journée depuis Porto : ce que couvre une excursion guidée (Bom Jesus, cathédrale…</span></span></a><a class="ia-card" href="/fr/porto-airport-transfer"><img src="/img/cards/porto-airport-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span class="ia-card-body"><strong>Transfert aéroport de Porto</strong><span class="ia-desc">Comment aller de l&#x27;aéroport de Porto (OPO) au centre, à Gaia ou à Póvoa de Varzim : métro ligne E, taxi, transfert…</span></span></a><a class="ia-card" href="/fr/gaia-port-cellars"><img src="/img/cards/rabelos-gaia-dom-luis-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span class="ia-card-body"><strong>Caves de porto à Gaia</strong><span class="ia-desc">Quelle cave de vin de Porto visiter à Vila Nova de Gaia : Taylor’s, Cálem, Cockburn’s, Fonseca, Burmester ou Poças. À…</span></span></a><a class="ia-card" href="/fr/lisbon-airport-transfer"><img src="/img/cards/airport-metro-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span class="ia-card-body"><strong>Transfert aéroport de Lisbonne</strong><span class="ia-desc">Comment aller de l&#x27;aéroport de Lisbonne (LIS) au centre : métro ligne rouge jusqu&#x27;à Saldanha, taxi, ou transfert réservé…</span></span></a><a class="ia-card" href="/fr/portugal-d7-visa"><img src="/img/cards/lisbon-praca-comercio-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span class="ia-card-body"><strong>Visa D7 pour le Portugal</strong><span class="ia-desc">Le visa D7 pour le Portugal, pour les pensions et les revenus passifs : les montants 2026 calculés sur le salaire minimum…</span></span></a></div></section><!-- /ia:home -->
@@ -186,6 +180,8 @@
 <p class="fine">Photos des vignettes : Paul Arps, <a href="https://creativecommons.org/licenses/by/2.0" rel="license noopener" target="_blank">CC BY 2.0</a> (tram 28) ; Chabe01, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener" target="_blank">CC BY-SA 4.0</a> (Pena) ; Herbert wie, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener" target="_blank">CC BY-SA 4.0</a> (baie de Cascais). Via Wikimedia Commons.</p>
 </section>
 </div>
+<section class="xp-sec" id="about" aria-labelledby="about-h"><div class="xp-about reveal"><div><p class="kicker">À propos</p><h2 id="about-h">Un petit guide, <em>écrit depuis le nord.</em></h2><p>Day in Portugal est un guide indépendant basé près de Porto. Nous écrivons les pages que nous aurions voulu avoir lors de notre premier voyage : quoi réserver, quoi éviter et comment y aller en train — avec des prix vérifiés sur les pages officielles ou partenaires, et la date de vérification.</p><p>Nous ne sommes pas une agence de voyages. Certains liens sont affiliés : vous payez le prix public et nous pouvons toucher une commission. <a href="/fr/disclosure">Comment nous gagnons de l’argent</a>.</p></div><ul><li>Prix et horaires datés dans chaque guide</li><li>Guides en English, Português, Español, Français et Deutsch</li><li>Outils gratuits : le <a href="/douro-planner/">Douro Day Planner</a> et le <a href="/portugal-visa-income-calculator">calculateur de revenus pour le visa</a></li></ul></div></section>
+<div class="book-bar" id="book-bar"><a href="#experiences"><span>Réserver</span><span>Voir les expériences →</span></a></div>
 </main>
 <footer class="site-foot">
 <div class="foot-inner">

@@ -223,3 +223,27 @@ window.DIP_I18N = {
     });
   });
 })(window.DIP_I18N);
+
+/* Added 15/11/2026: new top menu (Experiences · Map · Guides · About). */
+(function (d) {
+  var add = {
+    groups: {
+      es: { experiencias: "Experiencias", mapa: "Mapa", guias: "Guías", sobre: "Sobre nosotros", aeroporto: "Aeropuerto", cidades: "Excursiones", vistos: "Mudarse a Portugal" },
+      fr: { experiencias: "Expériences", mapa: "Carte", guias: "Guides", sobre: "À propos", aeroporto: "Aéroport", cidades: "Excursions", vistos: "S’installer au Portugal" },
+      de: { experiencias: "Erlebnisse", mapa: "Karte", guias: "Guides", sobre: "Über uns", aeroporto: "Flughafen", cidades: "Tagesausflüge", vistos: "Auswandern" },
+      pt: { experiencias: "Experiências", mapa: "Mapa", guias: "Guias", sobre: "Sobre", aeroporto: "Aeroporto", cidades: "Excursões", vistos: "Mudar para Portugal" }
+    },
+    items: {
+      es: { "/#experiences": "Todas las experiencias", "/#about": "Sobre Day in Portugal", "/demos/": "Para negocios", "/loja.html": "Regalos de Portugal", "mailto:dayinportugal@gmail.com": "Contacto: dayinportugal@gmail.com", "/douro-day|Douro day from Porto": "Un día en el Duero desde Oporto" },
+      fr: { "/#experiences": "Toutes les expériences", "/#about": "À propos de Day in Portugal", "/demos/": "Pour les entreprises", "/loja.html": "Cadeaux du Portugal", "mailto:dayinportugal@gmail.com": "Contact : dayinportugal@gmail.com" },
+      de: { "/#experiences": "Alle Erlebnisse", "/#about": "Über Day in Portugal", "/demos/": "Für Unternehmen", "/loja.html": "Geschenke aus Portugal", "mailto:dayinportugal@gmail.com": "Kontakt: dayinportugal@gmail.com" },
+      pt: { "/#experiences": "Todas as experiências", "/#about": "Sobre o Day in Portugal", "/demos/": "Para negócios", "/loja.html": "Presentes de Portugal", "mailto:dayinportugal@gmail.com": "Contacto: dayinportugal@gmail.com" }
+    }
+  };
+  ["groups", "items"].forEach(function (k) {
+    Object.keys(add[k]).forEach(function (lang) {
+      d[k][lang] = d[k][lang] || {};
+      Object.keys(add[k][lang]).forEach(function (key) { d[k][lang][key] = add[k][lang][key]; });
+    });
+  });
+})(window.DIP_I18N);

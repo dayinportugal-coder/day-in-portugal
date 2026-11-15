@@ -47,3 +47,10 @@ See also `img/CREDITS.md` for source URLs. Same photographers and licences as `/
 - `img/home/*-800.webp` (and `senhora-do-monte-1600.webp`) — smaller or cropped copies of photos already listed above and in `img/lisboa/CREDITS.md`, for the home page cards (same authors and licences; credits next to each group of cards). `livraria-lello-800.webp` is a square crop; `costa-nova-800.webp` crops the bottom 7 % (watermark strip).
 
 - `douro-planner/img/hero-regua-*.webp`, `og-douro-planner.jpg`, `icon-*.png` — [006 Douro vineyards in Peso da Régua, Portugal](https://commons.wikimedia.org/wiki/File:006_Douro_vineyards_in_Peso_da_R%C3%A9gua,_Portugal_-_wine_region_photo_Creative_Commons_Attribution.jpg) — Marek Ślusarczyk (Tupungato) — CC BY 3.0 — resized/cropped, WebP/PNG/JPG (Douro Day Planner, 13/11/2026)
+
+## Home redesign v2 (15/11/2026)
+- Home hero in all five languages is now `hero-ribeira-from-gaia-*.webp` (Jakub Hałun, CC BY 4.0, listed above) with a CSS film grade; the English hero no longer uses the François Philipp photo.
+- `img/exp/pena-palace-colour-{640,1200}.webp` — [Sintra Portugal Palácio da Pena-01.jpg](https://commons.wikimedia.org/wiki/File:Sintra_Portugal_Pal%C3%A1cio_da_Pena-01.jpg) — CEphoto, Uwe Aranas — CC BY-SA 3.0 — resized, WebP.
+- `img/exp/tram-28-santa-luzia-{640,1200}.webp` — [Tram 28 at Largo de Santa Luzia in Lisbon, 20250606 1958 0419.jpg](https://commons.wikimedia.org/wiki/File:Tram_28_at_Largo_de_Santa_Luzia_in_Lisbon,_20250606_1958_0419.jpg) — Jakub Hałun — CC BY 4.0 — resized, WebP.
+- `img/exp/lisbon-santa-luzia-view-{640,1200}.webp` — [Vistas de Lisboa desde el Mirador de Santa Luzia, Portugal, 2012-05-12, DD 03.JPG](https://commons.wikimedia.org/wiki/File:Vistas_de_Lisboa_desde_el_Mirador_de_Santa_Luzia,_Portugal,_2012-05-12,_DD_03.JPG) — Diego Delso — CC BY-SA 3.0 — resized, WebP.
+- `img/map/portugal.svg` — drawn from [Natural Earth](https://www.naturalearthdata.com/) 1:10m data (public domain).

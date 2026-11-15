@@ -670,3 +670,22 @@ main table{display:block;max-width:100%;overflow-x:auto}
 .ddp-promo .ddp-promo-b { grid-column:1 / -1; justify-self:start; display:inline-flex; align-items:center; gap:.4rem; background:#7a2433; color:#fff8f4; font-weight:700; border-radius:999px; padding:.6rem 1.1rem; font-size:.95rem; min-height:44px; }
 @media (min-width:700px) { .ddp-promo { grid-template-columns:150px 1fr auto; padding:1rem 1.2rem 1rem 1rem; } .ddp-promo img { width:150px; height:100px; } .ddp-promo .ddp-promo-b { grid-column:auto; justify-self:end; } }
 .wrap > .ddp-promo:first-child { margin-top:0; }
+
+/* ===== 2026-11-15 menu: Experiences · Map · Guides (mega panel) · About ===== */
+a.menu-link{text-decoration:none;justify-content:flex-start}
+a.menu-link:hover{color:var(--ink)}
+.menu-col-h{margin:.6rem .85rem .2rem;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--accent)}
+.menu-col .menu-hub{font-size:.9rem;padding:.5rem .85rem}
+.menu-col ul{padding-top:0}
+@media (min-width:820px){
+  .menu-panel.is-mega{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.2rem .6rem;width:min(68rem,calc(100vw - 1.5rem));padding:.8rem}
+  .menu-panel.is-mega[hidden]{display:none}
+  .menu-panel.is-mega .menu-col:last-child ul{display:grid;grid-template-columns:1fr}
+  .menu-panel.is-mega a{font-size:.88rem;padding:.38rem .7rem}
+  .menu-panel.is-mega .menu-col:last-child{max-height:min(70vh,34rem);overflow:auto}
+}
+@media (max-width:819px){
+  .menu-solo .menu-link{display:flex;width:100%}
+  .menu-col{border-top:1px solid var(--line);padding-top:.2rem}
+  .menu-col:first-child{border-top:0}
+}

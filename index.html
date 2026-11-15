@@ -35,6 +35,7 @@
   <link rel="preload" href="/fonts/instrument-serif-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/fonts/dm-sans-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="/styles.css" />
+<link href="/home.css" rel="stylesheet"/>
   <link rel="stylesheet" href="/assistant.css" />
   <link rel="stylesheet" href="/consent.css" />
   <script src="/consent.js" defer></script>
@@ -44,8 +45,10 @@
   <script src="/lang.js" defer></script>
   <script src="/assistant-match.js" defer></script>
   <script src="/assistant.js" defer></script>
+<script defer src="/experiences.js"></script>
+<script defer src="/home.js"></script>
 </head>
-<body>
+<body class="home">
   <a class="skip" href="#main">Skip to content</a>
   <header class="top">
     <div class="top-inner">
@@ -56,47 +59,34 @@
     </div>
   </header>
   <main id="main">
-  <section class="hero home-hero">
-    <picture>
-      <source type="image/avif" srcset="/img/hero-rabelo-evening-900.avif 900w, /img/hero-rabelo-evening-1600.avif 1600w, /img/hero-rabelo-evening-2400.avif 2400w" sizes="100vw" />
-      <img class="hero-img" src="/img/hero-rabelo-evening-1600.webp" srcset="/img/hero-rabelo-evening-900.webp 900w, /img/hero-rabelo-evening-1600.webp 1600w, /img/hero-rabelo-evening-2400.webp 2400w" sizes="100vw" width="1600" height="1067" alt="A rabelo boat on the Douro in front of Porto, lit by the evening sun" fetchpriority="high" />
-    </picture>
-    <div class="hero-inner">
-      <p class="kicker">An independent guide to Portugal</p>
-      <h1>Portugal, <em>slowly</em> and well.</h1>
-      <p class="lead">Calm, practical notes for visiting, for moving here, and for running a small business: what to book, where to sleep, which visa fits, and a few free tools that actually help.</p>
-      <div class="cta-row">
-        <a class="btn" href="#visit">Plan a visit</a>
-        <a class="btn ghost" href="#move">Moving to Portugal</a>
-      </div>
-      <!-- ia:search --><form class="ia-hero-search" role="search" action="https://duckduckgo.com/" method="get" data-ia-search><label class="sr-only" for="ia-q">Search the guide</label><input id="ia-q" name="q" type="search" autocomplete="off" placeholder="Search: Douro day trip, D7 visa, airport…" /><input type="hidden" name="sites" value="dayinportugal.com" /><button type="submit">Search</button></form><!-- /ia:search -->
-      <nav class="paths" aria-label="Start here">
-        <a href="#visit"><span>01</span>Visit</a>
-        <a href="#move"><span>02</span>Move here</a>
-        <a href="#business"><span>03</span>Local business</a>
-      </nav>
-    </div>
-    <p class="hero-credit">Photo: François Philipp · <a href="https://creativecommons.org/licenses/by/2.0" rel="license noopener" target="_blank">CC BY 2.0</a></p>
-  </section>
+  <section class="film-hero" aria-labelledby="hero-h">
+<img alt="The Ribeira riverfront in Porto, seen across the Douro from Cais de Gaia" class="hero-img" fetchpriority="high" height="778" sizes="100vw" src="/img/hero-ribeira-from-gaia-1600.webp" srcset="/img/hero-ribeira-from-gaia-800.webp 800w, /img/hero-ribeira-from-gaia-1600.webp 1600w, /img/hero-ribeira-from-gaia-2400.webp 2400w" width="1600"/>
+<span aria-hidden="true" class="film-bar top"></span><span aria-hidden="true" class="film-bar bot"></span>
+<div class="film-inner">
+<p class="film-kicker">Porto · Douro · Lisbon</p>
+<h1 id="hero-h">Portugal, <em>slowly</em> and well.</h1>
+<p class="film-lead">The river cruise, the port cellar and the Douro day worth booking — with real from-prices, a map of where they are, and booking on the partner sites you already know.</p>
+<div class="film-ctas"><a class="btn" href="#experiences">See experiences</a><a class="btn ghost" href="#map">Open the map</a></div>
+<ul class="film-facts"><li>Douro day from €85</li><li>Six bridges cruise from €18</li><li>Pay on GetYourGuide, Tiqets or Klook</li></ul>
+</div>
+<p class="film-credit">Ribeira, seen from Cais de Gaia · Photo: Jakub Hałun · <a href="https://creativecommons.org/licenses/by/4.0" rel="license noopener" target="_blank">CC BY 4.0</a></p>
+</section>
 
-  <div class="wrap">
-    <section class="trust" aria-label="How this guide works">
-      <article>
-        <span class="ico" aria-hidden="true">€</span>
-        <h2>You pay the same price</h2>
-        <p class="muted">Booking buttons go to partners such as GetYourGuide, Tiqets or Klook. If we earn a commission, it comes from them — not as an extra on your bill.</p>
-      </article>
-      <article>
-        <span class="ico" aria-hidden="true">✓</span>
-        <h2>Not a travel agency</h2>
-        <p class="muted">We do not take your card, hold your passport or rebook your flight. You reserve on the platform you already know.</p>
-      </article>
-      <article>
-        <span class="ico" aria-hidden="true">N</span>
-        <h2>Written from the north</h2>
-        <p class="muted">Day in Portugal is a small guide based near Porto. Questions: <a href="mailto:dayinportugal@gmail.com">dayinportugal@gmail.com</a>.</p>
-      </article>
-    </section>
+  <div class="xp-trust" role="note"><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><div><strong>You pay the public price</strong><span>Booking happens on GetYourGuide, Tiqets or Klook. Any commission comes from them, not from you.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></svg><div><strong>Cancellation terms before you pay</strong><span>The partner page shows whether, and until when, you can cancel for free.</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><strong>Independent, written near Porto</strong><span>Not a travel agency. Questions: <a href="mailto:dayinportugal@gmail.com">dayinportugal@gmail.com</a></span></div></li></ul><p class="xp-partners">Booking partners: <b>GetYourGuide</b> · <b>Tiqets</b> · <b>Klook</b> · <b>WeGoTrip</b></p></div>
+<section class="xp-sec" id="experiences" aria-labelledby="xp-h">
+<div class="xp-head reveal"><div><p class="kicker">Experiences</p><h2 id="xp-h">The few things <em>worth booking.</em></h2><p class="muted">Picked from our guides, with the from-price we found and a direct link to the partner page. Filter by area, or find them on the map.</p></div><div class="xp-filters" id="xp-filters"></div></div>
+<div class="xp-grid" id="xp-grid"><p class="muted">Open the <a href="/book">booking page</a>, the <a href="/douro-day">Douro day</a> or <a href="/lisbon-3-days">3 days in Lisbon</a>.</p></div>
+<p class="xp-note" id="xp-note"></p>
+</section>
+<section class="xp-sec" id="map" aria-labelledby="map-h">
+<div class="xp-head reveal"><div><p class="kicker">Map</p><h2 id="map-h">Where it all <em>happens.</em></h2><p class="muted">Tap a dot to see what you can do there. Porto has the most; the Douro and Lisbon are a train ride away.</p></div></div>
+<div class="pt-wrap">
+<div class="pt-map" id="pt-map" role="group" aria-label="Map of mainland Portugal with the places our experiences are in"><img alt="" decoding="async" height="1000" loading="lazy" src="/img/map/portugal.svg" width="585"/></div>
+<div aria-live="polite" class="pt-panel" id="pt-panel"><p class="muted">Open the <a href="/book">booking page</a>, the <a href="/douro-day">Douro day</a> or <a href="/lisbon-3-days">3 days in Lisbon</a>.</p></div>
+</div>
+<p class="fine">Photos: Jakub Hałun, CC BY 4.0 (hero, tram 28); CEphoto, Uwe Aranas, CC BY-SA 3.0 (Pena); Diego Delso, CC BY-SA 3.0 (Lisbon from Santa Luzia); other cards as listed in <a href="/credits">photo credits</a>. Map: Natural Earth (public domain).</p>
+</section>
+<div class="wrap">
     <!-- ddp:promo --><a class="ddp-promo" href="/douro-planner/?utm_source=site&amp;utm_medium=banner&amp;utm_campaign=index"><img src="/img/cards/douro-valley-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span><span class="ddp-promo-k">New · free app · works offline</span><strong>Douro Day Planner</strong><span class="ddp-promo-t">Pick your day and compare train + replacement bus, car or tour — real CP times, tolls, prices and the quintas open that day.</span></span><span class="ddp-promo-b">Plan my Douro day →</span></a><!-- /ddp:promo -->
 
     <!-- ia:home --><section class="ia-topics" aria-labelledby="ia-top-h"><div class="ia-head"><div><p class="kicker">Guides</p><h2 class="h-section" id="ia-top-h">Browse by topic</h2><p class="muted">Pick a starting point. Every guide has prices checked on official or partner pages.</p></div></div><div class="ia-topic-grid"><a class="ia-topic" href="/porto-guide"><img src="/img/cards/rabelos-ribeira-from-gaia-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span class="ia-topic-body"><strong>Porto guide</strong><span class="ia-count">15 guides</span></span></a><a class="ia-topic" href="/porto-day-trips"><img src="/img/cards/douro-valley-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span class="ia-topic-body"><strong>Day trips</strong><span class="ia-count">7 guides</span></span></a><a class="ia-topic" href="/lisbon-guide"><img src="/img/cards/tram-28-alfama-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span class="ia-topic-body"><strong>Lisbon</strong><span class="ia-count">7 guides</span></span></a><a class="ia-topic" href="/airport-transfers"><img src="/img/cards/porto-airport-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span class="ia-topic-body"><strong>Airport transfers</strong><span class="ia-count">5 guides</span></span></a><a class="ia-topic" href="/moving-to-portugal"><img src="/img/cards/lisbon-lapa-stairs-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span class="ia-topic-body"><strong>Moving to Portugal</strong><span class="ia-count">18 guides</span></span></a><a class="ia-topic" href="/loja.html"><img src="/img/cards/sardine-tins-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span class="ia-topic-body"><strong>Shop</strong></span></a></div></section><section class="ia-related ia-popular" aria-labelledby="ia-pop-h"><div class="ia-head"><h2 class="h-sub" id="ia-pop-h">Most read right now</h2></div><div class="ia-grid"><a class="ia-card" href="/douro-day"><img src="/img/cards/douro-valley-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span class="ia-card-body"><strong>Douro Valley day trip from Porto: tour, train or car</strong><span class="ia-desc">Plan a Douro Valley day trip from Porto: a guided tour with tastings, lunch and a boat in Pinhão, the CP train to Régua…</span></span></a><a class="ia-card" href="/braga-guimaraes-day-trip"><img src="/img/cards/bom-jesus-stairway-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span class="ia-card-body"><strong>Braga and Guimarães</strong><span class="ia-desc">Braga and Guimarães in one day from Porto: Bom Jesus, Braga cathedral and Guimarães castle. Guided tour, CP train (about…</span></span></a><a class="ia-card" href="/porto-airport-transfer"><img src="/img/cards/porto-airport-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span class="ia-card-body"><strong>Porto airport transfer</strong><span class="ia-desc">Porto airport to the city centre: metro line E to Trindade in about 27 minutes for €2.30 (+€0.60 Andante card), a taxi,…</span></span></a><a class="ia-card" href="/gaia-port-cellars"><img src="/img/cards/rabelos-gaia-dom-luis-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span class="ia-card-body"><strong>Port cellars in Gaia</strong><span class="ia-desc">Port wine cellars in Gaia compared: Taylor’s (€25, three ports), Fonseca (€16), Cálem, Cockburn’s, Burmester and Poças.…</span></span></a><a class="ia-card" href="/lisbon-airport-transfer"><img src="/img/cards/airport-metro-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span class="ia-card-body"><strong>Lisbon airport transfer</strong><span class="ia-desc">How to get from Lisbon airport (LIS) to the centre: red-line metro to Saldanha, taxi, or a pre-booked transfer, and when…</span></span></a><a class="ia-card" href="/portugal-d7-visa"><img src="/img/cards/lisbon-praca-comercio-640.webp" width="640" height="427" alt="" loading="lazy" decoding="async" /><span class="ia-card-body"><strong>Portugal D7 visa</strong><span class="ia-desc">The Portugal D7 visa for pensions and passive income: the 2026 income figures based on the €920 minimum wage, the…</span></span></a></div></section><!-- /ia:home -->
@@ -276,9 +266,11 @@
       </div>
       <div class="social big"><a href="https://www.instagram.com/dayinportugal/" rel="me noopener" target="_blank" aria-label="Instagram — @dayinportugal"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.2.8-.4.4-.6.7-.8 1.2-.2.4-.3 1-.4 2.1C2.7 9.8 2.7 10.2 2.7 12s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.2.4.4.7.6 1.2.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.2-.8.4-.4.6-.7.8-1.2.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.2-.4-.4-.7-.6-1.2-.8-.4-.2-1-.3-2.1-.4C15.5 4 15.1 4 12 4zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 8.1a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.2-8.3a1.1 1.1 0 1 1-2.3 0 1.1 1.1 0 0 1 2.3 0z"/></svg><span>Instagram</span></a><a href="https://www.facebook.com/profile.php?id=61595509427117" rel="noopener" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2.63" y="2.63" width="18.74" height="18.74" rx="3.6" fill="none" stroke="currentColor" stroke-width="0.86"/><path fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" d="M13.75 16.7V8.6h1.85M11.3 11.55h4.55"/></svg><span>Facebook</span></a><!-- More profiles: uncomment TikTok / Facebook in build/build.py (SOCIAL) and rebuild. --></div>
     </section>
-    <p class="fine">Azulejo panel photo: Diego Delso, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener" target="_blank">CC BY-SA 4.0</a> (São Bento station). Hero: François Philipp, <a href="https://creativecommons.org/licenses/by/2.0" rel="license noopener" target="_blank">CC BY 2.0</a>. More on <a href="/credits">photo credits</a>.</p>
+    <p class="fine">Azulejo panel photo: Diego Delso, <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="license noopener" target="_blank">CC BY-SA 4.0</a> (São Bento station). Hero: Jakub Hałun, <a href="https://creativecommons.org/licenses/by/4.0" rel="license noopener" target="_blank">CC BY 4.0</a>. More on <a href="/credits">photo credits</a>.</p>
   </div>
-  </main>
+  <section class="xp-sec" id="about" aria-labelledby="about-h"><div class="xp-about reveal"><div><p class="kicker">About</p><h2 id="about-h">A small guide, <em>written from the north.</em></h2><p>Day in Portugal is an independent guide based near Porto. We write the pages we wanted on our first trip: what to book, what to skip, and how to get there by train — with prices checked on official or partner pages, and the date we checked them.</p><p>We are not a travel agency. Some links are affiliate links: you pay the public price and we may earn a commission. <a href="/disclosure">How we earn</a>.</p></div><ul><li>Prices and opening hours dated on every guide</li><li>Guides in English, Português, Español, Français and Deutsch</li><li>Free tools: the <a href="/douro-planner/">Douro Day Planner</a> and the <a href="/portugal-visa-income-calculator">visa income calculator</a></li></ul></div></section>
+<div class="book-bar" id="book-bar"><a href="#experiences"><span>Book</span><span>See experiences →</span></a></div>
+</main>
   <footer class="site-foot">
     <div class="foot-inner">
       <div class="foot-col">
