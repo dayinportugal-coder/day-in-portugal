@@ -1,6 +1,6 @@
 /**
  * Netmend Sheets AI · AI functions inside Google Sheets, with your own free Gemini key.
- * https://dayinportugal.com/netmend/sheets-ai/
+ * https://netmend.app/sheets-ai/
  * Install: Extensions > Apps Script > paste this file > Save > reload the sheet > Netmend menu > Set Gemini API key.
  * Your key is stored in your Google account's user properties for this script. Nothing goes to Netmend:
  * the only calls are to Google's Gemini API and (for Pro) Gumroad licence verification.
@@ -59,7 +59,7 @@ function nmHelp() {
   var u = nmUsage_();
   SpreadsheetApp.getUi().alert('Netmend Sheets AI',
     (nmIsPro_() ? 'Pro active: no daily limit.' : 'Free: ' + u.count + ' of ' + NM_FREE_DAILY + ' AI calls used today.') +
-    '\n\nFunctions:\n=NETMEND_AI(prompt, [cells])\n=NETMEND_TRANSLATE(text, language)\nPro: =NETMEND_EXTRACT(text, what) · =NETMEND_CLASSIFY(text, "a,b,c") · =NETMEND_SENTIMENT(text) · =NETMEND_LIST(prompt, [n])\n\nGuide: https://dayinportugal.com/netmend/sheets-ai/', SpreadsheetApp.getUi().ButtonSet.OK);
+    '\n\nFunctions:\n=NETMEND_AI(prompt, [cells])\n=NETMEND_TRANSLATE(text, language)\nPro: =NETMEND_EXTRACT(text, what) · =NETMEND_CLASSIFY(text, "a,b,c") · =NETMEND_SENTIMENT(text) · =NETMEND_LIST(prompt, [n])\n\nGuide: https://netmend.app/sheets-ai/', SpreadsheetApp.getUi().ButtonSet.OK);
 }
 
 function nmUsage_() {
@@ -71,12 +71,12 @@ function nmUsage_() {
 function nmCount_() {
   if (nmIsPro_()) return;
   var u = nmUsage_();
-  if (u.count >= NM_FREE_DAILY) throw new Error('Free limit of ' + NM_FREE_DAILY + ' AI calls today reached. Pro (lifetime) removes it: dayinportugal.com/netmend/sheets-ai');
+  if (u.count >= NM_FREE_DAILY) throw new Error('Free limit of ' + NM_FREE_DAILY + ' AI calls today reached. Pro (lifetime) removes it: netmend.app/sheets-ai');
   u.count++;
   try { nmProps_().setProperty('NM_USAGE', JSON.stringify(u)); } catch (e) {}
 }
 function nmNeedPro_(name) {
-  if (!nmIsPro_()) throw new Error(name + ' is a Pro function. Free: NETMEND_AI and NETMEND_TRANSLATE. Pro: dayinportugal.com/netmend/sheets-ai');
+  if (!nmIsPro_()) throw new Error(name + ' is a Pro function. Free: NETMEND_AI and NETMEND_TRANSLATE. Pro: netmend.app/sheets-ai');
 }
 function nmFlat_(v) {
   if (v === undefined || v === null || v === '') return '';
@@ -196,7 +196,7 @@ function NETMEND_LIST(prompt, n) {
 /** Pro: run one prompt over each selected cell and write the answers as plain values in the next column. */
 function nmFillSelection() {
   var ui = SpreadsheetApp.getUi();
-  if (!nmIsPro_()) return ui.alert('Fill selected cells is part of Pro (lifetime). See dayinportugal.com/netmend/sheets-ai');
+  if (!nmIsPro_()) return ui.alert('Fill selected cells is part of Pro (lifetime). See netmend.app/sheets-ai');
   var range = SpreadsheetApp.getActiveRange();
   if (!range) return ui.alert('Select the cells with your input first.');
   var r = ui.prompt('Prompt for each cell', 'e.g. "Write a 1-line product description for". Answers go in the column to the right.', ui.ButtonSet.OK_CANCEL);
