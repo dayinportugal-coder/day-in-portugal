@@ -1,114 +1,96 @@
 /* Day in Portugal — site menu.
-   This file is the only menu definition. To add a guide, add one
-   { href, label } object to the right group. An empty group is not shown.
-   Lisbon lists the Lisbon guides. */
+   This file is the only menu definition. Four entries since 15/11/2026:
+   Experiences, Map (a plain link), Guides (a mega panel with one column per
+   section) and About. To add a guide, add one { href, label } object to the
+   right section of Guides. An empty group is not shown. */
 (function () {
   var MENU = [
     {
-      id: "porto",
-      label: "Porto",
-      hub: { href: "/porto-guide", label: "All Porto guides" },
+      id: "experiencias",
+      label: "Experiences",
+      hub: { href: "/#experiences", label: "All experiences" },
       items: [
-        { href: "/porto-3-days", label: "3 days in Porto" },
         { href: "/book", label: "Book in Porto" },
-        { href: "/book-first", label: "Book before you fly" },
-        { href: "/stay", label: "Where to sleep" },
-        { href: "/gaia-port-cellars", label: "Port cellars in Gaia" },
+        { href: "/douro-day", label: "Douro day from Porto" },
         { href: "/porto-river-cruise", label: "Six bridges cruise" },
+        { href: "/gaia-port-cellars", label: "Port cellars in Gaia" },
         { href: "/porto-food-tours", label: "Food and wine tours" },
         { href: "/fado-in-porto", label: "Fado in Porto" },
         { href: "/livraria-lello-tickets", label: "Livraria Lello" },
-        { href: "/bring", label: "What to bring home" },
-        { href: "/rent-car", label: "Car or metro" }
-      ]
-    },
-    {
-      id: "cidades",
-      label: "Day trips",
-      hub: { href: "/porto-day-trips", label: "Day trips from Porto" },
-      items: [
-        { href: "/douro-planner/", label: "Douro Day Planner (free app)" },
-        { href: "/douro-day", label: "Douro Valley" },
-        { href: "/braga-guimaraes-day-trip", label: "Braga and Guimarães" },
-        { href: "/aveiro-day-trip", label: "Aveiro and Costa Nova" },
-        { href: "/povoa-base", label: "Póvoa de Varzim and Vila do Conde" },
         { href: "/sintra-day-trip", label: "Sintra day trip" },
-        { href: "/cascais-day-trip", label: "Cascais day trip" },
-        { href: "/evora-day-trip", label: "Évora day trip" }
-      ]
-    },
-    {
-      id: "lisboa",
-      label: "Lisbon",
-      hub: { href: "/lisbon-guide", label: "All Lisbon guides" },
-      items: [
-        { href: "/lisbon-3-days", label: "3 days in Lisbon" },
-        { href: "/lisbon-where-to-stay", label: "Where to stay in Lisbon" },
         { href: "/lisbon-book-first", label: "Book before Lisbon" },
-        { href: "/sintra-day-trip", label: "Sintra day trip" },
-        { href: "/cascais-day-trip", label: "Cascais day trip" },
-        { href: "/evora-day-trip", label: "Évora day trip" }
+        { href: "/douro-planner/", label: "Douro Day Planner (free app)" }
+      ]
+    },
+    { id: "mapa", label: "Map", link: "/#map" },
+    {
+      id: "guias",
+      label: "Guides",
+      sections: [
+        { id: "porto", label: "Porto", hub: { href: "/porto-guide", label: "All Porto guides" }, items: [
+            { href: "/porto-3-days", label: "3 days in Porto" },
+            { href: "/book", label: "Book in Porto" },
+            { href: "/book-first", label: "Book before you fly" },
+            { href: "/stay", label: "Where to sleep" },
+            { href: "/gaia-port-cellars", label: "Port cellars in Gaia" },
+            { href: "/porto-river-cruise", label: "Six bridges cruise" },
+            { href: "/porto-food-tours", label: "Food and wine tours" },
+            { href: "/fado-in-porto", label: "Fado in Porto" },
+            { href: "/livraria-lello-tickets", label: "Livraria Lello" },
+            { href: "/bring", label: "What to bring home" },
+            { href: "/rent-car", label: "Car or metro" }
+          ] },
+        { id: "cidades", label: "Day trips", hub: { href: "/porto-day-trips", label: "Day trips from Porto" }, items: [
+            { href: "/douro-day", label: "Douro Valley" },
+            { href: "/braga-guimaraes-day-trip", label: "Braga and Guimarães" },
+            { href: "/aveiro-day-trip", label: "Aveiro and Costa Nova" },
+            { href: "/povoa-base", label: "Póvoa de Varzim and Vila do Conde" },
+            { href: "/sintra-day-trip", label: "Sintra day trip" },
+            { href: "/cascais-day-trip", label: "Cascais day trip" },
+            { href: "/evora-day-trip", label: "Évora day trip" }
+          ] },
+        { id: "lisboa", label: "Lisbon", hub: { href: "/lisbon-guide", label: "All Lisbon guides" }, items: [
+            { href: "/lisbon-3-days", label: "3 days in Lisbon" },
+            { href: "/lisbon-where-to-stay", label: "Where to stay in Lisbon" },
+            { href: "/lisbon-book-first", label: "Book before Lisbon" }
+          ] },
+        { id: "aeroporto", label: "Airport", hub: { href: "/airport-transfers", label: "All airport transfers" }, items: [
+            { href: "/porto-airport-transfer", label: "Porto airport transfer" },
+            { href: "/lisbon-airport-transfer", label: "Lisbon airport transfer" }
+          ] },
+        { id: "vistos", label: "Moving to Portugal", hub: { href: "/moving-to-portugal", label: "All moving guides" }, items: [
+            { href: "/move-to-portugal-2026", label: "Moving to Portugal in 2026" },
+            { href: "/portugal-d7-visa", label: "Portugal D7 visa" },
+            { href: "/portugal-d8-digital-nomad-visa", label: "Portugal D8 digital nomad visa" },
+            { href: "/d7-vs-d8-visa-portugal", label: "D7 vs D8 visa" },
+            { href: "/portugal-visa-income-calculator", label: "Visa income calculator" },
+            { href: "/portugal-visa-document-checklist", label: "Visa document checklist" },
+            { href: "/portugal-aima-residence-permit", label: "AIMA residence permit" },
+            { href: "/portugal-family-reunification", label: "Family reunification" },
+            { href: "/portugal-nif-niss", label: "NIF and NISS" },
+            { href: "/portugal-tax-residency-2026", label: "Tax residency and IFICI" },
+            { href: "/open-a-bank-account-in-portugal", label: "Open a bank account" },
+            { href: "/renting-in-portugal-as-a-foreigner", label: "Renting as a foreigner" },
+            { href: "/portugal-healthcare-for-expats", label: "Healthcare for foreigners" },
+            { href: "/portugal-cost-of-living-2026", label: "Cost of living 2026" },
+            { href: "/lisbon-cost-of-living-2026", label: "Lisbon cost of living" },
+            { href: "/porto-cost-of-living-2026", label: "Porto cost of living" },
+            { href: "/moving-to-portugal-from-the-uk", label: "Moving from the UK" },
+            { href: "/moving-to-portugal-from-the-usa", label: "Moving from the USA" }
+          ] }
       ]
     },
     {
-      id: "aeroporto",
-      label: "Airport",
-      hub: { href: "/airport-transfers", label: "All airport transfers" },
+      id: "sobre",
+      label: "About",
       items: [
-        { href: "/porto-airport-transfer", label: "Porto airport transfer" },
-        { href: "/lisbon-airport-transfer", label: "Lisbon airport transfer" },
-        { href: "/rent-car", label: "Car or metro" }
-      ]
-    },
-    {
-      id: "vistos",
-      label: "Moving to Portugal",
-      hub: { href: "/moving-to-portugal", label: "All moving guides" },
-      items: [
-        { href: "/move-to-portugal-2026", label: "Moving to Portugal in 2026" },
-        { href: "/portugal-d7-visa", label: "Portugal D7 visa" },
-        { href: "/portugal-d8-digital-nomad-visa", label: "Portugal D8 digital nomad visa" },
-        { href: "/d7-vs-d8-visa-portugal", label: "D7 vs D8 visa" },
-        { href: "/portugal-visa-income-calculator", label: "Visa income calculator" },
-        { href: "/portugal-visa-document-checklist", label: "Visa document checklist" },
-        { href: "/portugal-aima-residence-permit", label: "AIMA residence permit" },
-        { href: "/portugal-family-reunification", label: "Family reunification" },
-        { href: "/portugal-nif-niss", label: "NIF and NISS" },
-        { href: "/portugal-tax-residency-2026", label: "Tax residency and IFICI" },
-        { href: "/open-a-bank-account-in-portugal", label: "Open a bank account" },
-        { href: "/renting-in-portugal-as-a-foreigner", label: "Renting as a foreigner" },
-        { href: "/portugal-healthcare-for-expats", label: "Healthcare for foreigners" },
-        { href: "/portugal-cost-of-living-2026", label: "Cost of living 2026" },
-        { href: "/lisbon-cost-of-living-2026", label: "Lisbon cost of living" },
-        { href: "/porto-cost-of-living-2026", label: "Porto cost of living" },
-        { href: "/moving-to-portugal-from-the-uk", label: "Moving from the UK" },
-        { href: "/moving-to-portugal-from-the-usa", label: "Moving from the USA" }
-      ]
-    },
-    {
-      id: "loja",
-      label: "Shop",
-      items: [
-        { href: "/loja.html", label: "Gifts from Portugal" }
-      ]
-    },
-    {
-      id: "servicos",
-      label: "For businesses",
-      hub: { href: "/demos/", label: "Demos" },
-      items: [
-        { href: "/menu-qr", label: "QR menu in 4 languages" },
-        { href: "/qr-avaliacoes", label: "Free Google review QR" },
-        { href: "/avaliacoes-google", label: "Google reviews" },
-        { href: "/vsme-simples", label: "VSME report" },
-        { href: "/demos/31-de-janeiro/", label: "Demo: 31 de Janeiro restaurant" },
-        { href: "/demos/o-poboa/", label: "Demo: Ó Poboa Guesthouse" },
-        { href: "/demos/autor-guesthouse/", label: "Demo: Autor Guesthouse" },
-        { href: "/demos/restaurante-exemplo/", label: "Demo: sample restaurant" },
-        { href: "/demos/al-exemplo/", label: "Demo: sample guesthouse" },
-        { href: "/demos/clinica-exemplo/", label: "Demo: sample clinic" },
-        { href: "/demos/imobiliaria-exemplo/", label: "Demo: sample estate agency" },
-        { href: "/privacidade-servicos", label: "Privacy (services)" }
+        { href: "/#about", label: "About Day in Portugal" },
+        { href: "/disclosure", label: "How we earn" },
+        { href: "/loja.html", label: "Gifts from Portugal" },
+        { href: "/demos/", label: "For businesses" },
+        { href: "/credits", label: "Photo credits" },
+        { href: "/privacy", label: "Privacy" },
+        { href: "mailto:dayinportugal@gmail.com", label: "Contact: dayinportugal@gmail.com" }
       ]
     }
   ];
@@ -199,10 +181,40 @@
 
   nav.textContent = "";
 
-  MENU.forEach(function (group) {
-    var items = (group.items || []).filter(function (item) { return item && item.href && item.label; });
-    if (!items.length) return;
+  function renderList(items, state) {
+    var list = make("ul");
+    items.forEach(function (item) {
+      var li = make("li");
+      var target = localizeHref(item.href);
+      var link = make("a", { href: target, text: tItem(item.href, item.label) });
+      if (LANG !== "en" && !/^(\/(es|fr|de|pt)(\/|$)|mailto:)/.test(target)) {
+        link.setAttribute("hreflang", "en");
+        link.appendChild(make("span", { "class": "menu-en", text: "EN" }));
+      }
+      if (item.href.indexOf("#") < 0 && barePath(item.href) === here) {
+        link.setAttribute("aria-current", "page");
+        state.current = true;
+      }
+      li.appendChild(link);
+      list.appendChild(li);
+    });
+    return list;
+  }
 
+  function renderHub(hub, state) {
+    var hubLink = make("a", { "class": "menu-hub", href: localizeHref(hub.href), text: tItem(hub.href, hub.label) + " \u2192" });
+    if (hub.href.indexOf("#") < 0 && barePath(hub.href) === here) { hubLink.setAttribute("aria-current", "page"); state.current = true; }
+    return hubLink;
+  }
+
+  MENU.forEach(function (group) {
+    if (group.link) {
+      var solo = make("div", { "class": "menu-group menu-solo" });
+      solo.appendChild(make("a", { "class": "menu-btn menu-link", href: localizeHref(group.link), text: tGroup(group.id, group.label) }));
+      nav.appendChild(solo);
+      return;
+    }
+    var state = { current: false };
     var wrap = make("div", { "class": "menu-group" });
     var panelId = "menu-" + group.id;
     var button = make("button", {
@@ -212,36 +224,28 @@
       "aria-controls": panelId
     });
     button.appendChild(document.createTextNode(tGroup(group.id, group.label)));
-    var caret = make("span", { "class": "menu-caret", "aria-hidden": "true" });
-    button.appendChild(caret);
+    button.appendChild(make("span", { "class": "menu-caret", "aria-hidden": "true" }));
 
     var panel = make("div", { id: panelId, "class": "menu-panel" });
     panel.hidden = true;
-    if (items.length > 8) panel.classList.add("is-wide");
-    var groupHasCurrent = false;
-    if (group.hub) {
-      var hubLink = make("a", { "class": "menu-hub", href: localizeHref(group.hub.href), text: tItem(group.hub.href, group.hub.label) + " \u2192" });
-      if (barePath(group.hub.href) === here) { hubLink.setAttribute("aria-current", "page"); groupHasCurrent = true; }
-      panel.appendChild(hubLink);
+    if (group.sections) {
+      panel.classList.add("is-mega");
+      group.sections.forEach(function (sec) {
+        var items = (sec.items || []).filter(function (item) { return item && item.href && item.label; });
+        var col = make("div", { "class": "menu-col" });
+        col.appendChild(make("p", { "class": "menu-col-h", text: tGroup(sec.id, sec.label) }));
+        if (sec.hub) col.appendChild(renderHub(sec.hub, state));
+        col.appendChild(renderList(items, state));
+        panel.appendChild(col);
+      });
+    } else {
+      var items = (group.items || []).filter(function (item) { return item && item.href && item.label; });
+      if (!items.length) return;
+      if (items.length > 8) panel.classList.add("is-wide");
+      if (group.hub) panel.appendChild(renderHub(group.hub, state));
+      panel.appendChild(renderList(items, state));
     }
-    var list = make("ul");
-    items.forEach(function (item) {
-      var li = make("li");
-      var target = localizeHref(item.href);
-      var link = make("a", { href: target, text: tItem(item.href, item.label) });
-      if (LANG !== "en" && !/^\/(es|fr|de|pt)(\/|$)/.test(target)) {
-        link.setAttribute("hreflang", "en");
-        link.appendChild(make("span", { "class": "menu-en", text: "EN" }));
-      }
-      if (barePath(item.href) === here) {
-        link.setAttribute("aria-current", "page");
-        groupHasCurrent = true;
-      }
-      li.appendChild(link);
-      list.appendChild(li);
-    });
-    if (groupHasCurrent) button.classList.add("is-here");
-    panel.appendChild(list);
+    if (state.current) button.classList.add("is-here");
     wrap.appendChild(button);
     wrap.appendChild(panel);
     nav.appendChild(wrap);
