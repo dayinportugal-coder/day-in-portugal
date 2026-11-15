@@ -25,25 +25,39 @@
     catch (e) { return "€" + n; }
   };
 
+  function fmtDate(iso) {
+    try { return new Intl.DateTimeFormat(LANG === "en" ? "en-GB" : LANG, { day: "numeric", month: "short", year: "numeric" }).format(new Date(iso + "T12:00:00")); }
+    catch (e) { return iso; }
+  }
+  function euro2(n) {
+    try { return new Intl.NumberFormat(LANG === "en" ? "en-GB" : LANG, { style: "currency", currency: "EUR", minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 }).format(n); }
+    catch (e) { return "€" + n; }
+  }
   function card(item, compact) {
+    var tag = (compact ? "map_" : "home_") + LANG + "_" + item.id;
+    var page = "/experiences/" + item.slug;
     var a = el("article", { "class": "xp-card" + (compact ? " is-compact" : ""), "data-group": item.group, "data-place": item.place });
-    var fig = el("div", { "class": "xp-media" }, [
+    var fig = el("a", { "class": "xp-media", href: page, tabindex: "-1", "aria-hidden": "true" }, [
       el("img", { src: item.img, width: "640", height: "427", alt: "", loading: "lazy", decoding: "async" }),
       el("span", { "class": "xp-place", text: t(D.places[item.place].name) })
     ]);
     if (item.badge) fig.appendChild(el("span", { "class": "xp-badge", text: U.badge + " *" }));
+    else if (item.fc) fig.appendChild(el("span", { "class": "xp-badge is-fc", text: "✓ " + U.fc }));
     a.appendChild(fig);
     var body = el("div", { "class": "xp-body" });
-    body.appendChild(el("h3", { "class": "xp-name", text: t(item.name) }));
+    body.appendChild(el("h3", { "class": "xp-name" }, [el("a", { href: page, text: t(item.name) })]));
     body.appendChild(el("p", { "class": "xp-meta", text: t(item.meta) }));
+    if (item.rating) body.appendChild(el("p", { "class": "xp-rating", html: '<span aria-hidden="true">★</span> ' + item.rating.toFixed(1) + " · " + item.reviews.toLocaleString(LANG === "en" ? "en-GB" : LANG) + " " + U.reviews + " " + U.on + " " + item.partner }));
     var row = el("div", { "class": "xp-row" });
-    if (item.price) row.appendChild(el("p", { "class": "xp-price", html: "<span>" + U.from + "</span> " + euro(item.price) }));
-    else if (!item.href) row.appendChild(el("p", { "class": "xp-price is-free", text: U.free }));
+    if (item.price) {
+      row.appendChild(el("p", { "class": "xp-price", html: "<span>" + U.from + "</span> " + euro2(item.price) + ' <small>' + (item.unit === "group" ? U.group : U.person) + "</small>" }));
+      row.appendChild(el("p", { "class": "xp-date", text: U.checked + " " + fmtDate(item.checked) + " · " + item.partner }));
+    } else if (!item.href) row.appendChild(el("p", { "class": "xp-price is-free", text: U.free }));
     body.appendChild(row);
     var ctas = el("div", { "class": "xp-ctas" });
     if (item.href) {
-      ctas.appendChild(el("a", { "class": "btn xp-book", href: item.href, rel: "sponsored nofollow noopener", target: "_blank", "data-exp": item.id, html: U.book + '<span class="sr-only"> ' + U.newtab + "</span>" }));
-      ctas.appendChild(el("a", { "class": "xp-guide", href: guideHref(item.guide), text: U.guide }));
+      ctas.appendChild(el("a", { "class": "btn xp-book", href: D.track(item.href, tag), rel: "sponsored nofollow noopener", target: "_blank", "data-exp": item.id, html: U.book + '<span class="sr-only"> ' + U.newtab + "</span>" }));
+      ctas.appendChild(el("a", { "class": "xp-guide", href: page, text: U.details }));
     } else {
       ctas.appendChild(el("a", { "class": "btn xp-book is-ghost", href: guideHref(item.guide), text: U.guide }));
     }
@@ -55,23 +69,26 @@
   /* ---------- experience grid + filters ---------- */
   var grid = doc.getElementById("xp-grid");
   if (D && grid) {
-    grid.textContent = "";
-    D.items.forEach(function (it) { grid.appendChild(card(it)); });
+    if (!grid.querySelector(".xp-card")) { // cards are pre-rendered by tools/experiences_build.py
+      grid.textContent = "";
+      D.items.forEach(function (it) { grid.appendChild(card(it)); });
+    }
     var chips = doc.getElementById("xp-filters");
     if (chips) {
-      chips.textContent = "";
-      ["all", "porto", "trips", "lisbon"].forEach(function (g, i) {
-        var b = el("button", { type: "button", "class": "xp-chip", "aria-pressed": i === 0 ? "true" : "false", "data-filter": g, text: U[g] });
+      if (!chips.querySelector(".xp-chip")) ["all", "porto", "trips", "lisbon"].forEach(function (g, i) {
+        chips.appendChild(el("button", { type: "button", "class": "xp-chip", "aria-pressed": i === 0 ? "true" : "false", "data-filter": g, text: U[g] }));
+      });
+      chips.querySelectorAll(".xp-chip").forEach(function (b) {
+        var g = b.getAttribute("data-filter");
         b.addEventListener("click", function () {
           chips.querySelectorAll(".xp-chip").forEach(function (c) { c.setAttribute("aria-pressed", c === b ? "true" : "false"); });
           grid.querySelectorAll(".xp-card").forEach(function (c) { c.hidden = !(g === "all" || c.getAttribute("data-group") === g); });
           grid.scrollLeft = 0;
         });
-        chips.appendChild(b);
       });
     }
     var note = doc.getElementById("xp-note");
-    if (note) note.textContent = "* " + U.badgeNote + " " + U.priceNote;
+    if (note && !note.textContent) note.textContent = "* " + U.badgeNote + " " + U.priceNote;
   }
 
   /* ---------- map ---------- */

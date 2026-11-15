@@ -164,3 +164,14 @@ body.home{background-color:#f8f3ea;background-image:
 /* keep the old in-page anchor targets clear of the sticky header */
 .home [id]{scroll-margin-top:80px}
 @media (max-width:759px){.xp-trust{margin-top:.9rem}}
+/* 2026-11-15 v2: rating, date, free-cancellation badge on cards */
+.xp-name a{color:inherit;text-decoration:none}
+.xp-name a:hover{text-decoration:underline}
+.xp-rating{margin:.15rem 0 .2rem;font-size:.86rem;font-weight:600;color:var(--ink)}
+.xp-rating span{color:#a86a00}
+.xp-price small{font-size:.72rem;font-weight:500;color:var(--muted)}
+.xp-date{margin:.1rem 0 0;font-size:.74rem;color:var(--muted);width:100%}
+.xp-row{flex-wrap:wrap}
+.xp-badge.is-fc{background:#e8f2ea;color:#1d4d2b}
+.xp-badge.is-fc{right:auto}
+a.xp-media{display:block;color:inherit}
