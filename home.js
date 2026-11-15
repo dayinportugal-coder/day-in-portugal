@@ -157,10 +157,12 @@
   var bar = doc.getElementById("book-bar");
   var hero = doc.querySelector(".film-hero");
   var xp = doc.getElementById("experiences");
+  var mapSec = doc.getElementById("map");
   if (bar && hero && "IntersectionObserver" in window) {
-    var heroOut = false, xpIn = false;
-    var upd = function () { bar.classList.toggle("is-on", heroOut && !xpIn); };
+    var heroOut = false, xpIn = false, mapIn = false;
+    var upd = function () { bar.classList.toggle("is-on", heroOut && !xpIn && !mapIn); };
     new IntersectionObserver(function (e) { heroOut = !e[0].isIntersecting; upd(); }).observe(hero);
     if (xp) new IntersectionObserver(function (e) { xpIn = e[0].isIntersecting; upd(); }, { threshold: 0.15 }).observe(xp);
+    if (mapSec) new IntersectionObserver(function (e) { mapIn = e[0].isIntersecting; upd(); }, { threshold: 0.15 }).observe(mapSec);
   }
 })();
