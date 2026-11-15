@@ -9,5 +9,9 @@ window.NM_PRODUCTS = {
   "chat-pdf": { name: "Netmend Chat PDF Pro",   price: 19, productId: "-1VnsENn3hSgi8gvyaFwWg==", url: "https://portugaldiary.gumroad.com/l/netmend-chat-pdf" },
   certificates:{ name: "Netmend Certificates Pro", price: 19, productId: "8G3e_FHuBJe5H4lJVHjrCQ==", url: "https://portugaldiary.gumroad.com/l/netmend-certificates" },
   blur:       { name: "Netmend Blur Pro",       price: 19, productId: "fUlEbd-Bg7-CQd76RsReIA==", url: "https://portugaldiary.gumroad.com/l/ybylzw" },
-  statement:  { name: "Netmend Statement Pro",  price: 29, productId: "v43OyKnElur3RfHfK8X1Ug==", url: "https://portugaldiary.gumroad.com/l/netmend-statement" }
+  statement:  { name: "Netmend Statement Pro",  price: 29, productId: "v43OyKnElur3RfHfK8X1Ug==", url: "https://portugaldiary.gumroad.com/l/netmend-statement" },
+  /* New 15/11/2026. productId and url stay empty until the Gumroad products exist (Pro box then says "opens soon"). */
+  resume:     { name: "Netmend Resume Pro",     price: 19, productId: "", url: "" },
+  formula:    { name: "Netmend Formula Pro",    price: 19, productId: "", url: "" },
+  shots:      { name: "Netmend Shots Pro",      price: 19, productId: "", url: "" }
 };

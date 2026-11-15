@@ -179,22 +179,22 @@
       });
     });
   }
-  /* req: {contents | prompt, parts, system, json, tools, temperature, onModel} */
+  /* req: {contents | prompt, parts, system, json, tools, temperature, onModel, models (optional order override)} */
   NM.gemini = function (req) {
     var key = NM.getKey();
     if (!key) return Promise.reject(new Error("NOKEY"));
     if (!req.contents) req.contents = [{ role: "user", parts: req.parts || [{ text: req.prompt }] }];
-    var i = 0, lastErr;
+    var i = 0, lastErr, list = req.models || MODELS;
     function next() {
-      if (i >= MODELS.length) return Promise.reject(lastErr || new Error("No Gemini model accepted the request."));
-      var m = MODELS[i++];
+      if (i >= list.length) return Promise.reject(lastErr || new Error("No Gemini model accepted the request."));
+      var m = list[i++];
       if (req.onModel) req.onModel(m);
       return callModel(m, key, req).then(function (t) { return req.json ? NM.extractJson(t) : t; }).catch(function (err) {
         lastErr = err;
         var s = err.status, msg = String(err.message || "");
         var retry = s === 404 || s === 429 || s === 500 || s === 503 || /not found|no longer available|not supported|overloaded|expected format/i.test(msg);
         if (s === 400 && /model/i.test(msg)) retry = true;
-        if (retry && i < MODELS.length) return next();
+        if (retry && i < list.length) return next();
         throw err;
       });
     }
