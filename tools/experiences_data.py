@@ -12,14 +12,14 @@ def gygs(q): return "https://www.getyourguide.com/s/?q=" + q + "&" + GYG_Q
 
 PLACES = {
  "porto":  dict(lat=41.1406, lon=-8.6131, name=dict(en="Porto", pt="Porto", es="Oporto", fr="Porto", de="Porto")),
- "povoa":  dict(lat=41.3804, lon=-8.7609, short="Póvoa", dx=-1, dy=-0.6, name=dict(en="Póvoa de Varzim", pt="Póvoa de Varzim", es="Póvoa de Varzim", fr="Póvoa de Varzim", de="Póvoa de Varzim")),
- "braga":  dict(lat=41.4940, lon=-8.3600, name=dict(en="Braga & Guimarães", pt="Braga e Guimarães", es="Braga y Guimarães", fr="Braga et Guimarães", de="Braga & Guimarães")),
+ "povoa":  dict(lat=41.3804, lon=-8.7609, vlon=-9.16, short="Póvoa", dx=-1, dy=-1.2, name=dict(en="Póvoa de Varzim", pt="Póvoa de Varzim", es="Póvoa de Varzim", fr="Póvoa de Varzim", de="Póvoa de Varzim")),
+ "braga":  dict(lat=41.4940, lon=-8.3600, vlat=41.60, name=dict(en="Braga & Guimarães", pt="Braga e Guimarães", es="Braga y Guimarães", fr="Braga et Guimarães", de="Braga & Guimarães")),
  "douro":  dict(lat=41.1906, lon=-7.5464, name=dict(en="Douro Valley", pt="Vale do Douro", es="Valle del Duero", fr="Vallée du Douro", de="Douro-Tal")),
  "aveiro": dict(lat=40.6405, lon=-8.6538, name=dict(en="Aveiro", pt="Aveiro", es="Aveiro", fr="Aveiro", de="Aveiro")),
- "paiva":  dict(lat=40.9390, lon=-8.2160, short="Paiva", name=dict(en="Paiva Walkways & Arouca", pt="Passadiços do Paiva e Arouca", es="Pasarelas del Paiva y Arouca", fr="Passerelles du Paiva et Arouca", de="Paiva-Stege & Arouca")),
- "sintra": dict(lat=38.7876, lon=-9.3905, vlat=38.89, dy=-1.1, name=dict(en="Sintra", pt="Sintra", es="Sintra", fr="Sintra", de="Sintra")),
- "lisbon": dict(lat=38.7110, lon=-9.1300, name=dict(en="Lisbon", pt="Lisboa", es="Lisboa", fr="Lisbonne", de="Lissabon")),
- "cascais":dict(lat=38.6970, lon=-9.4215, dy=1.2, name=dict(en="Cascais", pt="Cascais", es="Cascais", fr="Cascais", de="Cascais")),
+ "paiva":  dict(lat=40.9390, lon=-8.2160, vlat=40.68, vlon=-7.53, short="Paiva", name=dict(en="Paiva Walkways & Arouca", pt="Passadiços do Paiva e Arouca", es="Pasarelas del Paiva y Arouca", fr="Passerelles du Paiva et Arouca", de="Paiva-Stege & Arouca")),
+ "sintra": dict(lat=38.7876, lon=-9.3905, vlat=39.15, dy=-1.3, name=dict(en="Sintra", pt="Sintra", es="Sintra", fr="Sintra", de="Sintra")),
+ "lisbon": dict(lat=38.7110, lon=-9.1300, dy=0, name=dict(en="Lisbon", pt="Lisboa", es="Lisboa", fr="Lisbonne", de="Lissabon")),
+ "cascais":dict(lat=38.6970, lon=-9.4215, vlat=38.24, dy=1.4, name=dict(en="Cascais", pt="Cascais", es="Cascais", fr="Cascais", de="Cascais")),
  "evora":  dict(lat=38.5714, lon=-7.9135, name=dict(en="Évora", pt="Évora", es="Évora", fr="Évora", de="Évora")),
 }
 

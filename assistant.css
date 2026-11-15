@@ -16,6 +16,7 @@
   display: grid; place-items: center; background: rgba(255,255,255,.14); font-family: var(--serif, Georgia, serif);
 }
 body:has(.dip-consent:not([hidden])) .dip-help { bottom: 12.5rem; }
+body:has(.book-bar.is-on) .dip-help { bottom: calc(4.6rem + env(safe-area-inset-bottom)); }
 .dip-help-panel {
   position: absolute; right: 0; bottom: calc(100% + .5rem);
   width: min(360px, calc(100vw - 24px));
