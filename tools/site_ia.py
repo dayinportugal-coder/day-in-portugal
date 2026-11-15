@@ -49,7 +49,7 @@ MOVING_GROUPS = [
   ("costs", ["/portugal-cost-of-living-2026", "/lisbon-cost-of-living-2026", "/porto-cost-of-living-2026"]),
   ("from", ["/moving-to-portugal-from-the-uk", "/moving-to-portugal-from-the-usa"]),
 ]
-BUSINESS = ["/menu-qr", "/qr-avaliacoes", "/avaliacoes-google", "/cartao-de-grupo", "/ecra-tv", "/vsme-simples", "/demos/"]
+BUSINESS = ["/negocios/", "/menu-qr", "/qr-avaliacoes", "/avaliacoes-google", "/cartao-de-grupo", "/ecra-tv", "/vsme-simples", "/demos/"]
 POPULAR = ["/douro-day", "/braga-guimaraes-day-trip", "/porto-airport-transfer", "/gaia-port-cellars", "/lisbon-airport-transfer", "/portugal-d7-visa"]
 
 T = {
@@ -240,7 +240,7 @@ def crumbs_html(lang, bare):
         hl = lang if exists(lang, hub) else "en"
         items.append((t[c] if c != "porto" else HUB_TEXT["porto"][lang][1], lp(hl, hub)))
     elif c == "business":
-        items.append((t["business"], lp(lang if exists(lang, "/demos/") else "en", "/demos/")))
+        items.append((t["business"], lp(lang if exists(lang, "/negocios/") else "en", "/negocios/")))
     name = m["short"] if m else ""
     if c and c.startswith("hub:"): name = HUB_TEXT[c[4:]][lang][1] if c[4:] in HUB_TEXT else m["title"]
     aria = {"en": "Breadcrumb", "es": "Migas de pan", "fr": "Fil d’Ariane", "de": "Brotkrumen", "pt": "Percurso"}[lang]
@@ -256,7 +256,7 @@ def related_html(lang, bare):
     t = T[lang]
     if c == "business":
         pool = [p for p in BUSINESS if p != bare and p != "/demos/"]
-        hub, hubname = "/demos/", t["business"]
+        hub, hubname = "/negocios/", t["business"]
     else:
         pool = [p for p in CATS[c]["pages"] if p != bare]
         if c == "airport": pool += ["/rent-car", "/book-first"]
@@ -290,7 +290,7 @@ def footer_map(lang):
       col(t["moving"], "/moving-to-portugal", ["/move-to-portugal-2026", "/portugal-d7-visa", "/portugal-d8-digital-nomad-visa", "/portugal-visa-income-calculator", "/portugal-nif-niss", "/portugal-tax-residency-2026", "/portugal-cost-of-living-2026"]),
       (f'<div class="foot-col"><p class="foot-h">{esc(t["about"])}</p><ul class="foot-links">'
        f'<li><a href="{lp(lang, "/loja.html") if exists(lang, "/loja.html") else "/loja.html"}">{esc(t["shop"])}</a></li>'
-       f'<li><a href="{lp(lang, "/demos/") if exists(lang, "/demos/") else "/demos/"}">{esc(t["business"])}</a></li>'
+       f'<li><a href="{lp(lang, "/negocios/") if exists(lang, "/negocios/") else "/negocios/"}">{esc(t["business"])}</a></li>'
        f'<li><a href="{lp(lang, "/disclosure")}">{esc(t["earn"])}</a></li><li><a href="{lp(lang, "/privacy")}">{esc(t["privacy"])}</a></li>'
        f'<li><a href="{lp(lang, "/credits")}">{esc(t["credits"])}</a></li><li><a href="mailto:dayinportugal@gmail.com">dayinportugal@gmail.com</a></li></ul></div>'),
     ]

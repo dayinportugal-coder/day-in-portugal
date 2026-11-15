@@ -2,13 +2,13 @@
 """Adds a click tag to every partner link in the static pages, so each page shows up
 separately in the partner dashboards: cmp=<tag> on GetYourGuide links, sub_id=<tag> on
 Travelpayouts (tp.media) links. Tag = pg_<lang>_<page>, letters/digits/underscore only.
-Skips /netmend/ and /experiences/ (generated with their own exp_ tags). Idempotent."""
+Skips /experiences/ (generated with their own exp_ tags). Idempotent."""
 import os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 n = 0
 for dp, dn, fn in os.walk(ROOT):
     rel = os.path.relpath(dp, ROOT)
-    if rel.startswith(("netmend", "experiences", ".git", "node_modules", "tools")): continue
+    if rel.startswith(("experiences", ".git", "node_modules", "tools")): continue
     for f in fn:
         if not f.endswith(".html"): continue
         p = os.path.join(dp, f); r = os.path.relpath(p, ROOT)
