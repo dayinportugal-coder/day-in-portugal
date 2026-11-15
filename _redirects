@@ -2,5 +2,3 @@
 /douro        /douro-day  301
 /douro.html   /douro-day  301
 
-# Netmend tools now live at netmend.app
-/netmend/*  https://netmend.app/:splat  301!

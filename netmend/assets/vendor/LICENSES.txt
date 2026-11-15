@@ -1,3 +1,0 @@
-pptxgenjs 4.0.1 MIT
-jspdf 4.2.1 MIT
-jszip 3.10.2 (MIT OR GPL-3.0-or-later)

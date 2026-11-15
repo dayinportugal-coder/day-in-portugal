@@ -1,7 +1,7 @@
 /* Day in Portugal — site menu.
-   This file is the only menu definition. Four entries since 15/11/2026:
+   This file is the only menu definition. Five entries since 15/11/2026:
    Experiences, Map (a plain link), Guides (a mega panel with one column per
-   section) and About. To add a guide, add one { href, label } object to the
+   section), Business, and About. To add a guide, add one { href, label } object to the
    right section of Guides. An empty group is not shown. */
 (function () {
   var MENU = [
@@ -83,19 +83,27 @@
       ]
     },
     {
+      id: "negocios",
+      label: "Business",
+      hub: { href: "/negocios/", label: "All business services" },
+      items: [
+        { href: "/negocios/", label: "Business services" },
+        { href: "/demos/", label: "AI assistant demos" },
+        { href: "/qr-avaliacoes", label: "Google review QR (PT)" },
+        { href: "/menu-qr", label: "Menu QR in 4 languages (PT)" },
+        { href: "/avaliacoes-google", label: "Google reviews (PT)" },
+        { href: "/ecra-tv", label: "Ecrã TV (PT)" },
+        { href: "/cartao-de-grupo", label: "Cartão de grupo (PT)" },
+        { href: "/vsme-simples", label: "VSME Simples (PT)" }
+      ]
+    },
+    {
       id: "sobre",
       label: "About",
       items: [
         { href: "/#about", label: "About Day in Portugal" },
         { href: "/disclosure", label: "How we earn" },
         { href: "/loja.html", label: "Gifts from Portugal" },
-        { href: "/demos/", label: "For businesses (websites and demos)" },
-        { href: "/qr-avaliacoes", label: "Google review QR (PT)" },
-        { href: "/menu-qr", label: "Menu QR in 4 languages (PT)" },
-        { href: "/avaliacoes-google", label: "Google reviews (PT)" },
-        { href: "/ecra-tv", label: "Ecrã TV (PT)" },
-        { href: "/cartao-de-grupo", label: "Cartão de grupo (PT)" },
-        { href: "/vsme-simples", label: "VSME Simples (PT)" },
         { href: "/credits", label: "Photo credits" },
         { href: "/privacy", label: "Privacy" },
         { href: "mailto:dayinportugal@gmail.com", label: "Contact: dayinportugal@gmail.com" }
