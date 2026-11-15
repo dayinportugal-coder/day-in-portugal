@@ -34,16 +34,16 @@ p { margin: 0 0 1rem; }
 .logo { display: inline-flex; align-items: center; gap: .55rem; margin-right: auto; font-family: var(--serif); font-weight: 700; font-size: 1.12rem; color: var(--ink); text-decoration: none; }
 .logo-mark { display: inline-grid; place-items: center; width: 1.9rem; height: 1.9rem; border-radius: 8px; background: var(--sage); color: #f7f3ec; font-size: 1rem; }
 .top-social { display: inline-flex; align-items: center; flex: 0 0 auto; }
-.top-ig, .top-fb { display: inline-grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 999px; color: var(--ink); flex: 0 0 auto; }
-.top-ig svg, .top-fb svg { width: 1.3rem; height: 1.3rem; }
-.top-ig:hover, .top-fb:hover { background: var(--tile); color: var(--accent); }
+.top-ig, .top-fb, .top-pin { display: inline-grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 999px; color: var(--ink); flex: 0 0 auto; }
+.top-ig svg, .top-fb svg, .top-pin svg { width: 1.3rem; height: 1.3rem; }
+.top-ig:hover, .top-fb:hover, .top-pin:hover { background: var(--tile); color: var(--accent); }
 @media (max-width: 430px) {
   .top-inner { padding-left: .65rem; padding-right: .65rem; gap: .2rem .3rem; }
   .logo { font-size: 1.02rem; gap: .4rem; }
   .logo-mark { width: 1.7rem; height: 1.7rem; font-size: .9rem; }
   .menu-toggle { width: 40px; height: 40px; }
   .lang-btn { width: 42px; height: 40px; }
-  .top-ig, .top-fb { width: 2.15rem; height: 2.15rem; }
+  .top-ig, .top-fb, .top-pin { width: 2.15rem; height: 2.15rem; }
 }
 .menu-toggle { display: inline-grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--line); border-radius: 10px; background: var(--card); color: var(--ink); cursor: pointer; }
 .menu-bars, .menu-bars::before, .menu-bars::after { display: block; width: 18px; height: 2px; background: currentColor; border-radius: 2px; position: relative; }
@@ -352,7 +352,7 @@ strong,b{font-weight:650}
 .lang-btn[aria-expanded="true"]{border-color:var(--accent)}
 .lang-menu{border:0;border-radius:16px;box-shadow:var(--shadow-lg)}
 .lang-menu a[aria-current="true"]{background:var(--ink);color:var(--bg)}
-.top-ig:hover,.top-fb:hover{background:var(--tile)}
+.top-ig:hover,.top-fb:hover,.top-pin:hover{background:var(--tile)}
 
 /* buttons */
 .btn,.book{font-weight:600;letter-spacing:.005em;border-radius:999px;transition:transform .2s ease,background .2s ease,box-shadow .2s ease,color .2s ease}

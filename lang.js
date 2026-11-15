@@ -194,9 +194,9 @@
 
     var header = document.querySelector("header.top .top-inner");
     if (header) {
-      var ig = header.querySelector(".top-ig");
-      var before = ig;
-      if (ig && ig.parentElement && ig.parentElement.classList.contains("top-social")) before = ig.parentElement;
+      var social = header.querySelector(".top-social");
+      var ig = header.querySelector(".top-ig, .top-pin");
+      var before = social || ig;
       if (before) header.insertBefore(wrap, before);
       else header.appendChild(wrap);
       return;

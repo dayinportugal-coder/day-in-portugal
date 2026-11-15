@@ -113,7 +113,7 @@ def external_urls(path: Path) -> list[str]:
     urls = []
     for href in re.findall(r'href="([^"]+)"', path.read_text(encoding="utf-8")):
         href = unquote(href.replace("&amp;", "&"))
-        if href.startswith("http") and SITE not in href and "instagram.com" not in href and "creativecommons.org" not in href and "wikimedia.org" not in href and "commons.wikimedia.org" not in href:
+        if href.startswith("http") and SITE not in href and "instagram.com" not in href and "pinterest.com" not in href and "facebook.com" not in href and "creativecommons.org" not in href and "wikimedia.org" not in href and "commons.wikimedia.org" not in href:
             urls.append(href)
     return urls
 
