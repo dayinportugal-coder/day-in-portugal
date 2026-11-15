@@ -251,3 +251,30 @@ body.home .chapter-head .chapter-no::after {
 }
 body.home .follow > .kicker,
 body.home .xp-about > .kicker { grid-column: 1 / -1; }
+
+/* Soft radius + slight downward shade (matches site chrome) */
+.film-ctas .btn{border-radius:12px}
+.xp-chip{
+  border-radius:12px;
+  background: linear-gradient(to bottom, #ffffff, #eee6d8);
+}
+.xp-chip[aria-pressed="true"]{
+  background: linear-gradient(to bottom, #201b16, #15110e);
+}
+.xp-card{
+  border-radius:12px;
+  background: linear-gradient(to bottom, #ffffff, #f3ebe0);
+}
+.xp-trust ul{
+  border-radius:12px;
+  background: linear-gradient(to bottom, rgba(255,255,255,.94), rgba(236,228,216,.9));
+}
+.book-bar a{
+  border-radius:12px;
+  background: linear-gradient(to bottom, #2a241e, #161310);
+}
+.book-bar a span:last-child{
+  border-radius:10px;
+  background: linear-gradient(to bottom, #c45a35, #9c4024);
+}
+.xp-book{border-radius:12px}

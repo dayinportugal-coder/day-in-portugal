@@ -693,3 +693,88 @@ a.menu-link:hover{color:var(--ink)}
   .menu-col{border-top:1px solid var(--line);padding-top:.2rem}
   .menu-col:first-child{border-top:0}
 }
+
+/* ===== Soft radius + slight downward shade on chrome (header, menus, buttons, cards) ===== */
+.top{
+  background: linear-gradient(to bottom, rgba(250,246,239,.94), rgba(228,221,208,.94));
+}
+@media (max-width:819px){
+  .site-menu.is-open{
+    background: linear-gradient(to bottom, #faf6ef, #e8e0d3);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+}
+.menu-btn{
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,.45), rgba(32,27,22,.07));
+}
+@media (min-width:820px){
+  .menu-btn:hover{
+    background: linear-gradient(to bottom, rgba(32,27,22,.05), rgba(32,27,22,.12));
+    color: var(--ink);
+  }
+  .menu-btn[aria-expanded="true"]{
+    background: linear-gradient(to bottom, #201b16, #15110e);
+    color: var(--bg);
+  }
+}
+.menu-toggle,
+.lang-btn{
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #ffffff, #eee6d8);
+}
+.menu-toggle[aria-expanded="true"],
+.lang-btn[aria-expanded="true"]{
+  background: linear-gradient(to bottom, #f7f1e6, #e6ddd0);
+}
+.menu-panel,
+.lang-menu{
+  border-radius: 12px;
+  background: linear-gradient(to bottom, #fffdf9, #f2ebe0);
+}
+.menu-panel a,
+.lang-menu a,
+.menu-hub{
+  border-radius: 10px;
+}
+.btn,
+.book{
+  border-radius: 12px;
+}
+.btn{
+  background: linear-gradient(to bottom, #c45a35, #9c4024);
+  color: var(--accent-ink);
+}
+.btn:hover{
+  background: linear-gradient(to bottom, #9c4024, #86361e);
+  color: #fff;
+}
+.book{
+  background: linear-gradient(to bottom, #2a241e, #161310);
+  color: var(--bg);
+}
+.book:hover{
+  background: linear-gradient(to bottom, #b4502e, #8f3b22);
+  color: #fff;
+}
+.btn.ghost{
+  background: linear-gradient(to bottom, rgba(255,255,255,.18), rgba(255,255,255,.08));
+}
+.btn.ghost:hover{
+  background: linear-gradient(to bottom, #ffffff, #f3ebe0);
+  color: var(--ink);
+}
+.tile,
+.card,
+.area,
+.trust article,
+.search-box,
+.foot-col.pt{
+  border-radius: 12px;
+  background-image: linear-gradient(to bottom, #ffffff, #f3ebe0);
+}
+.tile-body,
+.card-body{
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(32,27,22,.04));
+}
