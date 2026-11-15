@@ -178,20 +178,26 @@ body.home{background-color:#f8f3ea;background-image:
 .xp-badge.is-fc{right:auto}
 a.xp-media{display:block;color:inherit}
 
-/* Home section titles: Experiences, Map, Guides, About, Follow, sub-heads.
-   Do not include #pt-panel .kicker. */
+/* Home section titles: only the small kicker (and chapter label) is centred,
+   with a line on each side. Headings, leads and filters stay in their
+   original left-aligned layout. Do not include #pt-panel .kicker or the
+   kickers inside a split column. */
 body.home .xp-head .kicker,
 body.home .ia-head .kicker,
 body.home .sub-head .kicker,
 body.home .follow .kicker,
-body.home .xp-about .kicker {
+body.home .xp-about .kicker,
+body.home section > .kicker,
+body.home .chapter-head .chapter-no {
   display: flex;
+  flex: 1 0 100%;
   width: 100%;
   max-width: 100%;
+  box-sizing: border-box;
   justify-content: center;
   align-items: center;
   gap: 0.85rem;
-  margin: 0 auto 0.6rem;
+  margin: 0 0 0.6rem;
   text-align: center;
   font-family: var(--serif);
   font-style: italic;
@@ -202,6 +208,7 @@ body.home .xp-about .kicker {
   color: var(--accent);
 }
 body.home .xp-about .kicker { color: var(--gold); }
+body.home .follow .kicker { color: #ffcfb3; }
 
 body.home .xp-head .kicker::before,
 body.home .xp-head .kicker::after,
@@ -212,7 +219,11 @@ body.home .sub-head .kicker::after,
 body.home .follow .kicker::before,
 body.home .follow .kicker::after,
 body.home .xp-about .kicker::before,
-body.home .xp-about .kicker::after {
+body.home .xp-about .kicker::after,
+body.home section > .kicker::before,
+body.home section > .kicker::after,
+body.home .chapter-head .chapter-no::before,
+body.home .chapter-head .chapter-no::after {
   content: "";
   flex: 0 0 auto;
   width: 100px;
@@ -230,38 +241,13 @@ body.home .xp-about .kicker::after {
   body.home .follow .kicker::before,
   body.home .follow .kicker::after,
   body.home .xp-about .kicker::before,
-  body.home .xp-about .kicker::after {
+  body.home .xp-about .kicker::after,
+  body.home section > .kicker::before,
+  body.home section > .kicker::after,
+  body.home .chapter-head .chapter-no::before,
+  body.home .chapter-head .chapter-no::after {
     width: 180px;
   }
 }
-
-body.home .xp-head,
-body.home .ia-head,
-body.home .sub-head {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-body.home .xp-head > div,
-body.home .ia-head > div {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-body.home .xp-head h2,
-body.home .ia-head .h-section,
-body.home .ia-head .h-sub,
-body.home .sub-head .h-sub {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-body.home .xp-head p.muted,
-body.home .ia-head .muted,
-body.home .sub-head .muted {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-body.home .xp-head > div.xp-filters { flex-direction: row; flex-wrap: wrap; justify-content: center; width: auto; max-width: 100%; }
+body.home .follow > .kicker,
+body.home .xp-about > .kicker { grid-column: 1 / -1; }
