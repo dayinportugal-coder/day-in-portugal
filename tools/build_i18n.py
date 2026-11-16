@@ -430,6 +430,8 @@ def update_sitemap() -> None:
     for block in english:
         lines.append("  " + re.sub(r"\s+", " ", block).strip())
         loc = re.search(r"<loc>(.*?)</loc>", block).group(1)
+        if (urlparse(loc).path.strip("/") + ".html") in SKIP_PAGES:
+            continue  # Portuguese-only pages: language copies canonicalise to the root URL
         for lang in LANGS:
             new = localize_href(loc, lang)
             lines.append(f"  <url><loc>{new}</loc><lastmod>2026-11-06</lastmod></url>")
