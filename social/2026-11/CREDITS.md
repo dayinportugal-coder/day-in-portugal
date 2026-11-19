@@ -67,3 +67,62 @@ Files: 2026-11-20-r4-moving-order.mp4
 - comercio-por-do-sol: Timothy Vollmer from Oakland, USA, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Lisbon_sunset_(31749619718).jpg
 - douro-socalcos: Graeme Churchard from Bristol (51.4414, -2.5242), UK, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Douro_Valley_21.jpg
 - Contains AI-generated photorealistic images (marked on the image itself as "AI-generated image"). Voiceover is synthetic (Piper TTS, en_GB "cori" voice, public-domain LibriVox training data); music is generated in-house (procedural, royalty-free).
+
+# Batch 2 (21–26 Nov 2026)
+
+## 2026-11-21 · carousel
+Files: 2026-11-21-c4-winter-1.jpg, 2026-11-21-c4-winter-2.jpg, 2026-11-21-c4-winter-3.jpg, 2026-11-21-c4-winter-4.jpg, 2026-11-21-c4-winter-5.jpg, 2026-11-21-c4-winter-6.jpg
+- nz-farol: Luis Ascenso from Lisbon, Portugal, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Praia_do_Norte,Nazar%C3%A9_-23_(50655732078).jpg
+- nz-surf: Carlos Eduardo Joos, CC BY 2.0, https://commons.wikimedia.org/wiki/File:10_meters_-_Nazar%C3%A9_-_Portugal_-_Flickr_-_Carlos_Eduardo_Joos.jpg
+- estrela2: Fotos Rinês, CC BY 3.0, https://commons.wikimedia.org/wiki/File:Valley_(142110993).jpeg
+- madeira: David Lázaro, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Madeira_Island_(28683119676).jpg
+- algarve-marinha: Sergei Gussev, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Praia_da_Marinha_portugal_156_(22523153732).jpg
+- nz-praia: Alexkom000, CC BY 4.0, https://commons.wikimedia.org/wiki/File:2025-12-21_Nazar%C3%A9,_Praia_do_Norte_in_December_2.jpg
+
+## 2026-11-22 · reel
+Files: 2026-11-22-r5-coffee.mp4
+- brasileira: Shadowgate from Novara, ITALY, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Cafe_A_Brasileira_(346663514).jpg
+- cafe-chavena: Gordito1869, CC BY 3.0, https://commons.wikimedia.org/wiki/File:Espresso_La_Cimbali_1.JPG
+- pingado: rilo 2006, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Portugal_(15621880925).jpg
+- galao: Ondřej Žváček, CC BY 2.5, https://commons.wikimedia.org/wiki/File:Gal%C3%A3o.jpg
+- majestic: José Moutinho from Leça da Palmeira, Portugal, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Majestic_Caf%C3%A9_(9421761927).jpg
+- majestic-fachada: Pedro Ribeiro Simões from Lisboa, Portugal, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Majestic_Cafe_(2150556354).jpg
+- Voiceover is synthetic (Piper TTS, en_GB "cori" voice, public-domain LibriVox training data); music is generated in-house (procedural, royalty-free).
+
+## 2026-11-23 · carousel
+Files: 2026-11-23-c5-evora-1.jpg, 2026-11-23-c5-evora-2.jpg, 2026-11-23-c5-evora-3.jpg, 2026-11-23-c5-evora-4.jpg, 2026-11-23-c5-evora-5.jpg, 2026-11-23-c5-evora-6.jpg
+- evora-templo-v: Acediscovery, CC BY 4.0, https://commons.wikimedia.org/wiki/File:Roman-Temple-Evora.jpg
+- giraldo: Tibor Kovacs, CC BY 2.0, https://commons.wikimedia.org/wiki/File:StrollingThroughEvora_MG_8460_(15026805158).jpg
+- evora-templo: Ken & Nyetta, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Ancient_Roman_Temple,_%C3%89vora_-_Apr_2011.jpg
+- se-evora: Daniel Feliciano, Public domain, https://commons.wikimedia.org/wiki/File:S%C3%A9_%C3%89vora.JPG
+- ossos: tetedelart1855 from Paris, France, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Capela_dos_Ossos_-_Evora_(27704786390).jpg
+- giraldo-arcadas: François Philipp, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Pra%C3%A7a_de_Giraldo,_Evora_(10250693386).jpg
+
+## 2026-11-24 · reel
+Files: 2026-11-24-r6-coimbra.mp4
+- coimbra-rio: Olarcos, Public domain, https://commons.wikimedia.org/wiki/File:Coimbra_tozu.JPG
+- uc-torre: Elapsed (English Wikipedia), Public domain, https://commons.wikimedia.org/wiki/File:Coimbra_University_Tower_2.jpg
+- joanina: Jl FilpoC, CC BY 3.0, https://commons.wikimedia.org/wiki/File:Biblioteca_Joanina,_Coimbra.jpg
+- coimbra-se: Alexkom000, CC BY 4.0, https://commons.wikimedia.org/wiki/File:2026-05-22_S%C3%A9_Velha_de_Coimbra_1.jpg
+- coimbra-tarde: nanabou, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Almedina-CCBY.jpg
+- uc-patio: Marmontel, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Biblioth%C3%A8que_Joanina_(51543687655)_(cropped).jpg
+- Voiceover is synthetic (Piper TTS, en_GB "cori" voice, public-domain LibriVox training data); music is generated in-house (procedural, royalty-free).
+
+## 2026-11-25 · carousel
+Files: 2026-11-25-c6-phrases-1.jpg, 2026-11-25-c6-phrases-2.jpg, 2026-11-25-c6-phrases-3.jpg, 2026-11-25-c6-phrases-4.jpg, 2026-11-25-c6-phrases-5.jpg, 2026-11-25-c6-phrases-6.jpg
+- rua-electrico: Deensel, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Lisbon_tram_(36622596060).jpg
+- mercado-fruta: Dguendel, CC BY 4.0, https://commons.wikimedia.org/wiki/File:Lisbon,_Mercado_da_Ribeira,_vegetables.JPG
+- loja-souvenirs: amanderson2, Public domain, https://commons.wikimedia.org/wiki/File:Shopping_and_Church_Porto_Portugal_(52787278484).jpg
+- rua-electrico2: muffinn from Worcester, UK, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Portugal,_Lisbon_-_tram_(8589266993).jpg
+- conta: Shinpachi Shimura, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Manteigaria_(51156209498).jpg
+- loja-interior: xiquinhosilva from Cacau, CC BY 2.0, https://commons.wikimedia.org/wiki/File:87095-Porto_(49052489317).jpg
+
+## 2026-11-26 · reel
+Files: 2026-11-26-r7-niss.mp4
+- fachada-rosa: Dale Cruse, CC BY 4.0, https://commons.wikimedia.org/wiki/File:Weathered_Historic_Facade_with_Ornate_Balcony_in_Lisbon_(54744267037).jpg
+- porto-cores: João Neves, CC0, https://commons.wikimedia.org/wiki/File:Ribeira_(29560714177).jpg
+- electrico-azulejo: Eneas De Troya from Mexico City, México, CC BY 2.0, https://commons.wikimedia.org/wiki/File:El_clich%C3%A9_(52267853524).jpg
+- loja-cidadao: Rakoon, CC0, https://commons.wikimedia.org/wiki/File:Loja_do_Cidad%C3%A3o_government_office_2016_Portugal.jpg
+- azulejo-janela: Rob Oo from NL, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Abstract_(46767604824).jpg
+- porto-roupa: Alessia Damone, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Porto_(40692864705).png
+- Voiceover is synthetic (Piper TTS, en_GB "cori" voice, public-domain LibriVox training data); music is generated in-house (procedural, royalty-free).
