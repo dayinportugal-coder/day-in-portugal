@@ -98,7 +98,7 @@ HUB_TEXT = {
   "pt": ("Guia do Porto: o que reservar, onde dormir, o que evitar", "Guia do Porto", "Todos os guias do Porto num só sítio: roteiro de 3 dias, caves de Gaia, cruzeiro das seis pontes, fado, Livraria Lello, onde dormir e o transfer do aeroporto."),
  },
  "lisbon": {
-  "en": ("Lisbon travel guide: 3 days, where to stay and day trips", "Lisbon guide", "Every Lisbon guide in one place: a 3-day itinerary, where to stay, what to book first, Sintra, Cascais and Évora day trips, and the airport transfer."),
+  "en": ("Lisbon 3-day itinerary: where to stay and day trips", "Lisbon guide", "A 3-day Lisbon itinerary, plus where to stay, what to book first, day trips to Sintra, Cascais and Évora, and the airport transfer."),
   "es": ("Guía de Lisboa: 3 días, dónde dormir y excursiones", "Guía de Lisboa", "Todas las guías de Lisboa: itinerario de 3 días, dónde dormir, qué reservar antes, excursiones a Sintra, Cascais y Évora, y el traslado del aeropuerto."),
   "fr": ("Guide de Lisbonne : 3 jours, où dormir et excursions", "Guide de Lisbonne", "Tous nos guides de Lisbonne : itinéraire de 3 jours, où dormir, quoi réserver avant, excursions à Sintra, Cascais et Évora, et le transfert depuis l’aéroport."),
   "de": ("Lissabon-Reiseführer: 3 Tage, Unterkünfte und Tagesausflüge", "Lissabon-Guide", "Alle Lissabon-Guides: 3-Tage-Route, wo übernachten, was vorher buchen, Ausflüge nach Sintra, Cascais und Évora und der Flughafentransfer."),
